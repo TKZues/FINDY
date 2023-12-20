@@ -1,0 +1,606 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.09);
+}
+
+/* ------------- Navbar ------------- */
+.navbar {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
+}
+
+.navbar__logo-link {
+    color: transparent;
+    text-decoration: none;
+}
+
+.navbar__logo-img {
+    height: 50px;
+}
+
+.navbar__heading{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__heading img{
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    object-fit: cover;
+    
+}
+
+.navbar__heading-link {
+    margin-left: 8px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.navbar__heading-icon {
+    font-size: 2.8rem;
+    color: var(--main-color);
+}
+
+.navbar__mobile-bars {
+    display: none;
+    padding: 16px;
+    margin-left: auto;
+}
+
+/* Mobile menu */
+.mobile__menu {
+    display: none;
+    padding: 16px;
+    background-color: var(--background-color);
+}
+
+.mobile__heading {
+    padding: 8px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.mobile__heading-icon {
+    width: 22px;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-right: 8px;
+}
+
+.mobile__heading-link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.navbar__mobile-bars {
+    display: none;
+    padding: 16px;
+    margin-left: auto;
+}
+
+.navbar__bars-checkbox:checked ~ .mobile__menu {
+    display: block;
+}
+
+.header__search-checkbox:checked ~ .header__search {
+    display: flex;
+}
+
+/* ------------- Responsive ------------- */
+
+/* ------------- Mobile ------------- */
+@media (max-width: 739px) {
+    .navbar__heading {
+        display: none;
+    }
+    
+    .navbar__mobile-bars {
+        display: block;
+    }
+}
+
+/* ------------- Navbar ------------- */
+.top{
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+}
+
+
+/* ------------- Profile của thợ ------------- */
+.container {
+    margin-top: var(--header-height);
+    background-color: var(--background-color);
+}
+
+.content {
+    padding-top: 36px;
+}
+
+.freelancer {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.freelancer-info {
+    margin: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.personal-info {
+    text-align: center;
+}
+
+.personal-info__avatar {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.personal-info__avatar-img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.personal-info__name {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.personal-info__title {
+    font-size: 1.6rem;
+    margin: 4px;
+}
+
+.personal-info__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-info__rating-number {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+
+.personal-info__rating-reviews {
+    font-size: 1.4rem;
+}
+
+.freelancer-info-btn {
+    width: 90%;
+    margin: 5%;
+}
+
+.contact-info {
+    margin: 20px;
+}
+
+.contact-info__info {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.contact-info__info-icon {
+    color: var(--main-color);
+    margin-right: 8px;
+}
+
+.contact-info__info-number {
+    font-weight: 600;
+}
+
+.freelancer-description {
+    margin-top: 32px;
+    margin-right: 32px;
+}
+
+.freelancer-description__heading {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.freelancer-description__introduce {
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.freelancer-title {
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.freelancer-artwork {
+    margin-right: 16px;
+}
+
+.artwork-collection {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.artwork-collection:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.09);
+    transform: translateY(-1px);
+}
+
+.artwork-collection__name {
+    /* color: var(--main-color); */
+    font-size: 1.6rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.artwork-collection__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8px 16px;
+}
+
+.artwork-collection__img {
+    width: calc(50% - 4px);
+    object-fit: cover;
+    margin: 2px;
+    border: 1px solid var(--border-color);
+}
+
+.artwork-collection__price {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.artwork-collection__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.artwork-collection__info-text {
+    font-size: 1.2rem;
+}
+
+.artwork-collection__control {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.artwork-collection__control-btn {
+    width: 90%;
+    margin: 5%;
+}
+
+
+/* ------------- Thanh hiển thị số trang ------------- */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 80px;
+}
+
+.pagination-item {
+    list-style: none;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    opacity: 0.8;
+}
+
+.pagination-item__link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    margin: 0 15px;
+}
+
+/* ------------- Đánh giá ------------- */
+.review {
+    margin-top: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.review__heading {
+    padding: 16px 32px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 16px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    height: 150px;
+}
+
+.review-item__avatar {
+    margin: 16px 0 16px 16px;
+}
+
+.review-item__avatar-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review-item__content {
+    margin: 16px;
+}
+
+.review-item__content-name {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.review-item__content-time {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.review-item__content-text {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+/* ------------- Cửa sổ nổi: Gửi yêu cầu ------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__container {
+    margin: auto;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+}
+
+.require-form {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.require-form__header {
+    color: var(--main-color);
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    border-bottom: 3px solid var(--main-color);
+    margin: 0 36px;
+}
+
+.require-form__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 13px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.require-form__close:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.require-form__heading {
+    padding: 32px;
+    text-align: center;
+}
+
+.require-form__form {
+    padding: 32px 32px 8px;
+    font-size: 1.6rem;
+}
+
+.require-form__item {
+    margin-bottom: 16px;
+}
+
+.require-form__text {
+    line-height: 38px;
+    padding: 10px 0;
+}
+
+.require-form__icon {
+    width: 30px;
+    color: var(--main-color);
+}
+
+.require-form__input {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.require-form__price-input {
+    display: flex;
+    align-items: center;
+}
+
+.require-form__price-separate {
+    margin: 0 8px;
+}
+
+#require-form__time {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.require-form-btn {
+    float: right;
+    width: 200px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.require-form__control-btn {
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+}
+
+.require-form__control-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.post-job__form-input {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+#post-job__form-description {
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+ }
+/* ------------- Responsive ------------- */
+
+/* ------------- Mobile ------------- */
+@media (max-width: 739px) {
+    .navbar__heading {
+        display: none;
+    }
+    
+    .navbar__mobile-bars {
+        display: block;
+    }
+
+    .freelancer-description,
+    .freelancer-title {
+        margin-left: 32px;
+    }
+
+    .freelancer-artwork {
+        margin-left: 16px;
+    }
+
+    .review-item {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .require-form__heading {
+        padding: 20px;
+    }
+
+    .require-form__header {
+        font-size: 2rem;
+    }
+}
+
+/* ------------- Table ------------- */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .navbar__heading {
+        display: none;
+    }
+    
+    .navbar__mobile-bars {
+        display: block;
+    }
+    
+    .content {
+        margin: 0 16px;
+    }
+
+    .review-item {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .contact-info__info {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .personal-info__rating {
+        display: block;
+    }
+
+    .contact-info {
+        margin: 8px;
+    }
+
+    .contact-info__info {
+        font-size: 1.3rem;
+    }
+
+    .personal-info__name {
+        font-size: 1.8rem;
+    }
+
+    .artwork-collection__info {
+        display: block;
+    }
+}
