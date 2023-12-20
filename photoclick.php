@@ -27,6 +27,7 @@ $sukien = $_GET['sukien'];
 $diadiem = $_GET['diadiem'];
 $phongcach = $_GET['phongcach'];
 $motachitiet = $_GET['motachitiet'];
+$ma_posttimtho = $_GET['ma_posttimtho'];
 // Use these variables as needed in your photoclick.php page
 
 
@@ -35,7 +36,7 @@ $motachitiet = $_GET['motachitiet'];
 include "db_connection.php";
 
 // Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
-$sql = "SELECT * FROM thongtinthue WHERE mathongtinthue = $mathongtinthue";
+$sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
 $result = $conn->query($sql);
 
 // Kiểm tra nếu có kết quả
@@ -43,7 +44,7 @@ if ($result->num_rows > 0) {
     // Lặp qua từng dòng kết quả
     while ($row = $result->fetch_assoc()) {
         // Lấy thông tin từ cột cần thiết
-        $hinhanhthue = $row['hinhanhthue'];
+        $mathongtintho = $row['mathongtintho'];
         
         
     }
@@ -55,11 +56,13 @@ if ($result->num_rows > 0) {
 }
 
 
-echo "ID của Thợ: " . $mathongtintho;
-echo "Mã thông tin thuê" . $mathongtinthue;
-echo "ID của Thợ: " . $ten;
-echo "ID của Thợ: " . $gioitinh;
-echo "Hình ảnh Thuê: " . $hinhanhthue;
+// Các công việc khác cần làm trên trang mainphoto.php
+echo "ID của Thợ: " . $id_tho;
+echo "ID của Thợ: " . $hoTen;
+
+echo "Mã post tìm thợ: " . $ma_posttimtho;
+echo "Mã thông tin thợ" . $mathongtintho;
+
 ?>
 
 
@@ -116,8 +119,23 @@ echo "Hình ảnh Thuê: " . $hinhanhthue;
                                     <i class="fa-brands fa-bitcoin"></i><span><?php echo $gia ?></span>
                                 </div>
                                 <div class="photoclick_left-button">
-                                    <button type="button" onclick="ungTuyen()">Ứng tuyển</button>
-                                    <i class="fa-regular fa-star"></i>
+                                    <?php
+                                        include "connect.php";
+                                    ?>
+                                    <?php
+                                        $connect = new connect;
+                                        if($_SERVER['REQUEST_METHOD']==='POST'){
+                                        $insert_quanlybaidang = $connect -> insert_quanlybaidang();
+                                        }
+                                    ?>
+                                    <form action="" method="POST">
+                                        <div class="form_photoclick" style="display:none">
+                                            <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                                            <input type="text" name="mathongtintho" value="<?php echo $mathongtintho ?>">
+                                        </div>
+                                        <button type="submit" onclick="ungTuyen() " >Ứng tuyển</button>
+                                        <i class="fa-regular fa-star"></i>
+                                    </form>
                                 </div>
                                 <div class="photoclick_left-address">
                                 <i class="fa-solid fa-location-dot"></i> <span> <?php echo $diadiem ?></span>
