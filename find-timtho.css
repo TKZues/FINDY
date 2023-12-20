@@ -1,11 +1,7 @@
-.navbar > div:nth-child(2) {
-    border-bottom: 3px solid var(--main-color);
-}
-
 /* ------------- Filter ------------- */
 .container {
-    margin-top: var(--header-height);
-    background-color: var(--background-color);
+    margin-top: var(--top-header-height);
+    /* background-color: var(--background-color); */
 }
 
 .content {
@@ -115,7 +111,6 @@
     font-size: 1.6rem;
     padding: 0;
     cursor: pointer;
-    user-select: none;
 }
 
 .filter__menu-btn {
@@ -129,7 +124,7 @@
 /* ------------- Freelancer list ------------- */
 .freelancer-item {
     position: relative;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .freelancer-item-warp {
@@ -153,14 +148,6 @@
     margin-right: 8px;
 }
 
-/* .freelancer-item__avatar-img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-} */
-
 .freelancer-item__avatar-img {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -172,14 +159,14 @@
 }
 
 .freelancer-item__avatar-text {
-    padding: 4px 6px;
+    padding: 3px 5px;
     background-color: #586B50;
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     border-radius: 10px;
     position: absolute;
-    right: -8px;
-    bottom: 10px;
+    right: -9px;
+    bottom: 9px;
 }
 
 .freelancer-item__info {
@@ -187,14 +174,14 @@
 }
 
 .freelancer-item__title {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 600;
     display: block;
     margin-bottom: 8px;
 }
 
 .freelancer-item__text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: italic;
     color: #fff;
 }
@@ -244,10 +231,12 @@
 }
 
 .freelancer-item__artwork-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin: 1px;
+    width: 30%;
+    padding-top: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin: 2px;
 }
 
 .freelancer-item__view-details {

@@ -1,14 +1,17 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
-    <link rel="stylesheet" href="./base.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./find-timtho.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
 
 <body>
@@ -283,7 +286,7 @@ include "header.php"
 <div class="container">
     <div class="grid wide">
         <div class="row content">
-            <div class="col l-3 m-4 c-0">
+            <!-- <div class="col l-3 m-4 c-0">
                 <div class="filter">
                     <h3 class="filter__heading">
                         Lọc
@@ -459,17 +462,17 @@ include "header.php"
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col l-9 m-8 c-12">
+            <div class="col l-12 m-12 c-12">
                 <div class="freelancer">
-                    <div class="row">
-                        <div class="col l-4 m-6 c-12">
+                    <div class="row sm-gutter">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -511,24 +514,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-1-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-1-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-2.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-2.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -570,24 +573,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-2-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-2-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-2-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-2-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-2-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-2-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-3.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-3.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -629,24 +632,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-3-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-3-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-3-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-3-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-3-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-3-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-4.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-4.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -688,24 +691,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-4-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-4-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-4-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-4-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-4-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-4-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-5.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-5.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -747,24 +750,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-5-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-5-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-5-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-5-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-5-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-5-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-6.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-6.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -806,25 +809,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-6-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-6-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-6-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
-                                            <!-- <img src="./img/collection--4.png" alt="" id="artwork-img-4" class="freelancer-item__artwork-img" onclick="changeImage4()"> -->
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-6-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-6-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-6-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-7.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-7.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -866,24 +868,24 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-7-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-7-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-7-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-7-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-7-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-7-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="col l-4 m-6 c-12">
+                        <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
                                     <div class="freelancer-item__personal-info">
                                         <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-8.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-8.png);"></div>
                                             <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
@@ -925,75 +927,16 @@ include "header.php"
 
                                     <div class="slide-show-artwork">
                                         <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-8-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-8-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-8-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
-                            </div>
-                        </div>
-                        <div class="col l-4 m-6 c-12">
-                            <div class="freelancer-item">
-                                <a href="info-freelancer.php" class="freelancer-item-warp">
-                                    <div class="freelancer-item__personal-info">
-                                        <div class="freelancer-item__avatar">
-                                            <img src="./img/avatar-9.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
-                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                        </div>
-
-                                        <div class="freelancer-item__info">
-                                            <span class="freelancer-item__title">
-                                                Ngô Thảo Trang
-                                            </span>
-                                            <span class="freelancer-item__text">
-                                                Nhiếp ảnh gia tự do
-                                            </span>
-                                            <div class="star-rating">
-                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
-                                            </div>
-                                            <div class="freelancer-item__rating">
-                                                <strong>4.4</strong>
-                                                <span>(97 đánh giá)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="freelancer-item__contact">
-                                        <div class="freelancer-item__contact-info">
-                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                            <span class="freelancer-item__contact-text">090 **** ***</span>
-                                        </div>
-                                        <div class="freelancer-item__contact-info">
-                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                            <span class="freelancer-item__contact-text">t*******@gmail.com</span>
-                                        </div>
-                                        <div class="freelancer-item__contact-info">
-                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                            <span class="freelancer-item__contact-text">Đà Lạt, Lâm Đồng</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="slide-show-artwork">
-                                        <div class="freelancer-item__artwork-list">
-                                            <img src="./img/collection-9-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                            <img src="./img/collection-9-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                            <img src="./img/collection-9-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
                     </div>

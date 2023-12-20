@@ -5,7 +5,7 @@
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Findy</title>
-    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./account.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>

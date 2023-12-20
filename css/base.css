@@ -1,17 +1,31 @@
 :root {
-    --main-color: #40916c; /* Đây là biến màu chính, bạn có thể thay đổi mã màu tùy ý */
-    --main-background:#ffffff;
-    --main-header:white;
+    --main-color: #478C43;
+    --main-background: #ffffff;
+    --main-header: white;
     --background-color: #f5f5f5;
-    --text-color-main:#f7f8f9;
+    --text-color-main: #f7f8f9;
     --text-color: #222;
     --border-color: #dbdbdb;
-    --forthe-color:#222;
-    --complete-color:#222;
+    --forthe-color: #222;
+    --complete-color: #222;
     --headeruser-text: white;
     --gradient-color-1: #0097b2;
     --gradient-color-2: #7ed957;
+    /* --gradient-color-1: #478C43;
+    --gradient-color-2: #395B37; */
+    --top-height: 30px;
     --header-height: 60px;
+    --top-header-height: calc(var(--top-height) + var(--header-height));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.main {
+    overflow: hidden;
 }
 
 html {
@@ -21,7 +35,7 @@ html {
 }
 
 /* Button */
-.tabbar{
+.tabbar {
     border-bottom: 1px solid #f1f1f1;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -36,6 +50,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 .btn--primary {
@@ -53,15 +68,16 @@ html {
     font-size: 1.2rem;
     color: #D5D5D5;
     padding: 8px 0;
+    user-select: none;
 }
 
 .star-rating--gold {
     color: #FFCE3D;
 }
 
-  /* ----------chatbox--------- */
+/* ----------chatbox--------- */
 
-  .icon {
+.icon {
     position: fixed;
     top: 90%;
     right: 20px;
@@ -75,13 +91,13 @@ html {
     cursor: pointer;
     z-index: 1000;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  }
+}
 
-  .icon img{
+.icon img {
     width: 80%;
-  }
-  
-  /* Chatbox container */
+}
+
+/* Chatbox container */
 .chatbox {
     top: 20%;
     right: 20px;
@@ -97,10 +113,10 @@ html {
     z-index: 1000;
     font-size: 1.2rem;
     font-family: Arial, sans-serif;
-  }
-  
-  /* Chatbox header */
-  .chatbox-header {
+}
+
+/* Chatbox header */
+.chatbox-header {
     background-color: #000000;
     color: #fff;
     padding: 10px;
@@ -109,46 +125,46 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  /* Close button */
-  .close-button {
+}
+
+/* Close button */
+.close-button {
     background-color: transparent;
     border: none;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-  }
-  
-  .close-button:focus {
+}
+
+.close-button:focus {
     outline: none;
-  }
-  
-  /* Chatbox content */
-  .chatbox-content {
+}
+
+/* Chatbox content */
+.chatbox-content {
     padding: 10px;
     max-height: 200px;
     overflow-y: auto;
-  }
-  
-  /* Message input form */
-  .message-input {
+}
+
+/* Message input form */
+.message-input {
     padding: 10px;
     display: flex;
     align-items: center;
     border-top: 1px solid #ccc;
-  }
-  
-  .message-input input[type="text"] {
+}
+
+.message-input input[type="text"] {
     flex-grow: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px;
     font-size: 14px;
-  }
-  
-  .message-input button {
+}
+
+.message-input button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -156,12 +172,12 @@ html {
     padding: 8px 16px;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .message-input button:hover {
+}
+
+.message-input button:hover {
     background-color: #0056b3;
-  }
-  
+}
+
 
 /* ------- Responsive ------- */
 
@@ -198,11 +214,11 @@ html {
     padding-right: 0;
 }
 
-.icon{
+.icon {
     color: rgb(162, 162, 162);
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
@@ -211,112 +227,112 @@ html {
     .c-0 {
         display: none;
     }
-    
+
     .c-1 {
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
     }
-    
+
     .c-2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
     }
-    
+
     .c-3 {
         flex: 0 0 25%;
         max-width: 25%;
     }
-    
+
     .c-4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
-    
+
     .c-5 {
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
     }
-    
+
     .c-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
-    
+
     .c-7 {
         flex: 0 0 58.33333%;
         max-width: 58.33333%;
     }
-    
+
     .c-8 {
         flex: 0 0 66.66667%;
         max-width: 66.66667%;
     }
-    
+
     .c-9 {
         flex: 0 0 75%;
         max-width: 75%;
     }
-    
+
     .c-10 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
     }
-    
+
     .c-11 {
         flex: 0 0 91.66667%;
         max-width: 91.66667%;
     }
-    
+
     .c-12 {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    
+
     .c-o-1 {
         margin-left: 8.33333%;
     }
-    
+
     .c-o-2 {
         margin-left: 16.66667%;
     }
-    
+
     .c-o-3 {
         margin-left: 25%;
     }
-    
+
     .c-o-4 {
         margin-left: 33.33333%;
     }
-    
+
     .c-o-5 {
         margin-left: 41.66667%;
     }
-    
+
     .c-o-6 {
         margin-left: 50%;
     }
-    
+
     .c-o-7 {
         margin-left: 58.33333%;
     }
-    
+
     .c-o-8 {
         margin-left: 66.66667%;
     }
-    
+
     .c-o-9 {
         margin-left: 75%;
     }
-    
+
     .c-o-10 {
         margin-left: 83.33333%;
     }
-    
+
     .c-o-11 {
         margin-left: 91.66667%;
     }
 
-    
+
 }
 
 
@@ -624,7 +640,7 @@ html {
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
         width: 984px;
-        
+
     }
 
     .wide .row {
@@ -800,28 +816,28 @@ html {
     .a-0 {
         display: none;
     }
-    
+
     .a-1 {
         flex: 0 0 9.5%;
         max-width: 9.5%;
     }
-    
+
     .a-2 {
         flex: 0 0 19%;
         max-width: 19%;
     }
-    
+
 }
 
 
-/* >= Tablet */ 
+/* >= Tablet */
 @media (min-width: 740px) {
     .row {
         margin-left: -8px;
         margin-right: -8px;
     }
 
-   
+
 
     .col1 {
         padding-left: 8px;
@@ -833,7 +849,7 @@ html {
     }
 
     .b-1,
-    .b-2{
+    .b-2 {
         display: block;
     }
 
@@ -903,7 +919,7 @@ html {
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
         width: 984px;
-        
+
     }
 
     .wide .row {
@@ -944,5 +960,4 @@ html {
         flex: 0 0 19%;
         max-width: 19%;
     }
-
 }

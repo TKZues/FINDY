@@ -44,7 +44,7 @@
 
 /* ------------- Tài khoản ------------- */
 .container {
-    margin-top: var(--header-height);
+    margin-top: var(--top-header-height);
     background-color: var(--background-color);
 }
 

@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
-    <link rel="stylesheet" href="../base.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="../img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/findy-logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/base.css">
     <!-- <link rel="stylesheet" href="../mainphoto.css">
     <link rel="stylesheet" href="../mainicon.css"> -->
     <link rel="stylesheet" href="../header.css">
@@ -50,12 +54,12 @@
 
                 <!-- Mobile menu icon -->
                 <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
-                     <i class="navbar__heading-icon fa-solid fa-bars"></i>
+                    <i class="navbar__heading-icon fa-solid fa-bars"></i>
                 </label>
             </nav>
 
             <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
-                    
+
             <!-- Mobile menu -->
             <div class="mobile__menu">
                 <div class="mobile__heading">
@@ -110,8 +114,8 @@
                             <a href=""><img src="../img/386870903_305736715546458_1916554193795528438_n.png" alt=""></a>
                         </div>
                         <div class="button_banner">
-                            <i class="fa-solid fa-chevron-left"></i>
-                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="button_banner-icon fa-solid fa-chevron-left"></i>
+                            <i class="button_banner-icon fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
@@ -120,188 +124,297 @@
         </div>
     </section>
     <section>
-        <div class="filter">
+        <div class="job">
             <div class="grid wide">
-                <div class="filter_container row">
-
-                    <div class="filter_bottom col c-4 m-4 l-4">
-                        <div class="filter_top c-12 m-12 l-12">
-                            Lọc
-                        </div>
-                        <div class="row">
-                            <div class="filter_bottom-address col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Địa điểm</option>
-                                    <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
-                                    <option value="Hà Nội">Hà Nội</option>
-                                    <option value="Đà Nẵng">Đà Nẵng</option>
-                                    <option value="Thanh Hóa">Thanh Hóa</option>
-                                    <option value="Đồng Nai">Đồng Nai</option>
-                                    <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
-
-                                </select>
+                <div class="job-header">
+                    Việc làm Photographer tốt nhất
+                </div>
+                <div class="row job_container">
+                    <div class="col l-3 m-4 c-0">
+                        <div class="filter">
+                            <h3 class="filter__heading">
+                                Lọc
+                            </h3>
+                            <div class="filter__list">
+                                <div class="filter__item-warp">
+                                    <div id="filter__place-item" class="filter__item">
+                                        Địa điểm
+                                        <i id="filter__place-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
+                                        <i id="filter__place-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div id="filter__place-menu" class="filter__menu" style="display: none;">
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-1" class="">
+                                            <label for="place-1" class="filter__menu-name">Hồ Chí Minh</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-2" class="">
+                                            <label for="place-2" class="filter__menu-name">Hà Nội</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-3" class="">
+                                            <label for="place-3" class="filter__menu-name">Đà Nẵng</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-4" class="">
+                                            <label for="place-4" class="filter__menu-name">Đà Lạt</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-5" class="">
+                                            <label for="place-5" class="filter__menu-name">Phú Quốc</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="place-6" class="">
+                                            <label for="place-6" class="filter__menu-name">Khác</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__item-warp">
+                                    <div id="filter__price-item" class="filter__item">
+                                        Giá
+                                        <i id="filter__price-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
+                                        <i id="filter__price-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div id="filter__price-menu" class="filter__menu" style="display: none;">
+                                        <div class="filter__menu-item">
+                                            <input type="text" name="" id="" class="filter__price-input" placeholder="₫ TỪ">
+                                            <span class="filter__menu-name">-</span>
+                                            <input type="text" name="" id="" class="filter__price-input" placeholder="₫ ĐẾN">
+                                        </div>
+                                        <button class="btn btn--primary filter__menu-btn">ÁP DỤNG</button>
+                                    </div>
+                                </div>
+                                <div class="filter__item-warp">
+                                    <div id="filter__device-item" class="filter__item">
+                                        Thiết bị
+                                        <i id="filter__device-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
+                                        <i id="filter__device-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div id="filter__device-menu" class="filter__menu" style="display: none;">
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="device-1" class="">
+                                            <label for="device-1" class="filter__menu-name">Điện thoại</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="device-2" class="">
+                                            <label for="device-2" class="filter__menu-name">Máy ảnh</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__item-warp">
+                                    <div id="filter__hinhthuc-item" class="filter__item">
+                                        Hình thức
+                                        <i id="filter__hinhthuc-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
+                                        <i id="filter__hinhthuc-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div id="filter__hinhthuc-menu" class="filter__menu" style="display: none;">
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="hinhthuc-1" class="">
+                                            <label for="hinhthuc-1" class="filter__menu-name">Nhiếp ảnh trừu tượng</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="hinhthuc-2" class="">
+                                            <label for="hinhthuc-2" class="filter__menu-name">Nhiếp ảnh kiến trúc</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="hinhthuc-3" class="">
+                                            <label for="hinhthuc-3" class="filter__menu-name">Chụp ảnh trẻ sơ sinh</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="hinhthuc-4" class="">
+                                            <label for="hinhthuc-4" class="filter__menu-name">Chụp ảnh đen trắng</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="hinhthuc-5" class="">
+                                            <label for="hinhthuc-5" class="filter__menu-name">Make-up</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__item-warp">
+                                    <div id="filter__style-item" class="filter__item">
+                                        Phong cách
+                                        <i id="filter__style-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
+                                        <i id="filter__style-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <div id="filter__style-menu" class="filter__menu" style="display: none;">
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-1" class="">
+                                            <label for="style-1" class="filter__menu-name">Nàng thơ</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-2" class="">
+                                            <label for="style-2" class="filter__menu-name">Truyền thống</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-3" class="">
+                                            <label for="style-3" class="filter__menu-name">Cổ trang</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-4" class="">
+                                            <label for="style-4" class="filter__menu-name">Hiện đại</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-5" class="">
+                                            <label for="style-5" class="filter__menu-name">Quyến rũ</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-6" class="">
+                                            <label for="style-6" class="filter__menu-name">Tuổi teen</label>
+                                        </div>
+                                        <div class="filter__menu-item">
+                                            <input type="checkbox" id="style-7" class="">
+                                            <label for="style-7" class="filter__menu-name">Thanh xuân</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="filter_bottom-price col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Giá</option>
-                                    <option value="10 giờ">nhỏ hơn 200</option>
-                                    <option value="10 giờ">200-500</option>
-                                    <option value="10 giờ">500-800</option>
-                                    <option value="10 giờ">800-1000</option>
-                                    <option value="10 giờ">1000-1500</option>
-                                    <option value="10 giờ">trên 1500</option>
+                            <!-- <div class="row">
+                                <div class="filter_bottom-address col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Địa điểm</option>
+                                        <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
+                                        <option value="Hà Nội">Hà Nội</option>
+                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                        <option value="Thanh Hóa">Thanh Hóa</option>
+                                        <option value="Đồng Nai">Đồng Nai</option>
+                                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
 
-                                </select>
-                            </div>
-                            <div class="filter_bottom-price col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Thiết bị</option>
-                                    <option value="10 giờ">Điện thoại</option>
-                                    <option value="10 giờ">Máy ảnh</option>
+                                    </select>
+                                </div>
+                                <div class="filter_bottom-price col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Giá</option>
+                                        <option value="10 giờ">nhỏ hơn 200</option>
+                                        <option value="10 giờ">200-500</option>
+                                        <option value="10 giờ">500-800</option>
+                                        <option value="10 giờ">800-1000</option>
+                                        <option value="10 giờ">1000-1500</option>
+                                        <option value="10 giờ">trên 1500</option>
+
+                                    </select>
+                                </div>
+                                <div class="filter_bottom-price col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Thiết bị</option>
+                                        <option value="10 giờ">Điện thoại</option>
+                                        <option value="10 giờ">Máy ảnh</option>
 
 
-                                </select>
-                            </div>
-                            <!-- <div class="filter_bottom-time col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                        <option value="">Chọn giờ</option>
-                                        <option value="10 giờ">10 giờ</option>
-                                        <option value="11 giờ">11 giờ</option>
-                                        <option value="12 giờ">12 giờ</option>
-                                        <option value="13 giờ">13 giờ</option>
-                                        <option value="14 giờ">14 giờ</option>
-                                        <option value="15 giờ">15 giờ</option>
-                                        <option value="16 giờ">16 giờ</option>
-                                        <option value="17 giờ">17 giờ</option>
-                                        <option value="18 giờ">18 giờ</option>
-                                        <option value="19 giờ">19 giờ</option>
-                                        <option value="20 giờ">20 giờ</option>
-                                        <option value="21 giờ">21 giờ</option>
-                                        <option value="22 giờ">22 giờ</option>
-                                </select>
+                                    </select>
+                                </div>
+                                <div class="filter_bottom-hinhthuc col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Hình thức</option>
+                                        <option value="Nhiếp ảnh trừu tượng">Nhiếp ảnh trừu tượng</option>
+                                        <option value="Nhiếp ảnh kiến trúc">Nhiếp ảnh kiến trúc</option>
+                                        <option value="Chụp ảnh trẻ sơ sinh">Chụp ảnh trẻ sơ sinh</option>
+                                        <option value="1Chụp ảnh đen trắng">Chụp ảnh đen trắng</option>
+                                        <option value="Make-up">Make-up</option>
+
+                                    </select>
+                                </div>
+                                <div class="filter_bottom-style col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Phong cách</option>
+                                        <option value="CHÂN DUNG TRUYỀN THỐNG">Nàng thơ</option>
+                                        <option value="CHỤP KHOẢNH KHẮC">Truyền thống</option>
+                                        <option value="CHỤP CHÂN DUNG QUYẾN RŨ">Cổ trang</option>
+                                        <option value="CHÂN DUNG CUỘC SỐNG">Hiện đại</option>
+                                        <option value="CHÂN DUNG SIÊU THỰC">Quyến rũ</option>
+                                        <option value="CHÂN DUNG CUỘC SỐNG">Tuổi teen</option>
+                                        <option value="CHÂN DUNG SIÊU THỰC">Thanh xuân</option>
+
+                                    </select>
+                                </div>
+                                <div class="filter_bottom-event col c-12 m-12 l-12">
+                                    <select name="" id="" class="booking__input">
+                                        <option value="">Sự kiện</option>
+                                        <option value="10 giờ">Đám cưới</option>
+                                        <option value="11 giờ">Sinh nhật</option>
+                                        <option value="12 giờ">Kỷ yếu</option>
+                                        <option value="13 giờ">Đi tiệc</option>
+
+                                    </select>
+                                </div>
                             </div> -->
-                            <div class="filter_bottom-hinhthuc col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Hình thức</option>
-                                    <option value="Nhiếp ảnh trừu tượng">Nhiếp ảnh trừu tượng</option>
-                                    <option value="Nhiếp ảnh kiến trúc">Nhiếp ảnh kiến trúc</option>
-                                    <option value="Chụp ảnh trẻ sơ sinh">Chụp ảnh trẻ sơ sinh</option>
-                                    <option value="1Chụp ảnh đen trắng">Chụp ảnh đen trắng</option>
-                                    <option value="Make-up">Make-up</option>
-
-                                </select>
-                            </div>
-                            <div class="filter_bottom-style col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Phong cách</option>
-                                    <option value="CHÂN DUNG TRUYỀN THỐNG">Nàng thơ</option>
-                                    <option value="CHỤP KHOẢNH KHẮC">Truyền thống</option>
-                                    <option value="CHỤP CHÂN DUNG QUYẾN RŨ">Cổ trang</option>
-                                    <option value="CHÂN DUNG CUỘC SỐNG">Hiện đại</option>
-                                    <option value="CHÂN DUNG SIÊU THỰC">Quyến rũ</option>
-                                    <option value="CHÂN DUNG CUỘC SỐNG">Tuổi teen</option>
-                                    <option value="CHÂN DUNG SIÊU THỰC">Thanh xuân</option>
-
-                                </select>
-                            </div>
-                            <div class="filter_bottom-event col c-12 m-12 l-12">
-                                <select name="" id="" class="booking__input">
-                                    <option value="">Sự kiện</option>
-                                    <option value="10 giờ">Đám cưới</option>
-                                    <option value="11 giờ">Sinh nhật</option>
-                                    <option value="12 giờ">Kỷ yếu</option>
-                                    <option value="13 giờ">Đi tiệc</option>
-
-                                </select>
-                            </div>
                         </div>
                     </div>
-                    <div class="jobbest_container col c-8 m-8 l-8 ">
-                        <div class="jobbest-header ">
-                            <div class="jobbest-header--top">
-                                Việc làm Photographer tốt nhất
-                            </div>
-                            <div class="jobbest-header--bottom">
+
+                    <div class="col l-9 m-8 c-12">
+                        <div class="jobbest_container">
+                            <div class="jobbest-header">
                                 <div class="jobbest-header--bottom_filter">
                                     <input type="text" name="" id="" placeholder="Lọc theo">
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="jobbest-mid">
-                            <div class="row">
-                                <?php
-                                include "../connect.php"
-                                ?>
-                                <?php
-                                $connect = new connect;
-                                $select_postjob = $connect->select_postjob();
-                                ?>
-                                <div class="jobbest-mid">
-                                    <div class="row">
-                                        <?php
-                                        if ($select_postjob) {
-                                            while ($result = $select_postjob->fetch_assoc()) {
-                                                $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
-                                                $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
-                                                $_SESSION['diadiem'] = $result['diadiem'];
-                                                $_SESSION['thoigian'] = $result['thoigian'];
-                                                $_SESSION['gia'] = $result['gia'];
-                                                $_SESSION['sukien'] = $result['sukien'];
-                                                $_SESSION['phongcach'] = $result['phongcach'];
-                                                $_SESSION['anhmau'] = $result['anhmau'];
-                                                $_SESSION['motachitiet'] = $result['motachitiet'];
-                                        ?>
-                                                <a href="./photoclick.php" class="col c-12 m-6 l-6">
-                                                    <div class="jobbest-items ">
-                                                        <div class="jobbest-mid-top">
-                                                            <div class="row">
-                                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                                    <img src="<?php echo $imguserphoto_up ?>" alt="">
+                            <div class="jobbest-mid">
+                                <div class="row">
+                                    <?php
+                                    include "../connect.php"
+                                    ?>
+                                    <?php
+                                    $connect = new connect;
+                                    $select_postjob = $connect->select_postjob();
+                                    ?>
+                                    <div class="jobbest-mid">
+                                        <div class="row">
+                                            <?php
+                                            if ($select_postjob) {
+                                                while ($result = $select_postjob->fetch_assoc()) {
+                                                    $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
+                                                    $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
+                                                    $_SESSION['diadiem'] = $result['diadiem'];
+                                                    $_SESSION['thoigian'] = $result['thoigian'];
+                                                    $_SESSION['gia'] = $result['gia'];
+                                                    $_SESSION['sukien'] = $result['sukien'];
+                                                    $_SESSION['phongcach'] = $result['phongcach'];
+                                                    $_SESSION['anhmau'] = $result['anhmau'];
+                                                    $_SESSION['motachitiet'] = $result['motachitiet'];
+                                            ?>
+                                                    <a href="./photoclick.php" class="col c-12 m-6 l-6">
+                                                        <div class="jobbest-items ">
+                                                            <div class="jobbest-mid-top">
+                                                                <div class="row">
+                                                                    <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                                        <img src="<?php echo $imguserphoto_up ?>" alt="">
+                                                                    </div>
+                                                                    <div class="jobbest-mid-top--right col c-9 m-9 l-9">
+                                                                        <?php echo $result['tenposttimtho']  ?>
+                                                                        <p><?php echo $result['thoigian'] ?></p>
+                                                                        <p>Giá: <?php echo $result['gia'] ?></p>
+                                                                        <p><?php echo $result['sukien'] ?></p>
+                                                                        <p><?php echo $result['diadiem'] ?></p>
+                                                                    </div>
+                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
+                                                                        <i class="fa-regular fa-heart"></i>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="jobbest-mid-top--right col c-9 m-9 l-9">
-                                                                    <?php echo $result['tenposttimtho']  ?>
-                                                                    <p><?php echo $result['thoigian'] ?></p>
-                                                                    <p>Giá: <?php echo $result['gia'] ?></p>
-                                                                    <p><?php echo $result['sukien'] ?></p>
-                                                                    <p><?php echo $result['diadiem'] ?></p>
+                                                            </div>
+                                                            <div class="jobbest-mid-bottom">
+                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
                                                                 </div>
-                                                                <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                                    <i class="fa-regular fa-heart"></i>
+                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
+                                                                </div>
+                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="jobbest-mid-bottom">
-                                                            <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                            </div>
-                                                            <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                            </div>
-                                                            <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                            </div>
-
-
-                                                        </div>
-
-
-
-                                                    </div>
-                                                </a>
-                                        <?php
+                                                    </a>
+                                            <?php
+                                                }
                                             }
-                                        }
-                                        ?>
-
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
+            </div>
     </section>
 
     <section>
