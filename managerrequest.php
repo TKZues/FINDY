@@ -178,13 +178,14 @@ echo "ID của Thợ: " . $hoTen;
                                             $thoigian = $result['thoigian'];
                                             $phongcach = $result['phongcach'];
                                             $gia = $result['gia'];
+                                            $hinhanhthue = $result['hinhanhthue'];
                                 ?>
                         <div class="managerrequest_content  col c-12 m-6 l-6">
                                 <div class="">
-                                    <div class="managerrequest_content-items--avatar">
-                                        <img  alt="">
+                                    <div class="managerrequest_content-items--avatar c-3 m-3 l-3">
+                                        <img src="./img/<?php echo $hinhanhthue ?>" alt="">
                                     </div>
-                                    <div class="managerrequest_content-items--mid ">
+                                    <div class="managerrequest_content-items--mid c-6 m-6 l-6">
                                         <div class="name">
                                             Tên: <?php echo $result['hoTen']  ?>
                                         </div>
@@ -201,10 +202,10 @@ echo "ID của Thợ: " . $hoTen;
                                              Giá: <?php echo $result['gia'] ?>
                                         </div>
                                         <div class="detail">
-                                            <a href="./detailrequest.php">Xem chi tiết</a>
+                                            <!-- <a href="./detailrequest.php">Xem chi tiết</a> -->
                                         </div>
                                     </div>
-                                    <div class="managerrequest_content-items--button">
+                                    <div class="managerrequest_content-items--button c-2 m-2 l-2">
                                         <button type="button"><a href="./acceptorder.php?&tenposttimtho=<?php echo $result['tenposttimtho']; ?>&hoTenthue=<?php echo $result['hoTen']; ?>&diachi=<?php echo $result['diachi']; ?>&ma_posttructiep=<?php echo $result['ma_posttructiep'] ?>&thoigian=<?php echo $result['thoigian']; ?>&phongcach=<?php echo $result['phongcach']; ?>&gia=<?php echo $result['gia']; ?>&motachitiet=<?php echo $result['motachitiet']; ?>">Chấp nhận</a></button>
                                         <button type="button"><a href="">Từ chối</a></button>
                                     </div>
