@@ -9,216 +9,70 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    include "id_tho.php";
+?>
+<?php
+    include "connect.php";
+?>
+<?php 
+    $connect = new connect;
+    $select_thanhtoancoctho = $connect -> select_thanhtoancoctho($id_tho); //
+?>
+
 <div class="row">
+<?php
+                                    if($select_thanhtoancoctho){
+                                        while($result = $select_thanhtoancoctho->fetch_assoc()){
+                                        $anhtho = $result['hinhanhtho'];    
+                                        $tentho = $result['hoTen'];
+                                        $diadiem = $result['diadiem'];
+                                        $thoigian = $result['thoigian'];
+                                        $sukien = $result['sukien'];
+                                        $phongcach = $result['phongcach'];
+                                        $gia = $result['gia'];
+
+                                            
+                                ?>
                         <div class="manageroder_content  col c-12 m-6 l-6">
                                 <div class="">
-                                    <div class="manageroder_content-items--avatar">
+                                    <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
                                         <img src="./img/avatar1.jpg" alt="">
                                     </div>
-                                    <div class="manageroder_content-items--mid ">
+                                    <div class="manageroder_content-items--mid col c-7 m-7 l-7">
                                         <div class="name">
-                                            Vũ Thành Danh
+                                        <span>Họ tên: </span><?php echo $tentho ?>
                                         </div>
                                         <div class="address">
-                                            <span>Địa điểm: </span>Quận 1, TP.Hồ Chí Minh
+                                            <span>Địa điểm: </span><?php echo $diadiem ?>
                                         </div>
                                         <div class="time">
-                                            <span>Thời gian: </span>16h:30p
+                                            <span>Thời gian: </span><?php echo $thoigian ?>
                                         </div>
                                         <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh cỗ trang
+                                            <span>Phong cách: </span><?php echo $phongcach ?>
                                         </div>
                                         <div class="price">
-                                            <span>Giá: </span>300.000 <span>đ</span>
+                                            <span>Giá: </span><?php echo $gia ?> <span>đ</span>
                                         </div>
                                         
                                     </div>
-                                    <div class="manageroder_content-items--button">
+                                    <div class="manageroder_content-items--button col c-3 m-3 l-3">
                                         <!-- <button type="button">Thực hiện</button> -->
                                         <a href="">Xem chi tiết</a>
+                                        <button style="background-color: #cccccc;padding:0 3px;" type="submit">Chờ xác nhận</button>
                                     </div>
                                 </div>
                         </div>
 
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar2.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                            Nguyễn Thị Yến Nhi
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Quận 3, TP.Hồ Chí Minh
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>9h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh sinh nhật
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>1.000.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
+                        <?php 
+                                        }
+                                    }
 
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar3.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                            Võ Văn Luân
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Quận 10, TP.Hồ Chí Minh
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>11h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh đám cưới 
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>8.000.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
-                        
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar9.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                            Phạm Yến Như
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Studio Wiwi
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>7h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh mẹ và bé
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>500.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar5.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                            Nguyễn Khánh Linh
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Đồng Nai
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>9h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh Họp công ty
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>10.000.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar6.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                           Nguyễn Bảo Hân
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Quận 9, TP.Hồ Chí Minh
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>8h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh hiện đại
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>500.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar">
-                                        <img src="./img/avatar8.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid ">
-                                        <div class="name">
-                                            Bùi Thị Yến Nhi
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span>Bình Dương
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span>18h:00p
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span>Chụp ảnh giải bóng đá cấp thành
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span>5.000.000 <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                    </div>
-                                </div>
-                        </div>
+?>
                         
                         
                     
-                </div>
+</div>
 </body>
 </html>
