@@ -173,10 +173,6 @@
     margin-top: var(--header-height);
 }
 
-.content {
-    padding-top: 36px;
-}
-
 .process {
     position: relative;
 }
@@ -282,12 +278,19 @@
     margin-bottom: 12px;
 }
 
-.order__text,
+.order__text {
+    font-size: 1.4rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
 .order__text-icon {
     font-size: 1.4rem;
     color: #fff;
-    margin-bottom: 12px;
     margin-right: 4px;
+    width: 14px;
+    text-align: center;
 }
 
 .order__title {
