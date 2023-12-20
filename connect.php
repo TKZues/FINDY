@@ -124,8 +124,13 @@
             return $result;
         }
 
-        public function select_request(){
-            $query = "SELECT *FROM request";
+        public function select_request($id_tho){
+            $query = "select *from profile 
+            inner join post_tructiep on post_tructiep.ma_profile = profile.ma_profile
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join thongtintho on thongtintho.mathongtintho = profile.mathongtintho
+            where id_tho = $id_tho";
             $result = $this->db->select($query);
             return $result;
         }
@@ -145,7 +150,8 @@
             return $result;
         }
         public function select_postjob(){
-            $query = "SELECT *FROM post_timtho";
+            $query = "SELECT *FROM post_timtho
+            inner join thongtinthue on post_timtho.mathongtinthue = thongtinthue.mathongtinthue";
             $result = $this -> db -> select($query);
             return $result;
         }
@@ -185,6 +191,19 @@
             $sdt = $_POST['sdt'];
             $query = "INSERT INTO thongtinthue (id_thue, hinhanhthue, diachi, ngaysinh, cccd, gioitinh, sdt) 
             VALUES ('$id_thue','$hinhanhthue', '$diachi', '$ngaysinh', '$cccd', '$gioitinh', '$sdt')";
+            $result = $this->db->insert($query);
+            return $result;
+        }
+        public function insert_thongtinthophoto(){
+            $id_tho = $_POST['id_tho'];
+            $hinhanhtho = $_FILES['hinhanhtho']['name'];
+            $diachi = $_POST['diachi'];
+            $ngaysinh = $_POST['ngaysinh'];
+            $cccd = $_POST['cccd'];
+            $gioitinh = $_POST['gioitinh'];
+            $sdt = $_POST['sdt'];
+            $query = "INSERT INTO thongtintho (id_tho, hinhanhtho, diachi, ngaysinh, cccd, gioitinh, sdt) 
+            VALUES ('$id_tho','$hinhanhtho', '$diachi', '$ngaysinh', '$cccd', '$gioitinh', '$sdt')";
             $result = $this->db->insert($query);
             return $result;
         }
