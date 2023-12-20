@@ -205,12 +205,12 @@
 .process__number {
     width: 50px;
     height: 50px;
-    font-size: 3rem;
+    font-size: 2.3rem;
     color: #fff;
     background-color: #BFBDBC;
     border-radius: 50%;
     text-align: center;
-    line-height: 1.7;
+    line-height: 2.2;
     cursor: pointer;
 }
 
