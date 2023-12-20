@@ -35,6 +35,7 @@
     $phongcach = $_GET['phongcach'];
     $motachitiet = $_GET['motachitiet'];
     $ma_posttructiep = $_GET['ma_posttructiep'];
+    $tenposttimtho = $_GET['tenposttimtho'];
     
     // Hiển thị thông tin chi tiết
     
@@ -78,7 +79,7 @@
                             <p>DỊCH VỤ CUNG CẤP</p>
                             <div class="photomain">
                                 <div class="acceptoder_left-price-service">
-                                    <?php echo $kieu  ?>
+                                    <?php echo $tenposttimtho  ?>
                                 </div>
                                 <div class="acceptoder_left-price-style">
                                     <?php echo $gia ?>
