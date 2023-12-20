@@ -83,34 +83,10 @@
             $motaskill = $_POST['motaskill'];
             $award = $_POST['award'];
 
-            $ac1 = $_FILES['ac1']['name'];
-            $ac2 = $_FILES['ac2']['name'];
-            $ac3 = $_FILES['ac3']['name'];
-            $ac4 = $_FILES['ac4']['name'];
-            $hd1 = $_FILES['hd1']['name'];
-            $hd2 = $_FILES['hd2']['name'];
-            $hd3 = $_FILES['hd3']['name'];
-            $hd4 = $_FILES['hd4']['name'];
-            $sn1 = $_FILES['sn1']['name'];
-            $sn2 = $_FILES['sn2']['name'];
-            $sn3 = $_FILES['sn3']['name'];
-            $sn4 = $_FILES['sn4']['name'];
-            $gd1 = $_FILES['gd1']['name'];
-            $gd2 = $_FILES['gd2']['name'];
-            $gd3 = $_FILES['gd3']['name'];
-            $gd4 = $_FILES['gd4']['name'];
-            $at1 = $_FILES['at1']['name'];
-            $at2 = $_FILES['at2']['name'];
-            $at3 = $_FILES['at3']['name'];
-            $at4 = $_FILES['at4']['name'];
-            $ky1 = $_FILES['ky1']['name'];
-            $ky2 = $_FILES['ky2']['name'];
-            $ky3 = $_FILES['ky3']['name'];
-            $ky4 = $_FILES['ky4']['name'];
            
 
-            $query = "INSERT INTO profilephoto (hinhAnh, ten, vitri, mail, sdt, fb, diachi, tenkynang, motakynang, tengiaithuong, ac1, ac2, ac3, ac4, hd1, hd2, hd3, hd4, sn1, sn2, sn3, sn4, gd1, gd2, gd3, gd4, at1, at2, at3, at4, ky1, ky2, ky3, ky4)
-            VALUES ('$anhTho', '$namephoto', '$vitriungtuyen', '$email', '$phone', '$fb', '$diachi', '$nameskill', '$motaskill', '$award', '$ac1', '$ac2', '$ac3', '$ac4', '$hd1', '$hd2', '$hd3', '$hd4', '$sn1', '$sn2', '$sn3', '$sn4', '$gd1', '$gd2', '$gd3', '$gd4', '$at1', '$at2', '$at3', '$at4', '$ky1', '$ky2', '$ky3', '$ky4')";
+            $query = "INSERT INTO profile ( ten, vitri, mail, sdt, fb, gioithieu)
+            VALUES ( '$namephoto', '$vitriungtuyen', '$email', '$phone', '$fb', '$gioithieu')";
 
 
             $result = $this->db->insert($query);
@@ -149,6 +125,23 @@
             $result = $this->db->insert($query);
             return $result;
         }
+
+        public function insert_posttructiep(){
+            $mathongtinthue = $_POST["post-job__form-ma"];
+            $ma_profile = $_POST["post-job__form-maprofile"];
+            $name = $_POST["post-job__form-name"];
+            $place = $_POST["post-job__form-place"];
+            $time = $_POST["post-job__form-time"];
+            $price = $_POST["post-job__form-price"];
+            $event = $_POST["post-job__form-event"];
+            $style = $_POST["post-job__form-style"];
+            $hinh = $_FILES["hinhanh"]['name'];
+            $description = $_POST["post-job__form-description"];
+            $query = "INSERT INTO post_tructiep (mathongtinthue,ma_profile,tenposttimtho, diadiem, thoigian, gia, sukien, phongcach, anhmau, motachitiet) VALUES ('$mathongtinthue','$ma_profile','$name', '$place', '$time', '$price', '$event', '$style', '$hinh', '$description')";
+            $result = $this->db->insert($query);
+            return $result;
+        }
+
         public function select_postjob(){
             $query = "SELECT *FROM post_timtho
             inner join thongtinthue on post_timtho.mathongtinthue = thongtinthue.mathongtinthue";
@@ -222,6 +215,7 @@
         public function result_thongtintho($ma_posttimtho){
             $query = "SELECT * FROM thongtintho
             INNER JOIN quanlybaidang ON thongtintho.mathongtintho = quanlybaidang.ma_thongtintho
+            inNER JOIN account_tho on thongtintho.id_tho = account_tho.id_tho
             WHERE quanlybaidang.ma_posttimtho = $ma_posttimtho";
             $result = $this->db->select($query);
             return $result;
@@ -231,6 +225,7 @@
             inner JOIN thue_thanhtoancoc ON thue_thanhtoancoc.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
             where id_thue = $id_thue";
             $result = $this ->db ->select($query);
             return $result;
@@ -267,6 +262,14 @@
             $query = "DELETE FROM quanlybaidang where ma_quanlybaidang = '$ma_quanlybaidang";
             $result = $this->db->delete($query);
             return $result;
+        }
+        public function insert_quanlybaidang(){
+            $mathongtintho = $_POST['mathongtintho'];
+            $ma_posttimtho = $_POST['ma_posttimtho'];
+            $query = "INSERT INTO quanlybaidang (ma_posttimtho, ma_thongtintho)
+            values ('$ma_posttimtho', '$mathongtintho')";
+             $result = $this->db->insert($query);
+             return $result;
         }
     }
 ?>
