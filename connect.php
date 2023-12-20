@@ -71,22 +71,19 @@
         }
 
         public function insert_profilephoto(){
-            
-            $anhTho = $_FILES['anhTho']['name']; // File name
+            $mathongtintho = $_POST['mathongtintho'];
             $namephoto = $_POST['namephoto'];
             $vitriungtuyen = $_POST['vitriungtuyen'];
             $email = $_POST['email'];
             $phone = $_POST['phone'];
-            $fb = $_POST['fb'];
+            $mota = $_POST['mota'];
             $diachi = $_POST['diachi'];
-            $nameskill = $_POST['nameskill'];
-            $motaskill = $_POST['motaskill'];
-            $award = $_POST['award'];
+            
 
            
 
-            $query = "INSERT INTO profile ( ten, vitri, mail, sdt, fb, gioithieu)
-            VALUES ( '$namephoto', '$vitriungtuyen', '$email', '$phone', '$fb', '$gioithieu')";
+            $query = "INSERT INTO profile ( mathongtintho, ten, nghenghiep, sdt, email, diachi, gioithieu)
+            VALUES ('$mathongtintho', '$namephoto', '$vitriungtuyen',  '$phone','$email', '$diachi', '$mota')";
 
 
             $result = $this->db->insert($query);
@@ -230,6 +227,17 @@
             $result = $this ->db ->select($query);
             return $result;
        }
+       public function select_thanhtoancoctho($id_tho){
+        $query = "select *from post_timtho
+        inner JOIN thue_thanhtoancoc ON thue_thanhtoancoc.ma_posttimtho = post_timtho.ma_posttimtho
+        inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
+        inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+        inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+        inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+        where thongtintho.id_tho = $id_tho";
+        $result = $this ->db ->select($query);
+        return $result;
+   }
        public function select_thuchien($id_thue){
         $query = "select *from post_timtho
         inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
@@ -239,6 +247,17 @@
         $result = $this ->db ->select($query);
         return $result;
         }
+        public function select_thuchientho($id_tho){
+            $query = "select *from post_timtho
+            inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this ->db ->select($query);
+            return $result;
+            }
         public function select_nhansanpham($id_thue){
             $query = "select *from post_timtho
             inner JOIN thue_nhansanpham ON thue_nhansanpham.ma_posttimtho = post_timtho.ma_posttimtho
