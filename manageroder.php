@@ -20,9 +20,53 @@
 
 
 // Lấy thông tin người dùng từ session
-$id = $_SESSION['id'];
-$username = $_SESSION['username'];
 
+$id_tho = $_SESSION['id_tho'];
+$hoTen = $_SESSION['hoTen'];
+$gmail = $_SESSION['gmail'];
+
+include "db_connection.php";
+// Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
+$sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
+$result = $conn->query($sql);
+
+// Kiểm tra nếu có kết quả
+if ($result->num_rows > 0) {
+    // Lặp qua từng dòng kết quả
+    while ($row = $result->fetch_assoc()) {
+        // Lấy thông tin từ cột cần thiết
+        $mathongtintho = $row['mathongtintho'];
+      
+        $hinhanhtho = $row['hinhanhtho'];
+        $diachi = $row['diachi'];
+        $ngaysinh = $row['ngaysinh'];
+        $socccd = $row['cccd'];
+        $gioitinh = $row['gioitinh'];
+        $sdt = $row['sdt'];
+
+        
+    }
+} else {
+    $mathongtintho = "";
+   // You may set a default image path or leave it empty
+   $hinhanhtho = "avatar.jpg";
+    $hoTen = "";
+    $diachi = "";
+    $ngaysinh = "";
+    $socccd = "";
+    $gioitinh = ""; // Set a default value or leave it empty
+    $sdt = "";
+
+    // Thông báo không tìm thấy thông tin
+    echo "Không tìm thấy thông tin thuê cho ID: " . $id_tho;
+}
+
+// Đóng kết nối
+$conn->close();
+    // Hiển thị thông tin chi tiết
+    
+echo "ID của Thợ: " . $id_tho;
+echo "ID của Thợ: " . $mathongtintho;
 // Hiển thị thông tin người dùng
 
 ?> 
