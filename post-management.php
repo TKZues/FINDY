@@ -110,7 +110,7 @@ echo "ID của Thợ: " . $hoTen;
                                         // Process the results, for example:
                                         while ($row_thongtintho = $result_thongtintho->fetch_assoc()) {
                                             $mathongtintho = $row_thongtintho['mathongtintho'];
-                                            $tentho = $row_thongtintho['tentho'];
+                                            $tentho = $row_thongtintho['hoTen'];
                                             $hinhanhtho = $row_thongtintho['hinhanhtho'];
                                             $maquanlybaidang = $row_thongtintho['ma_quanlybaidang'];
                                     ?>
