@@ -22,6 +22,8 @@
 echo "ID của Thợ: " . $id_thue;
 echo "ID của Thợ: " . $hoTen;
 
+//ggggggggggggg
+
 ?>
     <?php
             include "headercustomer.php";
