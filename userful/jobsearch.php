@@ -5,13 +5,13 @@
     <title>Findy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="../mainphoto.css">
     <link rel="stylesheet" href="../base.css">
     <link rel="stylesheet" href="../find-timtho.css">
     <link rel="icon" href="../img/logoicon.jpg" sizes="6x6">
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
 <body>
-
 
 <header class="header">
             <div class="top">
@@ -49,6 +49,8 @@
                 </nav>
             </div>
         </header>
+
+    <div class="main">
         
 
         <div class="container">
@@ -246,19 +248,12 @@
                                     if($select_profile){
                                         while($result = $select_profile->fetch_assoc()){
                                             
-                                            $_SESSION['ma_profile'] = $result['ma_profile'];
-                                            $_SESSION['anhtho'] = $result['anhtho'];
-                                            $_SESSION['ten'] = $result['ten'];
-                                            $_SESSION['nghenghiep'] = $result['nghenghiep'];
-                                            $_SESSION['sdt'] = $result['sdt'];
-                                            $_SESSION['email'] = $result['email'];
-                                            $_SESSION['diachi'] = $result['diachi'];
-                                            $_SESSION['gioithieu'] = $result['gioithieu'];
+                                            
                                 ?>
                                     
                                     <div class="col l-4 m-6 c-12">
                                         <div class="freelancer-item">
-                                            <a href="info-freelancer.php" class="freelancer-item-warp">
+                                            <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&ma_profile=<?php echo urlencode($result['ma_profile']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
                                                 <div class="freelancer-item__personal-info">
                                                     <div class="freelancer-item__avatar">
                                                         <img src="../img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
