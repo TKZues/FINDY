@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
@@ -10,29 +11,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINDY</title>
 </head>
+
 <body>
-<!-- -----------chatbox------------ -->
-<?php
+    <!-- -----------chatbox------------ -->
+    <?php
     include "id_tho.php";
-?>
+    ?>
 
-<?php
-
-
-// Lấy thông tin người dùng từ session
-$id = $_SESSION['id'];
-$username = $_SESSION['username'];
-
-// Hiển thị thông tin người dùng
-
-?> 
-
-        
+    <?php
 
 
-        
-        <?php
-        include "headerphoto1.php";
+    // Lấy thông tin người dùng từ session
+    $id = $_SESSION['id'];
+    $username = $_SESSION['username'];
+
+    // Hiển thị thông tin người dùng
+
+    ?>
+
+    <?php
+    include "headerphoto1.php";
     ?>
 
     <section>
@@ -42,26 +40,26 @@ $username = $_SESSION['username'];
                     <div class="manageroder_header">
                         <div class="row">
                             <div class="manageroder_header-xacnhan  c-3 m-3 l-3">
-                                <a href="./photoconfirm.php" target="loadpage" id="xacnhan-link" class="active" >
-                                    <i class="fa-solid fa-list" id="xacnhan-icon"></i> 
+                                <a href="./photoconfirm.php" target="loadpage" id="xacnhan-link" class="active">
+                                    <i class="fa-solid fa-list" id="xacnhan-icon"></i>
                                     <p>Xác nhận</p>
                                 </a>
                             </div>
                             <div class="manageroder_header-thuchien c-3 m-3 l-3">
                                 <a href="./photoperform.php" target="loadpage" id="thuchien-link">
-                                    <i class="fa-solid fa-dolly" id="thuchien-icon"></i> 
+                                    <i class="fa-solid fa-dolly" id="thuchien-icon"></i>
                                     <p>Thực hiện</p>
                                 </a>
                             </div>
                             <div class="manageroder_header-giaosanpham c-3 m-3 l-3">
                                 <a href="./photodelivery.php" target="loadpage" id="giaosanpham-link">
-                                    <i class="fa-solid fa-box-archive" id="giaosanpham-icon"></i> 
+                                    <i class="fa-solid fa-box-archive" id="giaosanpham-icon"></i>
                                     <p>Giao sản phẩm</p>
                                 </a>
                             </div>
                             <div class="manageroder_header-thanhtoan c-3 m-3 l-3">
                                 <a href="./photopayment.php" target="loadpage" id="thanhtoan-link">
-                                    <i class="fa-solid fa-check" id="thanhtoan-icon"></i> 
+                                    <i class="fa-solid fa-check" id="thanhtoan-icon"></i>
                                     <p>Đã được thanh toán</p>
                                 </a>
                             </div>
@@ -69,14 +67,14 @@ $username = $_SESSION['username'];
                     </div>
                     <div class="manageroder_complete">
                         <article>
-                            <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" scrolling="no" width="100%"></iframe>
+                            <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" scrolling="yes" width="100%"></iframe>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   
+
 
     <section>
         <div class="footer">
@@ -103,57 +101,105 @@ $username = $_SESSION['username'];
                     <div class="footer_findy col c-2 m-2 l-2">
                         <h1>Findy</h1>
                         <ul>
-                            <a href=""><li>Dự án</li></a>
-                            <a href=""><li>Cuộc thi</li></a>
-                            <a href=""><li>Thành viên</li></a>
-                            <a href=""><li>Quản lý dự án</li></a>
-                            <a href=""><li>Hình ảnh khắp nơi</li></a>
-                            <a href=""><li>Xác thực</li></a>
+                            <a href="">
+                                <li>Dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Cuộc thi</li>
+                            </a>
+                            <a href="">
+                                <li>Thành viên</li>
+                            </a>
+                            <a href="">
+                                <li>Quản lý dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Hình ảnh khắp nơi</li>
+                            </a>
+                            <a href="">
+                                <li>Xác thực</li>
+                            </a>
                         </ul>
 
                     </div>
                     <div class="footer_introduce col c-2 m-2 l-2">
                         <h1>Giới thiệu</h1>
                         <ul>
-                            <a href=""><li>Về chúng tôi</li></a>
-                            <a href=""><li>Cách thức hoạt động</li></a>
-                            <a href=""><li>Bảo mật</li></a>
-                            <a href=""><li>Nhà đầu tư</li></a>
-                            <a href=""><li>Sơ đồ trang</li></a>
-                            <a href=""><li>Tin tức</li></a>
-                            <a href=""><li>Đội ngũ</li></a>
-                            <a href=""><li>Công việc</li></a>
+                            <a href="">
+                                <li>Về chúng tôi</li>
+                            </a>
+                            <a href="">
+                                <li>Cách thức hoạt động</li>
+                            </a>
+                            <a href="">
+                                <li>Bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Nhà đầu tư</li>
+                            </a>
+                            <a href="">
+                                <li>Sơ đồ trang</li>
+                            </a>
+                            <a href="">
+                                <li>Tin tức</li>
+                            </a>
+                            <a href="">
+                                <li>Đội ngũ</li>
+                            </a>
+                            <a href="">
+                                <li>Công việc</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_rules col c-2 m-2 l-2">
                         <h1>Điều khoản</h1>
                         <ul>
-                            <a href=""><li>Chính sách bảo mật</li></a>
-                            <a href=""><li>Điều khoản và điều kiện</li></a>
-                            <a href=""><li>Chính sách bản quyền</li></a>
-                            <a href=""><li>Quy tắc ứng xử</li></a>
-                            <a href=""><li>Các loại phí</li></a>
+                            <a href="">
+                                <li>Chính sách bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Điều khoản và điều kiện</li>
+                            </a>
+                            <a href="">
+                                <li>Chính sách bản quyền</li>
+                            </a>
+                            <a href="">
+                                <li>Quy tắc ứng xử</li>
+                            </a>
+                            <a href="">
+                                <li>Các loại phí</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_bussiness col c-2 m-2 l-2">
                         <h1>Đối tác</h1>
                         <ul>
-                            <a href=""><li>Escrow.com</li></a>
-                            <a href=""><li>Loadshift</li></a>
-                            <a href=""><li>Warrior Forum</li></a>
+                            <a href="">
+                                <li>Escrow.com</li>
+                            </a>
+                            <a href="">
+                                <li>Loadshift</li>
+                            </a>
+                            <a href="">
+                                <li>Warrior Forum</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_app col c-2 m-2 l-2">
                         <h1>Ứng dụng</h1>
                         <ul>
-                            <a href=""><li><img src="./assets/img/app-store.svg" alt=""></li></a>
-                            <a href=""><li><img src="./assets/img/google-play.svg" alt=""></li></a>
+                            <a href="">
+                                <li><img src="./assets/img/app-store.svg" alt=""></li>
+                            </a>
+                            <a href="">
+                                <li><img src="./assets/img/google-play.svg" alt=""></li>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </section>
     <!-- <script src="https://maps.app.goo.gl/3ooNCCMS91rFeVE88" async defer></script>
     <script>
@@ -172,13 +218,13 @@ $username = $_SESSION['username'];
     <div class="modal">
         <div class="modal__container">
             <!-- Register form -->
-            
+
             <form class="account_form hidden" id="register-form" method="POST">
                 <div class="account_form__container">
                     <h3 class="account_form__heading">Đăng ký</h3>
 
                     <div class="account_form__form">
-                        <input name="hoTen"  type="text" class="account_form__input" placeholder="Họ và tên">
+                        <input name="hoTen" type="text" class="account_form__input" placeholder="Họ và tên">
                         <input name="Email" type="email" class="account_form__input" placeholder="Email">
                         <input name="matKhau" type="password" class="password-input account_form__input" placeholder="Mật khẩu">
                         <input name="repeatmatKhau" type="password" class="account_form__input" placeholder="Nhập lại mật khẩu">
@@ -212,7 +258,15 @@ $username = $_SESSION['username'];
                         </a>
                         <a href="" class="btn account_form__socials--google">
                             <span class="account_form__socials-icon">
-                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g data-v-48748210=""><path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path> <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path> <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path> <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path> <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                    <g data-v-48748210="">
+                                        <path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                                        <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                                        <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                                        <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                                        <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path>
+                                    </g>
+                                </svg>
                             </span>
                             <span class="account_form__socials-title">
                                 Google
@@ -235,13 +289,13 @@ $username = $_SESSION['username'];
             </form>
 
             <!-- Login form -->
-            
-            <form class="account_form hidden" id="login-form" method = "POST" action = "mainphoto.php">
+
+            <form class="account_form hidden" id="login-form" method="POST" action="mainphoto.php">
                 <div class="account_form__container">
                     <h3 class="account_form__heading">Đăng nhập</h3>
 
                     <div class="account_form__form">
-                        <input name="Emailuser"  type="email" class="account_form__input" placeholder="Email">
+                        <input name="Emailuser" type="email" class="account_form__input" placeholder="Email">
                         <input name="Passworduser" type="password" class="password-input account_form__input" placeholder="Mật khẩu">
                     </div>
 
@@ -262,7 +316,15 @@ $username = $_SESSION['username'];
                         </a>
                         <a href="" class="btn account_form__socials--google">
                             <span class="account_form__socials-icon">
-                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g data-v-48748210=""><path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path> <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path> <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path> <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path> <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                    <g data-v-48748210="">
+                                        <path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                                        <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                                        <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                                        <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                                        <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path>
+                                    </g>
+                                </svg>
                             </span>
                             <span class="account_form__socials-title">
                                 Google
@@ -289,4 +351,5 @@ $username = $_SESSION['username'];
     <script src="./main.js"></script>
     <script src="./coloroder.js"></script>
 </body>
+
 </html>
