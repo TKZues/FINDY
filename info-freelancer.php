@@ -22,6 +22,7 @@ $reviews = $_GET['reviews'];
 $sdt = $_GET['sdt'];
 $email = $_GET['email'];
 $address = $_GET['address'];
+$ma_profile = $_GET['ma_profile'];
 
 include "db_connection.php";
 
@@ -480,7 +481,7 @@ echo "ID của Thợ: " . $diachi;
                 <?php
                     $connect = new connect;
                     if($_SERVER['REQUEST_METHOD']==='POST'){
-                        $insert_postjob = $connect -> insert_postjob();
+                        $insert_posttructiep = $connect -> insert_posttructiep();
                     }
                 ?>
                 <form action="" method="POST" enctype="multipart/form-data">
@@ -495,6 +496,17 @@ echo "ID của Thợ: " . $diachi;
                                         </div>
                                         <div class="col l-8 m-6 c-12">
                                             <input name="post-job__form-ma" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $mathongtinthue ?>">
+                                        </div>
+                        </div>
+                        <div class="row post-job__form-item">
+                                        <div class="col l-4 m-6 c-12">
+                                            <label for="post-job__form-name" class="post-job__form-text">
+                                                <i class="post-job__form-icon fa-solid fa-file-signature"></i>
+                                                Mã profile
+                                            </label>
+                                        </div>
+                                        <div class="col l-8 m-6 c-12">
+                                            <input name="post-job__form-maprofile" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $ma_profile ?>">
                                         </div>
                         </div>
                         <div class="row require-form__item">
