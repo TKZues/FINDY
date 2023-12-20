@@ -36,7 +36,7 @@ echo "ID của Thợ: " . $hoTen;
                                     if($select_thanhtoancoc){
                                         while($result = $select_thanhtoancoc->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
-                                        $tentho = $result['tentho'];
+                                        $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
                                         $sukien = $result['sukien'];
