@@ -17,7 +17,7 @@
 
 <?php
 
-$id_thue = $_SESSION['id_tho'];
+$id_tho = $_SESSION['id_tho'];
 $hoTen = $_SESSION['hoTen'];
 $gmail = $_SESSION['gmail'];
 // Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
@@ -33,12 +33,12 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         // Lấy thông tin từ cột cần thiết
         $mathongtintho = $row['mathongtintho'];
-        $tentho = $row['tentho'];
+      
+        $hinhanhtho = $row['hinhanhtho'];
         $diachi = $row['diachi'];
         $ngaysinh = $row['ngaysinh'];
-        $socccd = $row['socccd'];
+        $socccd = $row['cccd'];
         $gioitinh = $row['gioitinh'];
-        $email = $row['email'];
         $sdt = $row['sdt'];
 
         
@@ -46,23 +46,29 @@ if ($result->num_rows > 0) {
 } else {
     $mathongtintho = "";
    // You may set a default image path or leave it empty
-    $tentho = "";
+   $hinhanhtho = "avatar.jpg";
+    $hoTen = "";
     $diachi = "";
     $ngaysinh = "";
     $socccd = "";
     $gioitinh = ""; // Set a default value or leave it empty
-    $email = "";
     $sdt = "";
 
     // Thông báo không tìm thấy thông tin
-    echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+    echo "Không tìm thấy thông tin thuê cho ID: " . $id_tho;
 }
 
 // Đóng kết nối
 $conn->close();
 // Lấy thông tin người dùng từ session
-echo "ID của Thợ: " . $id_tho;
-echo "ID của Thợ: " . $hoTen;
+// echo "ID của Thợ: " . $id_tho;
+// echo "ID của Thợ: " . $hoTen;
+// echo "ID của Thợ: " . $hinhanhtho;
+// echo "ID của Thợ: " . $diachi;
+// echo "ID của Thợ: " . $ngaysinh;
+// echo "ID của Thợ: " . $gioitinh;
+// echo "ID của Thợ: " . $id_tho;
+// echo "ID của Thợ: " . $hoTen;
 // Hiển thị thông tin người dùng
 
 ?> 
@@ -77,7 +83,7 @@ echo "ID của Thợ: " . $hoTen;
                 <div class="content">
                     <div class="account__header">
                         <div class="account__header-avatar">
-                            <img src="./img/avatar-16.png" alt="Ảnh đại diện" class="account__header-avatar-img">
+                            <img src="./img/<?php echo $hinhanhtho  ?>" alt="Ảnh đại diện" class="account__header-avatar-img">
                             <p class="account__header-verified">Đã xác thực</p>
                         </div>
                         <div class="account__header-info">
@@ -128,7 +134,7 @@ echo "ID của Thợ: " . $hoTen;
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Email</p>
-                                            <input type="email" name="" id="" class="account__personal-input" value = "<?php echo  $email ?>">
+                                            <input type="email" name="" id="" class="account__personal-input" value = "<?php echo  $gmail ?>">
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Điện thoại</p>
@@ -140,10 +146,60 @@ echo "ID của Thợ: " . $hoTen;
                                         <h2 class="account__personal-heading">Vô hiệu hóa và khóa tài khoản</h2>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
+                                                <h4>Cập nhật thông tin</h4>
+                                                <p>Thông tin cá nhân</p>
+                                            </span>
+                                            <button class="btn account__personal-btn" onclick="disableAccount()">Cập nhật thông tin</button>                                            
+                                        </div>
+                                        <div class="account__personal-body">
+                                            <span class="account__personal-text">
                                                 <h4>Vô hiệu hóa</h4>
                                                 <p>Tạm thời ẩn hồ sơ</p>
                                             </span>
                                             <button class="btn account__personal-btn">Vô hiệu hóa tài khoản</button>                                            
+                                            <div class="overlay" id="overlay">
+    <!-- Your content for the overlay goes here -->
+                                            <div class="overlay-content">
+                                            <?php
+                                                include "connect.php";
+                                            ?>
+                                            <?php
+                                                $connect = new connect;
+                                                    if($_SERVER['REQUEST_METHOD']==='POST'){
+                                                    $insert_thongtinthophoto = $connect -> insert_thongtinthophoto();
+                                                }
+                                            ?>
+                                            <form action="#" method="post" enctype="multipart/form-data">
+                                                <label for="id_tho">ID Thuê:</label>
+                                                <input type="text" id="id_tho" name="id_tho" value= "<?php echo $id_tho ?>"required><br>
+
+
+                                                <label for="hinhanhthue">Hình Ảnh Thuê:</label>
+                                                <input type="file" id="hinhanhtho" name="hinhanhtho" required><br>
+
+                                                <label for="diachi">Địa Chỉ:</label>
+                                                <input type="text" id="diachi" name="diachi" required><br>
+
+                                                <label for="ngaysinh">Ngày Sinh:</label>
+                                                <input type="date" id="ngaysinh" name="ngaysinh" required><br>
+
+                                                <label for="cccd">CCCD:</label>
+                                                <input type="text" id="cccd" name="cccd" required><br>
+
+                                                <label for="gioitinh">Giới Tính:</label>
+                                                <select id="gioitinh" name="gioitinh" required>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nu">Nữ</option>
+                                                    <option value="Khac">Khác</option>
+                                                </select><br>
+
+                                                <label for="sdt">Số Điện Thoại:</label>
+                                                <input type="tel" id="sdt" name="sdt" required><br>
+
+                                                <input type="submit" value="Gửi">
+                                            </form>
+                                            </div>
+                                        </div>
                                         </div>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
@@ -318,5 +374,21 @@ echo "ID của Thợ: " . $hoTen;
         </div>
         
     </section>
+    <script>
+        function disableAccount() {
+    // Show the overlay when the button is clicked
+    document.getElementById("overlay").style.display = "flex";
+    
+    // Add a click event listener to the overlay
+    document.getElementById("overlay").addEventListener("click", function(event) {
+        // Check if the click is outside the overlay content
+        if (event.target === this) {
+            // Hide the overlay if the click is outside
+            this.style.display = "none";
+        }
+    });
+}
+
+    </script>
 </body>
 </html>

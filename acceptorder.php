@@ -27,27 +27,25 @@
         
     <?php
 // Kiểm tra xem có dữ liệu được truyền qua URL hay không
-if (isset($_GET['hoten']) && isset($_GET['diachi']) && isset($_GET['thoiGian']) && isset($_GET['kieu']) && isset($_GET['gia'])) {
     // Retrieve the values from the query parameters
-    $hoten = $_GET['hoten'];
+    $hoTenthue = $_GET['hoTenthue'];
     $diachi = $_GET['diachi'];
     $thoiGian = $_GET['thoiGian'];
     $gia = $_GET['gia'];
-    $kieu = $_GET['kieu'];
-    $marequest = $_GET['marequest'];
+    $phongcach = $_GET['phongcach'];
+    $motachitiet = $_GET['motachitiet'];
+    $ma_posttructiep = $_GET['ma_posttructiep'];
     
     // Hiển thị thông tin chi tiết
     
-} else {
-    echo 'Không có thông tin chi tiết.';
-}
+
 ?>
     <section>
         <div class="acceptoder">
             <div class="grid wide">
                 <div class="acceptoder_header c-12 m-12 l-12">
                     DANH SÁCH YÊU CẦU TỪ KHÁCH HÀNG
-                    <p>Mã request: <?php echo $marequest ?></p>
+                    <p>Mã request: <?php echo $ma_posttructiep ?></p>
                 </div>
                 <div class="acceptoder_container">
                     <div class="acceptoder_left">
@@ -56,13 +54,13 @@ if (isset($_GET['hoten']) && isset($_GET['diachi']) && isset($_GET['thoiGian']) 
                         </div>
                         <div class="acceptoder_left-items">
                             <div class="acceptoder_left-items-name">
-                                <span>Họ và tên khách hàng: </span> <span><?php echo $hoten ?></span> 
+                                <span>Họ và tên khách hàng: </span> <span><?php echo $hoTenthue ?></span> 
                             </div>
                             <div class="acceptoder_left-items-address">
                                 <span>Địa điểm: </span><span><?php echo $diachi ?></span>
                             </div>
                             <div class="acceptoder_left-items-form">
-                                <span>Hình thức: </span><span><?php echo $kieu ?></span>
+                                <span>Hình thức: </span><span><?php echo $phongcach ?></span>
                             </div>
                             <div class="acceptoder_left-items-date">
                                 <span>Ngày diễn ra: </span><span><?php echo $thoiGian ?></span>
@@ -71,7 +69,7 @@ if (isset($_GET['hoten']) && isset($_GET['diachi']) && isset($_GET['thoiGian']) 
                                 <span>Giá: </span><span><?php echo $gia ?></span><span>đ</span>
                             </div>
                             <div class="acceptoder_left-items-style">
-                                <span>Phong cách: </span><span>Ngầu</span>
+                                <span>Mô tả: </span><span><?php echo $motachitiet ?>  </span>
                             </div>
                             
 
