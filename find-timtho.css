@@ -1,137 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
+.navbar > div:nth-child(2) {
+    border-bottom: 3px solid var(--main-color);
 }
-
-.main {
-    overflow: hidden;
-}
-
-.header {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.09);
-}
-
-/* ------------- Navbar ------------- */
-.navbar {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
-}
-
-.navbar__logo-link {
-    color: transparent;
-    text-decoration: none;
-}
-
-.navbar__logo-img {
-    height: 50px;
-}
-
-.navbar__heading{
-    display: flex;
-    align-items: center;
-}
-
-.navbar__heading img{
-    width: 40px;
-    border-radius: 50%;
-    height: 40px;
-    object-fit: cover;
-    
-}
-
-.navbar__heading-link {
-    margin-left: 8px;
-    font-size: 2rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-.navbar__heading-icon {
-    font-size: 2.8rem;
-    color: var(--main-color);
-}
-
-.navbar__mobile-bars {
-    display: none;
-    padding: 16px;
-    margin-left: auto;
-}
-
-/* Mobile menu */
-.mobile__menu {
-    display: none;
-    padding: 16px;
-    background-color: var(--background-color);
-}
-
-.mobile__heading {
-    padding: 8px;
-    background-color: #fff;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.mobile__heading-icon {
-    width: 22px;
-    font-size: 1.7rem;
-    color: var(--main-color);
-    text-align: center;
-    margin-right: 8px;
-}
-
-.mobile__heading-link {
-    font-size: 1.6rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-.navbar__mobile-bars {
-    display: none;
-    padding: 16px;
-    margin-left: auto;
-}
-
-.navbar__bars-checkbox:checked ~ .mobile__menu {
-    display: block;
-}
-
-.header__search-checkbox:checked ~ .header__search {
-    display: flex;
-}
-
-/* ------------- Responsive ------------- */
-
-/* ------------- Mobile ------------- */
-@media (max-width: 739px) {
-    .navbar__heading {
-        display: none;
-    }
-    
-    .navbar__mobile-bars {
-        display: block;
-    }
-}
-
-/* ------------- Navbar ------------- */
-.top{
-    width: 100%;
-    height: 30px;
-    background-color: #000;
-}
-
-
 
 /* ------------- Filter ------------- */
 .container {
@@ -171,7 +40,7 @@
 }
 
 .filter__item {
-    color: #333;
+    color: var(--text-color);
     font-size: 1.6rem;
     padding: 8px 16px;
     background-color: #fff;
@@ -184,17 +53,28 @@
 }
 
 .filter__item:hover {
+    border: 1px solid var(--main-color);
     color: var(--main-color);
 }
 
 .filter__item-icon {
     background-color: #f5f5f5;
     font-size: 1.6rem;
-    color: #333;
+    color: var(--text-color);
     padding: 9px;
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.selected {
+    border: 1px solid var(--main-color);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.fa-chevron-up {
+    color: var(--main-color);
 }
 
 .filter__menu {
@@ -215,15 +95,27 @@
 
 .filter__menu-item input {
     margin-right: 8px;
+    padding: 0 8px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.filter__menu-name:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .filter__menu-name {
     font-size: 1.4rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .filter__menu-item .star-rating {
     font-size: 1.6rem;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
 }
 
 .filter__menu-btn {
@@ -261,12 +153,22 @@
     margin-right: 8px;
 }
 
-.freelancer-item__avatar-img {
+/* .freelancer-item__avatar-img {
     width: 70px;
     height: 70px;
     object-fit: cover;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 50%;
+} */
+
+.freelancer-item__avatar-img {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
 .freelancer-item__avatar-text {

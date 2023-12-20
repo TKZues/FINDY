@@ -1,34 +1,47 @@
-<header class="header">
-<div class="top">
+<!DOCTYPE html>
+<html lang="en">
 
-</div>
-          
-            <div class="grid wide">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/findy-logo.png" sizes="8x8">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY</title>
+</head>
 
-                <!-- Navbar -->
-                <nav class="navbar">
-                    <div class="navbar__logo">
-                        <a href="./customersignin.php" class="navbar__logo-link">
-                            <img src="./img/findy-logo-1.jpg" alt="Findy" class="navbar__logo-img">
-                        </a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./find-timtho.php" class="navbar__heading-link">Thuê thợ</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./post-job.php" class="navbar__heading-link">Đăng tin</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./post-management.php" class="navbar__heading-link">Quản lý bài đăng</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./order-management.php" class="navbar__heading-link">Đơn hàng</a>
-                    </div>
-                    
-                    <div class="navbar__heading">
-                        <img src="./img/avatar-16.png" alt="">
-                        <a href="./account.php" class="navbar__heading-link"><?php echo $hoTen; ?></a>
-                        <!-- <div class="tabbar_title3-hover">
+<body>
+    <header class="header">
+        <div class="top">
+
+        </div>
+        <div class="grid wide">
+
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <a href="./customersignin.php" class="navbar__logo-link">
+                        <img src="./img/findy-logo-1.jpg" alt="Findy" class="navbar__logo-img">
+                    </a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="./find-timtho.php" class="navbar__heading-link">Thuê thợ</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="./post-job.php" class="navbar__heading-link">Đăng tin</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="./post-management.php" class="navbar__heading-link">Quản lý bài đăng</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="./order-management.php" class="navbar__heading-link">Đơn hàng</a>
+                </div>
+
+                <div class="navbar__heading">
+                    <img src="./img/avatar-16.png" alt="">
+                    <a href="./account.php" class="navbar__heading-link"><?php echo $hoTen; ?></a>
+                    <!-- <div class="tabbar_title3-hover">
                                     
                                     <div class="tabbar_title3-hover-container ">
 
@@ -134,45 +147,44 @@
                                    
                                 </div> -->
 
-                    </div>
-                    <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
-                        <i class="navbar__heading-icon fa-solid fa-bars"></i>
-                    </label>
-                </nav>
-                <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
-                    
-                <!-- Mobile menu -->
-                <div class="mobile__menu">
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-circle-user"></i>
-                        <a href="./account.php" class="mobile__heading-link">[Tên người dùng]</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
-                        <a href="./find-freelancer.php" class="mobile__heading-link">Thuê Thợ</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
-                        <a href="" class="mobile__heading-link">Tìm việc</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-pen"></i>
-                        <a href="./post-job.php" class="mobile__heading-link">Đăng tin</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-file-pen"></i>
-                        <a href="./post-management.php" class="mobile__heading-link">Quản lý bài đăng</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-clipboard"></i>
-                        <a href="./order-management.php" class="mobile__heading-link">Đơn hàng</a>
-                    </div>
-                    <div class="mobile__heading">
-                        <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                        <a href="./order-management.php" class="mobile__heading-link">Đăng xuất</a>
-                    </div>
+                </div>
+                <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
+                    <i class="navbar__heading-icon fa-solid fa-bars"></i>
+                </label>
+            </nav>
+            <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
+
+            <!-- Mobile menu -->
+            <div class="mobile__menu">
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-circle-user"></i>
+                    <a href="./account.php" class="mobile__heading-link">[Tên người dùng]</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
+                    <a href="./find-freelancer.php" class="mobile__heading-link">Thuê Thợ</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
+                    <a href="" class="mobile__heading-link">Tìm việc</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-pen"></i>
+                    <a href="./post-job.php" class="mobile__heading-link">Đăng tin</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-file-pen"></i>
+                    <a href="./post-management.php" class="mobile__heading-link">Quản lý bài đăng</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-clipboard"></i>
+                    <a href="./order-management.php" class="mobile__heading-link">Đơn hàng</a>
+                </div>
+                <div class="mobile__heading">
+                    <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
+                    <a href="./order-management.php" class="mobile__heading-link">Đăng xuất</a>
                 </div>
             </div>
-        </header>  
-
-        
+        </div>
+    </header>
+</body>
