@@ -22,7 +22,7 @@
 echo "ID của Thợ: " . $id_thue;
 echo "ID của Thợ: " . $hoTen;
 
-//ggggggggggggg
+//test
 
 ?>
     <?php
