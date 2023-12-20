@@ -133,7 +133,7 @@
                     <div class="col l-3 m-4 c-0">
                         <div class="filter">
                             <h3 class="filter__heading">
-                                Lọc
+                                Lọc theo
                             </h3>
                             <div class="filter__list">
                                 <div class="filter__item-warp">
@@ -342,73 +342,68 @@
 
                     <div class="col l-9 m-8 c-12">
                         <div class="jobbest_container">
-                            <div class="jobbest-header">
+                            <!-- <div class="jobbest-header">
                                 <div class="jobbest-header--bottom_filter">
                                     <input type="text" name="" id="" placeholder="Lọc theo">
                                 </div>
-                            </div>
-                            <div class="jobbest-mid">
-                                <div class="row">
+                            </div> -->
+
+                            <?php
+                            include "../connect.php"
+                            ?>
+                            <?php
+                            $connect = new connect;
+                            $select_postjob = $connect->select_postjob();
+                            ?>
+                            <div class="jobbest_list">
+                                <div class="row sm-gutter">
                                     <?php
-                                    include "../connect.php"
+                                    if ($select_postjob) {
+                                        while ($result = $select_postjob->fetch_assoc()) {
+                                            $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
+                                            $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
+                                            $_SESSION['diadiem'] = $result['diadiem'];
+                                            $_SESSION['thoigian'] = $result['thoigian'];
+                                            $_SESSION['gia'] = $result['gia'];
+                                            $_SESSION['sukien'] = $result['sukien'];
+                                            $_SESSION['phongcach'] = $result['phongcach'];
+                                            $_SESSION['anhmau'] = $result['anhmau'];
+                                            $_SESSION['motachitiet'] = $result['motachitiet'];
                                     ?>
-                                    <?php
-                                    $connect = new connect;
-                                    $select_postjob = $connect->select_postjob();
-                                    ?>
-                                    <div class="jobbest-mid">
-                                        <div class="row">
-                                            <?php
-                                            if ($select_postjob) {
-                                                while ($result = $select_postjob->fetch_assoc()) {
-                                                    $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
-                                                    $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
-                                                    $_SESSION['diadiem'] = $result['diadiem'];
-                                                    $_SESSION['thoigian'] = $result['thoigian'];
-                                                    $_SESSION['gia'] = $result['gia'];
-                                                    $_SESSION['sukien'] = $result['sukien'];
-                                                    $_SESSION['phongcach'] = $result['phongcach'];
-                                                    $_SESSION['anhmau'] = $result['anhmau'];
-                                                    $_SESSION['motachitiet'] = $result['motachitiet'];
-                                            ?>
-                                                    <a href="./photoclick.php" class="col c-12 m-6 l-6">
-                                                        <div class="jobbest-items ">
-                                                            <div class="jobbest-mid-top">
-                                                                <div class="row">
-                                                                    <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                                        <img src="<?php echo $imguserphoto_up ?>" alt="">
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right col c-9 m-9 l-9">
-                                                                        <?php echo $result['tenposttimtho']  ?>
-                                                                        <p><?php echo $result['thoigian'] ?></p>
-                                                                        <p>Giá: <?php echo $result['gia'] ?></p>
-                                                                        <p><?php echo $result['sukien'] ?></p>
-                                                                        <p><?php echo $result['diadiem'] ?></p>
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                                        <i class="fa-regular fa-heart"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="jobbest-mid-bottom">
-                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                                </div>
-                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                                </div>
-                                                                <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-
-                                                                </div>
-                                                            </div>
+                                        <div class="col c-12 m-6 l-6">
+                                            <a href="./photoclick.php" class="jobbest_item-warp">
+                                                <div class="jobbest_item">
+                                                        <!-- <div class="jobbest-list-top--left col c-2 m-2 l-2">
+                                                            <img src="<?php echo $imguserphoto_up ?>" alt="">
+                                                        </div> -->
+                                                        <div class="jobbest_info">
+                                                            <h3 class="jobbest_info-title"><?php echo $result['tenposttimtho']  ?></h3>
+                                                            <p class="jobbest_info-time"><?php echo $result['thoigian'] ?></p>
+                                                            <p class="jobbest_info-price">Giá: <?php echo $result['gia'] ?></p>
+                                                            <p class="jobbest_info-event"><?php echo $result['sukien'] ?></p>
+                                                            <p class="jobbest_info-place"><?php echo $result['diadiem'] ?></p>
                                                         </div>
-                                                    </a>
-                                            <?php
-                                                }
-                                            }
-                                            ?>
+                                                        <div class="jobbest_favourite">
+                                                            <i class="jobbest_favourite-icon fa-regular fa-heart"></i>
+                                                        </div>
+                                                    <!-- <div class="jobbest-list-bottom">
+                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
+
+                                                        </div>
+                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
+
+                                                        </div>
+                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
+
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </a>
                                         </div>
-                                    </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -476,13 +471,13 @@
 
                             </div>
                         </div>
-                        <div class="jobbest-mid">
+                        <div class="jobbest-list">
                             <div class="row">
                                 <?php
 
                                 $select_postjob = $connect->select_postjob();
                                 ?>
-                                <div class="jobbest-mid">
+                                <div class="jobbest-list">
                                     <div class="row">
                                         <?php
                                         if ($select_postjob) {
@@ -499,27 +494,27 @@
                                         ?>
                                                 <a href="<?php echo $detailLink1; ?>" class="col c-12 m-6 l-6">
                                                     <div class="jobbest-items ">
-                                                        <div class="jobbest-mid-top">
+                                                        <div class="jobbest-list-top">
                                                             <div class="row">
-                                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                                <div class="jobbest-list-top--left col c-2 m-2 l-2">
                                                                     <img src="<?php echo $imgusermake_up ?>" alt="">
                                                                 </div>
-                                                                <div class="jobbest-mid-top--right col c-9 m-9 l-9">
+                                                                <div class="jobbest-list-top--right col c-9 m-9 l-9">
                                                                     <?php echo $result['tenCongViec'] ?>
                                                                     <p><?php echo $result['ten'] ?></p>
                                                                     <p> <?php echo $result['giaCa'] ?></p>
 
                                                                 </div>
-                                                                <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
+                                                                <div class="jobbest-list-top--right2 col c-1 m-1 l-1">
                                                                     <i class="fa-regular fa-heart"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="jobbest-mid-bottom">
-                                                            <div class="jobbest-mid-bottom-item">
+                                                        <div class="jobbest-list-bottom">
+                                                            <div class="jobbest-list-bottom-item">
 
                                                             </div>
-                                                            <div class="jobbest-mid-bottom-item">
+                                                            <div class="jobbest-list-bottom-item">
 
                                                             </div>
                                                         </div>

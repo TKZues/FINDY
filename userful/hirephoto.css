@@ -237,6 +237,67 @@
 
 }
 
+.jobbest_list {
+
+}
+
+.jobbest_item-warp {
+    text-decoration: none;
+}
+
+.jobbest_item {
+    background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.jobbest_info {
+
+}
+
+.jobbest_info-title {
+    font-size: 2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.jobbest_info-time {
+
+}
+
+.jobbest_info-price {
+
+}
+
+.jobbest_info-event {
+
+}
+
+.jobbest_info-place {
+
+}
+
+.jobbest_favourite {
+
+}
+
+.jobbest_favourite-icon {
+
+}
+
+
+
+
+
+
+
+
+
 .jobbest-header--bottom {
     display: flex;
     align-items: center;
@@ -262,13 +323,11 @@
     padding: 20px 0;
 }
 
-.jobbest-mid a {
+.jobbest-list a {
     text-decoration: none;
-
-
 }
 
-.jobbest-mid div>a>div {
+.jobbest-list div>a>div {
     background-color: #fcfcfc;
     margin: 7px 0;
     padding: 10px 15px;
@@ -277,16 +336,16 @@
     background: linear-gradient(to right, #0097B2, #7ED957);
 }
 
-.jobbest-mid div>a:hover>div {
+.jobbest-list div>a:hover>div {
     border: 1px solid #cecece;
     background-color: white;
 }
 
-.jobbest-mid-top--left img {
+.jobbest-list-top--left img {
     width: 100%;
 }
 
-.jobbest-mid-top--right {
+.jobbest-list-top--right {
     color: #212f3f;
     font-size: 1.7rem;
     font-weight: 600;
@@ -295,7 +354,7 @@
     flex-direction: column;
 }
 
-.jobbest-mid-top--right p {
+.jobbest-list-top--right p {
     color: #3b3b3b;
     font-size: 1.3rem;
 
@@ -303,11 +362,11 @@
     line-height: 16px;
 }
 
-.jobbest-mid-bottom {
+.jobbest-list-bottom {
     display: flex;
 }
 
-.jobbest-mid-top--right2 {
+.jobbest-list-top--right2 {
     color: #000;
     display: flex;
     justify-content: center;
@@ -316,9 +375,7 @@
     font-size: 1.4rem;
 }
 
-
-
-.jobbest-mid-bottom-button {
+.jobbest-list-bottom-button {
     background: var(--main-color);
     border-radius: 4px;
     color: #ffffff;
@@ -673,11 +730,11 @@
         font-size: 1.6rem;
     }
 
-    .jobbest-mid-top--right {
+    .jobbest-list-top--right {
         font-size: 1.2rem;
     }
 
-    .jobbest-mid-top--right p {
+    .jobbest-list-top--right p {
         font-size: 1.1rem;
     }
 }
