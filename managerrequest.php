@@ -20,11 +20,13 @@
 
 
 // Lấy thông tin người dùng từ session
-$id = $_SESSION['id'];
-$username = $_SESSION['username'];
+$id_tho = $_SESSION['id_tho'];
+$hoTen = $_SESSION['hoTen'];
+$gmail = $_SESSION['gmail'];
 
 // Hiển thị thông tin người dùng
-
+echo "ID của Thợ: " . $id_tho;
+echo "ID của Thợ: " . $hoTen;
 ?> 
 
         
@@ -166,44 +168,44 @@ $username = $_SESSION['username'];
                     ?>
                     <?php
                             $connect = new connect;        
-                            $select_request = $connect ->select_request();
+                            $select_request = $connect ->select_request($id_tho);
                         ?>
                         <?php
                                     if($select_request){
                                         while($result = $select_request->fetch_assoc()){
-                                            
-                                            $imguserphoto_up1 = "/FINDYDEMO/assets/php/img/". $result['hinhanh'];
-                                           
-                      
-                                        
+                                            $hotenthue = $result['hoTen'];
+                                            $diachi = $result['diachi'];
+                                            $thoigian = $result['thoigian'];
+                                            $phongcach = $result['phongcach'];
+                                            $gia = $result['gia'];
                                 ?>
                         <div class="managerrequest_content  col c-12 m-6 l-6">
                                 <div class="">
                                     <div class="managerrequest_content-items--avatar">
-                                        <img src="<?php echo $imguserphoto_up1 ?>" alt="">
+                                        <img  alt="">
                                     </div>
                                     <div class="managerrequest_content-items--mid ">
                                         <div class="name">
-                                            Tên: <?php echo $result['hoten']  ?>
+                                            Tên: <?php echo $result['hoTen']  ?>
                                         </div>
                                         <div class="address">
                                             Địa chỉ: <?php echo $result['diachi']  ?>
                                         </div>
                                         <div class="time">
-                                            Thời gian:  <?php echo $result['thoiGian']  ?>
+                                            Thời gian:  <?php echo $result['thoigian'] ?>
                                         </div>
                                         <div class="style">
-                                            Phong cách: <?php echo $result['kieu']  ?>
+                                            Phong cách: <?php echo $result['phongcach']  ?>
                                         </div>
                                         <div class="price">
-                                             Giá: <?php echo $result['gia']  ?>
+                                             Giá: <?php echo $result['gia'] ?>
                                         </div>
                                         <div class="detail">
                                             <a href="./detailrequest.php">Xem chi tiết</a>
                                         </div>
                                     </div>
                                     <div class="managerrequest_content-items--button">
-                                        <button type="button"><a href="./acceptorder.php?hoten=<?php echo $result['hoten']; ?>&diachi=<?php echo $result['diachi'];; ?>&marequest=<?php echo $result['marequest'] ?>&thoiGian=<?php echo $result['thoiGian']; ?>&kieu=<?php echo $result['kieu']; ?>&gia=<?php echo $result['gia']; ?>">Chấp nhận</a></button>
+                                        <button type="button"><a href="./acceptorder.php?hoTenthue=<?php echo $result['hoTen']; ?>&diachi=<?php echo $result['diachi']; ?>&ma_posttructiep=<?php echo $result['ma_posttructiep'] ?>&thoigian=<?php echo $result['thoigian']; ?>&phongcach=<?php echo $result['phongcach']; ?>&gia=<?php echo $result['gia']; ?>&motachitiet=<?php echo $result['motachitiet']; ?>">Chấp nhận</a></button>
                                         <button type="button"><a href="">Từ chối</a></button>
                                     </div>
                                 </div>
