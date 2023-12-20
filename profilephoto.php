@@ -65,7 +65,7 @@ if ($result->num_rows > 0) {
 // Đóng kết nối
 $conn->close();
 
-echo $hinhanhtho
+echo $mathongtintho
 ?> 
 
         
@@ -97,12 +97,13 @@ echo $hinhanhtho
                                 <div class="insert-profile-left-img">
                                
                                     <img id="hinhAnh" src="./img/<?php echo $hinhanhtho ?>" alt="Hình ảnh của bạn" style="max-width: 200px;">
-   
   
                                 </div>
                                 <div class="insert-profile-right-name">
                                     <input placeholder="Tên" type="text" name="namephoto" id="">
                                     <input placeholder="Vị trí ứng tuyển" type="text" name="vitriungtuyen" id="">
+                                    <input type="text" name="mathongtintho" id="" value = "<?php echo $mathongtintho ?>">
+
                                 </div>
                                 <div class="insert-profile-left-mail">
                                     <i class="fa-solid fa-envelope"></i>
@@ -114,11 +115,11 @@ echo $hinhanhtho
                                 </div>
                                 <div class="insert-profile-left-fb">
                                     <i class="fa-brands fa-facebook"></i>
-                                    <input placeholder="Nhập facebook" type="text" name="fb" id="">
+                                    <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
                                 </div>
                                 <div class="insert-profile-left-address">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
+                                    <input placeholder="Nhập mô tả" type="text" name="mota" id="">
                                 </div>
                                 
                             </div>    
