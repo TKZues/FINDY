@@ -217,24 +217,24 @@
                                 <?php
                                     if ($select_postjob) {
                                         while ($result = $select_postjob->fetch_assoc()) {
-                                            $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
-                                            $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
-                                            $_SESSION['diadiem'] = $result['diadiem'];
-                                            $_SESSION['thoigian'] = $result['thoigian'];
-                                            $_SESSION['gia'] = $result['gia'];
-                                            $_SESSION['sukien'] = $result['sukien'];
-                                            $_SESSION['phongcach'] = $result['phongcach'];
-                                            $_SESSION['anhmau'] = $result['anhmau'];
-                                            $_SESSION['motachitiet'] = $result['motachitiet'];
+                                            $mathongtinthue = $result['mathongtinthue'];
+                                            include "../db_connection.php";
+                                            $sql = "SELECT * FROM thongtinthue WHERE mathongtinthue = $mathongtinthue";
+                                            $result_thongtinthue = $conn->query($sql);
+                                            if ($result_thongtinthue) {
+                                                $thongtinthue_data = $result_thongtinthue->fetch_assoc();
+                                                $hinhanhthue = $thongtinthue_data['hinhanhthue'];
+                                           
                                 ?>
-                            <a href="./photoclick.php" class="col c-12 m-6 l-6">
+                            <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
                                 <div class="jobbest-items ">
                                     <div class="jobbest-mid-top">
                                         <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="<?php echo $imguserphoto_up ?>" alt="">
+                                            
+                                            <div class="jobbest-mid-top--left col c-3 m-3 l-3">
+                                                <img src="../img/<?php echo $hinhanhthue ?>" style="width:80px;height:80px;border-radius:50%" alt="">
                                             </div>
-                                            <div class="jobbest-mid-top--right col c-9 m-9 l-9" >
+                                            <div class="jobbest-mid-top--right col c-8 m-8 l-8" >
                                                 <?php echo $result['tenposttimtho']  ?>
                                                 <p><?php echo $result['thoigian'] ?></p>
                                                 <p>Giá: <?php echo $result['gia'] ?></p>
@@ -267,7 +267,8 @@
                             <?php
                                     }
                                 }
-                                ?>   
+                            }
+                            ?>     
                            
                         </div>
                     </div>
@@ -304,108 +305,7 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="jobinteresting">
-            <div class="grid wide">
-                <div class="jobinteresting_container row">
-                <div class="jobinteresting_right col c-4 m-4 l-4">
-                        <div class="jobinteresting_right-img">
-                            <div class="jobinteresting_right-img--container">
-                                <div class="jobinteresting_right-img-number">
-                                    <a href=""><img src="../img/bannermid1.jpg" alt=""></a>
-                                    <a href=""><img src="../img/bannermid2.jpg" alt=""></a>
-                                    <a href=""><img src="../img/bannermid3.jpg" alt=""></a>
-                                </div>
-                                <div class="jobinteresting_right-img--button">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jobinteresting_left col c-8 m-8 l-8">
-                        <div class="jobbest-header">
-                            <div class="jobbest-header--top">
-                            Việc làm Make-up Artist tốt nhất
-                            </div>
-                            <div class="jobbest-header--bottom">
-                                <div class="jobbest-header--bottom_filter">
-                                    <input type="text" name="" id="" placeholder="Lọc theo">
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Ngẫu nhiên
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="jobbest-mid">
-                            <div class="row">
-                            <?php
-                                   
-                            $select_postjob = $connect ->select_postjob();
-                            ?>
-                        <div class="jobbest-mid">
-                        <div class="row">
-                                 <?php
-                                    if($select_postjob){
-                                        while($result = $select_postjob->fetch_assoc()){
-                                            $imgusermake_up = "/FINDYDEMO/assets/php/img/". $result['hinhAnh'];
-                                            $detailLink1 = "./makeupclick.php?img=" . urlencode($imgusermake_up) .
-                      "&giaCa1=" . urlencode($result['giaCa']) .
-                      "&yeucau1=" . urlencode($result['yeucau']) .
-                      "&tenCongViec1=" . urlencode($result['tenCongViec']) .
-                      "&ten1=" . urlencode($result['ten']) .
-                      "&moTa1=" . urlencode($result['moTa']) ;
-                      
-                                        
-                                ?>
-                                <a href="<?php echo $detailLink1; ?>" class="col c-12 m-6 l-6">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="<?php echo $imgusermake_up ?>" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-9 m-9 l-9" >
-                                                    <?php echo $result['tenCongViec'] ?>
-                                                    <p><?php echo $result['ten'] ?></p>
-                                                    <p> <?php echo $result['giaCa'] ?></p>
-                                                    
-                                                </div>
-                                                <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                               
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <?php
-                                    }
-                                }
-                                ?>   
-                           
-                        </div>
-                            </div>
-                        </div>
-                        <div class="jobbest-bottom">
-                            <i class="fa-solid fa-c-left"></i>
-                            <span style="color:#00b14f">31</span> / <span>37 trang</span>
-                            <i class="fa-solid fa-c-right"></i>
-                        </div>  
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <section>
         <div class="footer">
             <div class="grid wide">
