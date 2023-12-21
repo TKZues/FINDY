@@ -18,8 +18,8 @@
 
 // Các công việc khác cần làm trên trang mainphoto.php
 
-echo "ID của Thợ: " . $id_thue;
-echo "ID của Thợ: " . $hoTen;
+// echo "ID của Thợ: " . $id_thue;
+// echo "ID của Thợ: " . $hoTen;
 
 ?>
 
@@ -36,7 +36,7 @@ echo "ID của Thợ: " . $hoTen;
                                     if($select_nhansanpham){
                                         while($result = $select_nhansanpham->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
-                                        $tentho = $result['tentho'];
+                                        $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
                                         $sukien = $result['sukien'];
