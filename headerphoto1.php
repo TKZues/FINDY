@@ -67,7 +67,7 @@
                                         <div name="Ten" class="tabbar_title3-hover--inforiname">
 
                                             Tên: <?php echo $hoTen; ?>
->>>>>>> 82dd08cffc50163496c9f8f5dd9a79cd2ba0bdd1
+
                                         </div>
                                         <div name="register" classs="tabbar_title3-hover--infor-ma">
                                             Mã ứng viên: <?php echo $id_tho ?>
