@@ -786,11 +786,12 @@
 }
 
 .managerrequest_content > div{
-    background: linear-gradient(to right, #0097B2, #7ED957);
+    background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
     
    display: flex;
    border-radius: 15px;
     align-items: center;
+    padding: 15px 0;
 }
 
 .managerrequest_content-items--avatar{
@@ -810,7 +811,7 @@
 }
 
 .managerrequest_content-items--avatar img{
-    width: 48%;
+    width: 70%;
 }
 
 /* Định dạng cho .managerrequest_container */
@@ -831,7 +832,7 @@
 
 /* Định dạng cho .name */
 .name {
-    color: #263a4d;
+    color: #ffffff;
     display: -webkit-box;
     font-size: 1.7rem;
     font-style: normal;
@@ -844,25 +845,40 @@
 }
 
 /* Định dạng cho .address và .time */
-.address, .time {
+.address {
     align-items: center;
-    
+    font-style: italic;
     border-radius: 4px;
-    color: #263a4d;
+    color: #ffffff;
     display: flex;
     font-size: 14px;
-    font-style: normal;
+
     font-weight: 400;
     gap: 6px;
     letter-spacing: .14px;
     line-height: 22px;
-    padding: 2px 8px 2px 4px;
+ 
+}
+
+.time {
+    align-items: center;
+    font-style: normal;
+    border-radius: 4px;
+    color: #1c201c;
+    display: flex;
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: .14px;
+    line-height: 22px;
+   
 }
 
 /* Định dạng cho .style */
 .style {
     font-style: italic;
-    color: #212f3f;
+    color: #111213;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
