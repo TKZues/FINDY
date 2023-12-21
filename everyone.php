@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/381365316_305905915351952_8433167268195273607_n.png" sizes="16x16">
-    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./everyone.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
