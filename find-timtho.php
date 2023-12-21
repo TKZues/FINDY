@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 
         <style>
-            .navbar > div:nth-child(2) {
+            .navbar>div:nth-child(2) {
                 border-bottom: 3px solid var(--main-color);
             }
         </style>
@@ -227,111 +227,205 @@
                                 $select_profile = $connect->select_profile();
                                 ?>
 
-                            <div class="row">
-                                <?php
-                                    if($select_profile){
-                                        while($result = $select_profile->fetch_assoc()){
-                                            
-                                            
-                                ?>
-                                    
-                                    <div class="col l-4 m-6 c-12">
-                                        <div class="freelancer-item">
-                                            <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&ma_profile=<?php echo urlencode($result['ma_profile']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
-                                                <div class="freelancer-item__personal-info">
-                                                    <div class="freelancer-item__avatar">
-                                                        <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
-                                                        <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                                    </div>
-                                                    
-                                                    <div class="freelancer-item__info">
-                                                        <span class="freelancer-item__title">
-                                                            <?php echo $result['ten'] ?>
-                                                        </span>
-                                                        <span class="freelancer-item__text">
-                                                            <?php echo $result['nghenghiep'] ?>
-                                                        </span>
-                                                        <div class="star-rating">
-                                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                <div class="row">
+                                <div class="row sm-gutter">
                                     <?php
                                     if ($select_profile) {
                                         while ($result = $select_profile->fetch_assoc()) {
                                     ?>
-                                        <div class="col l-4 m-6 c-12">
-                                            <div class="freelancer-item">
-                                                <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
-                                                    <div class="freelancer-item__personal-info">
-                                                        <div class="freelancer-item__avatar">
-                                                            <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
-                                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
 
-                                                        </div>
+                                            <div class="col l-4 m-6 c-12">
+                                                <div class="freelancer-item">
+                                                    <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
+                                                        <div class="freelancer-item__personal-info">
+                                                            <div class="freelancer-item__avatar">
+                                                                <!-- <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img"> -->
+                                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
+                                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
 
-                                                        <div class="freelancer-item__info">
-                                                            <span class="freelancer-item__title">
-                                                                <?php echo $result['ten'] ?>
-                                                            </span>
-                                                            <span class="freelancer-item__text">
-                                                                <?php echo $result['nghenghiep'] ?>
-                                                            </span>
-                                                            <div class="star-rating">
-                                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                <i class="star-rating--gold fa-solid fa-star"></i>
                                                             </div>
-                                                            <div class="freelancer-item__rating">
-                                                                <strong>4.9</strong>
-                                                                <span>(234 đánh giá)</span>
+
+                                                            <div class="freelancer-item__info">
+                                                                <span class="freelancer-item__title">
+                                                                    <?php echo $result['ten'] ?>
+                                                                </span>
+                                                                <span class="freelancer-item__text">
+                                                                    <?php echo $result['nghenghiep'] ?>
+                                                                </span>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                                <div class="freelancer-item__rating">
+                                                                    <strong>4.9</strong>
+                                                                    <span>(234 đánh giá)</span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div class="freelancer-item__contact">
-                                                        <div class="freelancer-item__contact-info">
-                                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                            <span class="freelancer-item__contact-text"><?php echo $result['sdt'] ?></span>
+                                                        <div class="freelancer-item__contact">
+                                                            <div class="freelancer-item__contact-info">
+                                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                                                <span class="freelancer-item__contact-text"><?php echo $result['sdt'] ?></span>
+                                                            </div>
+                                                            <div class="freelancer-item__contact-info">
+                                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                                                <span class="freelancer-item__contact-text"><?php echo $result['email'] ?></span>
+                                                            </div>
+                                                            <div class="freelancer-item__contact-info">
+                                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                                                <span class="freelancer-item__contact-text"><?php echo $result['diachi'] ?></span>
+                                                            </div>
                                                         </div>
-                                                        <div class="freelancer-item__contact-info">
-                                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                            <span class="freelancer-item__contact-text"><?php echo $result['email'] ?></span>
-                                                        </div>
-                                                        <div class="freelancer-item__contact-info">
-                                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                            <span class="freelancer-item__contact-text"><?php echo $result['diachi'] ?></span>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="slide-show-artwork">
-                                                        <div class="freelancer-item__artwork-list">
-                                                            <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                                            <img src="./img/collection-1-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                                            <img src="./img/collection-1-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                                        <div class="slide-show-artwork">
+                                                            <div class="freelancer-item__artwork-list">
+                                                                <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
+                                                                <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
+                                                                <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                                <!-- <div class="freelancer-item__view-details">
-                                            <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                        </div> -->
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
+
+
+
+                                            <!-- <div class="col l-4 m-6 c-12">
+                                                <div class="freelancer-item">
+                                                    <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&ma_profile=<?php echo urlencode($result['ma_profile']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
+                                                        <div class="freelancer-item__personal-info">
+                                                            <div class="freelancer-item__avatar">
+                                                                <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                                            </div>
+
+                                                            <div class="freelancer-item__info">
+                                                                <span class="freelancer-item__title">
+                                                                    <?php echo $result['ten'] ?>
+                                                                </span>
+                                                                <span class="freelancer-item__text">
+                                                                    <?php echo $result['nghenghiep'] ?>
+                                                                </span>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <div class="row">
+                                                                        <?php
+                                                                        if ($select_profile) {
+                                                                            while ($result = $select_profile->fetch_assoc()) {
+                                                                        ?>
+                                                                                <div class="col l-4 m-6 c-12">
+                                                                                    <div class="freelancer-item">
+                                                                                        <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
+                                                                                            <div class="freelancer-item__personal-info">
+                                                                                                <div class="freelancer-item__avatar">
+                                                                                                    <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
+                                                                                                    <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+
+                                                                                                </div>
+
+                                                                                                <div class="freelancer-item__info">
+                                                                                                    <span class="freelancer-item__title">
+                                                                                                        <?php echo $result['ten'] ?>
+                                                                                                    </span>
+                                                                                                    <span class="freelancer-item__text">
+                                                                                                        <?php echo $result['nghenghiep'] ?>
+                                                                                                    </span>
+                                                                                                    <div class="star-rating">
+                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                                                    </div>
+                                                                                                    <div class="freelancer-item__rating">
+                                                                                                        <strong>4.9</strong>
+                                                                                                        <span>(234 đánh giá)</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="freelancer-item__contact">
+                                                                                                <div class="freelancer-item__contact-info">
+                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['sdt'] ?></span>
+                                                                                                </div>
+                                                                                                <div class="freelancer-item__contact-info">
+                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['email'] ?></span>
+                                                                                                </div>
+                                                                                                <div class="freelancer-item__contact-info">
+                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['diachi'] ?></span>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="slide-show-artwork">
+                                                                                                <div class="freelancer-item__artwork-list">
+                                                                                                    <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
+                                                                                                    <img src="./img/collection-1-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
+                                                                                                    <img src="./img/collection-1-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                        <?php
+                                                                            }
+                                                                        }
+                                                                        ?>
+                                                                <?php
+                                                            }
+                                                        }
+                                                                ?>
+                                                                    </div>
+                                                                </div>
+
+                                                                <ul class="pagination">
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">
+                                                                            <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="pagination-item pagination-item--active">
+                                                                        <a href="" class="pagination-item__link">1</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">2</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">3</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">4</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">5</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">...</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">10</a>
+                                                                    </li>
+                                                                    <li class="pagination-item">
+                                                                        <a href="" class="pagination-item__link">
+                                                                            <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div> -->
                                 </div>
                             </div>
-
                             <ul class="pagination">
                                 <li class="pagination-item">
                                     <a href="" class="pagination-item__link">
@@ -366,135 +460,133 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section>
-            <div class="footer">
-                <div class="grid wide">
-                    <div class="footer_container row">
-                        <div class="footer_logo col c-6 m-2 l-2">
-                            <div class="footer_logo-logo">
 
-                                FINDY
-                            </div>
-                            <div class="footer_logo-english">
-                                <i class="fa-solid fa-earth-asia"></i>
-                                <a href="">VietNam</a>/ <a href="">Tiếng Việt</a>
-                            </div>
-                            <div class="footer_logo-help">
-                                <i class="fa-solid fa-circle-question"></i>
-                                Giúp đỡ & Hỗ trợ
-                            </div>
-                            <div class="footer_logo-accessibility">
-                                <i class="fa-solid fa-universal-access"></i>
-                                Trợ năng
-                            </div>
-                        </div>
-                        <div class="footer_findy col c-6 m-2 l-2">
-                            <h1>Findy</h1>
-                            <ul>
-                                <a href="">
-                                    <li>Dự án</li>
-                                </a>
-                                <a href="">
-                                    <li>Cuộc thi</li>
-                                </a>
-                                <a href="">
-                                    <li>Thành viên</li>
-                                </a>
-                                <a href="">
-                                    <li>Quản lý dự án</li>
-                                </a>
-                                <a href="">
-                                    <li>Hình ảnh khắp nơi</li>
-                                </a>
-                                <a href="">
-                                    <li>Xác thực</li>
-                                </a>
-                            </ul>
+                        
+                        <section>
+                            <div class="footer">
+                                <div class="grid wide">
+                                    <div class="footer_container row">
+                                        <div class="footer_logo col c-6 m-2 l-2">
+                                            <div class="footer_logo-logo">
 
-                        </div>
-                        <div class="footer_introduce col c-6 m-2 l-2">
-                            <h1>Giới thiệu</h1>
-                            <ul>
-                                <a href="">
-                                    <li>Về chúng tôi</li>
-                                </a>
-                                <a href="">
-                                    <li>Cách thức hoạt động</li>
-                                </a>
-                                <a href="">
-                                    <li>Bảo mật</li>
-                                </a>
-                                <a href="">
-                                    <li>Nhà đầu tư</li>
-                                </a>
-                                <a href="">
-                                    <li>Sơ đồ trang</li>
-                                </a>
-                                <a href="">
-                                    <li>Tin tức</li>
-                                </a>
-                                <a href="">
-                                    <li>Đội ngũ</li>
-                                </a>
-                                <a href="">
-                                    <li>Công việc</li>
-                                </a>
-                            </ul>
-                        </div>
-                        <div class="footer_rules col c-6 m-2 l-2">
-                            <h1>Điều khoản</h1>
-                            <ul>
-                                <a href="">
-                                    <li>Chính sách bảo mật</li>
-                                </a>
-                                <a href="">
-                                    <li>Điều khoản và điều kiện</li>
-                                </a>
-                                <a href="">
-                                    <li>Chính sách bản quyền</li>
-                                </a>
-                                <a href="">
-                                    <li>Quy tắc ứng xử</li>
-                                </a>
-                                <a href="">
-                                    <li>Các loại phí</li>
-                                </a>
-                            </ul>
-                        </div>
-                        <div class="footer_bussiness col c-6 m-2 l-2">
-                            <h1>Đối tác</h1>
-                            <ul>
-                                <a href="">
-                                    <li>Escrow.com</li>
-                                </a>
-                                <a href="">
-                                    <li>Loadshift</li>
-                                </a>
-                                <a href="">
-                                    <li>Warrior Forum</li>
-                                </a>
-                            </ul>
-                        </div>
-                        <div class="footer_app col c-6 m-2 l-2">
-                            <h1>Ứng dụng</h1>
-                            <ul>
-                                <a href="">
-                                    <li><img src="./img/app-store.svg" alt=""></li>
-                                </a>
-                                <a href="">
-                                    <li><img src="./img/google-play.svg" alt=""></li>
-                                </a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                FINDY
+                                            </div>
+                                            <div class="footer_logo-english">
+                                                <i class="fa-solid fa-earth-asia"></i>
+                                                <a href="">VietNam</a>/ <a href="">Tiếng Việt</a>
+                                            </div>
+                                            <div class="footer_logo-help">
+                                                <i class="fa-solid fa-circle-question"></i>
+                                                Giúp đỡ & Hỗ trợ
+                                            </div>
+                                            <div class="footer_logo-accessibility">
+                                                <i class="fa-solid fa-universal-access"></i>
+                                                Trợ năng
+                                            </div>
+                                        </div>
+                                        <div class="footer_findy col c-6 m-2 l-2">
+                                            <h1>Findy</h1>
+                                            <ul>
+                                                <a href="">
+                                                    <li>Dự án</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Cuộc thi</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Thành viên</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Quản lý dự án</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Hình ảnh khắp nơi</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Xác thực</li>
+                                                </a>
+                                            </ul>
 
-        </section>
-        <script src="./find-timtho.js"></script>
+                                        </div>
+                                        <div class="footer_introduce col c-6 m-2 l-2">
+                                            <h1>Giới thiệu</h1>
+                                            <ul>
+                                                <a href="">
+                                                    <li>Về chúng tôi</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Cách thức hoạt động</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Bảo mật</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Nhà đầu tư</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Sơ đồ trang</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Tin tức</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Đội ngũ</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Công việc</li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="footer_rules col c-6 m-2 l-2">
+                                            <h1>Điều khoản</h1>
+                                            <ul>
+                                                <a href="">
+                                                    <li>Chính sách bảo mật</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Điều khoản và điều kiện</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Chính sách bản quyền</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Quy tắc ứng xử</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Các loại phí</li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="footer_bussiness col c-6 m-2 l-2">
+                                            <h1>Đối tác</h1>
+                                            <ul>
+                                                <a href="">
+                                                    <li>Escrow.com</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Loadshift</li>
+                                                </a>
+                                                <a href="">
+                                                    <li>Warrior Forum</li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                        <div class="footer_app col c-6 m-2 l-2">
+                                            <h1>Ứng dụng</h1>
+                                            <ul>
+                                                <a href="">
+                                                    <li><img src="./img/app-store.svg" alt=""></li>
+                                                </a>
+                                                <a href="">
+                                                    <li><img src="./img/google-play.svg" alt=""></li>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                        <script src="./find-timtho.js"></script>
     </body>
 </php>
