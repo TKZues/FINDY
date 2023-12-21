@@ -18,7 +18,7 @@
 <?php
 include "header.php"
 ?>
-//w
+
 <section>
     <div class="videomain">
         <div class="videomain_video">
