@@ -105,7 +105,7 @@ echo "ID của Thợ: " . $hoTen;
                                             <span class="order-info__service-name">Chụp ảnh sinh nhật ngoại cảnh</span>
                                             <span class="order-info__service-price"><?php echo $gia ?>đ</span>
                                         </div>
-                                        <div class="order-info__service-info">
+                                        <div style="display: none;" class="order-info__service-info">
                                             <span class="order-info__service-name">Makeup</span>
                                             <span class="order-info__service-price">350.000 đ</span>
                                         </div>
@@ -114,9 +114,10 @@ echo "ID của Thợ: " . $hoTen;
                                     <div class="order-info__amount">
                                         <div class="order-info__amount-info">
                                             <span class="order-info__amount-name">Tổng giá trị:</span>
-                                            <span class="order-info__amount-total"></span>
+                                            <span class="order-info__amount-total"><?php echo $gia ?>đ</span>
+                                            <input style="display: none;" type="text" name="" id="txtAmount" value="<?php echo $gia ?>">
                                         </div>
-                                        <div class="order-info__amount-info">
+                                        <div style="display: none;" class="order-info__amount-info">
                                             <span class="order-info__amount-name">Cần cọc (50%):</span>
                                             <span class="order-info__amount-total">970.000 đ</span>
                                         </div>
@@ -143,8 +144,8 @@ echo "ID của Thợ: " . $hoTen;
                                         <label for="payment-viettel-money" class="payment-methods__item">
                                             <img src="./img/viettel-money.png" alt="Viettel Money" class="payment-methods__img">
                                             <div class="payment-methods__item-warp">
-                                                <p class="payment-methods__name">Viettel Money</p>
-                                                <div class="payment-methods__text">Thanh toán bằng Viettel Money</div>
+                                                <p class="payment-methods__name">Ngân hàng</p>
+                                                <div class="payment-methods__text">Chuyển khoản ngân hàng</div>
                                             </div>
                                             <input type="radio" name="payment-methods" id="payment-viettel-money">
                                         </label>
@@ -158,7 +159,8 @@ echo "ID của Thợ: " . $hoTen;
                                         </label>
                                     </div>
 
-                                    <a href=""><button class="btn btn--primary payment-methods-btn">Thanh toán cọc</button></a>
+                                    <button class="btn btn--primary payment-methods-btn" onclick="document.getElementById('myImg').src=GenQR()">Thanh toán cọc</button>
+                                    <img id="myImg" width="300px" src="" alt="">
                                 </div>
                             </div>
                         </div>
@@ -324,5 +326,13 @@ echo "ID của Thợ: " . $hoTen;
         </div>
         
     </section>
+    <script>
+        function GenQR() {
+            
+            Amount = document.getElementById('txtAmount').value
+            var link = "https://img.vietqr.io/image/BIDV-3131488052-print.png?amount=" + Amount + "&addInfo=Thanh%20toan%20coc%20Findy&accountName=MA%20DI%20HAO"
+            return link
+        }
+    </script>
 </body>
 </html>
