@@ -243,7 +243,8 @@
         inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
         inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
         inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
-        where id_thue = $id_thue";
+        inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+        where thongtinthue.id_thue = $id_thue";
         $result = $this ->db ->select($query);
         return $result;
         }
@@ -263,6 +264,8 @@
             inner JOIN thue_nhansanpham ON thue_nhansanpham.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = thue_nhansanpham.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+
             where id_thue = $id_thue";
             $result = $this ->db ->select($query);
             return $result;
