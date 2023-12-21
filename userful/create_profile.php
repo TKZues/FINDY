@@ -91,15 +91,7 @@
                                 <div class="insert-profile-left-address">
                                     <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
                                 </div>
-                                <div class="insert-profile-left-skill">
-                                    <h1>CÁC KỸ NĂNG</h1>
-                                    <input placeholder="Tên kỹ năng" type="text" name="nameskill">
-                                    <input placeholder="Mô tả kỹ năng" type="text" name="motaskill" id="">
-                                </div>
-                                <div class="insert-profile-left-award">
-                                    <h1>DANH HIỆU _ GIẢI THƯỞNG</h1>
-                                    <input placeholder="Tên giải thưởng" type="text" name="award" id="">
-                                </div>
+                               
                             </div>    
                             <div class="insert-profile-right col c-8 m-8 l-8">
                             
