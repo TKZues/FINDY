@@ -18,7 +18,7 @@
 
 // Các công việc khác cần làm trên trang mainphoto.php
 
-echo "ID của Thợ: " . $id_thue;
+//echo "ID của Thợ: " . $id_thue;
 // echo "ID của Thợ: " . $hoTen;
 
 ?>
