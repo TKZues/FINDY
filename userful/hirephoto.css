@@ -1,502 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    top: 0;
+.navbar>div:nth-child(2) {
+    border-bottom: 3px solid var(--main-color);
 }
 
-body{
-    background-color: var(--main-background);
+/* --------------- Banner ------------- */
+.banner {
+    margin-top: var(--top-header-height);
+    /* padding-top: 120px; */
 }
 
-.top_container{
-    background-color: rgb(13, 10, 38);
-    width: 100%;
-    height: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-size: 1.8rem;
-    justify-content: center;
-}
-
-.tabbar{
-    width: 100%;
-    background-color: var(--main-header);
-    position: fixed;
-    height: 120px;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #efefef;
-    box-shadow: 2px 2px 4px rgba(190, 190, 190, 0.2);
-}
-.d{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-   
-}
-
-.tabbar_container{
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-
-
-
-/* các thẻ link Thuê photographer   Thuê Make-up Artist   Trở thành Photographer */
-.tabbar_container a{
-    text-decoration: none;
-    color: var(--main-color);
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.tabbar_logo-container{
-    display: flex;
-    align-items: center;
-}
-
-
-.tabbar_logo-img img{
-    width: 50%;
-    height: auto ;
-}
-
-.tabbar_logo-title{
-    color: var(--main-color);
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-/* ------------thuee photographer------- */
-
-.tabbar_title1 > div{
-    border-right: 1px solid #00000033;
-}
-
-.tabbar_title1{
-    position: relative;
-}
-
-.tabbar_title1 a{
-    text-align: left;
-}
-
-.tabbar_title1-photographer{
-    position: absolute;
-    top: 278%;
-    width: 1560px;
-    height: auto;
-    background-color: white;
-    left: -300px;
-    border-radius: 8px;
-    padding: 20px 10px;
-    display: none;
-}
-
-.tabbar_title1-photographer::before{
-    content: "";
-    position: absolute;
-    width: 200px;
-    top: -30px;
-    left: 300px;
-    height: 50px;
-    
-}
-
-.photographer-left {
-    border-right: 1px solid #b3b3b3;
-}
-
-.photographer-left > div {
-    padding: 20px 20px;
-}
-
-.photographer-left  div:hover{
-    background-color: rgb(232, 232, 232);
-}
-
-.photographer-left-text{
-    font-size: 2.0rem !important;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-
-.tabbar_title1:hover .tabbar_title1-photographer{
-    display: block;
-}
-/* right */
-
-
-/* ----------------------- */
-.tabbar_title2 div{
-    border-right: 1px solid #00000033;
-}
-
-.tabbar_input-container{
-    display: flex;
-    border: 1px solid var(--main-color);
-    padding: 7px 4px;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.tabbar_user{
-    color: var(--main-color);
-}
-
-
-
-
-.tabbar_input-input input{
-    border: none;
-    padding-left: 20px;
-    border-color: none;
-    background-color: var(--main-header);
-    color: var(--main-color);
-}
-
-.tabbar_input-look i{
-    color: var(--main-color);
-    
-}
-
-.tabbar_input-input input{
+.banner_img-container {
     width: 100%;
 }
 
-.tabbar_user{
-    display: flex;
-}
-
-/* ---------------tabbar_title3--------- */
-
-.tabbar_title3{
-    position: relative;
-}
-
-.tabbar_title3-hover{
-    text-align: left;
-    position: absolute;
-    top: 230%;
-    width: 400px;
-    height: auto;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    background-color: white;
-    left: -100px;
-    border-radius: 8px;
-    padding: 20px 10px;
-    display: none;
-}
-
-.tabbar_title3-hover::before{
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 100px;
-    
-    top:-20px;
-    left: 100px;
-}
-
-.tabbar_title3-hover--avatar img{
-    width: 100%;
-}
-
-
-.tabbar_title3:hover .tabbar_title3-hover{
-    display: block;
-}
-.tabbar_title3-hover-container{
-    margin: 0px 10px;
-}
-
-.infor_user{
-    padding: 10px 0;
-    border-bottom: 1px solid #d6d6d6;
-    
-}
-
-.tabbar_title3-hover--inforiname{
-    color: #00b14f;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 20px;
-}
-
-.tabbar_title3-hover--infor-ma{
-    color: #6f7882;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-}
-.tabbar_title3-hover--infor-email{
-    color: #6f7882;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-}
-
-.tabbar_title3-hover--button{
-    margin: 10px 0;
-    
-}
-
-.tabbar_title3-hover--button div{
-    margin: 5px 0;
-   
-}
-
-.tabbar_title3-hover--button div span{
-    display: none;
-    /* transition: all 1s ease; */
-}
-.tabbar_title3-hover--button div:hover span{
-    display: block;
-   
-}
-.tabbar_title3-hover--button div:hover{
-    color: var(--main-color);
-}
-
-.tabbar_title3-hover--button-settinginfor{
-    display: flex;
-    align-items: center;
-   
-   color: var(--text-color);
-   padding: 10px 5px;
-   background-color: #ebebeb;
-   border-radius: 8px;
-}
-
-.tabbar_title3-hover--button-settinginfor i{
-    color: var(--main-color);
-}
-
-
-/* ---------------Main------------------- */
-
-
-.main{
-    padding-top: 120px;
-}
-
-.main_img{
-    width: 100%;
-    /* height: 200px; */
-    position: relative;
-    width: 100%;
-    /* height: 450px; */
-    overflow: hidden;
-}
-
-.buttom_voice{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main_img video{
-   
-    width: 100%;
-    height: 450px;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-}
-
-.main_left-img img{
-    width: 100%;
-}
-
-.main_bottom{
-    margin-top: 20px;
-}
-
-.main_bottom img{
-    width: 100%;
-    
-}
-
-.main_bottom div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.main_bottom img:hover {
-    width: 95%;
-    transition: all 0.15s ease-in-out;
-}
-
-.main_bottom-container{
-    align-items: center;
-    justify-content: center;
-}
-/* ----------------product------------- */
-.product{
-    margin-top: 100px;
-}
-.product_item{
-    text-align: center;
-}
-
-.product_item a{
-    text-decoration: none;
-}
-
-.product_item-container{
-    box-shadow: 0px 0px 8px 2px #0f0f0f;
-}
-.product_item-img{
-    position: relative;
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-}
-.product_item-img img{
-    width: 100%;
-    height: 450px;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-}
-
-.product_item-name{
-    width: 100%;
-    font-size: 20px;
-    color: #686766;
-    line-height: 70px;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    overflow: hidden;
-}
-
-.product_item-price{
-    width: 100%;
-    color: #c3a196;
-    font-weight: 600;
-    padding-bottom: 200px;
-}
-
-/* ---------------banner------------- */
-
-.banner_img{
-    width: 100%;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.banner_img-container{
-   
-    width: 100%;
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-}
-
-.banner{
-    padding-top: 120px;
-    margin: 20px 0;
-    height: 600px;
-    /* background-image: linear-gradient(to bottom, #d6ffd7, #ffffff); */
-}
-
-.banner-header > span > p{
-    color: #009643;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-    margin: 0 auto 6px;
-    width: 97%;
-    text-align: center;
-}
-
-.banner-header p{
-    color: #263a4d;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: .12px;
-    line-height: 16px;
-    text-align: center;
-}
-
-.banner_img{
-    width: 100%;
-}
-
-.banner_img-container{
+.banner_img {
     position: relative;
     overflow: hidden;
 }
 
-.banner_img-img{
-    width: 100%;
-    height: auto;
+.banner_img-img {
     position: relative;
-    transition: all 0.3s ease;
-}
-
-.banner_img-img img{
     width: 100%;
-    height: auto;
-  
+    height: 330px;
 }
 
-.banner_img-img img{
+.banner_img-img img {
+    width: 100%;
     position: absolute;
-
 }
 
-.banner_img-img a:nth-child(2) img{
+
+.banner_img-img a:nth-child(2) img {
     transform: translateX(100%);
 }
 
-.banner_img-img a:nth-child(3) img{
+.banner_img-img a:nth-child(3) img {
     transform: translateX(200%);
 }
 
-.banner_img-img a:nth-child(4) img{
+.banner_img-img a:nth-child(4) img {
     transform: translateX(300%);
 }
 
-.banner_img-img a:nth-child(5) img{
+.banner_img-img a:nth-child(5) img {
     transform: translateX(400%);
 }
 
-.button_banner{
+.button_banner {
     position: absolute;
     width: 100%;
     top: 50%;
     display: flex;
-    z-index: 90;
+    z-index: 10;
     font-size: 1.5rem;
     justify-content: space-between;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
-.button_banner i{
+.button_banner-icon {
     width: auto;
     height: auto;
     padding: 8px 12px;
     background-color: #fff;
     border-radius: 50%;
+    margin: 0 16px;
+}
+
+.button_banner-icon:hover {
+    background-color: #f3f3f3;
 }
 
 /* .banner_img-img a:nth-child(2) img{
@@ -507,106 +78,326 @@ body{
     transform: translateY(100%);
 } */
 
+/* --------------- Jobs ------------- */
 
-
-/* ----------jobbest------------- */
-.jobbest-header--top{
-    color: #00b14f;
-    display: flex;
-    font-weight: 600;
-    gap: 10px;
-    line-height: 28px;
-    font-size: 2.0rem;
+.job {
+    margin-top: 36px;
 }
-    
-.jobbest-header--bottom{
+
+.job-header {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.job_container {
+    margin-top: 10px;
+}
+
+/* --------- Filter --------- */
+.filter {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.filter__heading {
+    font-size: 1.8rem;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.filter__heading-icon {
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.filter__list {
+    padding-bottom: 12px;
+    margin: 0 10px;
+}
+
+.filter__item-warp {
+    margin: 16px;
+}
+
+.filter__item {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.filter__item:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.filter__item-icon {
+    background-color: #f5f5f5;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 9px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.selected {
+    border: 1px solid var(--main-color);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.fa-chevron-up {
+    color: var(--main-color);
+}
+
+.filter__menu {
+    padding: 16px 16px 0;
+}
+
+.filter__menu-item {
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
 }
 
-.jobbest-header--bottom_filter input{
+.filter__price-input {
+    width: 80px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+.filter__menu-item input {
+    margin-right: 8px;
+    padding: 0 8px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.filter__menu-name:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.filter__menu-name {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.filter__menu-item .star-rating {
+    font-size: 1.6rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.filter__menu-btn {
+    width: 75%;
+    height: 30px;
+    margin-top: 16px;
+    margin-left: 8px;
+    border-radius: 0;
+}
+
+/* .filter_bottom {
+    margin-top: 2%;
+}
+
+.filter_top {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 10px 10px;
+}
+
+.booking__input {
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 1.6rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 0 15px;
+    width: 100%;
+    outline: none;
+    margin: 5px 0;
+} */
+
+/* --------- Job best --------- */
+.jobbest_container {
+
+}
+
+.jobbest_list {
+
+}
+
+.jobbest_item-warp {
+    text-decoration: none;
+}
+
+.jobbest_item {
+    background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.jobbest_info {
+
+}
+
+.jobbest_info-title {
+    font-size: 2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.jobbest_info-time {
+
+}
+
+.jobbest_info-price {
+
+}
+
+.jobbest_info-event {
+
+}
+
+.jobbest_info-place {
+
+}
+
+.jobbest_favourite {
+
+}
+
+.jobbest_favourite-icon {
+
+}
+
+
+
+
+
+
+
+
+
+.jobbest-header--bottom {
+    display: flex;
+    align-items: center;
+}
+
+.jobbest-header--bottom_filter input {
     padding: 7px 10px;
     border-radius: 3px;
     border: 1px solid #b3b3b3;
 }
 
-.jobbest-header--bottom-button{
+.jobbest-header--bottom-button {
     background-color: #dcdcdc;
     color: var(--text-color);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 7px 10px;
     margin: 5px 10px;
     border-radius: 15px;
 }
 
-.jobbest{
+.jobbest {
     background-color: #f5f5f5;
     padding: 20px 0;
 }
 
-.jobbest-mid a{
+.jobbest-list a {
     text-decoration: none;
-   
-    
 }
 
-.jobbest-mid div > a > div{
+.jobbest-list div>a>div {
     background-color: #fcfcfc;
     margin: 7px 0;
-   padding: 10px 15px;
-   border-radius: 15px;
-   border: 1px solid  #e2e2e2; ;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #e2e2e2;
+    background: linear-gradient(to right, #0097B2, #7ED957);
 }
 
-.jobbest-mid div > a:hover >div {
-    border: 1px solid #a8a8a8;
+.jobbest-list div>a:hover>div {
+    border: 1px solid #cecece;
     background-color: white;
 }
 
-.jobbest-mid-top--left img{
+.jobbest-list-top--left img {
     width: 100%;
 }
 
-.jobbest-mid-top--right{
+.jobbest-list-top--right {
     color: #212f3f;
-    font-size: 14px;
+    font-size: 1.7rem;
     font-weight: 600;
     line-height: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.jobbest-mid-top--right p{
-    color: #6f7882;
-    font-size: 12px;
+.jobbest-list-top--right p {
+    color: #3b3b3b;
+    font-size: 1.3rem;
+
     font-weight: 500;
     line-height: 16px;
 }
 
-.jobbest-mid-bottom{
+.jobbest-list-bottom {
     display: flex;
 }
 
-.jobbest-mid-bottom-item{
-    background: #f4f5f5;
+.jobbest-list-top--right2 {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.jobbest-list-bottom-button {
+    background: var(--main-color);
     border-radius: 4px;
-    color: #212f3f;
+    color: #ffffff;
     display: inline-flex;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
     padding: 4px 8px;
+    margin: 5px 5px;
 }
 
-.jobbest-bottom{
+.jobbest-bottom {
     margin: 10px 0;
     font-size: 1.4rem;
     text-align: center;
 }
 
-.jobbest-bottom span{
+.jobbest-bottom span {
     margin: 0 5px;
 }
 
-.jobbest-bottom i{
+.jobbest-bottom i {
     padding: 8px 10px;
     color: #009643;
     background-color: white;
@@ -616,47 +407,44 @@ body{
 
 /* --------------jobintereting---------- */
 
-.jobinteresting_left{
+.jobinteresting_left {
     background-color: white;
     border-radius: 15px;
 }
 
-.jobinteresting_right-img{
+.jobinteresting_right-img--container {
     width: 100%;
 }
 
-.jobinteresting_right-img--container{
+
+
+.jobinteresting_right-img {
     position: relative;
     overflow: hidden;
-    
 }
 
-.jobinteresting_right-img-number{
-    
-    width: 100%;
-    height: 600px;
+.jobinteresting_right-img-number {
     position: relative;
-    transition: all 0.3s ease;
+    width: 100%;
+    height: 500px;
 }
 
-.jobinteresting_right-img-number img{
+.jobinteresting_right-img-number img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     position: absolute;
 }
 
-.jobinteresting_right-img-number a:nth-child(2) img{
+.jobinteresting_right-img-number a:nth-child(2) img {
     transform: translateX(100%);
 }
 
-.jobinteresting_right-img-number a:nth-child(3) img{
+.jobinteresting_right-img-number a:nth-child(3) img {
     transform: translateX(200%);
 }
 
 
 
-.jobinteresting_right-img--button{
+.jobinteresting_right-img--button {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -666,7 +454,7 @@ body{
     justify-content: space-between;
 }
 
-.jobinteresting_right-img--button i{
+.jobinteresting_right-img--button i {
     width: auto;
     height: auto;
     padding: 8px 12px;
@@ -675,11 +463,11 @@ body{
 }
 
 /* ------bannermid-------- */
-.bannermid{
+.bannermid {
     margin: 10px 0;
 }
 
-.bannermid_items img{
+.bannermid_items img {
     width: 100%;
     height: auto;
 }
@@ -688,7 +476,7 @@ body{
 
 
 
-.footer{
+.footer {
     margin-top: 150px;
     background-color: #12151b;
     padding: 50px 0;
@@ -697,39 +485,40 @@ body{
     border-top: 1px solid #686766;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     font-size: 1.3rem;
     color: var(--text-color-main);
 }
 
-.footer_logo div{
+.footer_logo div {
     font-size: 1.3rem;
     margin: 5px 0;
     color: var(--text-color-main);
 }
 
-.footer_logo div a{
+.footer_logo div a {
     text-decoration: none;
     color: var(--text-color-main);
 }
-.footer_logo-logo img{
+
+.footer_logo-logo img {
     width: 30%;
 }
 
-.footer div h1{
+.footer div h1 {
     font-weight: 700;
     margin: 10px 0;
 }
 
-.footer div ul li{
+.footer div ul li {
     list-style: none;
-    
+
     margin: 5px 0;
-   
+
 }
 
-.footer div ul a li:hover{
+.footer div ul a li:hover {
     padding-left: 15px;
     color: #5643ff;
     transition: all 0.3s ease-in;
@@ -905,4 +694,47 @@ body{
 .account_form__link {
     text-decoration: none;
     color: var(--main-color)
+}
+
+/* ------------- Responsive ------------- */
+
+/* ------------- Mobile ------------- */
+@media (max-width: 739px) {
+    .navbar__heading {
+        display: none;
+    }
+
+    .navbar__mobile-bars {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding-top: 100px;
+    }
+
+    .banner_img-img {
+        height: 150px;
+    }
+
+    .button_banner {
+        font-size: 1.2rem;
+    }
+
+    .filter_top {
+        font-size: 1.5rem;
+    }
+
+    .jobbest-header--top {
+        font-size: 1.6rem;
+    }
+
+    .jobbest-list-top--right {
+        font-size: 1.2rem;
+    }
+
+    .jobbest-list-top--right p {
+        font-size: 1.1rem;
+    }
 }
