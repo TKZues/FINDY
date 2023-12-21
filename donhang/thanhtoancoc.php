@@ -18,7 +18,7 @@
 
 // Các công việc khác cần làm trên trang mainphoto.php
 
-// echo "ID của Thợ: " . $id_thue;
+echo "ID của Thợ: " . $id_thue;
 // echo "ID của Thợ: " . $hoTen;
 
 ?>
@@ -30,7 +30,7 @@
     $connect = new connect;
     $select_thanhtoancoc = $connect -> select_thanhtoancoc($id_thue); //
 ?>
-<div class="manageroder_content  col c-12 m-12 l-12">
+
         
 <?php
                                     if($select_thanhtoancoc){
@@ -45,7 +45,7 @@
 
                                             
                                 ?>
-
+<div class="manageroder_content  col c-12 m-12 l-12">
                                 <div class="row">
                                     <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
                                         <img style="width:80%" src="../img/<?php echo $anhtho ?>" alt="">
@@ -73,12 +73,12 @@
                                         
                                     </div>
                                 </div>
-
+                                </div>
 <?php 
                                         }
                                     }
 
 ?>
-</div>
+
 </body>
 </html>

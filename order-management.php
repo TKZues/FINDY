@@ -34,17 +34,17 @@
                     <div class="row process">
                         <div class="col l-3 m-3 c-3">
                             <div class="process__group">
-                                <a href="./photoconfirm.php" target="loadpage" class="process__step active">
+                                <a href="./donhang/thanhtoancoc.php" target="loadpage" class="process__step active">
                                     <p class="process__number">
                                         <i class="fa-solid fa-list" id="xacnhan-icon"></i>
                                     </p>
-                                    <p class="process__name">Xác nhận</p>
+                                    <p class="process__name">Thanh toán </p>
                                 </a>
                             </div>
                         </div>
                         <div class="col l-3 m-3 c-3">
                             <div class="process__group">
-                                <a href="./photoperform.php"  target="loadpage" class="process__step">
+                                <a href="./donhang/thuchien.php"  target="loadpage" class="process__step">
                                     <p class="process__number">
                                         <i class="fa-solid fa-dolly" id="thuchien-icon"></i>
                                     </p>
@@ -54,28 +54,28 @@
                         </div>
                         <div class="col l-3 m-3 c-3">
                             <div class="process__group">
-                                <a href="./photodelivery.php" target="loadpage" class="process__step">
+                                <a href="./donhang/nhansanpham.php" target="loadpage" class="process__step">
                                     <p class="process__number">
                                         <i class="fa-solid fa-box-archive" id="giaosanpham-icon"></i>
                                     </p>
-                                    <p class="process__name">Giao sản phẩm</p>
+                                    <p class="process__name">Nhận sản phẩm</p>
                                 </a>
                             </div>
                         </div>
                         <div class="col l-3 m-3 c-3">
                             <div class="process__group">
-                                <a href="./photopayment.php" target="loadpage" class="process__step">
+                                <a href="./donhang/danhgia.php" target="loadpage" class="process__step">
                                     <p class="process__number">
                                         <i class="fa-solid fa-check" id="thanhtoan-icon"></i>
                                     </p>
-                                    <p class="process__name">Đã được thanh toán</p>
+                                    <p class="process__name">Đánh giá</p>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
+                        <iframe id="myiframe" src="./donhang/thanhtoancoc.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
                     </article>
                 </div> 
             </div>

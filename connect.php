@@ -217,7 +217,7 @@
             $result = $this->db->select($query);
             return $result;
         }
-       public function select_thanhtoancoc($id_thue){
+        public function select_thanhtoancoc($id_thue){
             $query = "select *from post_timtho
             inner JOIN thue_thanhtoancoc ON thue_thanhtoancoc.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
