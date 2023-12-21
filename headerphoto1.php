@@ -42,7 +42,7 @@
                                                         Tên: <?php echo $hoTen; ?>
                                                     </div>
                                                     <div name="register" classs="tabbar_title3-hover--infor-ma">
-                                                        Mã ứng viên: <?php echo $id ?>
+                                                        Mã ứng viên: <?php echo $id_tho ?>
                                                     </div>
                                                     <div name="mail" class="tabbar_title3-hover--infor-email">
                                                         <!-- Gmail: <?php echo $email ?> -->
