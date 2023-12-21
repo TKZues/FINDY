@@ -163,7 +163,7 @@
 /* ------------- Navbar ------------- */
 .top{
     width: 100%;
-    height: 30px;
+    height: var(--top-height);
     background-color: #000;
 }
 
