@@ -1,301 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./profilephoto.css">
     <link rel="stylesheet" href="./mainicon.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
 </head>
+
 <body>
 
-<?php
+    <?php
     include "id_tho.php";
-?>
-
-<?php
-
-
-// Lấy thông tin người dùng từ session
-$id_tho = $_SESSION['id_tho'];
-$hoTen = $_SESSION['hoTen'];
-
-// Hiển thị thông tin người dùng
-
-echo $id_tho;
-
-
-// Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
-include "db_connection.php";
-
-// Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
-$sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
-$result = $conn->query($sql);
-
-// Kiểm tra nếu có kết quả
-if ($result->num_rows > 0) {
-    // Lặp qua từng dòng kết quả
-    while ($row = $result->fetch_assoc()) {
-        // Lấy thông tin từ cột cần thiết
-        $mathongtintho = $row['mathongtintho'];
-        $hinhanhtho = $row['hinhanhtho'];
-        $diachi = $row['diachi'];
-        $ngaysinh = $row['ngaysinh'];
-        $cccd = $row['cccd'];
-        $gioitinh = $row['gioitinh'];
-        $sdt = $row['sdt']; 
-    }
-} else {
-    $mathongtintho = "";
-    $hinhanhtho = ""; // You may set a default image path or leave it empty
-    $diachi = "";
-    $ngaysinh = "";
-    $cccd = "";
-    $gioitinh = ""; // Set a default value or leave it empty
-    $email = "";
-    $sdt = "";
-
-    // Thông báo không tìm thấy thông tin
-    echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
-}
-
-// Đóng kết nối
-$conn->close();
-
-echo $mathongtintho
-?> 
-
-        
-
-
-        
-        <?php
-        include "headerphoto1.php";
     ?>
- 
 
-    
+    <?php
+
+
+    // Lấy thông tin người dùng từ session
+    $id_tho = $_SESSION['id_tho'];
+    $hoTen = $_SESSION['hoTen'];
+
+    // Hiển thị thông tin người dùng
+
+    echo $id_tho;
+
+
+    // Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
+    include "db_connection.php";
+
+    // Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
+    $sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
+    $result = $conn->query($sql);
+
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $mathongtintho = $row['mathongtintho'];
+            $hinhanhtho = $row['hinhanhtho'];
+            $diachi = $row['diachi'];
+            $ngaysinh = $row['ngaysinh'];
+            $cccd = $row['cccd'];
+            $gioitinh = $row['gioitinh'];
+            $sdt = $row['sdt'];
+        }
+    } else {
+        $mathongtintho = "";
+        $hinhanhtho = ""; // You may set a default image path or leave it empty
+        $diachi = "";
+        $ngaysinh = "";
+        $cccd = "";
+        $gioitinh = ""; // Set a default value or leave it empty
+        $email = "";
+        $sdt = "";
+
+        // Thông báo không tìm thấy thông tin
+        echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+    }
+
+    // Đóng kết nối
+    $conn->close();
+
+    echo $mathongtintho
+    ?>
+
+
+
+
+
+    <?php
+    include "headerphoto1.php";
+    ?>
+
+
+
     <section>
         <div class="insert">
             <div class="grid wide">
                 <div class="insert-profile l-12 c-12 m-12">
                     <?php
-                        include "connect.php";
+                    include "connect.php";
                     ?>
                     <?php
-                        $connect = new connect;
-                        if($_SERVER['REQUEST_METHOD']==='POST'){
-                        $insert_profilephoto = $connect -> insert_profilephoto();
-                        }
+                    $connect = new connect;
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $insert_profilephoto = $connect->insert_profilephoto();
+                    }
                     ?>
                     <form action="#" method="POST" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="insert-profile-left col c-3 m-3 l-3">
-                                <div class="insert-profile-left-img">
-                               
-                                    <img id="hinhAnh" src="./img/<?php echo $hinhanhtho ?>" alt="Hình ảnh của bạn" style="max-width: 200px;">
-  
-                                </div>
-                                <div class="insert-profile-right-name">
-                                    <input placeholder="Tên" type="text" name="namephoto" id="">
-                                    <input placeholder="Vị trí ứng tuyển" type="text" name="vitriungtuyen" id="">
-                                    <input style="display: none;" type="text" name="mathongtintho" id="" value = "<?php echo $mathongtintho ?>">
+                            <div class="col c-3 m-3 l-3">
+                                <div class="insert-profile-left">
+                                    <div class="insert-profile-left-img">
+                                        <!-- <img id="hinhAnh" src="./img/<?php echo $hinhanhtho ?>" alt="Hình ảnh của bạn" style="max-width: 200px;"> -->
+                                        <img id="hinhAnh" src="./img/avatar-13.png" alt="Hình ảnh của bạn" style="max-width: 200px;">
 
+                                    </div>
+                                    <div class="insert-profile-right-name">
+                                        <input placeholder="Tên" type="text" name="namephoto" id="">
+                                        <input placeholder="Vị trí ứng tuyển" type="text" name="vitriungtuyen" id="">
+                                        <input style="display: none;" type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+
+                                    </div>
+                                    <div class="insert-profile-left-mail">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input placeholder="Nhập mail" type="text" name="email" id="">
+                                    </div>
+                                    <div class="insert-profile-left-phone">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <input placeholder="Nhập số điện thoại" type="text" name="phone" id="">
+                                    </div>
+                                    <div class="insert-profile-left-fb">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
+                                    </div>
+                                    <div class="insert-profile-left-address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <input placeholder="Nhập mô tả" type="text" name="mota" id="">
+                                    </div>
                                 </div>
-                                <div class="insert-profile-left-mail">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <input placeholder="Nhập mail" type="text" name="email" id="">
-                                </div>
-                                <div class="insert-profile-left-phone">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <input placeholder="Nhập số điện thoại" type="text" name="phone" id="">
-                                </div>
-                                <div class="insert-profile-left-fb">
-                                    <i class="fa-brands fa-facebook"></i>
-                                    <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
-                                </div>
-                                <div class="insert-profile-left-address">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <input placeholder="Nhập mô tả" type="text" name="mota" id="">
-                                </div>
-                                
-                            </div>    
-                            <div class="insert-profile-right col c-8 m-8 l-8">
+                                <button class="btn btn--primary submit_profile" type="submit">Lưu</button>
+                            </div>
                             
-                             
+                            <div class="insert-profile-right col c-8 m-8 l-8">
+
+
                                 <div class="row">
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                    <div class="insert-profile-right-items">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="image-container" onclick="selectImage(this)">
                                                 <span style="font-size: 50px;">+</span>
                                                 <input type="file" name="ac1" accept="image/*" style="display: none;" onchange="displayImage(this)">
                                             </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ac2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ac3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ac4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
-
                                         </div>
                                     </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Ảnh cưới
-                                    </div>
-                                </div> 
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="hd1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                    <!-- <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ac1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ac2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ac3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ac4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
                                             </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="hd2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="hd3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="hd4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
-
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Ảnh cưới
                                         </div>
                                     </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Học đường
+                                    <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="hd1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="hd2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="hd3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="hd4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Học đường
+                                        </div>
                                     </div>
+                                    <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="sn1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="sn2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="sn3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="sn4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Sinh nhật
+                                        </div>
+                                    </div>
+                                    <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="gd1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="gd2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="gd3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="gd4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Gia đình
+                                        </div>
+                                    </div>
+                                    <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="at1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="at2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="at3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="at4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Ảnh tết
+                                        </div>
+                                    </div>
+                                    <div class="insert-profile-right-items c-4 m-4 l-4">
+                                        <div class="insert-profile-right-items-img">
+                                            <div class="row">
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ky1" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ky2" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ky3" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+                                                <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
+                                                    <span style="font-size: 50px;">+</span>
+                                                    <input type="file" name="ky4" accept="image/*" style="display: none;" onchange="displayImage(this)">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="insert-profile-right-items-name">
+                                            Kỷ yếu
+                                        </div>
+                                    </div> -->
                                 </div>
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="sn1" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="sn2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="sn3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="sn4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
+                            </div>
 
-                                        </div>
-                                    </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Sinh nhật
-                                    </div>
-                                </div>
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="gd1" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="gd2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="gd3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="gd4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
 
-                                        </div>
-                                    </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Gia đình
-                                    </div>
-                                </div>
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="at1" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="at2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="at3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="at4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
-
-                                        </div>
-                                    </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Ảnh tết
-                                    </div>
-                                </div>
-                                <div class="insert-profile-right-items c-4 m-4 l-4">
-                                    <div class="insert-profile-right-items-img">
-                                        <div class="row">
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ky1" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ky2" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ky3" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div>
-                                            <div class="image-container c-4 m-4 l-4" onclick="selectImage(this)">
-                                                <span style="font-size: 50px;">+</span>
-                                                <input type="file" name="ky4" accept="image/*" style="display: none;" onchange="displayImage(this)">
-                                            </div> 
-
-                                        </div>
-                                    </div>
-                                    <div class="insert-profile-right-items-name">
-                                        Kỷ yếu
-                                    </div>
-                                </div>
-                            </div>               
-                            
-                            
                         </div>
-</div>
-                        <button class="submit_profile" type="submit">Lưu</button>
-                    </form>
                 </div>
+                
+                </form>
             </div>
+        </div>
         </div>
     </section>
 
-  
+
 
     <!-- <section>
         <div class="main">
@@ -386,7 +401,7 @@ echo $mathongtintho
             </div>
         </div>
     </section> -->
-    
+
     <!-- <section>
         <div class="banner">
             <div class="grid wide">
@@ -410,10 +425,10 @@ echo $mathongtintho
             </div>
         </div>
     </section> -->
-    
-       
-    
-  
+
+
+
+
     <section>
         <div class="footer">
             <div class="grid wide">
@@ -439,57 +454,105 @@ echo $mathongtintho
                     <div class="footer_findy col c-2 m-2 l-2">
                         <h1>Findy</h1>
                         <ul>
-                            <a href=""><li>Dự án</li></a>
-                            <a href=""><li>Cuộc thi</li></a>
-                            <a href=""><li>Thành viên</li></a>
-                            <a href=""><li>Quản lý dự án</li></a>
-                            <a href=""><li>Hình ảnh khắp nơi</li></a>
-                            <a href=""><li>Xác thực</li></a>
+                            <a href="">
+                                <li>Dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Cuộc thi</li>
+                            </a>
+                            <a href="">
+                                <li>Thành viên</li>
+                            </a>
+                            <a href="">
+                                <li>Quản lý dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Hình ảnh khắp nơi</li>
+                            </a>
+                            <a href="">
+                                <li>Xác thực</li>
+                            </a>
                         </ul>
 
                     </div>
                     <div class="footer_introduce col c-2 m-2 l-2">
                         <h1>Giới thiệu</h1>
                         <ul>
-                            <a href=""><li>Về chúng tôi</li></a>
-                            <a href=""><li>Cách thức hoạt động</li></a>
-                            <a href=""><li>Bảo mật</li></a>
-                            <a href=""><li>Nhà đầu tư</li></a>
-                            <a href=""><li>Sơ đồ trang</li></a>
-                            <a href=""><li>Tin tức</li></a>
-                            <a href=""><li>Đội ngũ</li></a>
-                            <a href=""><li>Công việc</li></a>
+                            <a href="">
+                                <li>Về chúng tôi</li>
+                            </a>
+                            <a href="">
+                                <li>Cách thức hoạt động</li>
+                            </a>
+                            <a href="">
+                                <li>Bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Nhà đầu tư</li>
+                            </a>
+                            <a href="">
+                                <li>Sơ đồ trang</li>
+                            </a>
+                            <a href="">
+                                <li>Tin tức</li>
+                            </a>
+                            <a href="">
+                                <li>Đội ngũ</li>
+                            </a>
+                            <a href="">
+                                <li>Công việc</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_rules col c-2 m-2 l-2">
                         <h1>Điều khoản</h1>
                         <ul>
-                            <a href=""><li>Chính sách bảo mật</li></a>
-                            <a href=""><li>Điều khoản và điều kiện</li></a>
-                            <a href=""><li>Chính sách bản quyền</li></a>
-                            <a href=""><li>Quy tắc ứng xử</li></a>
-                            <a href=""><li>Các loại phí</li></a>
+                            <a href="">
+                                <li>Chính sách bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Điều khoản và điều kiện</li>
+                            </a>
+                            <a href="">
+                                <li>Chính sách bản quyền</li>
+                            </a>
+                            <a href="">
+                                <li>Quy tắc ứng xử</li>
+                            </a>
+                            <a href="">
+                                <li>Các loại phí</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_bussiness col c-2 m-2 l-2">
                         <h1>Đối tác</h1>
                         <ul>
-                            <a href=""><li>Escrow.com</li></a>
-                            <a href=""><li>Loadshift</li></a>
-                            <a href=""><li>Warrior Forum</li></a>
+                            <a href="">
+                                <li>Escrow.com</li>
+                            </a>
+                            <a href="">
+                                <li>Loadshift</li>
+                            </a>
+                            <a href="">
+                                <li>Warrior Forum</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_app col c-2 m-2 l-2">
                         <h1>Ứng dụng</h1>
                         <ul>
-                            <a href=""><li><img src="./assets/img/app-store.svg" alt=""></li></a>
-                            <a href=""><li><img src="./assets/img/google-play.svg" alt=""></li></a>
+                            <a href="">
+                                <li><img src="./assets/img/app-store.svg" alt=""></li>
+                            </a>
+                            <a href="">
+                                <li><img src="./assets/img/google-play.svg" alt=""></li>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </section>
     <!-- <script src="https://maps.app.goo.gl/3ooNCCMS91rFeVE88" async defer></script>
     <script>
@@ -508,13 +571,13 @@ echo $mathongtintho
     <div class="modal">
         <div class="modal__container">
             <!-- Register form -->
-            
+
             <form class="account_form hidden" id="register-form" method="POST">
                 <div class="account_form__container">
                     <h3 class="account_form__heading">Đăng ký</h3>
 
                     <div class="account_form__form">
-                        <input name="hoTen"  type="text" class="account_form__input" placeholder="Họ và tên">
+                        <input name="hoTen" type="text" class="account_form__input" placeholder="Họ và tên">
                         <input name="Email" type="email" class="account_form__input" placeholder="Email">
                         <input name="matKhau" type="password" class="password-input account_form__input" placeholder="Mật khẩu">
                         <input name="repeatmatKhau" type="password" class="account_form__input" placeholder="Nhập lại mật khẩu">
@@ -548,7 +611,15 @@ echo $mathongtintho
                         </a>
                         <a href="" class="btn account_form__socials--google">
                             <span class="account_form__socials-icon">
-                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g data-v-48748210=""><path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path> <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path> <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path> <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path> <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                    <g data-v-48748210="">
+                                        <path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                                        <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                                        <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                                        <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                                        <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path>
+                                    </g>
+                                </svg>
                             </span>
                             <span class="account_form__socials-title">
                                 Google
@@ -571,13 +642,13 @@ echo $mathongtintho
             </form>
 
             <!-- Login form -->
-            
-            <form class="account_form hidden" id="login-form" method = "POST" action = "mainphoto.php">
+
+            <form class="account_form hidden" id="login-form" method="POST" action="mainphoto.php">
                 <div class="account_form__container">
                     <h3 class="account_form__heading">Đăng nhập</h3>
 
                     <div class="account_form__form">
-                        <input name="Emailuser"  type="email" class="account_form__input" placeholder="Email">
+                        <input name="Emailuser" type="email" class="account_form__input" placeholder="Email">
                         <input name="Passworduser" type="password" class="password-input account_form__input" placeholder="Mật khẩu">
                     </div>
 
@@ -598,7 +669,15 @@ echo $mathongtintho
                         </a>
                         <a href="" class="btn account_form__socials--google">
                             <span class="account_form__socials-icon">
-                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g data-v-48748210=""><path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path> <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path> <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path> <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path> <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                                <svg data-v-48748210="" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                    <g data-v-48748210="">
+                                        <path data-v-48748210="" fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                                        <path data-v-48748210="" fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                                        <path data-v-48748210="" fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                                        <path data-v-48748210="" fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                                        <path data-v-48748210="" fill="none" d="M0 0h48v48H0z"></path>
+                                    </g>
+                                </svg>
                             </span>
                             <span class="account_form__socials-title">
                                 Google
@@ -624,4 +703,5 @@ echo $mathongtintho
     <script src="./anhphoto.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
