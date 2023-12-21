@@ -74,9 +74,11 @@ echo "ID của Thợ: " . $hoTen;
                 <div class="managerorder_container">
                 <div class="row">
                 
-                        <article>
-                            <iframe src="./donhang/thanhtoancoc.php" width="1000px" height="400px" frameborder="0" name = "loadpage"></iframe>
-                        </article>
+                        <div class="c-12 m-12 l-12">
+                            <article style="display: flex; align-items: center;justify-content: center;">
+                                <iframe src="./donhang/thanhtoancoc.php"  width="1100px" height="400px" frameborder="0" name = "loadpage"></iframe>
+                            </article>
+                        </div>
                 
                         
                         
