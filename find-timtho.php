@@ -293,93 +293,6 @@
 
 
 
-                                            <!-- <div class="col l-4 m-6 c-12">
-                                                <div class="freelancer-item">
-                                                    <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&ma_profile=<?php echo urlencode($result['ma_profile']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
-                                                        <div class="freelancer-item__personal-info">
-                                                            <div class="freelancer-item__avatar">
-                                                                <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
-                                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                                            </div>
-
-                                                            <div class="freelancer-item__info">
-                                                                <span class="freelancer-item__title">
-                                                                    <?php echo $result['ten'] ?>
-                                                                </span>
-                                                                <span class="freelancer-item__text">
-                                                                    <?php echo $result['nghenghiep'] ?>
-                                                                </span>
-                                                                <div class="star-rating">
-                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                    <div class="row">
-                                                                        <?php
-                                                                        if ($select_profile) {
-                                                                            while ($result = $select_profile->fetch_assoc()) {
-                                                                        ?>
-                                                                                <div class="col l-4 m-6 c-12">
-                                                                                    <div class="freelancer-item">
-                                                                                        <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
-                                                                                            <div class="freelancer-item__personal-info">
-                                                                                                <div class="freelancer-item__avatar">
-                                                                                                    <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img">
-                                                                                                    <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-
-                                                                                                </div>
-
-                                                                                                <div class="freelancer-item__info">
-                                                                                                    <span class="freelancer-item__title">
-                                                                                                        <?php echo $result['ten'] ?>
-                                                                                                    </span>
-                                                                                                    <span class="freelancer-item__text">
-                                                                                                        <?php echo $result['nghenghiep'] ?>
-                                                                                                    </span>
-                                                                                                    <div class="star-rating">
-                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                                                                    </div>
-                                                                                                    <div class="freelancer-item__rating">
-                                                                                                        <strong>4.9</strong>
-                                                                                                        <span>(234 đánh giá)</span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-
-                                                                                            <div class="freelancer-item__contact">
-                                                                                                <div class="freelancer-item__contact-info">
-                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['sdt'] ?></span>
-                                                                                                </div>
-                                                                                                <div class="freelancer-item__contact-info">
-                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['email'] ?></span>
-                                                                                                </div>
-                                                                                                <div class="freelancer-item__contact-info">
-                                                                                                    <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                                                                    <span class="freelancer-item__contact-text"><?php echo $result['diachi'] ?></span>
-                                                                                                </div>
-                                                                                            </div>
-
-                                                                                            <div class="slide-show-artwork">
-                                                                                                <div class="freelancer-item__artwork-list">
-                                                                                                    <img src="./img/collection-1-1.png" alt="" id="artwork-img-1" class="freelancer-item__artwork-img" onclick="changeImage1()">
-                                                                                                    <img src="./img/collection-1-2.png" alt="" id="artwork-img-2" class="freelancer-item__artwork-img" onclick="changeImage2()">
-                                                                                                    <img src="./img/collection-1-3.png" alt="" id="artwork-img-3" class="freelancer-item__artwork-img" onclick="changeImage3()">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                        <?php
-                                                                            }
-                                                                        }
-                                                                        ?>
                                                                 <?php
                                                             }
                                                         }
@@ -423,42 +336,10 @@
                                                             </div>
                                                         </div>
                                                 </div>
-                                            </div> -->
+                                            </div> 
                                 </div>
                             </div>
-                            <ul class="pagination">
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">
-                                        <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
-                                    </a>
-                                </li>
-                                <li class="pagination-item pagination-item--active">
-                                    <a href="" class="pagination-item__link">1</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">2</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">3</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">4</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">5</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">...</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">10</a>
-                                </li>
-                                <li class="pagination-item">
-                                    <a href="" class="pagination-item__link">
-                                        <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>

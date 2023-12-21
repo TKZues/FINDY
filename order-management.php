@@ -28,63 +28,59 @@
     include "headercustomer.php";
     ?>
 
-    <section>
-        <div class="manageroder">
+<div class="container">
             <div class="grid wide">
-                <div class="manageroder_container">
-                    <div class="manageroder_header">
-                        <div class="row">
-                            <div class="manageroder_header-xacnhan  c-3 m-3 l-3">
-                                <a href="./donhang/thanhtoancoc.php" target="loadpage" id="xacnhan-link" class="active">
-                                    <i class="fa-solid fa-list" id="xacnhan-icon"></i>
-                                    <p>Thanh toán cọc</p>
+                <div class="content" style="padding-top: 36px;">
+                    <div class="row process">
+                        <div class="col l-3 m-3 c-3">
+                            <div class="process__group">
+                                <a href="./photoconfirm.php" target="loadpage" class="process__step active">
+                                    <p class="process__number">
+                                        <i class="fa-solid fa-list" id="xacnhan-icon"></i>
+                                    </p>
+                                    <p class="process__name">Xác nhận</p>
                                 </a>
                             </div>
-                            <div class="manageroder_header-thuchien c-3 m-3 l-3">
-                                <a href="./donhang/thuchien.php" target="loadpage" id="thuchien-link">
-                                    <i class="fa-solid fa-dolly" id="thuchien-icon"></i>
-                                    <p>Thực hiện</p>
+                        </div>
+                        <div class="col l-3 m-3 c-3">
+                            <div class="process__group">
+                                <a href="./photoperform.php"  target="loadpage" class="process__step">
+                                    <p class="process__number">
+                                        <i class="fa-solid fa-dolly" id="thuchien-icon"></i>
+                                    </p>
+                                    <p class="process__name">Thực hiện</p>
                                 </a>
                             </div>
-                            <div class="manageroder_header-giaosanpham c-3 m-3 l-3">
-                                <a href="./donhang/nhansanpham.php" target="loadpage" id="giaosanpham-link">
-                                    <i class="fa-solid fa-box-archive" id="giaosanpham-icon"></i>
-                                    <p>Nhận sản phẩm</p>
+                        </div>
+                        <div class="col l-3 m-3 c-3">
+                            <div class="process__group">
+                                <a href="./photodelivery.php" target="loadpage" class="process__step">
+                                    <p class="process__number">
+                                        <i class="fa-solid fa-box-archive" id="giaosanpham-icon"></i>
+                                    </p>
+                                    <p class="process__name">Giao sản phẩm</p>
                                 </a>
                             </div>
-                            <div class="manageroder_header-thanhtoan c-3 m-3 l-3">
-                                <a href="./donhang/danhgia.php" target="loadpage" id="thanhtoan-link">
-                                    <i class="fa-solid fa-check" id="thanhtoan-icon"></i>
-                                    <p>Đánh giá</p>
+                        </div>
+                        <div class="col l-3 m-3 c-3">
+                            <div class="process__group">
+                                <a href="./photopayment.php" target="loadpage" class="process__step">
+                                    <p class="process__number">
+                                        <i class="fa-solid fa-check" id="thanhtoan-icon"></i>
+                                    </p>
+                                    <p class="process__name">Đã được thanh toán</p>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                </div>
+                    <article>
+                        <iframe id="myiframe" src="./photoconfirm.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
+                    </article>
+                </div> 
             </div>
         </div>
-    </section>
-    <section>
-        <div class="managerorder">
-            <div class="grid wide">
-                <div class="managerorder_container">
-
-                <div class="row">
-                
-                        <div class="c-12 m-12 l-12">
-                            <article style="display: flex; align-items: center;justify-content: center;">
-                                <iframe src="./donhang/thanhtoancoc.php"  width="1100px" height="400px" frameborder="0" name = "loadpage"></iframe>
-                            </article>
-                        </div>
-                
-                        
-                        
-                    
-                
-            </div>
-        </div>
-    </section>
+    </div>
 
     <section>
         <div class="footer">

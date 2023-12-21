@@ -41,7 +41,7 @@
                         <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">
-                    <img src="../img/avatar-1.png" alt="Ảnh đại diện" class="order__avatar-img">
+                    <img src="../img/<?php echo $anhtho ?>" alt="Ảnh đại diện" class="order__avatar-img">
                 </div>
 
                 <div class="order__info">
