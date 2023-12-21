@@ -1,4 +1,4 @@
-const iconLinks = document.querySelectorAll(".manageroder_header a");
+const iconLinks = document.querySelectorAll(".process__step");
 
 // Đặt sự kiện click cho mỗi liên kết
 iconLinks.forEach((link) => {
