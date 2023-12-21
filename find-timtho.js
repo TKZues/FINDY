@@ -11,10 +11,12 @@ togglePlaceMenu.addEventListener("click", function() {
         placeMenu.style.display = "block";
         placeIconDown.style.display = "none";
         placeIconUp.style.display = "block";
+        togglePlaceMenu.classList.add("selected");
     } else {
         placeMenu.style.display = "none";
         placeIconDown.style.display = "block";
-        placeIconUp.style.display = "none";                
+        placeIconUp.style.display = "none";
+        togglePlaceMenu.classList.remove("selected");
     }
 });
 
@@ -29,10 +31,12 @@ togglePriceMenu.addEventListener("click", function() {
         priceMenu.style.display = "block";
         priceIconDown.style.display = "none";
         priceIconUp.style.display = "block";
+        togglePriceMenu.classList.add("selected");
     } else {
         priceMenu.style.display = "none";
         priceIconDown.style.display = "block";
-        priceIconUp.style.display = "none";                
+        priceIconUp.style.display = "none";
+        togglePriceMenu.classList.remove("selected");
     }
 });
 
@@ -47,10 +51,12 @@ toggleExperienceMenu.addEventListener("click", function() {
         experienceMenu.style.display = "block";
         experienceIconDown.style.display = "none";
         experienceIconUp.style.display = "block";
+        toggleExperienceMenu.classList.add("selected");
     } else {
         experienceMenu.style.display = "none";
         experienceIconDown.style.display = "block";
-        experienceIconUp.style.display = "none";                
+        experienceIconUp.style.display = "none";
+        toggleExperienceMenu.classList.remove("selected");
     }
 });
 
@@ -65,10 +71,12 @@ toggleSkillMenu.addEventListener("click", function() {
         skillMenu.style.display = "block";
         skillIconDown.style.display = "none";
         skillIconUp.style.display = "block";
+        toggleSkillMenu.classList.add("selected");
     } else {
         skillMenu.style.display = "none";
         skillIconDown.style.display = "block";
-        skillIconUp.style.display = "none";                
+        skillIconUp.style.display = "none";
+        toggleSkillMenu.classList.remove("selected");
     }
 });
 
@@ -83,9 +91,11 @@ toggleRatingMenu.addEventListener("click", function() {
         ratingMenu.style.display = "block";
         ratingIconDown.style.display = "none";
         ratingIconUp.style.display = "block";
+        toggleRatingMenu.classList.add("selected");
     } else {
         ratingMenu.style.display = "none";
         ratingIconDown.style.display = "block";
-        ratingIconUp.style.display = "none";                
+        ratingIconUp.style.display = "none";
+        toggleRatingMenu.classList.remove("selected");
     }
 });
