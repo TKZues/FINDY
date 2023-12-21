@@ -190,7 +190,7 @@ echo "ID của Thợ: " . $hoTen;
                                                 $thongtinthue_data = $result_thongtinthue->fetch_assoc();
                                                 $hinhanhthue = $thongtinthue_data['hinhanhthue'];
                                 ?>
-                            <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
+                            <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
                                 <div class="jobbest-items ">
                                     <div class="jobbest-mid-top">
                                         <div class="row">
@@ -199,11 +199,11 @@ echo "ID của Thợ: " . $hoTen;
                                                 <img src="./img/<?php echo $hinhanhthue ?>" style="width:80px;height:80px;border-radius:50%" alt="">
                                             </div>
                                             <div class="jobbest-mid-top--right col c-8 m-8 l-8" >
-                                                <?php echo $result['tenposttimtho']  ?>
-                                                <p><?php echo $result['thoigian'] ?></p>
-                                                <p>Giá: <?php echo $result['gia'] ?></p>
-                                                <p><?php echo $result['sukien'] ?></p>
-                                                <p><?php echo $result['diadiem'] ?></p>
+                                                <p><?php echo $result['tenposttimtho']  ?></p>
+                                                <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
+                                                <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
+                                                <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
+                                                <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
                                             </div>
                                             <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
                                                     <i class="fa-regular fa-heart"></i>
