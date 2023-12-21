@@ -28,6 +28,7 @@ $diadiem = $_GET['diadiem'];
 $phongcach = $_GET['phongcach'];
 $motachitiet = $_GET['motachitiet'];
 $ma_posttimtho = $_GET['ma_posttimtho'];
+$anhmau = $_GET['anhmau'];
 // Use these variables as needed in your photoclick.php page
 
 
@@ -164,14 +165,14 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                 <div class="picture_img">
                                     <div class="row">
                                         <div class="picture_img-items c-4 m-4 l-4">
-                                            <img src="./img/avatar7.jpg" alt="">
+                                            <img src="./img/<?php echo $anhmau  ?>" alt="">
                                         </div>
-                                        <div class="picture_img-items c-4 m-4 l-4">
+                                        <!-- <div class="picture_img-items c-4 m-4 l-4">
                                             <img src="./img/download (4).jpg" alt="">
                                         </div>
                                         <div class="picture_img-items c-4 m-4 l-4">
                                             <img src="./img/Colors of Hoi An, Vietnam.jpg" alt="">
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
