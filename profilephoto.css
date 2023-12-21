@@ -748,7 +748,7 @@
 
 /* --------------headeruser------------- */
 .insert{
-    margin-top: 140px;
+    margin-top: var(--top-header-height);
 }
 .insert-profile{
     /* background-color: #ebebeb; */
@@ -766,18 +766,21 @@
     max-height: 100%;
     display: block;
 }
-.insert-profile-left{
-    background-color: rgb(255, 255, 255);
+.insert-profile-left {
+    /* background-color: rgb(255, 255, 255);
     color: #000000;
     border: 1px solid #b7b7b7;
     margin-right: 5%;
+    border-radius: 10px; */
+
+    border: 1px solid var(--border-color);
     border-radius: 10px;
 }
 
 
 .insert-profile-left > div{
-    margin: 5px 0px;
-   
+    width: 100%;
+    margin: 16px 0;
 }
 
 .insert-profile-left h1{
@@ -810,7 +813,10 @@
 }
 
 .insert-profile-left-img img{
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .insert-profile-right-name input:nth-child(1){
@@ -830,7 +836,7 @@
 .insert-profile-left-mail, .insert-profile-left-phone, .insert-profile-left-fb, .insert-profile-left-address{
     display: flex;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.rem;
 }
 
 .insert-profile-right-items{
@@ -865,6 +871,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    width: 100px;
+    height: 100px;
 }
 .image-container:hover {
     background-color: #f0f0f0;
@@ -896,19 +904,10 @@
 }
 
 /* Add a hover effect */
-.styled-button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
-}
 
 .submit_profile{
-    background-color: #007BFF; /* Background color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Padding around the text */
-    border: none; /* Remove the button border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change the cursor on hover */
-    font-size: 16px; /* Font size */
-    margin-top: 2%;
+    margin: 8px auto;
+    width: 80%;
 }
 
 @media (max-width: 768px) {

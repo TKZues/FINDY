@@ -158,7 +158,7 @@
             <div class="mobile__menu">
                 <div class="mobile__heading">
                     <i class="mobile__heading-icon fa-solid fa-circle-user"></i>
-                    <a href="./account.php" class="mobile__heading-link">[Tên người dùng]</a>
+                    <a href="./account.php" class="mobile__heading-link"><?php echo $hoTen; ?></a>
                 </div>
                 <div class="mobile__heading">
                     <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>

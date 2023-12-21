@@ -52,6 +52,7 @@
     font-weight: 700;
     text-decoration: none;
     color: var(--main-color);
+    margin-left: 4px;
 }
 
 .navbar__heading-icon {
