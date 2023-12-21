@@ -35,39 +35,58 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-
+                                        $mathuchien = $result['mathuchien'];
                                             
                                 ?>
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
-                                        <img src="./img/avatar1.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid col c-7 m-7 l-7">
-                                        <div class="name">
-                                        <span>Họ tên: </span><?php echo $tentho ?>
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span><?php echo $diadiem ?>
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span><?php echo $thoigian ?>
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span><?php echo $phongcach ?>
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span><?php echo $gia ?> <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button col c-3 m-3 l-3">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                        <button style="padding:0 3px;" type="submit">Giao sản phẩm</button>
-                                    </div>
-                                </div>
-                        </div>
+                        <div class="col l-12 m-12 c-12">
+            <div class="order">
+                <div class="order__avatar">
+                    <img src="../img/avatar-1.png" alt="Ảnh đại diện" class="order__avatar-img">
+                </div>
+
+                <div class="order__info">
+                    <span class="order__name">
+                        <?php echo $tentho  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-location-dot"></i>
+                        <?php echo $diadiem  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-calendar-days"></i>
+                        <?php echo $thoigian  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-regular fa-clock"></i>
+                        16h:30p
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <span class="order__title">
+                        Mã đơn hàng:
+                        <strong><?php echo $mathuchien ?> </strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong><?php echo $phongcach  ?></strong>
+                    </span>
+                    <span class="order__title">
+                        Tổng giá trị:
+                        <strong><?php echo $gia ?></strong>
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <button class="btn order-btn">Đã thực hiện</button>
+                </div>
+
+                <a href="" class="order__detail">
+                    Xem chi tiết
+                    <i class="order__detail-icon fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
 
                         <?php 
                                         }
@@ -77,7 +96,7 @@
                         
                         
                     
-</div>
+<!-- </div>
     <div class="content">
         <div class="col l-12 m-12 c-12">
             <div class="order">
@@ -332,7 +351,7 @@
                 </a>
             </div>
         </div>
-    </div>
->>>>>>> e4098b510ef2108a428df17eaed8351ace4ad601
+    </div> -->
+
 </body>
 </html>

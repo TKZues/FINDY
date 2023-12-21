@@ -232,7 +232,6 @@
         inner JOIN thue_thanhtoancoc ON thue_thanhtoancoc.ma_posttimtho = post_timtho.ma_posttimtho
         inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
         inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
-        inner join account_tho on account_tho.id_tho = thongtintho.id_tho
         inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
         where thongtintho.id_tho = $id_tho";
         $result = $this ->db ->select($query);
@@ -253,7 +252,6 @@
             inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
-            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
             where thongtintho.id_tho = $id_tho";
             $result = $this ->db ->select($query);
@@ -279,6 +277,16 @@
             return $result;
 
            
+        }
+        public function select_nhansanphamtho($id_tho){
+            $query = "select *from post_timtho
+            inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this ->db ->select($query);
+            return $result;
         }
         public function delete_quanlybaidang($ma_quanlybaidang){
             $query = "DELETE FROM quanlybaidang where ma_quanlybaidang = '$ma_quanlybaidang";

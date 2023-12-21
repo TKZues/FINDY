@@ -166,37 +166,6 @@
     height: var(--top-height);
     background-color: #000;
 }
-.navbar {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__logo-link {
-    color: transparent;
-    text-decoration: none;
-}
-
-.navbar__logo-link img{
-   
-}
-
-.navbar__logo-img {
-    height: 50px
-}
-
-.navbar__heading-link {
-    font-size: 2rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-.navbar__heading-icon {
-    font-size: 2.8rem;
-    color: var(--main-color);
-}
 
 
 

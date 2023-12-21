@@ -34,52 +34,11 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
+                                        $ma_thanhtoancoc = $result['ma_thanhtoancoc'];
 
                                             
                                 ?>
-                        <div class="manageroder_content  col c-12 m-6 l-6">
-                                <div class="">
-                                    <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
-                                        <img src="./img/avatar1.jpg" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid col c-7 m-7 l-7">
-                                        <div class="name">
-                                        <span>Họ tên: </span><?php echo $tentho ?>
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span><?php echo $diadiem ?>
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span><?php echo $thoigian ?>
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span><?php echo $phongcach ?>
-                                        </div>
-                                        <div class="price">
-                                            <span>Giá: </span><?php echo $gia ?> <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="manageroder_content-items--button col c-3 m-3 l-3">
-                                        <!-- <button type="button">Thực hiện</button> -->
-                                        <a href="">Xem chi tiết</a>
-                                        <button style="background-color: #cccccc;padding:0 3px;" type="submit">Chờ xác nhận</button>
-                                    </div>
-                                </div>
-                        </div>
-
-                        <?php 
-                                        }
-                                    }
-
-?>
-                        
-                        
-                    
-</div>
-
-    <div class="content">
-        <div class="col l-12 m-12 c-12">
+                        <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">
                     <img src="./img/avatar1.jpg" alt="Ảnh đại diện" class="order__avatar-img">
@@ -87,15 +46,15 @@
 
                 <div class="order__info">
                     <span class="order__name">
-                        Vũ Thành Danh
+                        <?php echo $tentho ?>
                     </span>
                     <span class="order__text">
                         <i class="order__text-icon fa-solid fa-location-dot"></i>
-                        Quận 1, TP.Hồ Chí Minh
+                        <?php echo $diadiem ?>
                     </span>
                     <span class="order__text">
                         <i class="order__text-icon fa-solid fa-calendar-days"></i>
-                        11/12/2023
+                        <?php echo $thoigian ?>
                     </span>
                     <span class="order__text">
                         <i class="order__text-icon fa-regular fa-clock"></i>
@@ -106,15 +65,15 @@
                 <div class="order__info">
                     <span class="order__title">
                         Mã đơn hàng:
-                        <strong>0093345</strong>
+                        <strong><?php  echo $ma_thanhtoancoc ?></strong>
                     </span>
                     <span class="order__title">
                         Phong cách:
-                        <strong>Chụp ảnh cổ trang</strong>
+                        <strong><?php echo $phongcach ?></strong>
                     </span>
                     <span class="order__title">
                         Tổng giá trị:
-                        <strong>300.000</strong>
+                        <strong><?php echo $gia ?></strong>
                         <strong>đ</strong>
                     </span>
                 </div>
@@ -131,6 +90,19 @@
                 </a>
             </div>
         </div>
+
+                        <?php 
+                                        }
+                                    }
+
+?>
+                        
+                        
+                    
+</div>
+
+    <!-- <div class="content">
+        
 
         <div class="col l-12 m-12 c-12">
             <div class="order">
@@ -396,7 +368,6 @@
                 </a>
             </div>
         </div>
-    </div>
->>>>>>> e4098b510ef2108a428df17eaed8351ace4ad601
+    </div> -->
 </body>
 </html>
