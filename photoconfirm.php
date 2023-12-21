@@ -27,7 +27,7 @@
 <?php
                                     if($select_thanhtoancoctho){
                                         while($result = $select_thanhtoancoctho->fetch_assoc()){
-                                        $anhtho = $result['hinhanhtho'];    
+                                        $anhtho = $result['hinhanhthue'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];

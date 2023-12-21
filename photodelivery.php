@@ -28,20 +28,20 @@
 <?php
                                     if($select_nhansanphamtho){
                                         while($result = $select_nhansanphamtho->fetch_assoc()){
-                                        $anhtho = $result['hinhanhtho'];    
+                                        $anhtho = $result['hinhanhthue'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-                                        $mathuchien = $result['mathuchien'];
+                                        $mathuchien = $result['ma_thuenhansanpham'];
                                             
                                 ?>
                         <div class="col l-12 m-12 c-12">
             <div class="order">
                 <div class="order__avatar">
-                    <img src="../img/avatar-1.png" alt="Ảnh đại diện" class="order__avatar-img">
+                    <img src="../img/<?php  echo $anhtho ?>" alt="Ảnh đại diện" class="order__avatar-img">
                 </div>
 
                 <div class="order__info">

@@ -280,8 +280,8 @@
         }
         public function select_nhansanphamtho($id_tho){
             $query = "select *from post_timtho
-            inner JOIN thuchien ON thuchien.ma_posttimtho = post_timtho.ma_posttimtho
-            inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
+            inner JOIN thue_nhansanpham ON thue_nhansanpham.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = thue_nhansanpham.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
             where thongtintho.id_tho = $id_tho";

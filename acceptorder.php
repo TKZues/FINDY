@@ -146,8 +146,10 @@ echo "ID của Thợ: " . $mathongtintho;
                                 </div>
                             </div>
                             <div class="acceptoder_left-items-button">
+                                <div class="input_accept" style="display: none;">
                                 <input type="text" name="" id="" value="<?php echo $ma_posttructiep ?>">
                                 <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
+                                </div>
                                 <a href="./manageroder.php">Tạo đơn hàng</a>
                             </div>
                         </div>
