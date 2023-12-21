@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+
 <?php
     include "id_tho.php";
 ?>
@@ -78,7 +78,6 @@
                         
                     
 </div>
-=======
     <div class="content">
         <div class="col l-12 m-12 c-12">
             <div class="order">
