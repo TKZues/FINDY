@@ -102,7 +102,7 @@ echo $mathongtintho
                                 <div class="insert-profile-right-name">
                                     <input placeholder="Tên" type="text" name="namephoto" id="">
                                     <input placeholder="Vị trí ứng tuyển" type="text" name="vitriungtuyen" id="">
-                                    <input type="text" name="mathongtintho" id="" value = "<?php echo $mathongtintho ?>">
+                                    <input style="display: none;" type="text" name="mathongtintho" id="" value = "<?php echo $mathongtintho ?>">
 
                                 </div>
                                 <div class="insert-profile-left-mail">
