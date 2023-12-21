@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <link rel="stylesheet" href="./manageroder.css">
-    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
