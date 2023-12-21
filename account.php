@@ -204,6 +204,13 @@ $conn->close();
                                             </span>
                                             <button class="btn account__personal-btn">Xóa tài khoản</button>                                            
                                         </div>
+                                        <div class="account__personal-body">
+                                            <span class="account__personal-text">
+                                                <h4>Đăng xuất </h4>
+                                                <p>Đăng xuất tài khoản</p>
+                                            </span>
+                                            <button class="btn account__personal-btn"><a href="./main.php">Đăng xuất</a></button>                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
