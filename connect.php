@@ -346,10 +346,29 @@
             inner JOIN tho_giaosanpham ON tho_giaosanpham.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = tho_giaosanpham.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
-            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
             inner join sanpham on sanpham.mathogiaosanpham = tho_giaosanpham.mathogiaosanpham
             where thongtinthue.id_thue = $id_thue";
             $result = $this ->db ->select($query);
+            return $result;
+        }
+        public function select_danhgia($id_thue){
+            $query = "select *from post_timtho
+            inner JOIN thue_danhgia ON thue_danhgia.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = thue_danhgia.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+            where thongtinthue.id_thue = $id_thue";
+            $result = $this ->db ->select($query);
+            return $result;
+        }
+        public function insert_thongtindanhgia(){
+            $rating = $_POST['rating1'];
+            $hinhdanhgia = $_FILES['hinhdanhgia']['name'];
+            $videodanhgia = $_FILES['videodanhgia']['name'];
+            $query= "INSERT INTO thongtindanhgia (rating,hinhdanhgia,videodanhgia) VALUES
+            ('$rating','$hinhdanhgia','$videodanhgia')";
+            $result = $this ->db->insert($query);
             return $result;
         }
     }

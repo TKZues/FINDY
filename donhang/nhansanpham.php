@@ -35,6 +35,7 @@
                                 <?php
                                     if($select_sanpham){
                                         while($result = $select_sanpham->fetch_assoc()){
+                                            $uniqueId = uniqid();  
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -43,6 +44,8 @@
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
                                         $drive = $result['drive'];
+                                        // $mathongtinthue = $result['mathongtinthue'];
+                                        // $mathogiaosanpham = $result['mathogiaosanpham'];
                                             
                                 ?>
                             <div class="manageroder_content  col c-12 m-12 l-12">
@@ -69,15 +72,54 @@
                                         
                                     </div>
                                     <div class="manageroder_content-items--button col c-2 m-2 l-2">
-                                        <a  href="<?php echo $drive; ?>" target = "_blank" ><button type="button">Xem sản phẩm</button></a>
-                                        
+                                    <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
+                        '<?php echo $gia; ?>',
+                        '<?php echo $thoigian; ?>'
+                        )">Nhận sản phẩm</button>                                        
                                     </div>
                                 </div>
+</div>        
+<div id="additional-info_<?php echo $uniqueId; ?>" class="additional-info" style="display: none;">
+            <form action="" method="POST">
+                <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
+                <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
+                <div class="flex_botton">
+                    <button class="button_additional" type="submit">Gửi yêu cầu chỉnh sửa</button>
+                    <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
+                </div>
+            </form>
 </div>
+
 <?php 
                                         }
                                     }
 
 ?>
+<script>
+    function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {
+        var additionalInfoDiv = document.getElementById('additional-info_' + uniqueId);
+
+        // Check the current visibility state
+        var isVisible = additionalInfoDiv.style.display === 'block';
+
+        // Toggle the visibility
+        additionalInfoDiv.style.display = isVisible ? 'none' : 'block';
+
+        // If visible, populate and show the additional info
+        if (!isVisible) {
+            additionalInfoDiv.innerHTML = `
+                <p>Địa điểm: ${diadiem}</p>
+                <p>Thời gian: ${thoigian}</p>
+                <p>Giá: ${gia}</p>
+                <p>Giá: ${mathogiaosanpham}</p>
+                // <input type="text" name="inputdrive_<?php echo $uniqueId; ?>" id="inputdrive_${uniqueId}" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
+                <button class="button_additional" type="submit">Gửi yêu cầu chỉnh sửa</button>
+                <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
+
+            `;
+        }
+    }
+</script>
 </body>
 </html>

@@ -784,6 +784,227 @@
 /* CSS for chat button */
 
 
+ 
+/* Style for the additional information container */
+.additional-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:10px 20px;
+    width: 100%;
+   
+    top: 0; /* Adjust the top position as needed */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card-like effect */
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it appears above other elements */
+    animation: slideDown 0.9s ease-out;
+
+}
+
+.additional-infodanhgia {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 20px;
+    width: 95%;
+   
+    top: 0; /* Adjust the top position as needed */
+    left: 0;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card-like effect */
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it appears above other elements */
+    animation: slideDown 0.9s ease-out;
+
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the additional information text */
+.additional-info p {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.additional-infodanhgia p {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+.additional-info input {
+    width: 20%;
+    height: auto;
+    padding: 5px 2px;
+}
+
+.additional-infodanhgia input {
+    width: 20%;
+    height: auto;
+    padding: 5px 2px;
+}
+/* Style for the order detail link */
+.order__detail {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for the order detail icon */
+.order__detail-icon {
+    margin-left: 5px;
+}
+
+/* Style for the order info spans */
+.order__name,
+.order__text,
+.order__title {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for the order info icons */
+.order__text-icon {
+    margin-right: 5px;
+}
+
+.button_additional{
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    height: 40px;
+    width: auto;
+    justify-content: center;
+    letter-spacing: .175px;
+    line-height: 22px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    margin: 10px 20px;
+}
+
+.additional-info form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.additional-infodanhgia form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex_botton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+ 
+.additional-info a{
+    text-decoration: none;
+}
+
+.additional-infodanhgia a{
+    text-decoration: none;
+}
+/* --------ngôi sao--------- */
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    color: #ddd;
+    font-size: 30px;
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.rating label:before {
+    content: '\2605';
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label:before,
+.rating label:hover,
+.rating label:hover ~ label,
+.rating label:hover:before,
+.rating label:hover ~ label:before {
+    color: #f90;
+}
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.additional-infodanhgia img, video {
+    max-width: 40%;
+    margin-bottom: 20px;
+}
+.danhgia{
+    display: flex;
+    align-items: center;
+}
   
-  
-  
+.upload-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.upload-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#selectedImage {
+    max-width: 100%;
+    max-height: 200px; /* Adjust the maximum height as needed */
+    display: none; /* Hide the image by default */
+    margin-top: 10px;
+}
+
+#selectedVideo {
+    max-width: 100%;
+    max-height: 200px; /* Adjust the maximum height as needed */
+    display: none; /* Hide the video by default */
+    margin-top: 10px;
+}
