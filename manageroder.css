@@ -821,8 +821,29 @@
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin:10px 20px;
+    width: 100%;
+   
+    top: 0; /* Adjust the top position as needed */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card-like effect */
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it appears above other elements */
+    animation: slideDown 0.9s ease-out;
+
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Style for the additional information text */
@@ -830,6 +851,12 @@
     margin-bottom: 5px;
     margin-left: 10px;
     font-size: 12px;
+}
+
+.additional-info input {
+    width: 20%;
+    height: auto;
+    padding: 5px 2px;
 }
 
 /* Style for the order detail link */
@@ -856,6 +883,26 @@
 /* Style for the order info icons */
 .order__text-icon {
     margin-right: 5px;
+}
+
+.button_additional{
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;
+    justify-content: center;
+    letter-spacing: .175px;
+    line-height: 22px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
 }
 
 /* CSS for chat button */

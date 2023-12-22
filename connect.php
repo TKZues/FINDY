@@ -331,6 +331,15 @@
 
            
         }
-        
+        public function insert_sanpham($uniqueId){
+            $inputmathogiaosp = $_POST['inputmathogiaosp'];
+            $inputmathongtinthue = $_POST['inputmathongtinthue'];
+            $inputdrive = $_POST['inputdrive'];
+            $query = "INSERT INTO sanpham (mathogiaosanpham, mathongtinthue, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
+        }
     }
 ?>

@@ -6,6 +6,7 @@
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <link rel="stylesheet" href="./manageroder.css">
     <link rel="stylesheet" href="./css/base.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -54,6 +55,7 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
+                                        $mathongtinthue = $result['mathongtinthue'];
                                         $mathogiaosanpham = $result['mathogiaosanpham'];
                                             
                                 ?>
@@ -99,7 +101,9 @@
                 <div class="order__info">
                 <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
                         '<?php echo $gia; ?>',
-                        '<?php echo $thoigian; ?>')">Giao sản phẩm</button>                </div>
+                        '<?php echo $thoigian; ?>',
+                        '<?php echo $mathogiaosanpham; ?>',
+                        '<?php echo $mathongtinthue; ?>')">Giao sản phẩm</button>                </div>
                 <a href="" class="order__detail">
                     Xem chi tiết
                     <i class="order__detail-icon fa-solid fa-right-long"></i>
@@ -107,7 +111,21 @@
             </div>
         </div>
         <div id="additional-info_<?php echo $uniqueId; ?>" class="additional-info" style="display: none;">
-            <input type="text" id="input_<?php echo $uniqueId; ?>" placeholder="Enter something...">
+        <?php
+                $connect = new connect;
+                if($_SERVER['REQUEST_METHOD']==='POST'){
+                                                            
+                $insert_sanpham = $connect->insert_sanpham($uniqueId);
+                                                                                                                   
+            }
+                                                        
+        ?>
+            <form action="" method="POST">
+                <input type="text" name="inputmathogiaosp" value="<?php echo $mathogiaosanpham ?>">
+                <input type="text" name="inputmathongtinthue" value="<?php echo $mathongtinthue ?>">
+                <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <button class="button_additional" type="submit">Hoàn thành</button>
+            </form>
         </div> <!-- New container for additional info -->
                         <?php 
                                         }
@@ -130,7 +148,11 @@
                 <p>Địa điểm: ${diadiem}</p>
                 <p>Thời gian: ${thoigian}</p>
                 <p>Giá: ${gia}</p>
-                <input type="text" id="input_${uniqueId}" placeholder="Enter something...">
+                <p>Giá: ${mathogiaosanpham}</p>
+                <input type="text" name="inputmathogiaosp_<?php echo $uniqueId; ?>" value="<?php echo $mathogiaosanpham ?>">
+                <input type="text" name="inputmathongtinthue_<?php echo $uniqueId; ?>" value="<?php echo $mathongtinthue ?>">
+                <input type="text" name="inputdrive_<?php echo $uniqueId; ?>" id="inputdrive_${uniqueId}" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <button class="button_additional" type="submit">Hoàn thành</button>
             `;
         }
     }
