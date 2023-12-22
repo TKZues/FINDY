@@ -32,7 +32,7 @@
 ?>
 
         
-<?php
+                                <?php
                                     if($select_thanhtoancoc){
                                         while($result = $select_thanhtoancoc->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
@@ -42,16 +42,21 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-
+                                        $ma_posttimtho = $result['ma_posttimtho'];
+                                        $mathongtintho = $result['mathongtintho'];
+                                        $ma_thanhtoancoc = $result['ma_thanhtoancoc'];
+                                        $tenposttimtho = $result['tenposttimtho'];
                                             
                                 ?>
-<div class="manageroder_content  col c-12 m-12 l-12">
+                            <div class="manageroder_content  col c-12 m-12 l-12">
                                 <div class="row">
                                     <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
                                         <img style="width:100px; height:100px; " src="../img/<?php echo $anhtho ?>" alt="">
                                     </div>
                                     <div class="manageroder_content-items--mid col c-7 m-7 l-7">
                                         <div class="name">
+                                            <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
+                                            <input type="text" name="" id="" value="<?php echo $ma_posttimtho  ?>">
                                             <?php echo $tentho ?>
                                         </div>
                                         <div class="address">
@@ -69,7 +74,7 @@
                                         
                                     </div>
                                     <div class="manageroder_content-items--button col c-2 m-2 l-2">
-                                        <a  href="../deposit-payment.php?name=<?php echo urlencode($tentho); ?>&diadiem=<?php echo urlencode($diadiem); ?>&thoigian=<?php echo urlencode($thoigian); ?>&diachi=<?php echo urlencode($sukien); ?>&gia=<?php echo urlencode($gia); ?>" target = "_blank" ><button type="button">Thanh toán</button></a>
+                                        <a  href="../deposit-payment.php?name=<?php echo urlencode($tentho); ?>&tenposttimtho=<?php echo urlencode($tenposttimtho); ?>&ma_thanhtoancoc=<?php echo urlencode($ma_thanhtoancoc); ?>&ma_posttimtho=<?php echo urlencode($ma_posttimtho); ?>&mathongtintho=<?php echo urlencode($mathongtintho); ?>&diadiem=<?php echo urlencode($diadiem); ?>&thoigian=<?php echo urlencode($thoigian); ?>&diachi=<?php echo urlencode($sukien); ?>&gia=<?php echo urlencode($gia); ?>" target = "_blank" ><button type="button">Thanh toán</button></a>
                                         
                                     </div>
                                 </div>

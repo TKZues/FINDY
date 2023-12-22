@@ -36,6 +36,10 @@
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
                                         $mathuchien = $result['mathuchien'];
+                                        $ma_posttimtho = $result['ma_posttimtho'];
+                                        $mathongtintho = $result['mathongtintho'];
+                                        $mathuchien = $result['mathuchien'];
+                                        $tenposttimtho = $result['tenposttimtho'];
                                             
                                 ?>
                         <div class="col l-12 m-12 c-12">
@@ -46,6 +50,7 @@
 
                 <div class="order__info">
                     <span class="order__name">
+                        
                         <?php echo $tentho  ?>
                     </span>
                     <span class="order__text">
@@ -78,7 +83,23 @@
                 </div>
 
                 <div class="order__info">
-                    <button class="btn order-btn">Đã thực hiện</button>
+                
+                                    <?php
+                                                        $connect = new connect;
+                                                        if($_SERVER['REQUEST_METHOD']==='POST'){
+                                                            
+                                                                $insert_thogiaosanpham = $connect->insert_thogiaosanpham();
+                                                                                                                   
+                                                        }
+                                                        
+                                                    ?>
+                                    <form action="" method="POST">
+                                        <div class="input_payment">
+                                            <input type="text" name="mathongtintho_thothuchien" id="" value="<?php echo $mathongtintho ?>">
+                                            <input type="text" name="ma_posttimtho_thothuchien" id="" value="<?php echo $ma_posttimtho  ?>">
+                                        </div>
+                                        <button class="btn order-btn">Đã thực hiện</button>
+                                    </form>
                 </div>
 
                 <a href="" class="order__detail">

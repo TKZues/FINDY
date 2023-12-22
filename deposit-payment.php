@@ -36,7 +36,10 @@ echo "ID của Thợ: " . $hoTen;
     $thoigian = $_GET['thoigian'];
     $diachi = $_GET['diachi'];
     $gia = $_GET['gia'];
-    
+    $ma_posttimtho = $_GET['ma_posttimtho'];
+    $mathongtintho = $_GET['mathongtintho'];
+    $ma_thanhtoancoc = $_GET['ma_thanhtoancoc'];
+    $tenposttimtho = $_GET['tenposttimtho'];
     // ... rest of your code
 ?>
     <div class="main">
@@ -53,8 +56,9 @@ echo "ID của Thợ: " . $hoTen;
                             <div class="col l-8 m-7 c-12">
                                 <div class="order-info">
                                     <div class="order-info__info">
+                                        
                                         <h1 class="order-info__heading">Thông tin đơn hàng</h1>
-                                        <h2 class="order-info__title">Mã đơn hàng: 00093345</h2>
+                                        <h2 class="order-info__title">Mã đơn thanh toán: <?php echo $ma_thanhtoancoc ?></h2>
                                         <div class="order-info__freelance">
                                             <div class="order-info__freelance-warp">
                                                 <span class="order-info__freelance-text">
@@ -102,7 +106,7 @@ echo "ID của Thợ: " . $hoTen;
                                     <div class="order-info__service">
                                         <h2 class="order-info__service-heading">Dịch vụ sử dụng</h2>
                                         <div class="order-info__service-info">
-                                            <span class="order-info__service-name">Chụp ảnh sinh nhật ngoại cảnh</span>
+                                            <span class="order-info__service-name"><?php  echo $tenposttimtho ?></span>
                                             <span class="order-info__service-price"><?php echo $gia ?>đ</span>
                                         </div>
                                         <div style="display: none;" class="order-info__service-info">
@@ -147,7 +151,7 @@ echo "ID của Thợ: " . $hoTen;
                                                 <p class="payment-methods__name">Ngân hàng</p>
                                                 <div class="payment-methods__text">Chuyển khoản ngân hàng</div>
                                             </div>
-                                            <input type="radio" name="payment-methods" id="payment-viettel-money">
+                                            <input type="radio" onclick="document.getElementById('myImg').src=GenQR()" name="payment-methods" id="payment-viettel-money">
                                         </label>
                                         <label for="payment-card" class="payment-methods__item">
                                             <img src="./img/card.png" alt="Thẻ ATM" class="payment-methods__img">
@@ -158,8 +162,26 @@ echo "ID của Thợ: " . $hoTen;
                                             <input type="radio" name="payment-methods" id="payment-card">
                                         </label>
                                     </div>
-
-                                    <button class="btn btn--primary payment-methods-btn" onclick="document.getElementById('myImg').src=GenQR()">Thanh toán cọc</button>
+                                    <?php
+                                        include 'connect.php';
+                                    ?>
+                                    <?php
+                                                        $connect = new connect;
+                                                        if($_SERVER['REQUEST_METHOD']==='POST'){
+                                                            
+                                                                $insert_thuchien = $connect->insert_thuchien();
+                                                                                                                   
+                                                        }
+                                                        
+                                                    ?>
+                                    <form action="" method="POST">
+                                        <div class="input_payment">
+                                            <input type="text" name="mathongtintho_thuchien" id="" value="<?php echo $mathongtintho ?>">
+                                            <input type="text" name="ma_posttimtho_thuchien" id="" value="<?php echo $ma_posttimtho  ?>">
+                                        </div>
+                                        <button class="btn btn--primary payment-methods-btn" >Thanh toán cọc</button>
+                                    </form>
+                                    
                                     <img id="myImg" width="300px" src="" alt="">
                                 </div>
                             </div>

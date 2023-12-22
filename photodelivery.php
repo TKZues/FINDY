@@ -35,7 +35,7 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-                                        $mathuchien = $result['ma_thuenhansanpham'];
+                                        $mathogiaosanpham = $result['mathogiaosanpham'];
                                             
                                 ?>
                         <div class="col l-12 m-12 c-12">
@@ -65,7 +65,7 @@
                 <div class="order__info">
                     <span class="order__title">
                         Mã đơn hàng:
-                        <strong><?php echo $mathuchien ?> </strong>
+                        <strong><?php echo $mathogiaosanpham ?> </strong>
                     </span>
                     <span class="order__title">
                         Phong cách:
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="order__info">
-                    <button class="btn order-btn">Đã thực hiện</button>
+                    <button class="btn order-btn">Giao sản phẩm</button>
                 </div>
 
                 <a href="" class="order__detail">
