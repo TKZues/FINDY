@@ -28,13 +28,13 @@
 ?>
 <?php 
     $connect = new connect;
-    $select_nhansanpham = $connect -> select_nhansanpham($id_thue); //
+    $select_sanpham = $connect -> select_sanpham($id_thue); //
 ?>
 
         
                                 <?php
-                                    if($select_nhansanpham){
-                                        while($result = $select_nhansanpham->fetch_assoc()){
+                                    if($select_sanpham){
+                                        while($result = $select_sanpham->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -42,7 +42,7 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-
+                                        $drive = $result['drive'];
                                             
                                 ?>
                             <div class="manageroder_content  col c-12 m-12 l-12">
@@ -69,7 +69,7 @@
                                         
                                     </div>
                                     <div class="manageroder_content-items--button col c-2 m-2 l-2">
-                                        <a  href="../deposit-payment.php?name=<?php echo urlencode($tentho); ?>&diadiem=<?php echo urlencode($diadiem); ?>&thoigian=<?php echo urlencode($thoigian); ?>&diachi=<?php echo urlencode($sukien); ?>&gia=<?php echo urlencode($gia); ?>" target = "_blank" ><button type="button">Xem sản phẩm</button></a>
+                                        <a  href="<?php echo $drive; ?>" target = "_blank" ><button type="button">Xem sản phẩm</button></a>
                                         
                                     </div>
                                 </div>

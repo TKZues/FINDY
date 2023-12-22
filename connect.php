@@ -341,5 +341,16 @@
             return $result;
           
         }
+        public function select_sanpham($id_thue){
+            $query = "select *from post_timtho
+            inner JOIN tho_giaosanpham ON tho_giaosanpham.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = tho_giaosanpham.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join sanpham on sanpham.mathogiaosanpham = tho_giaosanpham.mathogiaosanpham
+            where thongtinthue.id_thue = $id_thue";
+            $result = $this ->db ->select($query);
+            return $result;
+        }
     }
 ?>

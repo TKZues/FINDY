@@ -55,8 +55,10 @@
                                     </div>
                                     <div class="manageroder_content-items--mid col c-7 m-7 l-7">
                                         <div class="name">
-                                            <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
-                                            <input type="text" name="" id="" value="<?php echo $ma_posttimtho  ?>">
+                                            <div class="input_thanhtoancoc" style="display: none;">
+                                                <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
+                                                <input type="text" name="" id="" value="<?php echo $ma_posttimtho  ?>">
+                                            </div>
                                             <?php echo $tentho ?>
                                         </div>
                                         <div class="address">
