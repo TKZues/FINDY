@@ -37,9 +37,9 @@
         include "headercustomer.php";
         ?>
         <div class="main">
-            <div class="container">
+            <div class="find-timtho-container">
                 <div class="grid wide">
-                    <div class="row content">
+                    <div class="row find-timtho-content">
                         <div class="col l-3 m-4 c-0">
                             <div class="filter">
                                 <h3 class="filter__heading">

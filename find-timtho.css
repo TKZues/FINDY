@@ -1,10 +1,10 @@
 /* ------------- Filter ------------- */
-.container {
+.find-timtho-container {
     margin-top: var(--top-header-height);
     background-color: var(--background-color);
 }
 
-.content {
+.find-timtho-content {
     padding-top: 36px;
 }
 

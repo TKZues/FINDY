@@ -53,9 +53,9 @@ echo "ID của Thợ: " . $hoTen;
             include "headercustomer.php";
         ?>  
 
-        <div class="container">
+        <div class="post-management-container">
             <div class="grid wide">
-                <div class="content">
+                <div class="post-management-content">
                     <div class="post">
                         <h1 class="post-heading">Danh sách bài đăng</h1>
                         <div class="row">

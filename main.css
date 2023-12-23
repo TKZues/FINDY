@@ -347,15 +347,15 @@
 
 .jobbest-mid a{
     text-decoration: none;
-    margin-top: 24px;    
+    /* margin-top: 24px; */
 }
 
 .jobbest-mid div > a > div{
     background-color: #fcfcfc;
-    margin: 7px 0;
-   padding: 10px 15px;
-   border-radius: 15px;
-   border: 1px solid  #e2e2e2; ;
+    /* margin: 7px 0; */
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid  #e2e2e2; ;
 }
 
 .jobbest-mid div > a:hover >div {
@@ -369,7 +369,7 @@
 
 .jobbest-items {
     background: linear-gradient(to left, #7ED957, #0097B2);
-
+    margin-top: 24px;
 }
 
 .jobbest-mid-top--right{
