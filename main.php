@@ -948,7 +948,7 @@
                         </div>
                     </div>
 
-                    <ul class="pagination">
+                    <!-- <ul class="pagination">
                         <li class="pagination-item">
                             <a href="" class="pagination-item__link">
                                 <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
@@ -980,7 +980,7 @@
                                 <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -1018,7 +1018,7 @@
                         </div>
                         <div class="col l-6 m-6 c-12">
                             <div class="post-content">
-                                <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
+                                <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình Chụp ảnh kỷ niệm gia đình Chụp ảnh kỷ niệm gia đình</h3>
                                 <div class="post-content__author">
                                     <span class="post-content__name">Thanh Khải</span>
                                     <span class="post-content__time">
@@ -1031,7 +1031,7 @@
                                     <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
                                 </div>
                                 <p class="post-content__text">
-                                    Chúng tôi đang tìm kiếm một nhiếp ảnh gia tài năng, đam mê và sáng tạo để ghi lại những khoảnh khắc quý giá trong cuộc sống gia đình chúng tôi.
+                                    Chúng tôi đang tìm kiếm một nhiếp ảnh gia tài năng, đam mê và sáng tạo để ghi lại những khoảnh khắc quý giá trong cuộc sống gia đình chúng tôi. Chúng tôi đang tìm kiếm một nhiếp ảnh gia tài năng, đam mê và sáng tạo để ghi lại những khoảnh khắc quý giá trong cuộc sống gia đình chúng tôi.
                                 </p>
                                 <div class="post-content__details">
                                     <a href="#" class="post-content__detail">Hồ Chí Minh</a>
