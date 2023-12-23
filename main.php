@@ -83,7 +83,7 @@ include "header.php"
             <div class="jobinteresting_container row">
                 <div class="jobinteresting_left col c-12 m-12 l-12">
                     <div class="jobbest-header">
-                        <div class="jobbest-header--top">
+                        <div class="heading">
                             Việc làm tốt nhất
                         </div>
                         <div class="jobbest-header--bottom">
@@ -467,7 +467,8 @@ include "header.php"
 
             <div class="col l-12 m-12 c-12">
                 <div class="freelancer">
-                    <div class="row sm-gutter">
+                    <div class="heading">Photographer & Make-up Artist tốt nhất</div>
+                    <div class="row">
                         <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
@@ -538,7 +539,7 @@ include "header.php"
 
                                         <div class="freelancer-item__info">
                                             <span class="freelancer-item__title">
-                                                Trương Thu Trang
+                                                Trần Thu Trang
                                             </span>
                                             <span class="freelancer-item__text">
                                                 Make-up cô dâu

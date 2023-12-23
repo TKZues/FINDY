@@ -13,9 +13,9 @@
 
 <body>
     <header class="header">
-        <div class="top">
+        <!-- <div class="top">
 
-        </div>
+        </div> -->
         <div class="grid wide">
 
             <!-- Navbar -->

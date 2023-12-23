@@ -52,12 +52,13 @@
 
 
 .videomain_text--button button:nth-child(1){
-    background: #e60278;
-    border-color: #e60278;
+    /* background: #e60278;
+    border: 1px solid #e60278; */
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
     color: #f7f8f9;
     font-size: 15px;
     line-height: 1.4;
-    border: 1px solid #e60278;
     border-radius: 3px;
     display: inline-block;
     font-weight: 700;
@@ -265,8 +266,9 @@
 /* ----------------complete------------ */
 
 .complete{
-    padding-top: 50px;
+    padding: var(--top-header-height) 0;
     color: var(--complete-color);
+    background-color: var(--background-color);
 }
 
 .complete_header{
@@ -298,6 +300,15 @@
 /* .banner_img:nth-child(2) img{
     transform: translateY(100%);
 } */
+
+.heading {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.6;
+}
+
 /* ----------jobbest------------- */
 .jobbest-header--top{
     color: var(--main-color);
@@ -311,6 +322,7 @@
 .jobbest-header--bottom{
     display: flex;
     align-items: center;
+    margin-top: 24px;
 }
 
 .jobbest-header--bottom_filter input{
@@ -335,8 +347,7 @@
 
 .jobbest-mid a{
     text-decoration: none;
-   
-    
+    margin-top: 24px;    
 }
 
 .jobbest-mid div > a > div{
@@ -410,7 +421,10 @@
 }
 
 
-* --------------jobintereting---------- */
+/* --------------jobintereting---------- */
+.jobinteresting {
+    padding-top: 36px;
+}
 
 .jobinteresting_left{
     background-color: white;

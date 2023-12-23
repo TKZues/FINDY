@@ -13,7 +13,8 @@
     --gradient-color-2: #7ed957;
     /* --gradient-color-1: #478C43;
     --gradient-color-2: #395B37; */
-    --top-height: 30px;
+    /* --top-height: 30px; */
+    --top-height: 0px;
     --header-height: 60px;
     --top-header-height: calc(var(--top-height) + var(--header-height));
 }
