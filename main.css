@@ -51,7 +51,7 @@
 }
 
 
-.videomain_text--button button:nth-child(1){
+.videomain_text--button button:nth-child(1) {
     /* background: #e60278;
     border: 1px solid #e60278; */
     background: var(--main-color);
@@ -65,10 +65,9 @@
     padding: 16px 13px;
     text-align: center;
     cursor: pointer;
-
 }
 
-.videomain_text--button button:nth-child(2){
+.videomain_text--button button:nth-child(2) {
     background: linear-gradient(to bottom,transparent 0%,rgba(255,255,255,.2) 100%);
     border-color: #fff;
     color: #f7f8f9;
@@ -82,6 +81,11 @@
     text-align: center;
     cursor: pointer;
     margin: 20px 0;
+}
+
+.videomain_text--button button:nth-child(1):hover,
+.videomain_text--button button:nth-child(2):hover {
+    opacity: 0.8;
 }
 /* ---------------Main------------------- */
 
@@ -488,6 +492,10 @@
     background-color: var(--background-color);
 }
 
+.find-timtho-container {
+    padding-bottom: var(--top-header-height);
+}
+
 /* ------bannermid-------- */
 .bannermid{
     margin: 10px 0;
@@ -540,7 +548,7 @@
 
 /* ------- Form đăng nhập, đăng ký -------*/
 
-.modal{
+/* .modal{
     position: fixed;
     top: 0;
     right: 0;
@@ -693,7 +701,6 @@
 }
 
 .account_form__footer {
-    /* padding: 80px 32px 16px; */
     padding: 16px 32px;
     text-align: center;
 }
@@ -714,11 +721,11 @@
 .account_form__link {
     text-decoration: none;
     color: var(--main-color)
-}
+} */
 
 /* ----------------choice_service------------- */
 
-.choice_service{
+/* .choice_service{
     position: fixed;
     top: 0;
     right: 0;
@@ -743,7 +750,6 @@
     border-radius: 5px;
 }
 
-
 .choice_service_container{
     width: 500px;
     background-color: #fff;
@@ -760,4 +766,4 @@
     background-color: var(--background-color);
     width: 200px;
     height: 50px;
-}
+} */

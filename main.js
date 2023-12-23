@@ -1,54 +1,61 @@
 const modal = document.querySelector('.modal');
-const modalContainer = document.querySelector('.modal__container')
+const modalContainer = document.querySelector('.modal__container');
 const choice_service = document.querySelector('.choice_service');
-const choice_servicecontainer = document.querySelector('.choice_service_container')
+const choice_servicecontainer = document.querySelector('.choice_service_container');
 
 function showchoice_service() {
-    choice_service.classList.add('open')
+    modal.classList.remove('open');
+    choice_service.classList.add('open');
+    document.getElementById('register-form').classList.add('hidden');
+    document.getElementById('register-form2').classList.add('hidden');
+    document.getElementById('login-form').classList.add('hidden');
     document.getElementById('choice_service_content').classList.remove('hidden');
 }
 
 
 function showRegisterForm() {
-    modal.classList.add('open')
-    document.getElementById('register-form2').classList.add('hidden');
+    modal.classList.add('open');
+    choice_service.classList.remove('open');
     document.getElementById('register-form').classList.remove('hidden');
+    document.getElementById('register-form2').classList.add('hidden');
     document.getElementById('login-form').classList.add('hidden');
+    document.getElementById('choice_service_content').classList.add('hidden');
 }
 
 function showRegisterForm2() {
-    modal.classList.add('open')
+    modal.classList.add('open');
+    choice_service.classList.remove('open');
     document.getElementById('register-form').classList.add('hidden');
     document.getElementById('register-form2').classList.remove('hidden');
     document.getElementById('login-form').classList.add('hidden');
+    document.getElementById('choice_service_content').classList.add('hidden');
 }
 
 function showLoginForm() {
-    modal.classList.add('open')
+    modal.classList.add('open');
+    choice_service.classList.remove('open');
     document.getElementById('register-form').classList.add('hidden');
     document.getElementById('register-form2').classList.add('hidden');
     document.getElementById('login-form').classList.remove('hidden');
+    document.getElementById('choice_service_content').classList.add('hidden');
 }
 
 function closeForm() {
-    modal.classList.remove('open')
+    modal.classList.remove('open');
 }
 function closechoice() {
-    choice_service.classList.remove('open')
+    choice_service.classList.remove('open');
 }
 
-choice_service.addEventListener('click', closechoice)
-modal.addEventListener('click', closeForm)
-
-
+choice_service.addEventListener('click', closechoice);
+modal.addEventListener('click', closeForm);
 
 modalContainer.addEventListener('click', function (event) {
-    event.stopPropagation()
+    event.stopPropagation();
 })
 
-
 choice_servicecontainer.addEventListener('click', function (event) {
-    event.stopPropagation()
+    event.stopPropagation();
 })
 
 // ---------------slider-------------------
