@@ -23,6 +23,7 @@
 
     $connect = new connect;
     $select_nhansanphamtho = $connect -> select_nhansanphamtho($id_tho); //
+
 ?>
 
 <!-- <div id="myModal" class="modal">
@@ -132,7 +133,118 @@
                                     }
 
 ?>
+
+<?php 
+    $select_nhansanphamthott = $connect -> select_nhansanphamthott($id_tho); //
+?>
+
+<?php
+                                    if($select_nhansanphamthott){
+                                        while($result = $select_nhansanphamthott->fetch_assoc()){
+                                        $anhtho = $result['hinhanhthue'];  
+                                        $uniqueId1 = uniqid();  
+                                        $tentho = $result['hoTen'];
+                                        $diadiem = $result['diadiem'];
+                                        $thoigian = $result['thoigian'];
+                                        $sukien = $result['sukien'];
+                                        $phongcach = $result['phongcach'];
+                                        $gia = $result['gia'];
+                                        $mathongtinthuett = $result['mathongtinthue'];
+                                        $mathogiaosanphamtt = $result['mathogiaosanphamtt'];
+                                            
+                                ?>
+                        <div class="col l-12 m-12 c-12">
+            <div class="order">
+                <div class="order__avatar">
+                    <img src="../img/<?php  echo $anhtho ?>" alt="Ảnh đại diện" class="order__avatar-img">
+                </div>
+
+                <div class="order__info">
+                    <span class="order__name">
+                        <?php echo $tentho  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-location-dot"></i>
+                        <?php echo $diadiem  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-calendar-days"></i>
+                        <?php echo $thoigian  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-regular fa-clock"></i>
+                        16h:30p
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <span class="order__title">
+                        Mã đơn hàng:
+                        <strong><?php echo $mathogiaosanphamtt ?> </strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong><?php echo $phongcach  ?></strong>
+                    </span>
+                    <span class="order__title">
+                        Tổng giá trị:
+                        <strong><?php echo $gia ?></strong>
+                    </span>
+                </div>
+
+                <div class="order__info">
+                <button class="btn order-btn" onclick="toggleAdditionalInfo1('<?php echo $uniqueId1; ?>', '<?php echo $diadiem; ?>', '<?php echo $gia; ?>', '<?php echo $thoigian; ?>', '<?php echo $mathogiaosanphamtt; ?>', '<?php echo $mathongtinthuett; ?>')">Giao sản phẩm</button>
+                <a href="" class="order__detail">
+                    Xem chi tiết
+                    <i class="order__detail-icon fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
+        <div id="additional-info1_<?php echo $uniqueId1; ?>" class="additional-info1" style="display: none;">
+        <?php
+                $connect = new connect;
+                if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inputmathogiaosp1']) && isset($_POST['inputmathongtinthue1'])){
+                                                            
+                $insert_sanphamtt = $connect->insert_sanphamtt($uniqueId1);
+                                                                                                                   
+            }
+                                                        
+        ?>
+            <form action="./photopayment.php" method="POST">
+                <input type="text" name="inputmathogiaosp1" value="<?php echo $mathogiaosanphamtt ?>">
+                <input type="text" name="inputmathongtinthue1" value="<?php echo $mathongtinthuett ?>">
+                <input type="text" name="inputdrive1" id="inputdrive_<?php echo $uniqueId1; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <button class="button_additional" type="submit">Hoàn thành</button>
+            </form>
+        </div> <!-- New container for additional info -->
+                        <?php 
+                                        }
+                                    }
+
+?>
 <script>
+    function toggleAdditionalInfo1(uniqueId1, diadiem, gia, thoigian) {
+        var additionalInfoDiv1 = document.getElementById('additional-info1_' + uniqueId1);
+
+        // Check the current visibility state
+        var isVisible1 = additionalInfoDiv1.style.display === 'block';
+
+        // Toggle the visibility
+        additionalInfoDiv1.style.display = isVisible1 ? 'none' : 'block';
+
+        // If visible, populate and show the additional info
+        if (!isVisible1) {
+            additionalInfoDiv1.innerHTML = `
+            <p>Địa điểm: ${diadiem}</p>
+    <p>Thời gian: ${thoigian}</p>
+    <p>Giá: ${gia}</p>
+    <p>Giá: ${mathogiaosanpham}</p>
+    <input type="text" name="inputmathogiaosp1_<?php echo $uniqueId1; ?>" value="<?php echo $mathogiaosanphamtt ?>">
+    <input type="text" name="inputmathongtinthue1_<?php echo $uniqueId1; ?>" value="<?php echo $mathongtinthue ?>">
+    <input type="text" name="inputdrive1_<?php echo $uniqueId1; ?>" id="inputdrive_${uniqueId1}" placeholder="Nhập link google drive chứa sản phẩm ...">
+    <button class="button_additional1" type="submit">Hoàn thành</button>            `;
+        }
+    }
     function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {
         var additionalInfoDiv = document.getElementById('additional-info_' + uniqueId);
 
@@ -156,6 +268,7 @@
             `;
         }
     }
+    
 </script>
 <!-- <script>
     function toggleAdditionalInfo(diadiem, gia, thoigian) {

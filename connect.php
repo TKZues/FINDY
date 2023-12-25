@@ -288,8 +288,8 @@
             $result = $this ->db ->select($query);
             return $result;
         }
-        public function delete_quanlybaidang($ma_quanlybaidang){
-            $query = "DELETE FROM quanlybaidang where ma_quanlybaidang = '$ma_quanlybaidang";
+        public function delete_quanlybaidang($maquanlybaidang){
+            $query = "DELETE FROM quanlybaidang where ma_quanlybaidang = '$maquanlybaidang'";
             $result = $this->db->delete($query);
             return $result;
         }
@@ -418,6 +418,56 @@
             where thongtinthue.id_thue = $id_thue";
             $result = $this -> db -> select($query);
             return $result;
+        }
+        public function select_thuchientt($id_tho){
+            $query = "select *from thuchientt
+            inner join thongtintho on thongtintho.mathongtintho = thuchientt.mathongtintho
+            inner join post_tructiep on post_tructiep.ma_posttructiep = thuchientt.ma_posttructiep
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this -> db -> select($query);
+            return $result;
+        }
+        public function insert_thogiaosanphamtt(){
+            $maposttimthott = $_POST['ma_posttimtho_thothuchientt'];
+            $mathongtinthott = $_POST['mathongtintho_thothuchientt'];
+            $query = "INSERT INTO tho_giaosanphamtt (ma_posttructiep, mathongtintho) 
+            VALUES ('$maposttimthott','$mathongtinthott')";
+            $result = $this->db->insert($query);
+            return $result;
+
+           
+        }
+         public function select_nhansanphamthott($id_tho){
+            $query = "select *from post_tructiep
+            inner JOIN tho_giaosanphamtt ON tho_giaosanphamtt.ma_posttructiep = post_tructiep.ma_posttructiep
+            inner join thongtintho on thongtintho.mathongtintho = tho_giaosanphamtt.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this ->db ->select($query);
+            return $result;
+        }
+        public function insert_sanphamtt($uniqueId){
+            $inputmathogiaosp = $_POST['inputmathogiaosp1'];
+            $inputmathongtinthue = $_POST['inputmathongtinthue1'];
+            $inputdrive = $_POST['inputdrive1'];
+            $query = "INSERT INTO sanphamtt (mathogiaosanphamtt, mathongtinthue, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
+        }
+        public function insert_danhgia(){
+            $mathongtintho = $_POST['mathongtintho'];
+            $ma_posttimtho = $_POST['ma_posttimtho'];
+            $query = "INSERT INTO thue_danhgia (ma_posttimtho, mathongtintho) 
+            VALUES ('$ma_posttimtho','$mathongtintho')";
+            $result = $this->db->insert($query);
+            return $result;
+
+           
         }
     }
 ?>

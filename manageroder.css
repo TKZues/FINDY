@@ -905,6 +905,122 @@
     margin: 10px 0;
 }
 
+
+/* ------------- */
+
+
+/* Style for the button text */
+.order-btn span {
+    flex-grow: 1;
+}
+
+/* Style for the additional information container */
+.additional-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:10px 20px;
+    width: 100%;
+   
+    top: 0; /* Adjust the top position as needed */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card-like effect */
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it appears above other elements */
+    animation: slideDown 0.9s ease-out;
+
+}
+
+
+
+/* Style for the additional information text */
+.additional-info1 p {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.additional-info1 input {
+    width: 20%;
+    height: auto;
+    padding: 5px 2px;
+}
+
+/* Style for the order detail link */
+.order__detail1 {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for the order detail icon */
+.order__detail-icon1 {
+    margin-left: 5px;
+}
+
+/* Style for the order info spans */
+.order__name1,
+.order__text1,
+.order__title1 {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for the order info icons */
+.order__text-icon1 {
+    margin-right: 5px;
+}
+
+.button_additional1{
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;
+    justify-content: center;
+    letter-spacing: .175px;
+    line-height: 22px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.additional-info1 { 
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:10px 20px;
+    width: 100%;
+   
+    top: 0; /* Adjust the top position as needed */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a card-like effect */
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it appears above other elements */
+    animation: slideDown 0.9s ease-out;
+
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* CSS for chat button */
 
 @media (max-width: 768px) {

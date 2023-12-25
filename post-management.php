@@ -113,6 +113,7 @@ echo "ID của Thợ: " . $hoTen;
                                             $tentho = $row_thongtintho['hoTen'];
                                             $hinhanhtho = $row_thongtintho['hinhanhtho'];
                                             $maquanlybaidang = $row_thongtintho['ma_quanlybaidang'];
+                                            echo  'maqly'.$maquanlybaidang
                                     ?>
                                         <div class="candidate__list c-12 m-12 l-12">
                                             <div class="candidate__resume">
@@ -147,16 +148,19 @@ echo "ID của Thợ: " . $hoTen;
                                                    
                                                    
                                                     <?php
-                                                        $connect = new connect;
-                                                        if($_SERVER['REQUEST_METHOD']==='POST'){
+                                                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                                            $connect = new connect;
+                                                        
                                                             if (isset($_POST['accept'])) {
+                                                                // Handle accept action
                                                                 $insert_thanhtoancoc = $connect->insert_thanhtoancoc();
                                                             } elseif (isset($_POST['reject'])) {
-                                                                // Delete record from the database
-                                                                
-                                                               $delete_quanlybaidang = $connect ->delete_quanlybaidang($maquanlybaidang); //()
-                                                              
-                                                            }                                                         
+                                                                // Handle reject action
+                                                                $maquanlybaidang = $_POST['maquanlybaidang'];
+                                                        
+                                                                // Call the method to delete the record
+                                                                $delete_quanlybaidang = $connect->delete_quanlybaidang($maquanlybaidang);
+                                                            }
                                                         }
                                                         
                                                     ?>
@@ -166,11 +170,15 @@ echo "ID của Thợ: " . $hoTen;
                                                             <input name ="mathongtintho" type="text" value ="<?php echo $mathongtintho ?>">
                                                             </div>
                                                         <button type = "submit" name="accept" class="btn btn--primary candidate__control-btn">Chấp nhận</button>
-                                                        <button type = "submit" name="reject" class="btn btn--primary candidate__control-btn">Từ chối</button>
+                                                        
 
                                                         </form>
-                                                        
-                                                   
+                                                        <form action="" method="POST">
+                                                            <!-- Add hidden input for maquanlybaidang -->
+                                                            <input type="hidden" name="maquanlybaidang" value="<?php echo $maquanlybaidang ?>">
+                                                            <button type="submit" name="reject" class="btn btn--primary candidate__control-btn">Từ chối</button>
+                                                        </form>
+
                                                 </div>
                                                 
                                             </div>

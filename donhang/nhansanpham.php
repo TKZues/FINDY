@@ -44,8 +44,8 @@
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
                                         $drive = $result['drive'];
-                                        // $mathongtinthue = $result['mathongtinthue'];
-                                        // $mathogiaosanpham = $result['mathogiaosanpham'];
+                                        $mathongtintho = $result['mathongtintho'];
+                                        $ma_posttimtho = $result['ma_posttimtho'];
                                             
                                 ?>
                             <div class="manageroder_content  col c-12 m-12 l-12">
@@ -83,11 +83,22 @@
             <form action="" method="POST">
                 <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
                 <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
-                <div class="flex_botton">
-                    <button class="button_additional" type="submit">Gửi yêu cầu chỉnh sửa</button>
-                    <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
-                </div>
+                
             </form>
+            <div class="flex_botton">
+                    <button class="button_additional" type="submit">Gửi yêu cầu chỉnh sửa</button>
+                    <?php
+                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                                    $insert_danhgia = $connect-> insert_danhgia();
+                                    }
+                    ?>
+                    <form action="" method="POST">
+                        <input type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                        <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                        <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
+                    </form>
+                   
+            </div>
 </div>
 
 <?php 
