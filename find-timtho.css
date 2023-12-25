@@ -326,7 +326,7 @@
     margin: 0 15px;
 }
 
-/* 
+
 .footer{
     margin-top: 150px;
     background-color: #12151b;
@@ -372,7 +372,7 @@
     padding-left: 15px;
     color: #5643ff;
     transition: all 0.3s ease-in;
-} */
+}
 
 /* ------------- Mobile ------------- */
 @media (max-width: 739px) {

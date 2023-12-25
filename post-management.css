@@ -328,7 +328,7 @@
 }
 
 
-/* .footer{
+.footer{
     margin-top: 150px;
     background-color: #12151b;
     padding: 50px 0;
@@ -373,7 +373,7 @@
     padding-left: 15px;
     color: #5643ff;
     transition: all 0.3s ease-in;
-} */
+}
 /* ------------- Responsive ------------- */
 
 /* ------------- Mobile ------------- */

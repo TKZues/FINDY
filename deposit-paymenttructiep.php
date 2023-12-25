@@ -38,7 +38,7 @@ echo "ID của Thợ: " . $hoTen;
     $gia = $_GET['gia'];
     $ma_posttimtho = $_GET['ma_posttimtho'];
     $mathongtintho = $_GET['mathongtintho'];
-    $ma_thanhtoancoc = $_GET['ma_thanhtoancoc'];
+    $mathanhtoancoctt = $_GET['mathanhtoancoctt'];
     $tenposttimtho = $_GET['tenposttimtho'];
     // ... rest of your code
 ?>
@@ -58,7 +58,7 @@ echo "ID của Thợ: " . $hoTen;
                                     <div class="order-info__info">
                                         
                                         <h1 class="order-info__heading">Thông tin đơn hàng</h1>
-                                        <h2 class="order-info__title">Mã đơn thanh toán: <?php echo $ma_thanhtoancoc ?></h2>
+                                        <h2 class="order-info__title">Mã đơn thanh toán: <?php echo $mathanhtoancoctt ?></h2>
                                         <div class="order-info__freelance">
                                             <div class="order-info__freelance-warp">
                                                 <span class="order-info__freelance-text">
@@ -169,15 +169,15 @@ echo "ID của Thợ: " . $hoTen;
                                                         $connect = new connect;
                                                         if($_SERVER['REQUEST_METHOD']==='POST'){
                                                             
-                                                                $insert_thuchien = $connect->insert_thuchien();
+                                                                $insert_thuchientt = $connect->insert_thuchientt();
                                                                                                                    
                                                         }
                                                         
                                                     ?>
                                     <form action="" method="POST">
                                         <div class="input_payment">
-                                            <input type="text" name="mathongtintho_thuchien" id="" value="<?php echo $mathongtintho ?>">
-                                            <input type="text" name="ma_posttimtho_thuchien" id="" value="<?php echo $ma_posttimtho  ?>">
+                                            <input type="text" name="mathongtintho_thuchientt" id="" value="<?php echo $mathongtintho ?>">
+                                            <input type="text" name="ma_posttimtho_thuchientt" id="" value="<?php echo $mathanhtoancoctt  ?>">
                                         </div>
                                         <button class="btn btn--primary payment-methods-btn" >Thanh toán cọc</button>
                                     </form>

@@ -29,12 +29,61 @@
 <?php 
     $connect = new connect;
     $select_thuchien = $connect -> select_thuchien($id_thue); //
+    $select_thuchienttthue = $connect -> select_thuchienttthue($id_thue); //
 ?>
 
         
                                 <?php
                                     if($select_thuchien){
                                         while($result = $select_thuchien->fetch_assoc()){
+                                        $anhtho = $result['hinhanhtho'];    
+                                        $tentho = $result['hoTen'];
+                                        $diadiem = $result['diadiem'];
+                                        $thoigian = $result['thoigian'];
+                                        $sukien = $result['sukien'];
+                                        $phongcach = $result['phongcach'];
+                                        $gia = $result['gia'];
+
+                                            
+                                ?>
+                            <div class="manageroder_content  col c-12 m-12 l-12">
+                                <div class="row">
+                                    <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
+                                        <img style="width:100px; height:100px; " src="../img/<?php echo $anhtho ?>" alt="">
+                                    </div>
+                                    <div class="manageroder_content-items--mid col c-7 m-7 l-7">
+                                        <div class="name">
+                                            <?php echo $tentho ?>
+                                        </div>
+                                        <div class="address">
+                                            <span>Địa điểm: </span><?php echo $diadiem ?>
+                                        </div>
+                                        <div class="time">
+                                            <span>Thời gian: </span><?php echo $thoigian ?>
+                                        </div>
+                                        <div class="style">
+                                            <span>Phong cách: </span><?php  echo $phongcach ?>
+                                        </div>
+                                        <div class="price">
+                                            <span>Cọc: </span><?php echo $gia ?> <span>đ</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="manageroder_content-items--button col c-2 m-2 l-2">
+                                        <a  href="../deposit-payment.php?name=<?php echo urlencode($tentho); ?>&diadiem=<?php echo urlencode($diadiem); ?>&thoigian=<?php echo urlencode($thoigian); ?>&diachi=<?php echo urlencode($sukien); ?>&gia=<?php echo urlencode($gia); ?>" target = "_blank" ><button type="button">Đang thực hiện</button></a>
+                                        
+                                    </div>
+                                </div>
+</div>
+<?php 
+                                        }
+                                    }
+
+?>
+
+<?php
+                                    if($select_thuchienttthue){
+                                        while($result = $select_thuchienttthue->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];

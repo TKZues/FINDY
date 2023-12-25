@@ -179,6 +179,8 @@ echo "ID của Thợ: " . $hoTen;
                                             $phongcach = $result['phongcach'];
                                             $gia = $result['gia'];
                                             $hinhanhthue = $result['hinhanhthue'];
+                                            $ma_posttructiep = $result['ma_posttructiep'];
+                                            $mathongtintho = $result['mathongtintho'];
                                 ?>
                         <div class="managerrequest_content  col c-12 m-6 l-6">
                                 <div class="">
@@ -187,6 +189,7 @@ echo "ID của Thợ: " . $hoTen;
                                     </div>
                                     <div class="managerrequest_content-items--mid c-6 m-6 l-6">
                                         <div class="name">
+                                            
                                             Tên: <?php echo $result['hoTen']  ?>
                                         </div>
                                         <div class="address">

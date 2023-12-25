@@ -150,7 +150,22 @@ echo "ID của Thợ: " . $mathongtintho;
                                 <input type="text" name="" id="" value="<?php echo $ma_posttructiep ?>">
                                 <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
                                 </div>
-                                <a href="./manageroder.php">Tạo đơn hàng</a>
+                                <?php 
+                                    include "connect.php";
+                                ?>
+                                <?php
+                                    $connect = new connect;
+                                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                                    $insert_thanhtoancoctt = $connect-> insert_thanhtoancoctt();
+                                    }
+                                ?>
+                                <form action="" method="POST">
+                                    <div class="input_qlytructiep">
+                                                    <input type="text" name="maposttt" id="" value="<?php echo $ma_posttructiep ?>">
+                                                    <input type="text" name="mathongtinthott" id="" value="<?php echo $mathongtintho  ?>">
+                                    </div>
+                                <button type="submit">Tạo đơn hàng</button>
+                                </form>
                             </div>
                         </div>
                     </div>

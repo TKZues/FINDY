@@ -426,7 +426,7 @@
    padding: 10px 15px;
    border-radius: 20px;
    border: 1px solid  #e2e2e2; 
-   background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+   /* background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
 }
 
 .jobbest-mid div > a:hover >div {
@@ -461,7 +461,7 @@
 }
 
 .jobbest-mid-top--right p:nth-child(1){
-    color: #ffffff;
+    color: var(--main-color-2);
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 16px;

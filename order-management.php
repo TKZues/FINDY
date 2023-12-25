@@ -75,7 +75,7 @@
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./donhang/danhgia.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
+                        <iframe id="myiframe" src="./donhang/thanhtoancoc.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
                     </article>
                 </div> 
             </div>

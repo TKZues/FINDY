@@ -371,5 +371,53 @@
             $result = $this ->db->insert($query);
             return $result;
         }
+        public function insert_thanhtoancoctt(){
+            $maposttt = $_POST['maposttt'];
+            $mathongtinthott = $_POST['mathongtinthott'];
+            $query = "INSERT INTO thue_thanhtoancoctt (ma_posttructiep, mathongtintho)
+            VALUES ('$maposttt', '$mathongtinthott')";
+            $result = $this ->db->insert($query);
+            return $result;
+        }
+        public function select_thanhtoancoctt($id_tho){
+            $query = "select *from thue_thanhtoancoctt
+            inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoctt.mathongtintho
+            inner join post_tructiep on post_tructiep.ma_posttructiep = thue_thanhtoancoctt.ma_posttructiep
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this -> db -> select($query);
+            return $result;
+        }
+        public function select_thanhtoancocttthue($id_thue){
+            $query = "select *from thue_thanhtoancoctt
+            inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoctt.mathongtintho
+            inner join post_tructiep on post_tructiep.ma_posttructiep = thue_thanhtoancoctt.ma_posttructiep
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+            where thongtinthue.id_thue = $id_thue";
+            $result = $this -> db -> select($query);
+            return $result;
+        }
+        public function insert_thuchientt(){
+            $maposttimthott = $_POST['ma_posttimtho_thuchientt'];
+            $mathongtinthott = $_POST['mathongtintho_thuchientt'];
+            $query = "INSERT INTO thuchientt (ma_posttructiep, mathongtintho) 
+            VALUES ('$maposttimthott','$mathongtinthott')";
+            $result = $this->db->insert($query);
+            return $result;
+
+           
+        }
+        public function select_thuchienttthue($id_thue){
+            $query = "select *from thuchientt
+            inner join thongtintho on thongtintho.mathongtintho = thuchientt.mathongtintho
+            inner join post_tructiep on post_tructiep.ma_posttructiep = thuchientt.ma_posttructiep
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_tructiep.mathongtinthue
+            inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+            where thongtinthue.id_thue = $id_thue";
+            $result = $this -> db -> select($query);
+            return $result;
+        }
     }
 ?>
