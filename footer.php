@@ -117,10 +117,10 @@
                     <h1>Ứng dụng</h1>
                     <ul>
                         <a href="">
-                            <li><img src="./img/app-store.svg" alt=""></li>
+                            <li><img src="<?php echo $appStore; ?>" alt=""></li>
                         </a>
                         <a href="">
-                            <li><img src="./img/google-play.svg" alt=""></li>
+                            <li><img src="<?php echo $googlePlay; ?>" alt=""></li>
                         </a>
                     </ul>
                 </div>
@@ -360,7 +360,7 @@
             <div class="account_form__footer">
 
                 <p class="account_form__text">
-                    Bạn đã có tài khoản Findy?
+                    Bạn chưa có tài khoản Findy?
                     <a href="#" class="account_form__link" onclick="showchoice_service()">Đăng ký</a>
                 </p>
             </div>

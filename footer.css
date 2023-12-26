@@ -1,10 +1,11 @@
 .footer {
-    /* background-color: #12151b; */
-    background-color: var(--main-color-2);
+    background-color: #12151b;
+    border-top: 4px solid #12151b;
+    /* background-color: var(--main-color-2); */
+    /* border-top: 4px solid var(--main-color); */
     padding: var(--top-header-height) 0;
     color: var(--text-color-main);
     font-size: 1rem;
-    border-top: 4px solid var(--main-color);
 }
 
 .footer a{
@@ -42,10 +43,10 @@
     margin: 8px 0;
 }
 
-.footer div ul a li:hover{
+.footer div ul a li:hover {
     padding-left: 8px;
     /* color: #5643ff; */
-    color: var(--main-color-1);
+    color: var(--main-color);
     transition: all 0.3s ease-in;
 }
 
