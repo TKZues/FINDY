@@ -175,7 +175,7 @@ echo "ID của Thợ: " . $hoTen;
                                                         
                                                     ?>
                                     <form action="" method="POST">
-                                        <div class="input_payment">
+                                        <div class="input_payment" style="display: none;">
                                             <input type="text" name="mathongtintho_thuchientt" id="" value="<?php echo $mathongtintho ?>">
                                             <input type="text" name="ma_posttimtho_thuchientt" id="" value="<?php echo $mathanhtoancoctt  ?>">
                                         </div>

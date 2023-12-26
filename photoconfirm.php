@@ -139,7 +139,7 @@
                 <div class="order__info">
                     <span class="order__title">
                         Mã đơn hàng:
-                        <strong><?php  echo $ma_thanhtoancoc ?></strong>
+                        <strong><?php  echo $mathanhtoancoctt ?></strong>
                     </span>
                     <span class="order__title">
                         Phong cách:

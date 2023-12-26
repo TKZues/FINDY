@@ -154,6 +154,15 @@ echo "ID của Thợ: " . $hoTen;
                                                             if (isset($_POST['accept'])) {
                                                                 // Handle accept action
                                                                 $insert_thanhtoancoc = $connect->insert_thanhtoancoc();
+                                                                if ($insert_thanhtoancoc) {
+                                                                    // If the insert is successful, proceed to delete from table2
+                                                                    $maquanlybaidang = $_POST['maquanlybaidang'];
+                                                                    $delete_quanlybaidang = $connect->delete_quanlybaidang($maquanlybaidang);
+                                                                }else{
+                                                                    echo "Error";
+                                                                } 
+
+
                                                             } elseif (isset($_POST['reject'])) {
                                                                 // Handle reject action
                                                                 $maquanlybaidang = $_POST['maquanlybaidang'];
@@ -166,6 +175,8 @@ echo "ID của Thợ: " . $hoTen;
                                                     ?>
                                                         <form action="" method="POST">
                                                             <div class="form_qlybaidang" style= "display:none">
+                                                            <input type="hidden" name="maquanlybaidang" value="<?php echo $maquanlybaidang ?>">
+
                                                             <input name ="maposttimtho"  type="text" value ="<?php echo $ma_posttimtho ?>" >
                                                             <input name ="mathongtintho" type="text" value ="<?php echo $mathongtintho ?>">
                                                             </div>
