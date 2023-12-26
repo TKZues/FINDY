@@ -124,7 +124,7 @@
 /* ------------- Freelancer list ------------- */
 .freelancer-item {
     position: relative;
-    margin-top: 24px;
+    margin-bottom: 24px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
 }
@@ -327,7 +327,7 @@
 }
 
 
-.footer{
+/* .footer{
     margin-top: 150px;
     background-color: #12151b;
     padding: 50px 0;
@@ -372,7 +372,7 @@
     padding-left: 15px;
     color: #5643ff;
     transition: all 0.3s ease-in;
-}
+} */
 
 /* ------------- Mobile ------------- */
 @media (max-width: 739px) {

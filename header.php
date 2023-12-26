@@ -11,8 +11,9 @@
         <!-- Navbar -->
         <nav class="navbar">
             <div class="navbar__logo">
-                <a href="" class="navbar__logo-link">
-                    <img src="./img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
+                <a href="<?php echo $logoLink; ?>" class="navbar__logo-link">
+                    <!-- <img src="./img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img"> -->
+                    <img src="<?php echo $logoFindy; ?>" alt="Findy" class="navbar__logo-img">
                 </a>
             </div>
             <div class="navbar__heading">

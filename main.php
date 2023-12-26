@@ -17,6 +17,8 @@
 
 <body>
     <?php
+    $logoLink = "./main.php";
+    $logoFindy = "./img/findy-logo-ngang.png";
     include "header.php"
     ?>
 
@@ -1398,6 +1400,8 @@
     </section>
 
     <?php
+    $appStore = "./img/app-store.svg";
+    $googlePlay = "./img/google-play.svg";
     include "footer.php"
     ?>
 
