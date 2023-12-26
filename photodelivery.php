@@ -56,8 +56,9 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
-                                        $mathongtinthue = $result['mathongtinthue'];
+                                        $mathongtintho = $result['mathongtintho'];
                                         $mathogiaosanpham = $result['mathogiaosanpham'];
+                                        $ma_posttimtho = $result['ma_posttimtho'];
                                             
                                 ?>
                         <div class="col l-12 m-12 c-12">
@@ -103,8 +104,8 @@
                 <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
                         '<?php echo $gia; ?>',
                         '<?php echo $thoigian; ?>',
-                        '<?php echo $mathogiaosanpham; ?>',
-                        '<?php echo $mathongtinthue; ?>')">Giao sản phẩm</button>                </div>
+                        '<?php echo $ma_posttimtho; ?>',
+                        '<?php echo $mathongtintho; ?>')">Giao sản phẩm</button>                </div>
                 <a href="" class="order__detail">
                     Xem chi tiết
                     <i class="order__detail-icon fa-solid fa-right-long"></i>
@@ -113,17 +114,24 @@
         </div>
         <div id="additional-info_<?php echo $uniqueId; ?>" class="additional-info" style="display: none;">
         <?php
+        
                 $connect = new connect;
                 if($_SERVER['REQUEST_METHOD']==='POST'){
                                                             
-                $insert_sanpham = $connect->insert_sanpham($uniqueId);
+                $insert_sanpham = $connect->insert_sanpham();
+                if($insert_sanpham){
+                    $insert_thochochinhsua = $connect->insert_thochochinhsua();
+                }
                                                                                                                    
             }
                                                         
         ?>
+        <?php 
+            echo "mathogiaosanpham" .$mathogiaosanpham;
+        ?>
             <form action="" method="POST">
-                <input type="text" name="inputmathogiaosp" value="<?php echo $mathogiaosanpham ?>">
-                <input type="text" name="inputmathongtinthue" value="<?php echo $mathongtinthue ?>">
+                <input type="text" name="inputmathogiaosp" value="<?php echo $ma_posttimtho ?>">
+                <input type="text" name="inputmathongtinthue" value="<?php echo $mathongtintho ?>">
                 <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
                 <button class="button_additional" type="submit">Hoàn thành</button>
             </form>

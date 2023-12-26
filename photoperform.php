@@ -90,7 +90,9 @@
                                                         if($_SERVER['REQUEST_METHOD']==='POST'){
                                                             
                                                                 $insert_thogiaosanpham = $connect->insert_thogiaosanpham();
-                                                                                                                   
+                                                                if($insert_thogiaosanpham){
+                                                                    $delete_thuchien = $connect->delete_thuchien($mathuchien);
+                                                                }                                                       
                                                         }
                                                         
                                                     ?>
@@ -181,6 +183,7 @@
                                                         if($_SERVER['REQUEST_METHOD']==='POST'){
                                                             
                                                                 $insert_thogiaosanphamtt = $connect->insert_thogiaosanphamtt();
+                                                                
                                                                                                                    
                                                         }
                                                         

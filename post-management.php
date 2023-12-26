@@ -113,7 +113,7 @@ echo "ID của Thợ: " . $hoTen;
                                             $tentho = $row_thongtintho['hoTen'];
                                             $hinhanhtho = $row_thongtintho['hinhanhtho'];
                                             $maquanlybaidang = $row_thongtintho['ma_quanlybaidang'];
-                                            echo  'maqly'.$maquanlybaidang
+                                            // echo  'maqly'.$maquanlybaidang
                                     ?>
                                         <div class="candidate__list c-12 m-12 l-12">
                                             <div class="candidate__resume">

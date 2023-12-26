@@ -170,7 +170,9 @@ echo "ID của Thợ: " . $hoTen;
                                                         if($_SERVER['REQUEST_METHOD']==='POST'){
                                                             
                                                                 $insert_thuchien = $connect->insert_thuchien();
-                                                                                                                   
+                                                                if($insert_thuchien){
+                                                                    $delete_thanhtoancoc = $connect ->delete_thanhtoancoc($ma_thanhtoancoc);
+                                                                }                                               
                                                         }
                                                         
                                                     ?>

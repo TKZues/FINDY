@@ -52,7 +52,7 @@
     </section>
 
 
-    <!-- <section>
+    <section>
     <div class="jobinteresting">
         <div class="grid wide">
             <div class="jobinteresting_container row">
@@ -258,7 +258,7 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
     <section>
         <div class="complete">
