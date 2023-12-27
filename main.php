@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINDY - Kết nối dễ dàng</title>
-    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
+    <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./main.css">
@@ -17,8 +17,6 @@
 
 <body>
     <?php
-    $logoLink = "./main.php";
-    $logoFindy = "./img/findy-logo-ngang.png";
     include "header.php"
     ?>
 
@@ -52,213 +50,213 @@
     </section>
 
 
-    <section>
-    <div class="jobinteresting">
-        <div class="grid wide">
-            <div class="jobinteresting_container row">
-                <div class="jobinteresting_left col c-12 m-12 l-12">
-                    <div class="jobbest-header">
-                        <div class="heading">
-                            Việc làm tốt mọi nơi
+    <!-- <section>
+        <div class="jobinteresting">
+            <div class="grid wide">
+                <div class="jobinteresting_container row">
+                    <div class="jobinteresting_left col c-12 m-12 l-12">
+                        <div class="jobbest-header">
+                            <div class="heading">
+                                Việc làm tốt mọi nơi
+                            </div>
+                            <div class="jobbest-header--bottom">
+                                <div class="jobbest-header--bottom_filter">
+                                    <input type="text" name="" id="" placeholder="Lọc theo">
+                                </div>
+                                <div class="jobbest-header--bottom-button">
+                                    Ngẫu nhiên
+                                </div>
+                                <div class="jobbest-header--bottom-button">
+                                    Hà Nội
+                                </div>
+                                <div class="jobbest-header--bottom-button">
+                                    Thành phố Hồ Chí Minh
+                                </div>
+                                <div class="jobbest-header--bottom-button">
+                                    Miền Bắc
+                                </div>
+                                <div class="jobbest-header--bottom-button">
+                                    Miền Nam
+                                </div>
+                            </div>
                         </div>
-                        <div class="jobbest-header--bottom">
-                            <div class="jobbest-header--bottom_filter">
-                                <input type="text" name="" id="" placeholder="Lọc theo">
-                            </div>
-                            <div class="jobbest-header--bottom-button">
-                                Ngẫu nhiên
-                            </div>
-                            <div class="jobbest-header--bottom-button">
-                                Hà Nội
-                            </div>
-                            <div class="jobbest-header--bottom-button">
-                                Thành phố Hồ Chí Minh
-                            </div>
-                            <div class="jobbest-header--bottom-button">
-                                Miền Bắc
-                            </div>
-                            <div class="jobbest-header--bottom-button">
-                                Miền Nam
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jobbest-mid">
-                        <div class="row">
-                            <a href="#" onclick="showLoginForm()" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
+                        <div class="jobbest-mid">
+                            <div class="row">
+                                <a href="#" onclick="showLoginForm()" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
                                             </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                        </div>
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
+                                            </div>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
-                                            </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                </a>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
                                             </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
-                                            </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                </a>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
                                             </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
+                                </a>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
+                                            </div>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
+                                            </div>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
 
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
-                                            </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                <img src="./img/banner3.jpg" alt="">
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
                                             </div>
-                                            <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                <p>Công ty trách nhiệm hữu hạng</p>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item">
-                                            10 - 15 triệu
+                                </a>
+                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
+                                    <div class="jobbest-items ">
+                                        <div class="jobbest-mid-top">
+                                            <div class="row">
+                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
+                                                    <img src="./img/banner3.jpg" alt="">
+                                                </div>
+                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
+                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
+                                                    <p>Công ty trách nhiệm hữu hạng</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="jobbest-mid-bottom-item">
-                                            Hồ Chí Minh
+                                        <div class="jobbest-mid-bottom">
+                                            <div class="jobbest-mid-bottom-item">
+                                                10 - 15 triệu
+                                            </div>
+                                            <div class="jobbest-mid-bottom-item">
+                                                Hồ Chí Minh
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="jobbest-bottom">
+                            <i class="fa-solid fa-c-left"></i>
+                            <span style="color:#00b14f">31</span> / <span>37 trang</span>
+                            <i class="fa-solid fa-c-right"></i>
                         </div>
                     </div>
-                    <div class="jobbest-bottom">
-                        <i class="fa-solid fa-c-left"></i>
-                        <span style="color:#00b14f">31</span> / <span>37 trang</span>
-                        <i class="fa-solid fa-c-right"></i>
-                    </div>
+
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section> -->
 
     <section>
         <div class="complete">
@@ -1452,6 +1450,8 @@
             </div>
         </div>
     </section> -->
+
+    
     <div class="forthe">
         <video id="mVideo" autoplay>
             <source src="./video/videomakeup.mp4" type="video/mp4">
@@ -1459,9 +1459,9 @@
         </video>
     </div>
 
+    <script src="./video.js"></script>
+
     <?php
-    $appStore = "./img/app-store.svg";
-    $googlePlay = "./img/google-play.svg";
     include "footer.php"
     ?>
 
