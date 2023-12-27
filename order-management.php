@@ -75,7 +75,7 @@
                     </div>
 
                     <article>
-                        <iframe id="myiframe" src="./donhang/thanhtoancoc.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;"></iframe>
+                        <iframe id="myiframe" src="./donhang/thanhtoancoc.php" name="loadpage" frameborder="0" height="700px" width="100%" style="padding-top: 43px;" scrolling="no" onload="resizeIframe();"></iframe>
                     </article>
                 </div> 
             </div>
@@ -353,6 +353,18 @@
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+    function resizeIframe() {
+        var iframe = document.getElementById('myiframe');
+        if (iframe) {
+            var newHeight = iframe.contentWindow.document.body.scrollHeight + 50;
+            iframe.style.height = newHeight + 'px';
+        }
+    }
+
+    // Gọi hàm resizeIframe() khi trang photoconfirm.php tải xong
+    window.onload = resizeIframe;
+</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./main.js"></script>
     <script src="./coloroder.js"></script>

@@ -206,6 +206,9 @@
 
                         <?php 
                                         }
+                                    }else {
+                                        // Display default image when there is no data
+                                        echo '<div class="col l-12 m-12 c-12"><img src="./img/img-html.jpg" alt="Blank Image"></div>';
                                     }
 
 ?>                   
