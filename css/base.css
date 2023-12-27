@@ -38,6 +38,10 @@ html {
     box-sizing: border-box;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Button */
 .tabbar {
     border-bottom: 1px solid #f1f1f1;
