@@ -11,11 +11,17 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../find-timtho.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
+
+    <style>
+        .navbar__heading-warp > .navbar__heading:nth-child(2) > .navbar__heading-link {
+            color: var(--main-color);
+        }
+    </style>
 </head>
 
 <body>
     <?php
-    include "../header.php"
+    include "../header.php";
     ?>
 
     <div class="main">
@@ -454,10 +460,11 @@
 
     </section> -->
 
-    <script src="../find-timtho.js"></script>
+    <!-- <script src="../find-timtho.js"></script> -->
 
     <?php
     include "../footer.php"
     ?>
+
 </body>
 </php>

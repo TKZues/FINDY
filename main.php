@@ -1457,6 +1457,10 @@
         </video>
     </div>
 
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./video.js"></script> -->
+
     <?php
     include "footer.php"
     ?>

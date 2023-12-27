@@ -1,7 +1,3 @@
-.navbar>div:nth-child(2) {
-    border-bottom: 3px solid var(--main-color);
-}
-
 /* --------------- Banner ------------- */
 .banner {
     margin-top: var(--top-header-height);
@@ -50,7 +46,6 @@
     width: 100%;
     top: 50%;
     display: flex;
-    z-index: 10;
     font-size: 1.5rem;
     justify-content: space-between;
     transform: translateY(-50%);

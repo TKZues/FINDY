@@ -149,11 +149,11 @@
                 <!-- <button onclick="showRegisterForm()">Muốn làm người thuê</button>
                 <button onclick="showRegisterForm2()">Muốn làm thợ</button> -->
                 <div class="choice_service_content-btn" onclick="showRegisterForm2()">
-                    <img src="./img/lam-tho.png" alt="Muốn làm thợ" class="choice_service_content-img">
+                    <img src="/img/lam-tho.png" alt="Muốn làm thợ" class="choice_service_content-img">
                     <div class="choice_service_content-text">Muốn làm thợ</div>
                 </div>
                 <div class="choice_service_content-btn" onclick="showRegisterForm()">
-                    <img src="./img/lam-nguoi-thue.png" alt="Muốn làm người thuê" class="choice_service_content-img">
+                    <img src="/img/lam-nguoi-thue.png" alt="Muốn làm người thuê" class="choice_service_content-img">
                     <div class="choice_service_content-text">Muốn làm người thuê</div>
                 </div>
             </div>
@@ -367,8 +367,8 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./main.js"></script>
-<script src="./video.js"></script>
+<script src="/main.js"></script>
+<script src="/video.js"></script>
 
 </body>
 

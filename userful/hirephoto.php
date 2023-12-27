@@ -5,90 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINDY - Kết nối dễ dàng</title>
-    <link rel="icon" href="../img/findy-logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../img/findy-logo.png" type="image/x-icon">
+    <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/base.css">
-    <!-- <link rel="stylesheet" href="../mainphoto.css">
-    <link rel="stylesheet" href="../mainicon.css"> -->
-    <link rel="stylesheet" href="../header.css">
     <link rel="stylesheet" href="./hirephoto.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
 
+    <style>
+        .navbar__heading-warp > .navbar__heading:nth-child(1) > .navbar__heading-link {
+            color: var(--main-color);
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="top">
-
-        </div>
-        <div class="grid wide">
-
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="navbar__logo">
-                    <a href="../main.php" class="navbar__logo-link">
-                        <img src="../img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
-                    </a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="./hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="./jobsearch.php" class="navbar__heading-link">Tìm việc</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="./create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="#" class="navbar__heading-link">Blog</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="#" onclick="showchoice_service()" class="navbar__heading-link">Đăng ký</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="#" onclick="showLoginForm()" class="navbar__heading-link">Đăng nhập</a>
-                </div>
-
-                <!-- Mobile menu icon -->
-                <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
-                    <i class="navbar__heading-icon fa-solid fa-bars"></i>
-                </label>
-            </nav>
-
-            <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
-
-            <!-- Mobile menu -->
-            <div class="mobile__menu">
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                    <a href="#" onclick="showchoice_service()" class="navbar__heading-link">Đăng ký</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                    <a href="#" onclick="showLoginForm()" class="mobile__heading-link">Đăng nhập</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
-                    <a href="./hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
-                    <a href="./jobsearch.php" class="navbar__heading-link">Tìm việc</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-pen"></i>
-                    <a href="./create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-file-pen"></i>
-                    <a href="" class="mobile__heading-link">Blog</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php
+    include "../header.php"
+    ?>
 
     <section>
         <div class="banner">
@@ -268,75 +202,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row">
-                                <div class="filter_bottom-address col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Địa điểm</option>
-                                        <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
-                                        <option value="Hà Nội">Hà Nội</option>
-                                        <option value="Đà Nẵng">Đà Nẵng</option>
-                                        <option value="Thanh Hóa">Thanh Hóa</option>
-                                        <option value="Đồng Nai">Đồng Nai</option>
-                                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
-
-                                    </select>
-                                </div>
-                                <div class="filter_bottom-price col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Giá</option>
-                                        <option value="10 giờ">nhỏ hơn 200</option>
-                                        <option value="10 giờ">200-500</option>
-                                        <option value="10 giờ">500-800</option>
-                                        <option value="10 giờ">800-1000</option>
-                                        <option value="10 giờ">1000-1500</option>
-                                        <option value="10 giờ">trên 1500</option>
-
-                                    </select>
-                                </div>
-                                <div class="filter_bottom-price col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Thiết bị</option>
-                                        <option value="10 giờ">Điện thoại</option>
-                                        <option value="10 giờ">Máy ảnh</option>
-
-
-                                    </select>
-                                </div>
-                                <div class="filter_bottom-hinhthuc col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Hình thức</option>
-                                        <option value="Nhiếp ảnh trừu tượng">Nhiếp ảnh trừu tượng</option>
-                                        <option value="Nhiếp ảnh kiến trúc">Nhiếp ảnh kiến trúc</option>
-                                        <option value="Chụp ảnh trẻ sơ sinh">Chụp ảnh trẻ sơ sinh</option>
-                                        <option value="1Chụp ảnh đen trắng">Chụp ảnh đen trắng</option>
-                                        <option value="Make-up">Make-up</option>
-
-                                    </select>
-                                </div>
-                                <div class="filter_bottom-style col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Phong cách</option>
-                                        <option value="CHÂN DUNG TRUYỀN THỐNG">Nàng thơ</option>
-                                        <option value="CHỤP KHOẢNH KHẮC">Truyền thống</option>
-                                        <option value="CHỤP CHÂN DUNG QUYẾN RŨ">Cổ trang</option>
-                                        <option value="CHÂN DUNG CUỘC SỐNG">Hiện đại</option>
-                                        <option value="CHÂN DUNG SIÊU THỰC">Quyến rũ</option>
-                                        <option value="CHÂN DUNG CUỘC SỐNG">Tuổi teen</option>
-                                        <option value="CHÂN DUNG SIÊU THỰC">Thanh xuân</option>
-
-                                    </select>
-                                </div>
-                                <div class="filter_bottom-event col c-12 m-12 l-12">
-                                    <select name="" id="" class="booking__input">
-                                        <option value="">Sự kiện</option>
-                                        <option value="10 giờ">Đám cưới</option>
-                                        <option value="11 giờ">Sinh nhật</option>
-                                        <option value="12 giờ">Kỷ yếu</option>
-                                        <option value="13 giờ">Đi tiệc</option>
-
-                                    </select>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
@@ -360,48 +225,6 @@
                                     <?php
                                     if ($select_postjob) {
                                         while ($result = $select_postjob->fetch_assoc()) {
-<<<<<<< HEAD
-                                            $mathongtinthue = $result['mathongtinthue'];
-                                            include "../db_connection.php";
-                                            $sql = "SELECT * FROM thongtinthue WHERE mathongtinthue = $mathongtinthue";
-                                            $result_thongtinthue = $conn->query($sql);
-                                            if ($result_thongtinthue) {
-                                                $thongtinthue_data = $result_thongtinthue->fetch_assoc();
-                                                $hinhanhthue = $thongtinthue_data['hinhanhthue'];
-                                           
-                                ?>
-                            <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
-                                <div class="jobbest-items ">
-                                    <div class="jobbest-mid-top">
-                                        <div class="row">
-                                            
-                                            <div class="jobbest-mid-top--left col c-3 m-3 l-3">
-                                                <img src="../img/<?php echo $hinhanhthue ?>" style="width:80px;height:80px;border-radius:50%" alt="">
-                                            </div>
-                                            <div class="jobbest-mid-top--right col c-8 m-8 l-8" >
-                                                <?php echo $result['tenposttimtho']  ?>
-                                                <p><?php echo $result['thoigian'] ?></p>
-                                                <p>Giá: <?php echo $result['gia'] ?></p>
-                                                <p><?php echo $result['sukien'] ?></p>
-                                                <p><?php echo $result['diadiem'] ?></p>
-                                            </div>
-                                            <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <div class="jobbest-mid-bottom">
-                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-                                            
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-                                            
-                                        </div>
-                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
-                                            
-                                        </div>
-                                       
-=======
                                             $_SESSION['mathongtinthue '] = $result['mathongtinthue'];
                                             $_SESSION['tenposttimtho'] = $result['tenposttimtho'];
                                             $_SESSION['diadiem'] = $result['diadiem'];
@@ -430,7 +253,6 @@
                                                         </div>
                                                     <!-- <div class="jobbest-list-bottom">
                                                         <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
->>>>>>> e4098b510ef2108a428df17eaed8351ace4ad601
 
                                                         </div>
                                                         <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
@@ -446,16 +268,9 @@
                                     <?php
                                         }
                                     }
-<<<<<<< HEAD
-                                }
-                            }
-                            ?>     
-                           
-=======
                                     ?>
                                 </div>
                             </div>
->>>>>>> e4098b510ef2108a428df17eaed8351ace4ad601
                         </div>
                     </div>
                 </div>
@@ -487,9 +302,7 @@
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-    
-=======
+
     <section>
         <div class="jobinteresting">
             <div class="grid wide">
@@ -592,7 +405,6 @@
                 </div>
             </div>
     </section>
->>>>>>> e4098b510ef2108a428df17eaed8351ace4ad601
     <section>
         <div class="footer">
             <div class="grid wide">
