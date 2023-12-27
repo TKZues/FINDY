@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="./css/base.css">
-<link rel="stylesheet" href="./header.css">
-<link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+<link rel="stylesheet" href="/header.css">
 
 <header class="header">
     <!-- <div class="top">

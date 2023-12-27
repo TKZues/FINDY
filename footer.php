@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="./css/base.css">
-<link rel="stylesheet" href="./footer.css">
-<link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+<link rel="stylesheet" href="/footer.css">
 
 <section>
     <div class="footer">
