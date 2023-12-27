@@ -117,10 +117,10 @@
                     <h1>Ứng dụng</h1>
                     <ul>
                         <a href="">
-                            <li><img src="<?php echo $appStore; ?>" alt=""></li>
+                            <li><img src="/img/app-store.svg" alt=""></li>
                         </a>
                         <a href="">
-                            <li><img src="<?php echo $googlePlay; ?>" alt=""></li>
+                            <li><img src="/img/google-play.svg" alt=""></li>
                         </a>
                     </ul>
                 </div>

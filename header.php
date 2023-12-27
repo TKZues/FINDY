@@ -11,28 +11,35 @@
         <!-- Navbar -->
         <nav class="navbar">
             <div class="navbar__logo">
-                <a href="<?php echo $logoLink; ?>" class="navbar__logo-link">
-                    <!-- <img src="./img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img"> -->
-                    <img src="<?php echo $logoFindy; ?>" alt="Findy" class="navbar__logo-img">
+                <a href="/main.php" class="navbar__logo-link">
+                    <img src="/img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
                 </a>
             </div>
-            <div class="navbar__heading">
-                <a href="./userful/hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
+            <div class="navbar__heading-warp">
+                <div class="navbar__heading">
+                    <a href="/userful/hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="/userful/jobsearch.php" class="navbar__heading-link">Tìm việc</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="/userful/create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
+                </div>
+                <div class="navbar__heading">
+                    <a href="#" class="navbar__heading-link">Blog</a>
+                </div>
             </div>
-            <div class="navbar__heading">
-                <a href="./userful/jobsearch.php" class="navbar__heading-link">Tìm việc</a>
+            <div class="navbar__heading-search">
+                <i class="navbar__search-icon fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
             </div>
-            <div class="navbar__heading">
-                <a href="./userful/create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
-            </div>
-            <div class="navbar__heading">
-                <a href="#" class="navbar__heading-link">Blog</a>
-            </div>
-            <div class="navbar__heading">
-                <a href="#" onclick="showchoice_service()" class="navbar__heading-link">Đăng ký</a>
-            </div>
-            <div class="navbar__heading">
-                <a href="#" onclick="showLoginForm()" class="navbar__heading-link">Đăng nhập</a>
+            <div class="navbar__heading-controls">
+                <div class="navbar__heading">
+                    <div onclick="showLoginForm()" class="navbar__heading-link">Đăng nhập</div>
+                </div>
+                <div class="navbar__heading">
+                    <div onclick="showchoice_service()" class="btn btn--primary navbar__heading-link">Đăng ký</div>
+                </div>
             </div>
 
             <!-- Mobile menu icon -->
@@ -47,11 +54,11 @@
         <div class="mobile__menu">
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                <a href="#" onclick="showchoice_service()" class="mobile__heading-link">Đăng ký</a>
+                <div onclick="showchoice_service()" class="mobile__heading-link">Đăng ký</div>
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                <a href="#" onclick="showLoginForm()" class="mobile__heading-link">Đăng nhập</a>
+                <div onclick="showLoginForm()" class="mobile__heading-link">Đăng nhập</div>
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
