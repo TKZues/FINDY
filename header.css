@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* ------------- Navbar ------------- */
@@ -27,17 +27,43 @@
 }
 
 .navbar__heading {
-    /* flex: 1; */
-    text-align: center;
-    padding: 6px 32px;
-    /* border-right: 1px solid var(--border-color); */
+    margin: 0 8px;
     display: flex;
+    flex: 1;
+    justify-content: center;
     align-items: center;
 }
 
-/* .navbar > div:last-of-type {
+.navbar__heading-warp {
+    display: flex;
+    flex: 1;
+    margin: 0 36px;
+}
+
+.navbar__heading-search {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 4px 16px;
+    margin: 0 8px;
+}
+
+.navbar__search-icon {
+    font-size: 1.6rem;
+}
+
+.navbar__search-input {
+    font-size: 1.6rem;
+    padding: 4px 8px;
+    line-height: 1.4;
     border: none;
-} */
+    outline: none;
+    width: 150px;
+}
+
+.navbar__heading-controls {
+    display: flex;
+}
+
 
 .navbar__heading-img{
     width: 40px;
@@ -48,16 +74,22 @@
 }
 
 .navbar__heading-link {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
     /* color: var(--main-color); */
     color: var(--text-color);
     margin-left: 4px;
+    cursor: pointer;
 }
 
 .navbar__heading-link:hover {
     color: var(--main-color);
+}
+
+.btn.navbar__heading-link {
+    color: #fff;
+    height: 36px;
 }
 
 .navbar__heading-icon {
@@ -132,4 +164,263 @@
     width: 100%;
     height: var(--top-height);
     background-color: #000;
+}
+
+
+/* ------- Form đăng nhập, đăng ký -------*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__container {
+    margin: auto;
+}
+
+.account_form {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.account_form2 {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.account_form__container {
+    padding: 16px 32px;
+}
+
+.account_form__heading {
+    color: var(--text-color);
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.account_form__form {
+    margin: 16px;
+}
+
+.account_form__input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+
+.show-hide-password {
+    position: absolute;
+    padding: 12px;
+    font-size: 1.4rem;
+    top: calc((100% - 16px) / 2);
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.account_form__input:focus {
+    border-color: var(--main-color);
+}
+
+.account_form__aside {
+    margin: 0 16px;
+}
+
+.account_form__policy-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.account_form__policy-link {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.account_form__btn {
+    width: calc(100% - 32px);
+    margin: 20px 16px;
+}
+
+.account_form__socials {
+    padding: 0 32px;
+}
+
+.account_form__separate {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+    line-height: 0;
+}
+
+.account_form__separate-text {
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.25);
+    padding: 0 10px;
+}
+
+.account_form__socials-list {
+    margin: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.account_form__socials--facebook {
+    color: #3a5a9b;
+}
+
+.account_form__socials--google {
+    color: #000;
+}
+
+.account_form__socials--facebook,
+.account_form__socials--google {
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.account_form__socials--facebook:hover,
+.account_form__socials--google:hover {
+    background-color: #f5f5f5;
+}
+
+.account_form__socials-icon {
+    font-size: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.account_form__socials-title {
+    margin: 0 16px;
+}
+
+.account_form__footer {
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.account_form__footer-btn {
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.account_form__text {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.account_form__link {
+    text-decoration: none;
+    color: var(--main-color)
+}
+
+.choice_service {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+}
+
+.choice_service.open {
+    display: flex;
+}
+
+.choice_service_content {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.choice_service_container {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* .choice_service_content button{
+    background-color: var(--background-color);
+    width: 200px;
+    height: 50px;
+} */
+
+.choice_service_content_container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 16px 0;
+}
+
+.choice_service_container-heading {
+    color: var(--text-color);
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 16px;
+}
+
+.choice_service_content-btn {
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.choice_service_content-btn:hover {
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 10px 20px 0 rgba(71, 140, 67, 0.2);
+}
+
+.choice_service_content-btn:hover .choice_service_content-text {
+    color: var(--main-color);
+}
+
+.choice_service_content-img {
+    width: 80%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.choice_service_content-text {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 16px 0;
 }
