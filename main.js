@@ -1,3 +1,4 @@
+// ------------- Đăng ký, đăng nhập -------------
 const modal = document.querySelector('.modal');
 const modalContainer = document.querySelector('.modal__container');
 const choice_service = document.querySelector('.choice_service');
