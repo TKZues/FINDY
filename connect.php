@@ -493,5 +493,73 @@
             return $result;
           
         }
-    }
+
+        public function select_thochochinhsua($id_tho){
+            $query = "SELECT *FROM thochochinhsua
+            inner join post_timtho on thochochinhsua.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join thongtintho on thongtintho.mathongtintho = thochochinhsua.mathongtintho
+            where thongtintho.id_tho = $id_tho";
+
+            $result = $this->db->select($query);
+            return $result;
+        }
+        public function insert_yeucauchinhsua(){
+            $inputmathogiaosp = $_POST['ma_posttimthoyc'];
+            $inputmathongtinthue = $_POST['mathongtinthoyc'];
+            $inputdrive = $_POST['driveyc'];
+            $query = "INSERT INTO yeucauchinhsua (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
+        }
+        public function delete_thosanpham($ma_posttimtho, $mathongtintho){
+            $query = "DELETE FROM tho_sanpham WHERE ma_posttimtho = '$ma_posttimtho' and mathongtintho = '$mathongtintho'";
+            $result = $this -> db->delete($query);
+            return $result;
+        }
+        public function insert_thuenhanlaisanpham(){
+            $inputmathogiaosp = $_POST['ma_posttimthoyc'];
+            $inputmathongtinthue = $_POST['mathongtinthoyc'];
+            $inputdrive = $_POST['driveyc'];
+            $query = "INSERT INTO yeucauchinhsua (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
+        }
+        public function select_yecauchinhsua($id_tho){
+            $query = "SELECT *FROM yeucauchinhsua
+            inner join post_timtho on yeucauchinhsua.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join thongtintho on thongtintho.mathongtintho = yeucauchinhsua.mathongtintho
+            where thongtintho.id_tho = $id_tho";
+
+            $result = $this->db->select($query);
+            return $result;
+        }
+        public function delete_thochosanpham($ma_posttimtho, $mathongtintho){
+            $query = "DELETE FROM thochochinhsua WHERE ma_posttimtho = '$ma_posttimtho' and mathongtintho = '$mathongtintho'";
+            $result = $this -> db->delete($query);
+            return $result;
+        }
+        public function insert_guilaisanpham($uniqueId1){
+            $inputmathogiaosp = $_POST['inputmathogiaosp2'];
+            $inputmathongtinthue = $_POST['inputmathongtinthue2'];
+            $inputdrive = $_POST['inputdrive2'];
+            $query = "INSERT INTO tho_sanpham (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
+        }
+        public function delete_yeucauchinhsua($ma_posttimtho, $mathongtintho){
+            $query = "DELETE FROM yeucauchinhsua WHERE ma_posttimtho = '$ma_posttimtho' and mathongtintho = '$mathongtintho'";
+            $result = $this -> db->delete($query);
+            return $result;
+        }
+    }   
 ?>

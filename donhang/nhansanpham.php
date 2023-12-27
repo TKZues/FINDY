@@ -86,16 +86,45 @@
                 
             </form>
             <div class="flex_botton">
-                    <button class="button_additional" type="submit">Gửi yêu cầu chỉnh sửa</button>
                     <?php
-                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                                    $insert_danhgia = $connect-> insert_danhgia();
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                            if (isset($_POST['submit_yeucauchinhsua'])) {
+                                $insert_yeucauchinhsua = $connect->insert_yeucauchinhsua();
+                                if ($insert_yeucauchinhsua){
+                                    $delete_thochosanpham = $connect-> delete_thochosanpham($ma_posttimtho, $mathongtintho);
+                                    if ($delete_thochosanpham){
+                                        $delete_thosanpham = $connect-> delete_thosanpham($ma_posttimtho, $mathongtintho);
                                     }
-                    ?>
+                                    else{
+                                        echo "Error";
+                                    }
+                                }else{
+                                    echo "Error";
+                                }
+                            } elseif (isset($_POST['submit_danhgia'])) {
+                                $insert_danhgia = $connect->insert_danhgia();
+                            }
+                        }
+                        ?>
+                        <?php
+                            echo "d" .$ma_posttimtho;
+                            echo "d" .$mathongtintho;
+                        ?>
                     <form action="" method="POST">
+                    <input type="text" name="driveyc" id="" value="<?php echo $drive ?>">
+                    <input type="text" name="mathongtinthoyc" id="" value="<?php echo $mathongtintho ?>">
+                    <input type="text" name="ma_posttimthoyc" id="" value="<?php echo $ma_posttimtho ?>">
+                    <button class="button_additional" type="submit" name="submit_yeucauchinhsua">Gửi yêu cầu chỉnh sửa</button>
+                    
+                    </form>
+
+               
+                    
+                    <form action="" method="POST">
+                        <input type="text" name="" id="" value="<?php echo $drive ?>">
                         <input type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                         <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
-                        <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
+                        <button class="button_additional" type="submit" name="submit_danhgia">Đã nhận sản phẩm</button>
                     </form>
                    
             </div>

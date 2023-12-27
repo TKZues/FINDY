@@ -43,7 +43,9 @@
 
 <!-- Overlay HTML -->
 <div id="myOverlay" class="overlay"></div>
-
+<div class="giaosanpham">
+    Giao sản phẩm
+</div>
 <div class="row">
 <?php
                                     if($select_nhansanphamtho){
@@ -121,6 +123,9 @@
                 $insert_sanpham = $connect->insert_sanpham();
                 if($insert_sanpham){
                     $insert_thochochinhsua = $connect->insert_thochochinhsua();
+                    if($insert_thochochinhsua){
+                        $delete_thogiaosanpham = $connect->delete_thogiaosanpham($mathogiaosanpham);
+                    }
                 }
                                                                                                                    
             }
@@ -142,6 +147,203 @@
 
 ?>
 
+<!-- =========================== -->
+<div class="chophanhoi">
+    Chờ phản hồi
+</div>
+
+<?php 
+    $select_thochochinhsua = $connect -> select_thochochinhsua($id_tho); //
+?>
+
+<?php
+                                    if($select_thochochinhsua){
+                                        while($result = $select_thochochinhsua->fetch_assoc()){
+                                        $anhtho = $result['hinhanhthue'];  
+                                        $uniqueId1 = uniqid();  
+                                        $tentho = $result['hoTen'];
+                                        $diadiem = $result['diadiem'];
+                                        $thoigian = $result['thoigian'];
+                                        $sukien = $result['sukien'];
+                                        $phongcach = $result['phongcach'];
+                                        $gia = $result['gia'];
+                                        $mathongtinthuett = $result['mathongtinthue'];
+                                        $mathochochinhsua = $result['mathochochinhsua'];
+                                        $ma_posttimtho = $result['ma_posttimtho'];
+                                        
+                                            
+                                ?>
+                        <div class="col l-12 m-12 c-12">
+            <div class="order">
+                <div class="order__avatar">
+                    <img src="../img/<?php  echo $anhtho ?>" alt="Ảnh đại diện" class="order__avatar-img">
+                </div>
+
+                <div class="order__info">
+                    <span class="order__name">
+                        <?php echo $tentho  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-location-dot"></i>
+                        <?php echo $diadiem  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-calendar-days"></i>
+                        <?php echo $thoigian  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-regular fa-clock"></i>
+                        16h:30p
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <span class="order__title">
+                        Mã đơn hàng:
+                        <strong><?php echo $mathochochinhsua ?> </strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong><?php echo $phongcach  ?></strong>
+                    </span>
+                    <span class="order__title">
+                        Tổng giá trị:
+                        <strong><?php echo $gia ?></strong>
+                    </span>
+                </div>
+
+                <div class="order__info">
+                <button class="btn order-btn" onclick="toggleAdditionalInfo1('<?php echo $uniqueId1; ?>', '<?php echo $diadiem; ?>', '<?php echo $gia; ?>', '<?php echo $thoigian; ?>', '<?php echo $mathogiaosanphamtt; ?>', '<?php echo $mathongtinthuett; ?>')">Chờ phản hồi</button>
+                <a href="" class="order__detail">
+                    Xem chi tiết
+                    <i class="order__detail-icon fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
+        <div id="additional-info1_<?php echo $uniqueId1; ?>" class="additional-info1" style="display: none;">
+        <?php
+                $connect = new connect;
+                if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inputmathogiaosp1']) && isset($_POST['inputmathongtinthue1'])){
+                                                            
+                $insert_sanphamtt = $connect->insert_sanphamtt($uniqueId1);
+                                                                                                                   
+            }
+                                                        
+        ?>
+            <form action="./photopayment.php" method="POST">
+                <input type="text" name="inputmathogiaosp1" value="<?php echo $mathogiaosanphamtt ?>">
+                <input type="text" name="inputmathongtinthue1" value="<?php echo $mathongtinthuett ?>">
+                <input type="text" name="inputdrive1" id="inputdrive_<?php echo $uniqueId1; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <button class="button_additional" type="submit">Hoàn thành</button>
+            </form>
+        </div> <!-- New container for additional info -->
+                        <?php 
+                                        }
+                                    }
+
+?>
+
+<!-- ---------------------------------- -->
+<div class="chinhsua">
+    Chỉnh sửa lại
+</div>
+<?php 
+    $select_yecauchinhsua = $connect -> select_yecauchinhsua($id_tho); //
+?>
+
+<?php
+                                    if($select_yecauchinhsua){
+                                        while($result = $select_yecauchinhsua->fetch_assoc()){
+                                        $anhtho = $result['hinhanhthue'];  
+                                        $uniqueId1 = uniqid();  
+                                        $tentho = $result['hoTen'];
+                                        $diadiem = $result['diadiem'];
+                                        $thoigian = $result['thoigian'];
+                                        $sukien = $result['sukien'];
+                                        $phongcach = $result['phongcach'];
+                                        $gia = $result['gia'];
+                                        $mathongtinthue = $result['mathongtinthue'];
+                                        $mayeucauchinhsua = $result['mayeucauchinhsua'];
+                                        $mathongtintho = $result['mathongtintho'];
+                                        $ma_posttimtho = $result['ma_posttimtho'];
+                                        $drive = $result['drive'];
+                                ?>
+                        <div class="col l-12 m-12 c-12">
+            <div class="order">
+                <div class="order__avatar">
+                    <img src="../img/<?php  echo $anhtho ?>" alt="Ảnh đại diện" class="order__avatar-img">
+                </div>
+
+                <div class="order__info">
+                    <span class="order__name">
+                        <?php echo $tentho  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-location-dot"></i>
+                        <?php echo $diadiem  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-solid fa-calendar-days"></i>
+                        <?php echo $thoigian  ?>
+                    </span>
+                    <span class="order__text">
+                        <i class="order__text-icon fa-regular fa-clock"></i>
+                        16h:30p
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <span class="order__title">
+                        Mã đơn hàng:
+                        <strong><?php echo $mayeucauchinhsua ?> </strong>
+                    </span>
+                    <span class="order__title">
+                        Phong cách:
+                        <strong><?php echo $phongcach  ?></strong>
+                    </span>
+                    <span class="order__title">
+                        Tổng giá trị:
+                        <strong><?php echo $gia ?></strong>
+                    </span>
+                </div>
+
+                <div class="order__info">
+                    <a href="<?php echo $drive ?>" target="_blank">Xem phản hồi</a>
+                <button class="btn order-btn" onclick="toggleAdditionalInfo1('<?php echo $uniqueId1; ?>', '<?php echo $diadiem; ?>', '<?php echo $gia; ?>', '<?php echo $thoigian; ?>', '<?php echo $mayeucauchinhsua; ?>', '<?php echo $mathongtintho; ?>')">Chỉnh sửa</button>
+                <a href="" class="order__detail">
+                    Xem chi tiết
+                    <i class="order__detail-icon fa-solid fa-right-long"></i>
+                </a>
+            </div>
+        </div>
+        <div id="additional-info1_<?php echo $uniqueId1; ?>" class="additional-info1" style="display: none;">
+        <?php
+                $connect = new connect;
+                if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inputmathogiaosp2']) && isset($_POST['inputmathongtinthue2'])){
+                                                            
+                $insert_guilaisanpham = $connect->insert_guilaisanpham($uniqueId1);
+                if($insert_guilaisanpham){
+                    $delete_yeucauchinhsua = $connect->delete_yeucauchinhsua($ma_posttimtho, $mathongtintho);
+                }else{
+                    echo "Error";
+                }
+                                                                                                                   
+            }
+                                                        
+        ?>
+            <form action="./photodelivery.php" method="POST">
+                <input type="text" name="inputmathogiaosp2" value="<?php echo $ma_posttimtho ?>">
+                <input type="text" name="inputmathongtinthue2" value="<?php echo $mathongtintho ?>">
+                <input type="text" name="inputdrive2" id="inputdrive_<?php echo $uniqueId1; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <button class="button_additional" type="submit">Hoàn thành</button>
+            </form>
+        </div> <!-- New container for additional info -->
+                        <?php 
+                                        }
+                                    }
+
+?>
+<!-- ---------------------------------- -->
 <?php 
     $select_nhansanphamthott = $connect -> select_nhansanphamthott($id_tho); //
 ?>
