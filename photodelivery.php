@@ -44,9 +44,7 @@
 
 <!-- Overlay HTML -->
 <div id="myOverlay" class="overlay"></div>
-<div class="giaosanpham">
-    Giao sản phẩm
-</div>
+
 <div class="row">
 <?php
                                     if($select_nhansanphamtho){
@@ -151,9 +149,7 @@
 ?>
 
 <!-- =========================== -->
-<div class="chophanhoi">
-    Chờ phản hồi
-</div>
+
 
 <?php 
     $select_thochochinhsua = $connect -> select_thochochinhsua($id_tho); //
@@ -248,9 +244,7 @@
 ?>
 
 <!-- ---------------------------------- -->
-<div class="chinhsua">
-    Chỉnh sửa lại
-</div>
+
 <?php 
     $select_yecauchinhsua = $connect -> select_yecauchinhsua($id_tho); //
 ?>

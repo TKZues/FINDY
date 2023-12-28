@@ -467,7 +467,7 @@ echo "ID của Thợ: " . $mathongtintho;
     function resizeIframe() {
         var iframe = document.getElementById('myiframe');
         if (iframe) {
-            var newHeight = iframe.contentWindow.document.body.scrollHeight + 200;
+            var newHeight = iframe.contentWindow.document.body.scrollHeight + 600;
             iframe.style.height = newHeight + 'px';
         }
     }

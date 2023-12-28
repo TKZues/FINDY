@@ -41,7 +41,7 @@
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
                                         $ma_thanhtoancoc = $result['ma_thanhtoancoc'];
-
+                                        $tenposttimtho = $result['tenposttimtho'];
                                             
                                 ?>
         <div class="col l-12 m-12 c-12">
@@ -90,8 +90,13 @@
                     </span>
                 </div>
 
-                <a href="" class="order__detail">
-                    Xem chi tiết
+                <a href="javascript:void(0);" class="order__detail" 
+                onclick="openModal('<?php echo $anhtho; ?>', 
+                '<?php echo $tentho; ?>', '<?php echo $tenposttimtho; ?>', 
+                '<?php echo $thoigian; ?>', '<?php echo $phongcach; ?>', 
+                '<?php echo $phongcach; ?>','<?php echo $gia; ?>',
+                '<?php echo $sukien; ?>')">
+                    Xem chi tiế t
                     <i class="order__detail-icon fa-solid fa-right-long"></i>
                 </a>
             </div>
