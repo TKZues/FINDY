@@ -123,7 +123,7 @@
 
 /* ------------- Filter mới ------------- */
 .filter {
-    background-color: var(--background-color);
+    background-color: #fff;
     border-radius: 10px;
 }
 
@@ -139,8 +139,7 @@
 }
 
 .filter__list {
-    padding-bottom: 12px;
-    margin: 0 10px;
+    padding-top: 12px;
     display: flex;
 }
 
@@ -180,7 +179,6 @@
 
 .selected {
     border: 1px solid var(--main-color);
-    font-weight: 700;
     color: var(--main-color);
 }
 
@@ -214,14 +212,6 @@
     outline: none;
     border: 1px solid var(--border-color);
     border-radius: 5px;
-}
-
-.filter__menu-name:hover {
-    color: var(--main-color);
-    cursor: pointer;
-}
-
-.filter__menu-name {
     font-size: 1.4rem;
     color: var(--text-color);
 }
