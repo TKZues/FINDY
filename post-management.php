@@ -60,7 +60,9 @@ echo "ID của Thợ: " . $hoTen;
                         <h1 class="post-heading">Danh sách bài đăng</h1>
                         <div class="row">
                             <?php 
-                                include "connect.php"
+                                include "connect.php";
+                                $emptyImage = '<img src="./img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+                                $dataDisplayed = false;
                             ?>
                             <?php
                                     $connect = new connect;        
@@ -71,6 +73,7 @@ echo "ID của Thợ: " . $hoTen;
                                         while($result = $select_posttimtho->fetch_assoc()){
                                             $ma_posttimtho = $result['ma_posttimtho'];
                                             $mathongtinthue = $result['mathongtinthue'];
+                                            $dataDisplayed = true;   
                                             
                             ?>
                             <div class="col l-6 m-12 c-12">
@@ -111,6 +114,7 @@ echo "ID của Thợ: " . $hoTen;
                                         while ($row_thongtintho = $result_thongtintho->fetch_assoc()) {
                                             $mathongtintho = $row_thongtintho['mathongtintho'];
                                             $tentho = $row_thongtintho['hoTen'];
+                                            $dataDisplayed = true;   
                                             $hinhanhtho = $row_thongtintho['hinhanhtho'];
                                             $maquanlybaidang = $row_thongtintho['ma_quanlybaidang'];
                                             // echo  'maqly'.$maquanlybaidang
@@ -205,6 +209,11 @@ echo "ID của Thợ: " . $hoTen;
                                     }
                                 }
                             ?>
+                            <?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
+?>  
                         </div>
                     </div>
                 </div>

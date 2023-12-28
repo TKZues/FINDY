@@ -357,7 +357,7 @@
     function resizeIframe() {
         var iframe = document.getElementById('myiframe');
         if (iframe) {
-            var newHeight = iframe.contentWindow.document.body.scrollHeight + 50;
+            var newHeight = iframe.contentWindow.document.body.scrollHeight + 400;
             iframe.style.height = newHeight + 'px';
         }
     }

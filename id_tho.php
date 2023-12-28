@@ -11,4 +11,6 @@
     // Lấy thông tin người dùng từ session
     $id_tho = $_SESSION['id_tho'];
     $hoTen = $_SESSION['hoTen'];
+    
+    
 ?>

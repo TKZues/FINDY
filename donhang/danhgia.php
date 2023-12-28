@@ -29,6 +29,8 @@
 <?php 
     $connect = new connect;
     $select_danhgia = $connect -> select_danhgia($id_thue); //
+    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
         
@@ -36,6 +38,7 @@
                                     if($select_danhgia){
                                         while($result = $select_danhgia->fetch_assoc()){
                                             $uniqueId = uniqid();  
+                                            $dataDisplayed = true;
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -43,6 +46,7 @@
                                         $sukien = $result['sukien'];
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
+                                        $drive = $result['drive'];
                                         // $mathongtinthue = $result['mathongtinthue'];
                                         // $mathogiaosanpham = $result['mathogiaosanpham'];
                                             
@@ -74,7 +78,10 @@
                                     <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
                         '<?php echo $gia; ?>',
                         '<?php echo $thoigian; ?>'
-                        )">Đánh giá</button>                                        
+                        )">Đánh giá</button>
+                                    <a href="<?php echo $drive ?>" target="self"><div class="xemchitiet">
+                                        Xem chi tiết
+                                    </div> </a>                                       
                                     </div>
                                 </div>
 </div>        
@@ -129,6 +136,11 @@
                                         }
                                     }
 
+?>
+<?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 <script>
     function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {

@@ -24,13 +24,16 @@
     $connect = new connect;
     $select_thanhtoancoctho = $connect -> select_thanhtoancoctho($id_tho); //
     $select_thanhtoancoctt = $connect -> select_thanhtoancoctt($id_tho);
+    $emptyImage = '<img src="./img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
 <div class="row">
 <?php
                                     if($select_thanhtoancoctho){
                                         while($result = $select_thanhtoancoctho->fetch_assoc()){
-                                        $anhtho = $result['hinhanhthue'];    
+                                        $anhtho = $result['hinhanhthue']; 
+                                        $dataDisplayed = true;   
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -103,7 +106,8 @@
                         <?php
                                     if($select_thanhtoancoctt){
                                         while($result = $select_thanhtoancoctt->fetch_assoc()){
-                                        $anhtho = $result['hinhanhthue'];    
+                                        $anhtho = $result['hinhanhthue'];  
+                                        $dataDisplayed = true;  
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -176,13 +180,14 @@
 
                         <?php 
                                         }
-                                    }else {
-                                        // Display default image when there is no data
-                                        echo '<div class="col l-12 m-12 c-12"><img src="./img/img-html.jpg" alt="Blank Image"></div>';
                                     }
 
 ?>               
-                    
+       <?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
+?>             
 <!-- Add this modal container at the end of your HTML body -->
 <div id="myModal1" class="modal1">
   <div class="modal1-content">

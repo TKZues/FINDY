@@ -26,6 +26,28 @@
         <div class="top">
 
         </div>
+        <?php
+            include "db_connection.php";
+
+            $sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
+            $result = $conn->query($sql);
+            
+            // Kiểm tra nếu có kết quả
+            if ($result->num_rows > 0) {
+                // Lặp qua từng dòng kết quả
+                while ($row = $result->fetch_assoc()) {
+                    // Lấy thông tin từ cột cần thiết
+                    $hinhanhtho = $row['hinhanhtho'];
+                
+            
+                    
+                }
+            } else {
+                $hinhanhtho = "avatar.png";   
+
+            }
+           
+        ?>
         <div class="grid wide">
 
             <!-- Navbar -->
@@ -49,7 +71,7 @@
                 </div>
 
                 <div class="navbar__heading">
-                    <img src="./img/avatar-16.png" alt="" class="navbar__heading-img">
+                    <img src="./img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
                     <a href="./accountphoto.php" class="navbar__heading-link">
                         <p><?php echo $hoTen; ?></p>
                     </a>

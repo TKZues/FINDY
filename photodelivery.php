@@ -23,7 +23,8 @@
 
     $connect = new connect;
     $select_nhansanphamtho = $connect -> select_nhansanphamtho($id_tho); //
-
+    $emptyImage = '<img src="./img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
 <!-- <div id="myModal" class="modal">
@@ -52,6 +53,7 @@
                                         while($result = $select_nhansanphamtho->fetch_assoc()){
                                         $anhtho = $result['hinhanhthue'];  
                                         $uniqueId = uniqid();  
+                                        $dataDisplayed = true;  
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -144,6 +146,7 @@
                         <?php 
                                         }
                                     }
+                                    
 
 ?>
 
@@ -161,6 +164,7 @@
                                         while($result = $select_thochochinhsua->fetch_assoc()){
                                         $anhtho = $result['hinhanhthue'];  
                                         $uniqueId1 = uniqid();  
+                                        $dataDisplayed = true;  
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -255,7 +259,8 @@
                                     if($select_yecauchinhsua){
                                         while($result = $select_yecauchinhsua->fetch_assoc()){
                                         $anhtho = $result['hinhanhthue'];  
-                                        $uniqueId1 = uniqid();  
+                                        $uniqueId1 = uniqid();
+                                        $dataDisplayed = true;    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -323,7 +328,13 @@
                                                             
                 $insert_guilaisanpham = $connect->insert_guilaisanpham($uniqueId1);
                 if($insert_guilaisanpham){
-                    $delete_yeucauchinhsua = $connect->delete_yeucauchinhsua($ma_posttimtho, $mathongtintho);
+                    $insert_thochochinhsua2 = $connect->insert_thochochinhsua2();
+                    if($insert_thochochinhsua2){
+                        $delete_yeucauchinhsua = $connect->delete_yeucauchinhsua($ma_posttimtho, $mathongtintho);
+                    }
+                    else{
+                        echo "Error";
+                    }
                 }else{
                     echo "Error";
                 }
@@ -353,6 +364,7 @@
                                         while($result = $select_nhansanphamthott->fetch_assoc()){
                                         $anhtho = $result['hinhanhthue'];  
                                         $uniqueId1 = uniqid();  
+                                        $dataDisplayed = true;  
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -431,6 +443,11 @@
                                         }
                                     }
 
+?>               
+       <?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 <script>
     function toggleAdditionalInfo1(uniqueId1, diadiem, gia, thoigian) {

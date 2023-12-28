@@ -42,7 +42,7 @@
             $ngaysinh = $row['ngaysinh'];
             $cccd = $row['cccd'];
             $gioitinh = $row['gioitinh'];
-            $email = $row['email'];
+            
             $sdt = $row['sdt'];
         }
     } else {
@@ -53,7 +53,7 @@
         $ngaysinh = "";
         $cccd = "";
         $gioitinh = ""; // Set a default value or leave it empty
-        $email = "";
+        
         $sdt = "";
 
         // Thông báo không tìm thấy thông tin

@@ -29,6 +29,8 @@
 <?php 
     $connect = new connect;
     $select_sanpham = $connect -> select_sanpham($id_thue); //
+    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
         
@@ -36,6 +38,7 @@
                                     if($select_sanpham){
                                         while($result = $select_sanpham->fetch_assoc()){
                                             $uniqueId = uniqid();  
+                                            $dataDisplayed = true;
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -103,6 +106,21 @@
                                 }
                             } elseif (isset($_POST['submit_danhgia'])) {
                                 $insert_danhgia = $connect->insert_danhgia();
+                                if($insert_danhgia){
+                                    $delete_thochosanpham = $connect-> delete_thochosanpham($ma_posttimtho, $mathongtintho);
+                                    if ($delete_thochosanpham){
+                                        $delete_thosanpham = $connect-> delete_thosanpham($ma_posttimtho, $mathongtintho);
+                                        if ($delete_thosanpham){
+                                            $insert_dathanhtoan = $connect-> insert_dathanhtoan();
+                                        }
+                                        else{
+                                            echo "Error";
+                                        }
+                                    }
+                                }
+                                else{
+                                    echo "Error";
+                                }
                             }
                         }
                         ?>
@@ -121,7 +139,7 @@
                
                     
                     <form action="" method="POST">
-                        <input type="text" name="" id="" value="<?php echo $drive ?>">
+                        <input type="text" name="drive" id="" value="<?php echo $drive ?>">
                         <input type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                         <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
                         <button class="button_additional" type="submit" name="submit_danhgia">Đã nhận sản phẩm</button>
@@ -134,6 +152,11 @@
                                         }
                                     }
 
+?>
+<?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 <script>
     function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {

@@ -30,6 +30,8 @@
     $connect = new connect;
     $select_thuchien = $connect -> select_thuchien($id_thue); //
     $select_thuchienttthue = $connect -> select_thuchienttthue($id_thue); //
+    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
         
@@ -37,6 +39,7 @@
                                     if($select_thuchien){
                                         while($result = $select_thuchien->fetch_assoc()){
                                         $anhtho = $result['hinhanhtho'];    
+                                        $dataDisplayed = true;
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -84,7 +87,8 @@
 <?php
                                     if($select_thuchienttthue){
                                         while($result = $select_thuchienttthue->fetch_assoc()){
-                                        $anhtho = $result['hinhanhtho'];    
+                                        $anhtho = $result['hinhanhtho'];  
+                                        $dataDisplayed = true;    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -127,6 +131,11 @@
                                         }
                                     }
 
+?>
+<?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 </body>
 </html>

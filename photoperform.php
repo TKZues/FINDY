@@ -23,13 +23,16 @@
     $connect = new connect;
     $select_thuchientho = $connect -> select_thuchientho($id_tho); //
     $select_thuchientt = $connect -> select_thuchientt($id_tho);
+    $emptyImage = '<img src="./img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
 <div class="row">
 <?php
                                     if($select_thuchientho){
                                         while($result = $select_thuchientho->fetch_assoc()){
-                                        $anhtho = $result['hinhanhthue'];    
+                                        $anhtho = $result['hinhanhthue'];  
+                                        $dataDisplayed = true;     
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
@@ -124,6 +127,7 @@
                                         while($result = $select_thuchientt->fetch_assoc()){
                                         $anhtho = $result['hinhanhthue'];    
                                         $tentho = $result['hoTen'];
+                                        $dataDisplayed = true;   
                                         $diadiem = $result['diadiem'];
                                         $thoigian = $result['thoigian'];
                                         $sukien = $result['sukien'];
@@ -206,12 +210,15 @@
 
                         <?php 
                                         }
-                                    }else {
-                                        // Display default image when there is no data
-                                        echo '<div class="col l-12 m-12 c-12"><img src="./img/img-html.jpg" alt="Blank Image"></div>';
                                     }
 
-?>                   
+?>   
+              
+       <?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
+?>               
       </div>              
 <!-- </div>
     <div class="content">

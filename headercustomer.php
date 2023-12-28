@@ -16,6 +16,29 @@
         <div class="top">
 
         </div>
+        <?php
+            include "db_connection.php";
+
+            $sql = "SELECT * FROM thongtinthue WHERE id_thue = $id_thue";
+            $result = $conn->query($sql);
+            
+            // Kiểm tra nếu có kết quả
+            if ($result->num_rows > 0) {
+                // Lặp qua từng dòng kết quả
+                while ($row = $result->fetch_assoc()) {
+                    // Lấy thông tin từ cột cần thiết
+                    $hinhanhthue = $row['hinhanhthue'];
+                
+            
+                    
+                }
+            } else {
+                $hinhanhthue = "avatar.png";   
+
+            }
+            // echo "hinhanhthue=" . $hinhanhthue;
+           
+        ?>
         <div class="grid wide">
 
             <!-- Navbar -->
@@ -39,7 +62,7 @@
                 </div>
 
                 <div class="navbar__heading">
-                    <img src="./img/avatar-16.png" alt="" class="navbar__heading-img">
+                    <img src="./img/<?php  echo $hinhanhthue  ?>" alt="" class="navbar__heading-img">
                     <a href="./account.php" class="navbar__heading-link"><?php echo $hoTen; ?></a>
                     <!-- <div class="tabbar_title3-hover">
                                     
