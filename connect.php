@@ -353,11 +353,14 @@
             return $result;
         }
         public function insert_thongtindanhgia(){
+            $mathongtinthue = $_POST['mathongtinthue'];
+            $mathongtintho = $_POST['mathongtintho'];
+            $mota = $_POST['mota'];
             $rating = $_POST['rating1'];
             $hinhdanhgia = $_FILES['hinhdanhgia']['name'];
             $videodanhgia = $_FILES['videodanhgia']['name'];
-            $query= "INSERT INTO thongtindanhgia (rating,hinhdanhgia,videodanhgia) VALUES
-            ('$rating','$hinhdanhgia','$videodanhgia')";
+            $query= "INSERT INTO thongtindanhgia (mathongtinthue, mathongtintho, rating, mota, hinhdanhgia,videodanhgia) VALUES
+            ('$mathongtinthue','$mathongtintho','$rating','$mota','$hinhdanhgia','$videodanhgia')";
             $result = $this ->db->insert($query);
             return $result;
         }
