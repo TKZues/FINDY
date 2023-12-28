@@ -1,4 +1,3 @@
-/* ------------- Filter ------------- */
 .find-timtho-container {
     margin-top: var(--top-header-height);
     background-color: var(--background-color);
@@ -8,7 +7,8 @@
     padding-top: 36px;
 }
 
-.filter {
+/* ------------- Filter ------------- */
+/* .filter {
     background-color: #fff;
     border-radius: 10px;
 }
@@ -84,7 +84,7 @@
 }
 
 .filter__price-input {
-    width: 80px;
+    width: 70px;
     height: 30px;
     margin-left: 8px;
 }
@@ -108,7 +108,7 @@
 }
 
 .filter__menu-item .star-rating {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 0;
     cursor: pointer;
 }
@@ -118,7 +118,126 @@
     height: 30px;
     margin-top: 16px;
     margin-left: 8px;
-    border-radius: 0;
+    border-radius: 5px;
+} */
+
+/* ------------- Filter mới ------------- */
+.filter {
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.filter__heading {
+    font-size: 1.6rem;
+    padding: 12px 16px;
+    line-height: 1.6;
+}
+
+.filter__heading-icon {
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.filter__list {
+    padding-bottom: 12px;
+    margin: 0 10px;
+    display: flex;
+}
+
+.filter__item-warp {
+    margin: 8px;
+    flex: 1;
+}
+
+.filter__item {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    margin-bottom: 16px;
+}
+
+.filter__item:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.filter__item-icon {
+    background-color: #f5f5f5;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 9px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.selected {
+    border: 1px solid var(--main-color);
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.fa-chevron-up {
+    color: var(--main-color);
+}
+
+.filter__menu-warp {
+    background-color: #fff;
+}
+
+.filter__menu {
+    padding-left: 8px;
+}
+
+.filter__menu-item {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin: 0 8px;
+}
+
+.filter__price-input {
+    width: 70px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+.filter__menu-item input {
+    margin-right: 8px;
+    padding: 0 8px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.filter__menu-name:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.filter__menu-name {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.filter__menu-item .star-rating {
+    font-size: 1.4rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.filter__menu-btn {
+    width: 75%;
+    height: 30px;
+    margin-top: 16px;
+    margin-left: 8px;
+    border-radius: 5px;
 }
 
 /* ------------- Freelancer list ------------- */
