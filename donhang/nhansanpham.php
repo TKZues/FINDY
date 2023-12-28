@@ -83,11 +83,13 @@
                                 </div>
 </div>        
 <div id="additional-info_<?php echo $uniqueId; ?>" class="additional-info" style="display: none;">
-            <form action="" method="POST">
-                <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
-                <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
-                
-            </form>
+            <div class="alone">
+                <form action="" method="POST">
+                    <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
+                    <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
+                    
+                </form>
+            </div>
             <div class="flex_botton">
                     <?php
                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -125,13 +127,13 @@
                         }
                         ?>
                         <?php
-                            echo "d" .$ma_posttimtho;
-                            echo "d" .$mathongtintho;
+                            // echo "d" .$ma_posttimtho;
+                            // echo "d" .$mathongtintho;
                         ?>
                     <form action="" method="POST">
                     <input type="text" name="driveyc" id="" value="<?php echo $drive ?>">
-                    <input type="text" name="mathongtinthoyc" id="" value="<?php echo $mathongtintho ?>">
-                    <input type="text" name="ma_posttimthoyc" id="" value="<?php echo $ma_posttimtho ?>">
+                    <input type="text" style="display: none;" name="mathongtinthoyc" id="" value="<?php echo $mathongtintho ?>">
+                    <input type="text" style="display: none;" name="ma_posttimthoyc" id="" value="<?php echo $ma_posttimtho ?>">
                     <button class="button_additional" type="submit" name="submit_yeucauchinhsua">Gửi yêu cầu chỉnh sửa</button>
                     
                     </form>
@@ -140,8 +142,8 @@
                     
                     <form action="" method="POST">
                         <input type="text" name="drive" id="" value="<?php echo $drive ?>">
-                        <input type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
-                        <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                        <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                        <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
                         <button class="button_additional" type="submit" name="submit_danhgia">Đã nhận sản phẩm</button>
                     </form>
                    

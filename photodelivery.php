@@ -132,12 +132,15 @@
                                                         
         ?>
         <?php 
-            echo "mathogiaosanpham" .$mathogiaosanpham;
+            // echo "mathogiaosanpham" .$mathogiaosanpham;
         ?>
             <form action="" method="POST">
-                <input type="text" name="inputmathogiaosp" value="<?php echo $ma_posttimtho ?>">
-                <input type="text" name="inputmathongtinthue" value="<?php echo $mathongtintho ?>">
-                <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
+                <div class="giaosp" style="font-size: 1.6rem;font-weight: 700;margin: 10px 3px;">
+                    Giao sản phẩm
+                </div>
+                <input type="text" style="display: none;" name="inputmathogiaosp" value="<?php echo $ma_posttimtho ?>">
+                <input type="text" style="display: none;" name="inputmathongtinthue" value="<?php echo $mathongtintho ?>">
+                <input type="text"  name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
                 <button class="button_additional" type="submit">Hoàn thành</button>
             </form>
         </div> <!-- New container for additional info -->
