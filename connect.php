@@ -450,10 +450,11 @@
           
         }
         public function insert_danhgia(){
+            $drive = $_POST['drive'];
             $mathongtintho = $_POST['mathongtintho'];
             $ma_posttimtho = $_POST['ma_posttimtho'];
-            $query = "INSERT INTO thue_danhgia (ma_posttimtho, mathongtintho) 
-            VALUES ('$ma_posttimtho','$mathongtintho')";
+            $query = "INSERT INTO thue_danhgia (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$ma_posttimtho','$mathongtintho',' $drive ')";
             $result = $this->db->insert($query);
             return $result;
 
@@ -565,6 +566,35 @@
             $query = "SELECT *FROM thongtintho where id_tho = '$id_tho'";
             $result = $this->db->select($query);
             return $result;
+        }
+        public function insert_thochochinhsua2(){
+            $inputmathogiaosp = $_POST['inputmathogiaosp2'];
+            $inputmathongtinthue = $_POST['inputmathongtinthue2'];
+            $inputdrive = $_POST['inputdrive2'];
+            $query = "INSERT INTO thochochinhsua (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$inputmathogiaosp', '$inputmathongtinthue', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+        }
+        public function select_dathanhtoan($id_tho){
+            $query = "select *from thanhtoan
+            inner join post_timtho on post_timtho.ma_posttimtho = thanhtoan.ma_posttimtho
+            inner join thongtintho on thongtintho.mathongtintho = thanhtoan.mathongtintho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            where thongtintho.id_tho = $id_tho";
+            $result = $this ->db ->select($query);
+            return $result;
+        }
+        public function insert_dathanhtoan(){
+            $ma_posttimtho = $_POST['ma_posttimtho'];
+            $mathongtintho = $_POST['mathongtintho'];
+            $inputdrive = $_POST['drive'];
+            $query = "INSERT INTO thanhtoan (ma_posttimtho, mathongtintho, drive) 
+            VALUES ('$ma_posttimtho', '$mathongtintho', '$inputdrive')";
+            $result = $this->db->insert($query);
+            return $result;
+          
         }
     }   
 ?>

@@ -328,7 +328,13 @@
                                                             
                 $insert_guilaisanpham = $connect->insert_guilaisanpham($uniqueId1);
                 if($insert_guilaisanpham){
-                    $delete_yeucauchinhsua = $connect->delete_yeucauchinhsua($ma_posttimtho, $mathongtintho);
+                    $insert_thochochinhsua2 = $connect->insert_thochochinhsua2();
+                    if($insert_thochochinhsua2){
+                        $delete_yeucauchinhsua = $connect->delete_yeucauchinhsua($ma_posttimtho, $mathongtintho);
+                    }
+                    else{
+                        echo "Error";
+                    }
                 }else{
                     echo "Error";
                 }
