@@ -561,5 +561,10 @@
             $result = $this -> db->delete($query);
             return $result;
         }
+        public function select_thongtincuatho($id_tho){
+            $query = "SELECT *FROM thongtintho where id_tho = '$id_tho'";
+            $result = $this->db->select($query);
+            return $result;
+        }
     }   
 ?>

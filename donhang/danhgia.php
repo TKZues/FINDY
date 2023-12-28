@@ -29,6 +29,8 @@
 <?php 
     $connect = new connect;
     $select_danhgia = $connect -> select_danhgia($id_thue); //
+    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
         
@@ -36,6 +38,7 @@
                                     if($select_danhgia){
                                         while($result = $select_danhgia->fetch_assoc()){
                                             $uniqueId = uniqid();  
+                                            $dataDisplayed = true;
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -129,6 +132,11 @@
                                         }
                                     }
 
+?>
+<?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 <script>
     function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {

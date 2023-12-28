@@ -29,6 +29,8 @@
 <?php 
     $connect = new connect;
     $select_sanpham = $connect -> select_sanpham($id_thue); //
+    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
 ?>
 
         
@@ -36,6 +38,7 @@
                                     if($select_sanpham){
                                         while($result = $select_sanpham->fetch_assoc()){
                                             $uniqueId = uniqid();  
+                                            $dataDisplayed = true;
                                         $anhtho = $result['hinhanhtho'];    
                                         $tentho = $result['hoTen'];
                                         $diadiem = $result['diadiem'];
@@ -134,6 +137,11 @@
                                         }
                                     }
 
+?>
+<?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
 ?>
 <script>
     function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {
