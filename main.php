@@ -1462,7 +1462,8 @@
     <script src="./video.js"></script> -->
 
     <?php
-    include "footer.php"
+    include "connect.php";
+    include "footer.php";
     ?>
 
 </body>

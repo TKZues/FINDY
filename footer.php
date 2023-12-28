@@ -161,7 +161,7 @@
         <div class="account_form__footer">
             <p class="account_form__text">
                 Bạn đã có tài khoản Findy?
-                <a href="#" class="account_form__link" onclick="showLoginForm()">Đăng nhập</a>
+                <div class="account_form__link" onclick="showLoginForm()">Đăng nhập</div>
             </p>
         </div>
     </div>
@@ -169,9 +169,7 @@
 
 <div class="modal">
     <div class="modal__container">
-        <?php
-        include "connect.php";
-        ?>
+        
         <?php
         $connect = new connect;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -237,7 +235,7 @@
             <div class="account_form__footer">
                 <p class="account_form__text">
                     Bạn đã có tài khoản Findy?
-                    <a href="#" class="account_form__link" onclick="showLoginForm()">Đăng nhập</a>
+                    <div class="account_form__link" onclick="showLoginForm()">Đăng nhập</div>
                 </p>
             </div>
         </form>
@@ -307,12 +305,12 @@
 
                 <p class="account_form__text">
                     Bạn đã có tài khoản Findy?
-                    <a href="#" class="account_form__link" onclick="showLoginForm()">Đăng nhập</a>
+                    <div class="account_form__link" onclick="showLoginForm()">Đăng nhập</div>
                 </p>
             </div>
         </form>
 
-        <form class="account_form hidden" id="login-form" method="POST" action="login_process.php">
+        <form class="account_form hidden" id="login-form" method="POST" action="/login_process.php">
             <div class="account_form__container">
                 <h3 class="account_form__heading">Đăng nhập</h3>
 
@@ -359,7 +357,7 @@
 
                 <p class="account_form__text">
                     Bạn chưa có tài khoản Findy?
-                    <a href="#" class="account_form__link" onclick="showchoice_service()">Đăng ký</a>
+                    <div class="account_form__link" onclick="showchoice_service()">Đăng ký</div>
                 </p>
             </div>
         </form>
