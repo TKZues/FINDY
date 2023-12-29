@@ -49,240 +49,47 @@
         </div>
     </section>
 
-
-    <!-- <section>
-        <div class="jobinteresting">
-            <div class="grid wide">
-                <div class="jobinteresting_container row">
-                    <div class="jobinteresting_left col c-12 m-12 l-12">
-                        <div class="jobbest-header">
-                            <div class="heading">
-                                Việc làm tốt mọi nơi
-                            </div>
-                            <div class="jobbest-header--bottom">
-                                <div class="jobbest-header--bottom_filter">
-                                    <input type="text" name="" id="" placeholder="Lọc theo">
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Ngẫu nhiên
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Hà Nội
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Thành phố Hồ Chí Minh
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Miền Bắc
-                                </div>
-                                <div class="jobbest-header--bottom-button">
-                                    Miền Nam
-                                </div>
-                            </div>
-                        </div>
-                        <div class="jobbest-mid">
-                            <div class="row">
-                                <a href="#" onclick="showLoginForm()" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="./photoclicknosignin.php" class="col c-4 m-4 l-4">
-                                    <div class="jobbest-items ">
-                                        <div class="jobbest-mid-top">
-                                            <div class="row">
-                                                <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                    <img src="./img/banner3.jpg" alt="">
-                                                </div>
-                                                <div class="jobbest-mid-top--right col c-10 m-10 l-10">
-                                                    Chuyên viên chụp ảnh cưới - Tại thành Phố Hồ Chí Minh
-                                                    <p>Công ty trách nhiệm hữu hạng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jobbest-mid-bottom">
-                                            <div class="jobbest-mid-bottom-item">
-                                                10 - 15 triệu
-                                            </div>
-                                            <div class="jobbest-mid-bottom-item">
-                                                Hồ Chí Minh
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="jobbest-bottom">
-                            <i class="fa-solid fa-c-left"></i>
-                            <span style="color:#00b14f">31</span> / <span>37 trang</span>
-                            <i class="fa-solid fa-c-right"></i>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section>
-        <div class="complete">
+        <div class="post">
             <div class="grid wide">
-                <div class="complete_container">
-                    <div class="complete_header">
-                        Cần hoàn thành công việc?
-                    </div>
-                    <div class="complete_items row">
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Đăng công việc</h1>
-                            <p>Đăng công việc miễn phí và dễ dàng. Chỉ cần điền vào tiêu đề, mô tả và ngân sách, các thứ bạn cần sẽ đến trong chốc lát.</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chọn</h1>
-                            <p>Không có công việc nào là quá lớn hay quá nhỏ. Chúng tôi luôn có các thứ cần thiết thuộc mọi quy mô hay ngân sách. Cái gì quá phức tạp, Chúng tôi đều có thể hoàn thành!</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chi trả an toàn</h1>
-                            <p>Chỉ chi trả khi công việc được hoàn thành và bạn thấy hài lòng 100% với chất lượng, thông qua hệ thống các mốc thanh toán của chúng tôi.</p>
-                        </div>
-                        <div class="complete_items--content col c-3 m-3 l-3">
-                            <h1>Chúng tôi ở đây để hỗ trợ</h1>
-                            <p>Đội ngũ tuyển dụng viên tài năng của chúng tôi có thể giúp bạn tìm được Photographer & Make-up Artist tốt nhất.</p>
-                        </div>
-                    </div>
+                <div class="heading">Bài đăng gần đây</div>
+                <div id="postModal" style="display: none;">
+                    <form id="postForm">
+                        <label for="postTitle">Tiêu đề bài đăng:</label>
+                        <input type="text" id="postTitle" name="postTitle" required><br>
+
+                        <label for="postContent">Nội dung bài đăng:</label>
+                        <textarea id="postContent" name="postContent" required></textarea>
+
+                        <button type="add-post-btn" onclick="addNewPost()">Đăng bài</button>
+                        <button type="button" onclick="closePostModal()">Đóng</button>
+                    </form>
+                </div>
+                <div class="grid-container" id="gridContainer">
+                    <?php
+                    include "connect.php";
+                    $connect = new connect;
+                    $select_post = $connect->select_post();
+                    $count_post = $connect->count_post();
+                    if ($count_post->num_rows > 0) {
+                        while ($row = mysqli_fetch_assoc($select_post)) {
+                            $noidung = $row["content"];
+                            $nguoidang = $row["hoTen"];
+                            $likes = $row["likes"];
+                            $hinhanh = $row["image"];
+                            echo "<div class='grid-item'>
+                                    <img src='$hinhanh' alt='Post Image'>
+                                    <div class='content'>
+                                        <p> $noidung </p>
+                                    </div>
+                                    <div class='post-meta'>
+                                        <span class='like-count'> $likes </span>
+                                        <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
+                                    </div>
+                                </div>";
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -291,696 +98,474 @@
     <div class="find-timtho-container">
         <div class="grid wide">
             <div class="row find-timtho-content">
-                <!-- <div class="col l-3 m-4 c-0">
-                <div class="filter">
-                    <h3 class="filter__heading">
-                        Lọc
-                    </h3>
+                <div class="freelancer">
+                    <div class="heading">Photographer & Make-up Artist tốt nhất</div>
+                    <div class="row">
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                        </div>
 
-                    <div class="filter__list">
-                        <div class="filter__item-warp">
-                            <div id="filter__place-item" class="filter__item">
-                                Địa điểm
-                                <i id="filter__place-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
-                                <i id="filter__place-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div id="filter__place-menu" class="filter__menu" style="display: none;">
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-1" class="">
-                                    <label for="place-1" class="filter__menu-name">Hồ Chí Minh</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-2" class="">
-                                    <label for="place-2" class="filter__menu-name">Hà Nội</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-3" class="">
-                                    <label for="place-3" class="filter__menu-name">Đà Nẵng</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-4" class="">
-                                    <label for="place-4" class="filter__menu-name">Đà Lạt</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-5" class="">
-                                    <label for="place-5" class="filter__menu-name">Phú Quốc</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="place-6" class="">
-                                    <label for="place-6" class="filter__menu-name">Khác</label>
-                                </div>
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Trần Minh Khánh
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Nhiếp ảnh gia tự do
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.9</strong>
+                                                <span>(234 đánh giá)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">090 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">t*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Bình Thạnh, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="filter__item-warp">
-                            <div id="filter__price-item" class="filter__item">
-                                Giá
-                                <i id="filter__price-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
-                                <i id="filter__price-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div id="filter__price-menu" class="filter__menu" style="display: none;">
-                                <div class="filter__menu-item">
-                                    <input type="text" name="" id="" class="filter__price-input" placeholder="₫ TỪ">
-                                    <span class="filter__menu-name">-</span>
-                                    <input type="text" name="" id="" class="filter__price-input" placeholder="₫ ĐẾN">
-                                </div>
-                                <button class="btn btn--primary filter__menu-btn">ÁP DỤNG</button>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-2.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                        </div>
+
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Trần Thu Trang
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Make-up cô dâu
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.9</strong>
+                                                <span>(108 đánh giá)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">090 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">h*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Quận 1, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-2-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-2-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-2-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="filter__item-warp">
-                            <div id="filter__experience-item" class="filter__item">
-                                Kinh nghiệm
-                                <i id="filter__experience-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
-                                <i id="filter__experience-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div id="filter__experience-menu" class="filter__menu" style="display: none;">
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="exp-1" class="">
-                                    <label for="exp-1" class="filter__menu-name">Dưới 1 năm</;>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="exp-2" class="">
-                                    <label for="exp-2" class="filter__menu-name">1 - 3 năm</;>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="exp-3" class="">
-                                    <label for="exp-3" class="filter__menu-name">3 - 5 năm</;>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="exp-4" class="">
-                                    <label for="exp-4" class="filter__menu-name">Trên 5 năm</;>
-                                </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-3.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                        </div>
+
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Nguyễn Văn Nam
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Chuyên ảnh cưới
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
+                                            </div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.6</strong>
+                                                <span>(120 đánh giá)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">038 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">n*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Đà Nẵng</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-3-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-3-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-3-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="filter__item-warp">
-                            <div id="filter__skill-item" class="filter__item">
-                                Kỹ năng
-                                <i id="filter__skill-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
-                                <i id="filter__skill-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div id="filter__skill-menu" class="filter__menu" style="display: none;">
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="skill-1" class="">
-                                    <label for="skill-1" class="filter__menu-name">Chụp ảnh</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="skill-2" class="">
-                                    <label for="skill-2" class="filter__menu-name">Quay video</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="skill-3" class="">
-                                    <label for="skill-3" class="filter__menu-name">Edit ảnh</label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="skill-4" class="">
-                                    <label for="skill-4" class="filter__menu-name">Edit video</label>
-                                </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-4.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                        </div>
+
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Vũ Quốc Tuấn
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Chuyên ảnh sơ sinh
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>5.0</strong>
+                                                <span>(108 đánh giá)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">037 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">t*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Gò Vấp, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-4-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-4-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-4-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                        <div class="filter__item-warp">
-                            <div id="filter__rating-item" class="filter__item">
-                                Đánh giá
-                                <i id="filter__rating-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
-                                <i id="filter__rating-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
-                            </div>
-                            <div id="filter__rating-menu" class="filter__menu" style="display: none;">
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-1" class="">
-                                    <label for="rating-1" class="star-rating">
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                    </label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-2" class="">
-                                    <label for="rating-2" class="star-rating">
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-3" class="">
-                                    <label for="rating-3" class="star-rating">
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-4" class="">
-                                    <label for="rating-4" class="star-rating">
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-5" class="">
-                                    <label for="rating-5" class="star-rating">
-                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </label>
-                                </div>
-                                <div class="filter__menu-item">
-                                    <input type="checkbox" id="rating-6" class="">
-                                    <label for="rating-6" class="star-rating">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </label>
-                                </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-5.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
+                                        </div>
+
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Đỗ Hoàng Anh
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Make-up nghệ thuật
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
+                                            </div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.5</strong>
+                                                <span>(125 đánh giá)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">039 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">h*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Thanh Xuân, Hà Nội</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-5-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-5-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-5-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
+                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
+                                </div> -->
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div> -->
-
-                <div class="col l-12 m-12 c-12">
-                    <div class="freelancer">
-                        <div class="heading">Photographer & Make-up Artist tốt nhất</div>
-                        <div class="row">
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Trần Minh Khánh
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Nhiếp ảnh gia tự do
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.9</strong>
-                                                    <span>(234 đánh giá)</span>
-                                                </div>
-                                            </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-6.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">090 **** ***</span>
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Hoàng Diệu Linh
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Make-up sự kiện
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
                                             </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">t*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Bình Thạnh, Hồ Chí Minh</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.6</strong>
+                                                <span>(93 đánh giá)</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <!-- <div class="freelancer-item__view-details">
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">038 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">l*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-6-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-6-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-6-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- <div class="freelancer-item__view-details">
                                     <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
                                 </div> -->
-                                </div>
                             </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-2.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Trần Thu Trang
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Make-up cô dâu
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.9</strong>
-                                                    <span>(108 đánh giá)</span>
-                                                </div>
-                                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-7.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">090 **** ***</span>
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Lê Phương Mai
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Chuyên ảnh kỷ yếu
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
                                             </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">h*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Quận 1, Hồ Chí Minh</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-2-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-2-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-2-3.png);" onclick="changeImage3()"></div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>4.8</strong>
+                                                <span>(190 đánh giá)</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">090 **** ***</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">m*******@gmail.com</span>
+                                        </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-7-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-7-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-7-3.png);" onclick="changeImage3()"></div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-3.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Nguyễn Văn Nam
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Chuyên ảnh cưới
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.6</strong>
-                                                    <span>(120 đánh giá)</span>
-                                                </div>
-                                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="freelancer-item">
+                                <a href="info-freelancer.php" class="freelancer-item-warp">
+                                    <div class="freelancer-item__personal-info">
+                                        <div class="freelancer-item__avatar">
+                                            <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-8.png);"></div>
+                                            <p class="freelancer-item__avatar-text">Uy tín: 100</p>
                                         </div>
 
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">038 **** ***</span>
+                                        <div class="freelancer-item__info">
+                                            <span class="freelancer-item__title">
+                                                Lê Hoàng Long
+                                            </span>
+                                            <span class="freelancer-item__text">
+                                                Chuyên ảnh cổ phục
+                                            </span>
+                                            <div class="star-rating">
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
+                                                <i class="star-rating--gold fa-solid fa-star"></i>
                                             </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">n*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Đà Nẵng</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-3-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-3-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-3-3.png);" onclick="changeImage3()"></div>
+                                            <div class="freelancer-item__rating">
+                                                <strong>5.0</strong>
+                                                <span>(219 đánh giá)</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-4.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Vũ Quốc Tuấn
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Chuyên ảnh sơ sinh
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>5.0</strong>
-                                                    <span>(108 đánh giá)</span>
-                                                </div>
-                                            </div>
+                                    <div class="freelancer-item__contact">
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
+                                            <span class="freelancer-item__contact-text">037 **** ***</span>
                                         </div>
-
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">037 **** ***</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">t*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Gò Vấp, Hồ Chí Minh</span>
-                                            </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
+                                            <span class="freelancer-item__contact-text">h*******@gmail.com</span>
                                         </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-4-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-4-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-4-3.png);" onclick="changeImage3()"></div>
-                                            </div>
+                                        <div class="freelancer-item__contact-info">
+                                            <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
+                                            <span class="freelancer-item__contact-text">Đống Đa, Hà Nội</span>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-5.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Đỗ Hoàng Anh
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Make-up nghệ thuật
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.5</strong>
-                                                    <span>(125 đánh giá)</span>
-                                                </div>
-                                            </div>
+                                    <div class="slide-show-artwork">
+                                        <div class="freelancer-item__artwork-list">
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
+                                            <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
                                         </div>
-
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">039 **** ***</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">h*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Thanh Xuân, Hà Nội</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-5-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-5-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-5-3.png);" onclick="changeImage3()"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-6.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Hoàng Diệu Linh
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Make-up sự kiện
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-regular fa-star-half-stroke"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.6</strong>
-                                                    <span>(93 đánh giá)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">038 **** ***</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">l*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-6-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-6-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-6-3.png);" onclick="changeImage3()"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-7.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Lê Phương Mai
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Chuyên ảnh kỷ yếu
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>4.8</strong>
-                                                    <span>(190 đánh giá)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">090 **** ***</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">m*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Thủ Đức, Hồ Chí Minh</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-7-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-7-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-7-3.png);" onclick="changeImage3()"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
-                            </div>
-                            <div class="col l-3 m-4 c-12">
-                                <div class="freelancer-item">
-                                    <a href="info-freelancer.php" class="freelancer-item-warp">
-                                        <div class="freelancer-item__personal-info">
-                                            <div class="freelancer-item__avatar">
-                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-8.png);"></div>
-                                                <p class="freelancer-item__avatar-text">Uy tín: 100</p>
-                                            </div>
-
-                                            <div class="freelancer-item__info">
-                                                <span class="freelancer-item__title">
-                                                    Lê Hoàng Long
-                                                </span>
-                                                <span class="freelancer-item__text">
-                                                    Chuyên ảnh cổ phục
-                                                </span>
-                                                <div class="star-rating">
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    <i class="star-rating--gold fa-solid fa-star"></i>
-                                                </div>
-                                                <div class="freelancer-item__rating">
-                                                    <strong>5.0</strong>
-                                                    <span>(219 đánh giá)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="freelancer-item__contact">
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-phone"></i>
-                                                <span class="freelancer-item__contact-text">037 **** ***</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-envelope"></i>
-                                                <span class="freelancer-item__contact-text">h*******@gmail.com</span>
-                                            </div>
-                                            <div class="freelancer-item__contact-info">
-                                                <i class="freelancer-item__contact-icon fa-solid fa-location-dot"></i>
-                                                <span class="freelancer-item__contact-text">Đống Đa, Hà Nội</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-show-artwork">
-                                            <div class="freelancer-item__artwork-list">
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                                <div class="freelancer-item__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <!-- <div class="freelancer-item__view-details">
-                                    <a href="#" class="freelancer-item__view-details-link">Xem thông tin chi tiết</a>
-                                </div> -->
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- <ul class="pagination">
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">
-                                <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
-                            </a>
-                        </li>
-                        <li class="pagination-item pagination-item--active">
-                            <a href="" class="pagination-item__link">1</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">2</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">3</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">4</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">5</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">...</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">10</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="" class="pagination-item__link">
-                                <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
-                            </a>
-                        </li>
-                    </ul> -->
                 </div>
             </div>
         </div>
@@ -1462,7 +1047,6 @@
     <script src="./video.js"></script> -->
 
     <?php
-    include "connect.php";
     include "footer.php";
     ?>
 
