@@ -169,3 +169,85 @@ function switchLanguage() {
 // ---------------jobinteresting_slider-------------------
 
 
+
+function dragOverHandler(event) {
+    event.preventDefault();
+}
+
+function dropHandler(event) {
+    event.preventDefault();
+    const files = event.dataTransfer.files;
+    handleFile(files);
+}
+
+function handleFile(files) {
+    const dropArea = document.getElementById('dropArea');
+    const preview = document.getElementById('preview');
+
+    if (files.length > 0) {
+        const file = files[0];
+        const fileType = file.type.split('/')[0];
+
+        if (fileType === 'image' || fileType === 'video') {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'flex';
+                dropArea_p.style.display = 'none';
+                img_holder.style.display = 'none';  
+                browseButton.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert('Vui lòng chọn một ảnh hoặc video.');
+        }
+    }
+
+    // Reset input field
+    const fileInput = document.getElementById('fileInput');
+    fileInput.value = '';
+}
+
+// Kích hoạt input file khi click vào vùng drop
+const dropArea = document.getElementById('dropArea');
+const fileInput = document.getElementById('fileInput');
+
+dropArea.addEventListener('click', function () {
+    fileInput.click();
+});
+function browseFiles() {
+    const fileInput = document.getElementById('fileInput');
+    fileInput.click();
+}
+function confirmCancel() {
+    const confirmDialog = document.getElementById('confirmDialog');
+    confirmDialog.style.display = 'flex';
+}
+
+function closeConfirmDialog() {
+    const confirmDialog = document.getElementById('confirmDialog');
+    confirmDialog.style.display = 'none';
+}
+
+function cancelUpload() {
+    window.location.href = 'profilephoto.php';
+}
+
+
+function likePost(btn) {
+    var likeCount = btn.parentNode.querySelector('.like-count');
+    var currentLikes = parseInt(likeCount.innerText);
+
+    if (btn.classList.contains('liked')) {
+        // Nếu đã like, thực hiện unlike
+        likeCount.innerText = (currentLikes - 1) + '';
+        btn.classList.remove('liked');
+        btn.innerHTML = '<i class="far fa-heart"></i>';
+    } else {
+        // Nếu chưa like, thực hiện like
+        likeCount.innerText = (currentLikes + 1) + '';
+        btn.classList.add('liked');
+        btn.innerHTML = "<i style='color:#478C43' class='fas fa-heart'></i>";
+    }
+}
+

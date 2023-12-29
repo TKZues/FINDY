@@ -87,6 +87,7 @@
 .videomain_text--button button:nth-child(2):hover {
     opacity: 0.8;
 }
+
 /* ---------------Main------------------- */
 
 
@@ -149,6 +150,7 @@
     align-items: center;
     justify-content: center;
 }
+
 /* ----------------product------------- */
 .product{
     margin-top: 100px;
@@ -267,6 +269,13 @@
     background-color: #fff;
     border-radius: 50%;
 }
+
+/* ------------- Post ------------- */
+.post {
+    margin-top: 36px;
+}
+
+
 /* ----------------complete------------ */
 
 .complete {
@@ -549,4 +558,74 @@
 #mVideo {
     width: 100%;
     margin-bottom: -3px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;  
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.grid-item .content {
+    padding: 16px;
+}
+
+.grid-item h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: center;
+    padding: 12px;
+}
+
+.like-count, .comment-count {
+    font-size: 14px;
+    color: #666666;
+}
+
+.add-post-btn {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.interaction-btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: #9e9ea7;
+    border: none;
+    padding-left: 5px;
+    margin-right: 0;
 }
