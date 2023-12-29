@@ -235,7 +235,7 @@
 
                                             <div class="col l-4 m-6 c-12">
                                                 <div class="freelancer-item">
-                                                    <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>" class="freelancer-item-warp">
+                                                    <a href="info-freelancer.php?name=<?php echo urlencode($result['ten']); ?>&job=<?php echo urlencode($result['nghenghiep']); ?>&rating=4.9&reviews=<?php echo urlencode($result['gioithieu']); ?>&sdt=<?php echo urlencode($result['sdt']); ?>&email=<?php echo urlencode($result['email']); ?>&address=<?php echo urlencode($result['diachi']); ?>&mathongtintho=<?php echo urlencode($result['mathongtintho']); ?>" class="freelancer-item-warp">
                                                         <div class="freelancer-item__personal-info">
                                                             <div class="freelancer-item__avatar">
                                                                 <!-- <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img"> -->

@@ -618,5 +618,12 @@
             $result = $this->db->select($query);
             return $result;
         }
+        public function select_tacpham($mathongtintho){
+            $query = "SELECT * FROM post inner join thongtintho
+            on post.user_id = thongtintho.id_tho
+            where thongtintho.mathongtintho = $mathongtintho;";
+            $result = $this->db->select($query);
+            return $result;
+        }
     }   
 ?>

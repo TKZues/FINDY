@@ -523,6 +523,316 @@
     font-family: Arial, Helvetica, sans-serif;
     resize: none;
  }
+
+ /* ---------------- */
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px 20px 20px;  
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 230px;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.grid-item .content {
+    padding: 16px;
+}
+
+.grid-item h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: center;
+    padding: 12px;
+}
+
+.like-count, .comment-count {
+    font-size: 14px;
+    color: #666666;
+}
+
+.add-post-btn {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.interaction-btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: #9e9ea7;
+    border: none;
+    padding-left: 5px;
+    margin-right: 0;
+    
+}
+.post-form {
+    max-width: 600px;
+    margin: 5px;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.upload_post{
+    border:dashed 1px #9e9ea7;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.upload_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 0 20px 0 20px;
+}
+.upload_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.btn_upload{
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.title_post{
+    font-size: 20px;
+    color: #0d0c22;
+}
+.description_post{
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0d0c22;
+}
+.a_btn{
+    text-decoration: none;
+    color: #ffffff;
+}
+#dropArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+#fileInput {
+    display: none;
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+#browseButton {
+    margin-top: 10px;
+    background-color: transparent;
+    color: #0d0c22;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    border-bottom: solid 2px var(--main-color);
+}
+#fileInput{
+    display: none;
+}
+#dropArea_p{
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration-color: #0d0c22;
+}
+.post{  
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+#lbl{
+    font-size: 16px;
+}
+#confirmDialog {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+}
+#postButton{
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    float:right
+}
+#cancelButton{
+    padding: 10px 15px;
+    margin-right:10px;
+    background-color: transparent;
+    color: #0d0c22;
+    border:solid 1px #9e9ea7;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+#confirmDialog h2 {
+    font-size: 24px;
+    justify-content: flex-start;
+    color: #0d0c22;
+    margin: 10px 0 10px 0;
+}
+#confirmDialog p {
+    font-size: 16px;
+    color: #0d0c22;
+    justify-content: flex-start;
+    margin: 5px 0 5px 0;
+    line-height: 1.5;
+}
+#confirmDialog div {
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+#OK-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#Cancle-btn{
+    padding: 10px 15px;
+    margin-right:10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #0d0c22;
+    border:solid 1px #9e9ea7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item-img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s;
+}
+
+.grid-item:hover .grid-item-img {
+    filter: grayscale(80%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 192, 192, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item:hover .overlay {
+    display: flex;
+}
+
 /* ------------- Responsive ------------- */
 
 /* ------------- Mobile ------------- */
