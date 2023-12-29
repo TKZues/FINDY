@@ -18,9 +18,31 @@
 
 
 <?php
+
+include "db_connection.php";
+
+$sql = "SELECT * FROM thongtintho
+WHERE thongtintho.id_tho = $id_tho";
+$result = $conn->query($sql);
+
+// Kiểm tra nếu có kết quả
+if ($result->num_rows > 0) {
+    // Lặp qua từng dòng kết quả
+    while ($row = $result->fetch_assoc()) {
+        // Lấy thông tin từ cột cần thiết
+        $mathongtintho = $row['mathongtintho'];
+        
+    }
+} else {
+    $mathongtintho = "";
+    
+
+    // Thông báo không tìm thấy thông tin
+    // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+}
 // Các công việc khác cần làm trên trang mainphoto.php
-echo "ID của Thợ: " . $id_tho;
-echo "ID của Thợ: " . $hoTen;
+// echo "ID của Thợ: " . $id_tho;
+// echo "ID của Thợ: " . $hoTen;
 ?>
 
 <?php
@@ -183,12 +205,14 @@ echo "ID của Thợ: " . $hoTen;
                                     if ($select_postjob) {
                                         while ($result = $select_postjob->fetch_assoc()) {
                                             $mathongtinthue = $result['mathongtinthue'];
+                                            
                                             include "db_connection.php";
                                             $sql = "SELECT * FROM thongtinthue WHERE mathongtinthue = $mathongtinthue";
                                             $result_thongtinthue = $conn->query($sql);
                                             if ($result_thongtinthue) {
                                                 $thongtinthue_data = $result_thongtinthue->fetch_assoc();
                                                 $hinhanhthue = $thongtinthue_data['hinhanhthue'];
+                                                
                                 ?>
                             <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
                                 <div class="jobbest-items ">
@@ -206,8 +230,11 @@ echo "ID của Thợ: " . $hoTen;
                                                 <p ><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
                                             </div>
                                             <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
+                                                    
+                                                    <input type="text" name="" id="" value="<?php echo $result['ma_posttimtho'] ?>">
+                                                    <input type="text" name="" id="" value="<?php echo $mathongtintho ?>">
+                                                    <button type="submit"><i class="fa-regular fa-heart"></i></button>
+                                            </div>  
                                         </div>
                                     </div>
                                     <div class="jobbest-mid-bottom">
