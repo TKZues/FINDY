@@ -203,7 +203,7 @@ echo "ID của Thợ: " . $hoTen;
                                                 <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
                                                 <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
                                                 <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
-                                                <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
+                                                <p ><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
                                             </div>
                                             <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
                                                     <i class="fa-regular fa-heart"></i>

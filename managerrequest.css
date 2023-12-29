@@ -786,8 +786,8 @@
 }
 
 .managerrequest_content > div{
-    background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
-    
+    /* background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
+    border: 1px solid #b3b3b3;
    display: flex;
    border-radius: 15px;
     align-items: center;
@@ -801,6 +801,10 @@
 
 .managerrequest_content-items--mid{
     width: 60%;
+}
+
+.managerrequest_content-items--mid div{
+    margin: 3px 0;
 }
 
 .managerrequest_content-items--button{
@@ -832,7 +836,7 @@
 
 /* Định dạng cho .name */
 .name {
-    color: #ffffff;
+    color: var(--main-color);
     display: -webkit-box;
     font-size: 1.7rem;
     font-style: normal;
@@ -849,7 +853,7 @@
     align-items: center;
     font-style: italic;
     border-radius: 4px;
-    color: #ffffff;
+    color: #202020;
     display: flex;
     font-size: 14px;
 
@@ -858,6 +862,15 @@
     letter-spacing: .14px;
     line-height: 22px;
  
+}
+
+.border_gach{
+    border-bottom: 1px solid var(--main-color);
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
 }
 
 .time {

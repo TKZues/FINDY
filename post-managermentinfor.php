@@ -16,17 +16,14 @@
 <?php
 
 $name = $_GET['name'];
-$job = $_GET['job'];
-$rating = $_GET['rating'];
-$reviews = $_GET['reviews'];
-$sdt = $_GET['sdt'];
-$email = $_GET['email'];
-$address = $_GET['address'];
-$ma_profile = $_GET['ma_profile'];
+$mathongtintho = $_GET['mathongtintho'];
+
 
 include "db_connection.php";
 
-$sql = "SELECT * FROM thongtinthue WHERE id_thue = $id_thue";
+$sql = "SELECT * FROM thongtintho
+inner join profile on thongtintho.mathongtintho = profile.mathongtintho  
+WHERE thongtintho.mathongtintho = $mathongtintho";
 $result = $conn->query($sql);
 
 // Kiểm tra nếu có kết quả
@@ -34,8 +31,8 @@ if ($result->num_rows > 0) {
     // Lặp qua từng dòng kết quả
     while ($row = $result->fetch_assoc()) {
         // Lấy thông tin từ cột cần thiết
-        $mathongtinthue = $row['mathongtinthue'];
-        $hinhanhthue = $row['hinhanhthue'];
+        $mathongtintho = $row['mathongtintho'];
+        $hinhanhtho = $row['hinhanhtho'];
         $ten = $row['ten'];
         $diachi = $row['diachi'];
         $ngaysinh = $row['ngaysinh'];
@@ -43,8 +40,9 @@ if ($result->num_rows > 0) {
         $gioitinh = $row['gioitinh'];
         $email = $row['email'];
         $sdt = $row['sdt'];
-
-        
+        $job = $row['nghenghiep'];
+        $address = $row['diachi'];
+        $reviews = $row['gioithieu'];
     }
 } else {
     $mathongtinthue = "";
@@ -89,7 +87,7 @@ if ($result->num_rows > 0) {
                                 <div class="freelancer-info">
                                     <div class="personal-info">
                                         <div class="personal-info__avatar">
-                                            <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="personal-info__avatar-img">
+                                            <img src="./img/<?php echo $hinhanhtho ?>" alt="Ảnh đại diện" class="personal-info__avatar-img">
                                         </div>
                                         <h1 class="personal-info__name">
                                             <?php echo $name ?>

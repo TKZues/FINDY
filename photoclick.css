@@ -489,16 +489,26 @@
     padding: 10px 15px;
 }
 
+.content1 i{
+    /* color: var(--main-color); */
+}
+
+.content1 strong{
+    font-weight: 550;
+}
+
+.content1 span{
+    line-height: 1.5;
+}
 
 .photoclick_right{
     background-color: #f4f4f4;
 }
 
 .photoclick_left--name{
-    font-size: 1.5rem !important;
-    
+    font-size: 2.1rem !important;
     font-weight: 700;
-    
+    color: var(--main-color);
 
 }
 

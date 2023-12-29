@@ -458,6 +458,9 @@
     margin: 2px 0;
     font-weight: 500;
     line-height: 16px;
+    white-space: nowrap; /* Ngăn chặn trình duyệt xuống dòng khi nội dung quá dài */
+    overflow: hidden;    /* Ẩn phần nội dung vượt quá chiều rộng của phần tử */
+    text-overflow: ellipsis;
 }
 
 .jobbest-mid-top--right p:nth-child(1){
@@ -465,7 +468,10 @@
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 16px;
+    
 }
+
+
 .jobbest-mid-top--right i{
     color: rgb(9, 9, 9);
     margin: 3px 5px;

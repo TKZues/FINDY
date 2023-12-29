@@ -977,23 +977,12 @@
   }
 
 .acceptoder_left-items-button {
-    background-color: var(--main-color); /* Màu nền của nút */
-    color: #fff; /* Màu chữ trên nút */
-    width: 125px;
-    padding: 10px 10px; /* Kích thước nút */
-    border: none; /* Loại bỏ viền nút */
-    border-radius: 5px; /* Độ cong của góc nút */
-    cursor: pointer; /* Biểu tượng con trỏ khi di chuột vào nút */
-    font-size: 16px; /* Kích thước chữ trên nút */
-    margin: 7px 0;
-    text-align: center;
+    
    
   }
   
   /* CSS cho trạng thái hover (khi di chuột vào nút) */
-  .acceptoder_left-items-button:hover {
-    background-color: #0056b3; /* Màu nền thay đổi khi hover */
-  }
+  
 
   .acceptoder_left-items-button a{
     text-decoration: none;

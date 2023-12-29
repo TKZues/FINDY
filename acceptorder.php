@@ -160,11 +160,11 @@ echo "ID của Thợ: " . $mathongtintho;
                                     }
                                 ?>
                                 <form action="" method="POST">
-                                    <div class="input_qlytructiep">
+                                    <div class="input_qlytructiep" style="display: none;">
                                                     <input type="text" name="maposttt" id="" value="<?php echo $ma_posttructiep ?>">
                                                     <input type="text" name="mathongtinthott" id="" value="<?php echo $mathongtintho  ?>">
                                     </div>
-                                <button type="submit">Tạo đơn hàng</button>
+                                <button class="btn--primary btn" type="submit">Tạo đơn hàng</button>
                                 </form>
                             </div>
                         </div>

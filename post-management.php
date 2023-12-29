@@ -145,6 +145,10 @@ echo "ID của Thợ: " . $hoTen;
                                                             <strong>4.9</strong>
                                                             <span>(234 đánh giá)</span>
                                                         </div>
+                                                        <div class="candidate__thongtin">
+                                                           
+                                                            <span><a href="./post-managermentinfor.php?name=<?php echo urlencode($row_thongtintho['hoTen']); ?>&mathongtintho=<?php echo urlencode($mathongtintho); ?>">Xem thông tin</a></span>
+                                                        </div>
                                                     </div>
                                                 </div>
         

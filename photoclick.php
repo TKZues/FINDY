@@ -117,7 +117,7 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                     <?php echo $tenposttimtho ?>
                                 </div>
                                 <div class="photoclick_left-price">
-                                    <i class="fa-brands fa-bitcoin"></i><span><?php echo $gia ?></span>
+                                    <i class="fa-brands fa-bitcoin"></i><span><strong>Giá:</strong> <?php echo $gia ?></span>
                                 </div>
                                 <div class="photoclick_left-button">
                                     <?php
@@ -139,19 +139,19 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                     </form>
                                 </div>
                                 <div class="photoclick_left-address">
-                                <i class="fa-solid fa-location-dot"></i> <span> <?php echo $diadiem ?></span>
+                                <i class="fa-solid fa-location-dot"></i> <span><strong>Địa điểm:</strong> <?php echo $diadiem ?></span>
                                 </div>
                                 <div class="photoclick_left-date">
-                                <i class="fa-solid fa-calendar-days"></i><span> <?php echo $thoigian  ?></span>
+                                <i class="fa-solid fa-calendar-days"></i><span><strong>Thời gian:</strong> <?php echo $thoigian  ?></span>
                                 </div>
                                 <div class="photoclick_left-style">
-                                    <i class="fa-solid fa-person-dress"></i><span><?php echo $phongcach ?></span>
+                                    <i class="fa-solid fa-person-dress"></i><span><strong>Phong cách:</strong> <?php echo $phongcach ?></span>
                                 </div>
                                 <div class="photoclick_left-tool">
-                                <i class="fa-solid fa-toolbox"></i><span><?php echo $sukien ?></span>
+                                <i class="fa-solid fa-toolbox"></i><span><strong>Sự kiện:</strong> <?php echo $sukien ?></span>
                                 </div>
                                 <div class="photoclick_left-mota">
-                                <i class="fa-regular fa-square-check"></i><span><?php echo $motachitiet ?></span>
+                                <i class="fa-regular fa-square-check"></i><span><strong></strong> <?php echo $motachitiet ?></span>
                                 </div>
                                 <div class="photoclick_left-radio">
                                 <i class="fa-regular fa-square-check"></i><span>Cần hỗ trợ makeup</span>

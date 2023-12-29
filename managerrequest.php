@@ -169,12 +169,15 @@ echo "ID của Thợ: " . $hoTen;
                     <?php
                             $connect = new connect;        
                             $select_request = $connect ->select_request($id_tho);
+                            $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+    $dataDisplayed = false;
                         ?>
                         <?php
                                     if($select_request){
                                         while($result = $select_request->fetch_assoc()){
                                             $hotenthue = $result['hoTen'];
                                             $diachi = $result['diachi'];
+                                            $dataDisplayed = true;
                                             $thoigian = $result['thoigian'];
                                             $phongcach = $result['phongcach'];
                                             $gia = $result['gia'];
@@ -194,6 +197,9 @@ echo "ID của Thợ: " . $hoTen;
                                         </div>
                                         <div class="address">
                                             Địa chỉ: <?php echo $result['diachi']  ?>
+                                        </div>
+                                        <div class="border_gach">
+                                            
                                         </div>
                                         <div class="time">
                                             Thời gian:  <?php echo $result['thoigian'] ?>
@@ -219,7 +225,11 @@ echo "ID của Thợ: " . $hoTen;
                                 }
                                 ?>
                         
-                        
+                        <?php
+    if (!$dataDisplayed) {
+        echo $emptyImage;
+    }
+?>
                         
                     
                 </div>

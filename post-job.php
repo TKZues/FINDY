@@ -90,7 +90,7 @@
                             ?>
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="post-job__form">
-                                    <div class="row post-job__form-item">
+                                    <div class="row post-job__form-item" style="display: none;">
                                         <div class="col l-4 m-6 c-12">
                                             <label for="post-job__form-name" class="post-job__form-text">
                                                 <i class="post-job__form-icon fa-solid fa-file-signature"></i>
