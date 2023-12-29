@@ -571,10 +571,9 @@
         </div>
     </div>
 
-
     <div class="post-container">
         <div class="grid wide">
-            <div class="post-management-content">
+            <div class="content">
                 <div class="post">
                     <div class="heading">Việc làm tốt mọi nơi</div>
                     <div class="row">
