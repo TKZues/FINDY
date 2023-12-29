@@ -219,7 +219,7 @@
                                         <i id="filter__place-icon-up" class="filter__item-icon fa-solid fa-chevron-up" style="display: none;"></i>
                                         <i id="filter__place-icon-down" class="filter__item-icon fa-solid fa-chevron-down"></i>
                                     </div>
-                                    <!-- <div id="filter__place-menu" class="filter__menu" style="display: none;">
+                                    <div id="filter__place-menu" class="filter__menu" style="display: none;">
                                         <div class="filter__menu-item">
                                             <input type="checkbox" id="place-1" class="">
                                             <label for="place-1" class="filter__menu-name">Hồ Chí Minh</label>
@@ -244,7 +244,7 @@
                                             <input type="checkbox" id="place-6" class="">
                                             <label for="place-6" class="filter__menu-name">Khác</label>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                                 <div class="filter__item-warp">
                                     <div id="filter__price-item" class="filter__item">
@@ -382,7 +382,7 @@
                                 </div>
                             </div>
 
-                            <div class="filter__menu-warp">
+                            <!-- <div class="filter__menu-warp">
                                 <div id="filter__place-menu" class="filter__menu" style="display: none;">
                                     <div class="btn filter__menu-item">
                                         Hồ Chí Minh
@@ -403,7 +403,7 @@
                                         Khác
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
