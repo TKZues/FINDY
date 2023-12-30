@@ -519,10 +519,18 @@
 
 .photoclick_left-button{
     margin: 0 20px;
+    display: flex;
+}
+
+.photoclick_left-button form:nth-child(1){
+    width: 50%;
+}
+.photoclick_left-button form:nth-child(2){
+    width: 10%;
 }
 
 .photoclick_left-button button{
-    width: 60%;
+    width: 90%;
    border: none;
    border-radius: 15px;
     background-color: rgb(67,102,71);
@@ -530,6 +538,8 @@
     text-align: center;
     padding: 5px 0 ;
 }
+
+
 
 .photoclick_left-button{
     font-size: 1.5rem;

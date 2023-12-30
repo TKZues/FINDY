@@ -339,6 +339,218 @@
 }
 
 
+/* ------------- Freelancer list ------------- */
+.daluu{
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.freelancer {
+    margin-top: 24px;
+}
+
+.freelancer-item {
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.freelancer-item-warp {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: #fff;
+    /* background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2)); */
+    border-radius: 10px;
+}
+
+.freelancer-item__personal-info {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.freelancer-item__avatar {
+    width: 25%;
+    position: relative;
+    margin-right: 8px;
+}
+
+.freelancer-item__avatar-img {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.freelancer-item__avatar-text {
+    padding: 3px 5px;
+    background-color: #586B50;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    position: absolute;
+    right: -9px;
+    bottom: 9px;
+}
+
+.freelancer-item__info {
+    margin: 8px 0 8px 16px;
+}
+
+.freelancer-item__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--main-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.freelancer-item__text {
+    font-size: 1.4rem;
+    font-style: italic;
+    /* color: #fff; */
+    color: var(--text-color);
+}
+
+.freelancer-item__rating {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.freelancer-item__contact {
+    padding: 0 12px;
+    /* color: #fff; */
+    color: var(--text-color);
+    position: relative;
+}
+
+.freelancer-item__contact::before {
+    --separate-width: 60%;
+    position: absolute;
+    content: "";
+    width: var(--separate-width);
+    height: 1px;
+    background-color: var(--main-color);
+    top: -10px;
+    left: calc((100% - var(--separate-width)) /2 );
+}
+
+.freelancer-item__contact-info {
+    margin-bottom: 8px;
+    margin-left: 16px;
+}
+
+.freelancer-item__contact-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.freelancer-item__contact-text {
+    font-size: 1.4rem;
+}
+
+
+.freelancer-item__artwork-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.freelancer-item__artwork-img {
+    width: 30%;
+    padding-top: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin: 1px;
+}
+
+.freelancer-item__artwork-img:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.freelancer-item__artwork-img:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.freelancer-item__view-details {
+    display: none;
+    position: absolute;
+    height: 40px;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.freelancer-item__view-details-link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+}
+
+.freelancer-item:hover {
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 10px 20px 0 rgba(71, 140, 67, 0.2);
+    /* box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.09); */
+    transform: translateY(-1px);
+}
+
+.freelancer-item:hover .freelancer-item__view-details {
+    display: flex;
+}
+
+/* ------- Thanh hiển thị số trang ------- */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 80px;
+}
+
+.pagination-item {
+    list-style: none;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    opacity: 0.8;
+}
+
+.pagination-item__link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    margin: 0 15px;
+}
 
 
 /* ------------- Responsive ------------- */

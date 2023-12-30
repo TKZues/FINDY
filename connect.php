@@ -301,6 +301,14 @@
              $result = $this->db->insert($query);
              return $result;
         }
+        public function insert_thothichbaipost(){
+            $mathongtintho = $_POST['mathongtintho'];
+            $ma_posttimtho = $_POST['ma_posttimtho'];
+            $query = "INSERT INTO thothichbaipost (ma_posttimtho, mathongtintho)
+            values ('$ma_posttimtho', '$mathongtintho')";
+             $result = $this->db->insert($query);
+             return $result;
+        }
         public function insert_thuchien(){
             $maposttimtho = $_POST['ma_posttimtho_thuchien'];
             $mathongtintho = $_POST['mathongtintho_thuchien'];
@@ -621,6 +629,31 @@
         public function select_tacpham($mathongtintho){
             $query = "SELECT * FROM post inner join thongtintho
             on post.user_id = thongtintho.id_tho
+            where thongtintho.mathongtintho = $mathongtintho;";
+            $result = $this->db->select($query);
+            return $result;
+        }
+        public function select_luutin($mathongtintho){
+            $query = "SELECT * FROM thothichbaipost 
+            inner join post_timtho on thothichbaipost.ma_posttimtho = post_timtho.ma_posttimtho
+            inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            where thothichbaipost.mathongtintho = $mathongtintho;";
+            $result = $this->db->select($query);
+            return $result;
+        }
+        public function insert_thuethichbaiprofile(){
+            $ma_profile = $_POST['ma_profile'];
+            $mathongtinthue = $_POST['mathongtinthue'];
+            $query = "INSERT INTO thuethichbaiprofile (ma_profile, mathongtinthue)
+            values ('$ma_profile', '$mathongtinthue')";
+             $result = $this->db->insert($query);
+             return $result;
+        }
+        public function select_thuethichbaiprofile($mathongtintho){
+            $query = "SELECT *from thongtindanhgia
+            inner join thongtinthue on thongtinthue.mathongtinthue = thongtindanhgia.mathongtinthue
+            inner join thongtintho on thongtintho.mathongtintho = thongtindanhgia.mathongtintho
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
             where thongtintho.mathongtintho = $mathongtintho;";
             $result = $this->db->select($query);
             return $result;

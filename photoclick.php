@@ -125,8 +125,15 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                     ?>
                                     <?php
                                         $connect = new connect;
-                                        if($_SERVER['REQUEST_METHOD']==='POST'){
-                                        $insert_quanlybaidang = $connect -> insert_quanlybaidang();
+                                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                            if (isset($_POST['ung_tuyen'])) {
+                                                // Process form for "Ứng tuyển"
+                                                $insert_quanlybaidang = $connect->insert_quanlybaidang();
+                                            } elseif (isset($_POST['like'])) {
+                                                // Process form for "<i class='fa-regular fa-heart'></i>"
+                                                // Add code to handle the second form data if needed
+                                                $insert_thothichbaipost = $connect->insert_thothichbaipost();
+                                            }
                                         }
                                     ?>
                                     <form action="" method="POST">
@@ -134,8 +141,15 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                             <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
                                             <input type="text" name="mathongtintho" value="<?php echo $mathongtintho ?>">
                                         </div>
-                                        <button type="submit" onclick="ungTuyen() " >Ứng tuyển</button>
-                                        <i class="fa-regular fa-star"></i>
+                                        <button type="submit" name="ung_tuyen" onclick="ungTuyen() " >Ứng tuyển</button>
+                                        
+                                    </form>
+                                    <form action="" method="POST">
+                                        <div class="form_photoclick" style="display: none;">
+                                            <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                                            <input type="text" name="mathongtintho" value="<?php echo $mathongtintho ?>">
+                                        </div>
+                                        <button type="submit" name="like"><i class="fa-regular fa-heart"></i></button>
                                     </form>
                                 </div>
                                 <div class="photoclick_left-address">

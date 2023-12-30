@@ -342,6 +342,12 @@
     padding: 20px 0;
 }
 
+.account__history-save-content{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
 .jobbest-mid a{
     text-decoration: none;
    
@@ -354,12 +360,17 @@
    padding: 10px 15px;
    border-radius: 20px;
    border: 1px solid  #e2e2e2; 
-   background: linear-gradient(to right, #0097B2, #7ED957);
+   /* background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
 }
 
 .jobbest-mid div > a:hover >div {
     border: 1px solid #cecece;
     background-color: white;
+}
+
+.jobbest-mid-top--left{
+    display: flex;
+    align-items: center;
 }
 
 .jobbest-mid-top--left img{
@@ -376,11 +387,28 @@
 }
 
 .jobbest-mid-top--right p{
-    color: #3b3b3b;
+    color: #000000;
     font-size: 1.3rem;
-   
+    margin: 2px 0;
     font-weight: 500;
     line-height: 16px;
+    white-space: nowrap; /* Ngăn chặn trình duyệt xuống dòng khi nội dung quá dài */
+    overflow: hidden;    /* Ẩn phần nội dung vượt quá chiều rộng của phần tử */
+    text-overflow: ellipsis;
+}
+
+.jobbest-mid-top--right p:nth-child(1){
+    color: var(--main-color-2);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 16px;
+    
+}
+
+
+.jobbest-mid-top--right i{
+    color: rgb(9, 9, 9);
+    margin: 3px 5px;
 }
 
 .jobbest-mid-bottom{

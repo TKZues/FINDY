@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
@@ -10,73 +11,72 @@
     <link rel="stylesheet" href="./accountphoto.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
+
 <body>
-<?php
+    <?php
     include "id_tho.php";
-?>
+    ?>
 
-<?php
+    <?php
 
-$id_tho = $_SESSION['id_tho'];
-$hoTen = $_SESSION['hoTen'];
-$gmail = $_SESSION['gmail'];
-// Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
-include "db_connection.php";
+    $id_tho = $_SESSION['id_tho'];
+    $hoTen = $_SESSION['hoTen'];
+    $gmail = $_SESSION['gmail'];
+    // Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
+    include "db_connection.php";
 
-// Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
-$sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
-$result = $conn->query($sql);
+    // Truy vấn SQL để lấy thông tin từ bảng thongtinthue dựa trên id_thue
+    $sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
+    $result = $conn->query($sql);
 
-// Kiểm tra nếu có kết quả
-if ($result->num_rows > 0) {
-    // Lặp qua từng dòng kết quả
-    while ($row = $result->fetch_assoc()) {
-        // Lấy thông tin từ cột cần thiết
-        $mathongtintho = $row['mathongtintho'];
-      
-        $hinhanhtho = $row['hinhanhtho'];
-        $diachi = $row['diachi'];
-        $ngaysinh = $row['ngaysinh'];
-        $socccd = $row['cccd'];
-        $gioitinh = $row['gioitinh'];
-        $sdt = $row['sdt'];
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $mathongtintho = $row['mathongtintho'];
 
-        
+            $hinhanhtho = $row['hinhanhtho'];
+            $diachi = $row['diachi'];
+            $ngaysinh = $row['ngaysinh'];
+            $socccd = $row['cccd'];
+            $gioitinh = $row['gioitinh'];
+            $sdt = $row['sdt'];
+        }
+    } else {
+        $mathongtintho = "";
+        // You may set a default image path or leave it empty
+        $hinhanhtho = "avatar.jpg";
+        $hoTen = "";
+        $diachi = "";
+        $ngaysinh = "";
+        $socccd = "";
+        $gioitinh = ""; // Set a default value or leave it empty
+        $sdt = "";
+
+        // Thông báo không tìm thấy thông tin
+        echo "Không tìm thấy thông tin thuê cho ID: " . $id_tho;
     }
-} else {
-    $mathongtintho = "";
-   // You may set a default image path or leave it empty
-   $hinhanhtho = "avatar.jpg";
-    $hoTen = "";
-    $diachi = "";
-    $ngaysinh = "";
-    $socccd = "";
-    $gioitinh = ""; // Set a default value or leave it empty
-    $sdt = "";
 
-    // Thông báo không tìm thấy thông tin
-    echo "Không tìm thấy thông tin thuê cho ID: " . $id_tho;
-}
+    // Đóng kết nối
+    $conn->close();
+    // Lấy thông tin người dùng từ session
+    // echo "ID của Thợ: " . $id_tho;
+    // echo "ID của Thợ: " . $hoTen;
+    // echo "ID của Thợ: " . $hinhanhtho;
+    // echo "ID của Thợ: " . $diachi;
+    // echo "ID của Thợ: " . $ngaysinh;
+    // echo "ID của Thợ: " . $gioitinh;
+    // echo "ID của Thợ: " . $id_tho;
+    // echo "ID của Thợ: " . $hoTen;
+    // Hiển thị thông tin người dùng
 
-// Đóng kết nối
-$conn->close();
-// Lấy thông tin người dùng từ session
-// echo "ID của Thợ: " . $id_tho;
-// echo "ID của Thợ: " . $hoTen;
-// echo "ID của Thợ: " . $hinhanhtho;
-// echo "ID của Thợ: " . $diachi;
-// echo "ID của Thợ: " . $ngaysinh;
-// echo "ID của Thợ: " . $gioitinh;
-// echo "ID của Thợ: " . $id_tho;
-// echo "ID của Thợ: " . $hoTen;
-// Hiển thị thông tin người dùng
-
-?> 
+    ?>
 
     <div class="main">
-       <?php
-            include "headerphoto1.php";
-       ?>
+        <?php
+        include "headerphoto1.php";
+        ?>
 
         <div class="container">
             <div class="grid wide">
@@ -104,7 +104,7 @@ $conn->close();
                                         </div>
                                     </div>
                                     <a href="#" class="account__personal-change-password">Đổi mật khẩu</a>
-                                    
+
                                     <div class="account__personal-info">
                                         <h2 class="account__personal-heading">Thông tin cá nhân</h2>
                                         <div class="account__personal-body">
@@ -113,7 +113,7 @@ $conn->close();
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Số CCCD</p>
-                                            <input type="text" name="" id="" class="account__personal-input" value ="<?php echo $socccd ?>">
+                                            <input type="text" name="" id="" class="account__personal-input" value="<?php echo $socccd ?>">
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Giới tính</p>
@@ -134,11 +134,11 @@ $conn->close();
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Email</p>
-                                            <input type="email" name="" id="" class="account__personal-input" value = "<?php echo  $gmail ?>">
+                                            <input type="email" name="" id="" class="account__personal-input" value="<?php echo  $gmail ?>">
                                         </div>
                                         <div class="account__personal-body">
                                             <p class="account__personal-text">Điện thoại</p>
-                                            <input type="text" name="" id="" class="account__personal-input" value = "<?php echo $sdt ?>">
+                                            <input type="text" name="" id="" class="account__personal-input" value="<?php echo $sdt ?>">
                                         </div>
                                     </div>
 
@@ -149,71 +149,71 @@ $conn->close();
                                                 <h4>Cập nhật thông tin</h4>
                                                 <p>Thông tin cá nhân</p>
                                             </span>
-                                            <button class="btn account__personal-btn" onclick="disableAccount()">Cập nhật thông tin</button>                                            
+                                            <button class="btn account__personal-btn" onclick="disableAccount()">Cập nhật thông tin</button>
                                         </div>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
                                                 <h4>Vô hiệu hóa</h4>
                                                 <p>Tạm thời ẩn hồ sơ</p>
                                             </span>
-                                            <button class="btn account__personal-btn">Vô hiệu hóa tài khoản</button>                                            
+                                            <button class="btn account__personal-btn">Vô hiệu hóa tài khoản</button>
                                             <div class="overlay" id="overlay">
-    <!-- Your content for the overlay goes here -->
-                                            <div class="overlay-content">
-                                            <?php
-                                                include "connect.php";
-                                            ?>
-                                            <?php
-                                                $connect = new connect;
-                                                    if($_SERVER['REQUEST_METHOD']==='POST'){
-                                                    $insert_thongtinthophoto = $connect -> insert_thongtinthophoto();
-                                                }
-                                            ?>
-                                            <form action="#" method="post" enctype="multipart/form-data">
-                                                <label for="id_tho">ID Thuê:</label>
-                                                <input type="text" id="id_tho" name="id_tho" value= "<?php echo $id_tho ?>"required><br>
+                                                <!-- Your content for the overlay goes here -->
+                                                <div class="overlay-content">
+                                                    <?php
+                                                    include "connect.php";
+                                                    ?>
+                                                    <?php
+                                                    $connect = new connect;
+                                                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                                        $insert_thongtinthophoto = $connect->insert_thongtinthophoto();
+                                                    }
+                                                    ?>
+                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                        <label for="id_tho">ID Thuê:</label>
+                                                        <input type="text" id="id_tho" name="id_tho" value="<?php echo $id_tho ?>" required><br>
 
 
-                                                <label for="hinhanhthue">Hình Ảnh Thuê:</label>
-                                                <input type="file" id="hinhanhtho" name="hinhanhtho" required><br>
+                                                        <label for="hinhanhthue">Hình Ảnh Thuê:</label>
+                                                        <input type="file" id="hinhanhtho" name="hinhanhtho" required><br>
 
-                                                <label for="diachi">Địa Chỉ:</label>
-                                                <input type="text" id="diachi" name="diachi" required><br>
+                                                        <label for="diachi">Địa Chỉ:</label>
+                                                        <input type="text" id="diachi" name="diachi" required><br>
 
-                                                <label for="ngaysinh">Ngày Sinh:</label>
-                                                <input type="date" id="ngaysinh" name="ngaysinh" required><br>
+                                                        <label for="ngaysinh">Ngày Sinh:</label>
+                                                        <input type="date" id="ngaysinh" name="ngaysinh" required><br>
 
-                                                <label for="cccd">CCCD:</label>
-                                                <input type="text" id="cccd" name="cccd" required><br>
+                                                        <label for="cccd">CCCD:</label>
+                                                        <input type="text" id="cccd" name="cccd" required><br>
 
-                                                <label for="gioitinh">Giới Tính:</label>
-                                                <select id="gioitinh" name="gioitinh" required>
-                                                    <option value="Nam">Nam</option>
-                                                    <option value="Nu">Nữ</option>
-                                                    <option value="Khac">Khác</option>
-                                                </select><br>
+                                                        <label for="gioitinh">Giới Tính:</label>
+                                                        <select id="gioitinh" name="gioitinh" required>
+                                                            <option value="Nam">Nam</option>
+                                                            <option value="Nu">Nữ</option>
+                                                            <option value="Khac">Khác</option>
+                                                        </select><br>
 
-                                                <label for="sdt">Số Điện Thoại:</label>
-                                                <input type="tel" id="sdt" name="sdt" required><br>
+                                                        <label for="sdt">Số Điện Thoại:</label>
+                                                        <input type="tel" id="sdt" name="sdt" required><br>
 
-                                                <input type="submit" value="Gửi">
-                                            </form>
+                                                        <input type="submit" value="Gửi">
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
                                                 <h4>Xóa </h4>
                                                 <p>Xóa hồ sơ vĩnh viễn</p>
                                             </span>
-                                            <button class="btn account__personal-btn">Xóa tài khoản</button>                                            
+                                            <button class="btn account__personal-btn">Xóa tài khoản</button>
                                         </div>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
                                                 <h4>Đăng xuất </h4>
                                                 <p>Đăng xuất tài khoản</p>
                                             </span>
-                                            <button class="btn account__personal-btn"><a href="./main.php">Đăng xuất</a></button>                                            
+                                            <button class="btn account__personal-btn"><a href="./main.php">Đăng xuất</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -228,70 +228,69 @@ $conn->close();
                                         <div class="account__history-save-items">
                                             <div class="jobbest-mid">
                                                 <div class="row">
-                                                    <a href="<?php echo $detailLink; ?>" class="col c-12 m-12 l-12">
-                                                        <div class="jobbest-items ">
-                                                            <div class="jobbest-mid-top">
-                                                                <div class="row">
-                                                                    <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                                        <img src="./img/avatar-1.png" alt="">
+
+                                                    <?php
+
+                                                    $select_luutin = $connect->select_luutin($mathongtintho);
+                                                    $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+                                                    $dataDisplayed = false;
+                                                    ?>
+                                                    <?php
+                                                    if ($select_luutin) {
+                                                        while ($result = $select_luutin->fetch_assoc()) {
+                                                            $dataDisplayed = true;
+
+                                                    ?>
+                                                            <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-12 l-12">
+                                                                <div class="jobbest-items ">
+                                                                    <div class="jobbest-mid-top">
+                                                                        <div class="row">
+
+                                                                            <div class="jobbest-mid-top--left col c-3 m-3 l-3">
+                                                                                <img src="./img/<?php echo $result['hinhanhthue'] ?>" style="width:80px;height:80px;border-radius:50%" alt="">
+                                                                            </div>
+                                                                            <div class="jobbest-mid-top--right col c-8 m-8 l-8">
+                                                                                <p><?php echo $result['tenposttimtho']  ?></p>
+                                                                                <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
+                                                                                <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
+                                                                                <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
+                                                                                <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
+                                                                            </div>
+                                                                            <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
+
+                                                                                <button type="submit"><i class="fa-regular fa-heart"></i></button>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="jobbest-mid-top--right col c-9 m-9 l-9" >
-                                                                        chụp ảnh cưới
-                                                                        <p>Trần Thanh VIệt</p>
-                                                                        <p>Giá: 500.000</p>
-                                                                        <p>Photoshop</p>
-                                                                        <p>TP.HCM</p>
+                                                                    <div class="jobbest-mid-bottom">
+                                                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
+                                                                        </div>
+                                                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
+                                                                        </div>
+                                                                        <div class="jobbest-mid-bottom-item  c-3 m-3 l-3">
+
+                                                                        </div>
+
+
                                                                     </div>
-                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                                            <i class="fa-regular fa-heart"></i>
-                                                                    </div>
+
+
+
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>   
-                                                    <a href="<?php echo $detailLink; ?>" class="col c-12 m-12 l-12">
-                                                        <div class="jobbest-items ">
-                                                            <div class="jobbest-mid-top">
-                                                                <div class="row">
-                                                                    <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                                        <img src="./img/avatar-2.png" alt="">
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right col c-9 m-9 l-9" >
-                                                                        chụp ảnh cưới
-                                                                        <p>Trần Thanh VIệt</p>
-                                                                        <p>Giá: 500.000</p>
-                                                                        <p>Photoshop</p>
-                                                                        <p>TP.HCM</p>
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                                            <i class="fa-regular fa-heart"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a> 
-                                                    <a href="<?php echo $detailLink; ?>" class="col c-12 m-12 l-12">
-                                                        <div class="jobbest-items ">
-                                                            <div class="jobbest-mid-top">
-                                                                <div class="row">
-                                                                    <div class="jobbest-mid-top--left col c-2 m-2 l-2">
-                                                                        <img src="./img/avatar-3.png" alt="">
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right col c-9 m-9 l-9" >
-                                                                        chụp ảnh cưới
-                                                                        <p>Trần Thanh VIệt</p>
-                                                                        <p>Giá: 500.000</p>
-                                                                        <p>Photoshop</p>
-                                                                        <p>TP.HCM</p>
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-                                                                            <i class="fa-regular fa-heart"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a> 
-                                                                                             
+                                                            </a>
+                                                    <?php
+                                                        }
+                                                    }
+
+                                                    ?>
+                                                    <?php
+                                                    if (!$dataDisplayed) {
+                                                        echo $emptyImage;
+                                                    }
+                                                    ?>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -329,73 +328,121 @@ $conn->close();
                     <div class="footer_findy col c-2 m-2 l-2">
                         <h1>Findy</h1>
                         <ul>
-                            <a href=""><li>Dự án</li></a>
-                            <a href=""><li>Cuộc thi</li></a>
-                            <a href=""><li>Thành viên</li></a>
-                            <a href=""><li>Quản lý dự án</li></a>
-                            <a href=""><li>Hình ảnh khắp nơi</li></a>
-                            <a href=""><li>Xác thực</li></a>
+                            <a href="">
+                                <li>Dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Cuộc thi</li>
+                            </a>
+                            <a href="">
+                                <li>Thành viên</li>
+                            </a>
+                            <a href="">
+                                <li>Quản lý dự án</li>
+                            </a>
+                            <a href="">
+                                <li>Hình ảnh khắp nơi</li>
+                            </a>
+                            <a href="">
+                                <li>Xác thực</li>
+                            </a>
                         </ul>
 
                     </div>
                     <div class="footer_introduce col c-2 m-2 l-2">
                         <h1>Giới thiệu</h1>
                         <ul>
-                            <a href=""><li>Về chúng tôi</li></a>
-                            <a href=""><li>Cách thức hoạt động</li></a>
-                            <a href=""><li>Bảo mật</li></a>
-                            <a href=""><li>Nhà đầu tư</li></a>
-                            <a href=""><li>Sơ đồ trang</li></a>
-                            <a href=""><li>Tin tức</li></a>
-                            <a href=""><li>Đội ngũ</li></a>
-                            <a href=""><li>Công việc</li></a>
+                            <a href="">
+                                <li>Về chúng tôi</li>
+                            </a>
+                            <a href="">
+                                <li>Cách thức hoạt động</li>
+                            </a>
+                            <a href="">
+                                <li>Bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Nhà đầu tư</li>
+                            </a>
+                            <a href="">
+                                <li>Sơ đồ trang</li>
+                            </a>
+                            <a href="">
+                                <li>Tin tức</li>
+                            </a>
+                            <a href="">
+                                <li>Đội ngũ</li>
+                            </a>
+                            <a href="">
+                                <li>Công việc</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_rules col c-2 m-2 l-2">
                         <h1>Điều khoản</h1>
                         <ul>
-                            <a href=""><li>Chính sách bảo mật</li></a>
-                            <a href=""><li>Điều khoản và điều kiện</li></a>
-                            <a href=""><li>Chính sách bản quyền</li></a>
-                            <a href=""><li>Quy tắc ứng xử</li></a>
-                            <a href=""><li>Các loại phí</li></a>
+                            <a href="">
+                                <li>Chính sách bảo mật</li>
+                            </a>
+                            <a href="">
+                                <li>Điều khoản và điều kiện</li>
+                            </a>
+                            <a href="">
+                                <li>Chính sách bản quyền</li>
+                            </a>
+                            <a href="">
+                                <li>Quy tắc ứng xử</li>
+                            </a>
+                            <a href="">
+                                <li>Các loại phí</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_bussiness col c-2 m-2 l-2">
                         <h1>Đối tác</h1>
                         <ul>
-                            <a href=""><li>Escrow.com</li></a>
-                            <a href=""><li>Loadshift</li></a>
-                            <a href=""><li>Warrior Forum</li></a>
+                            <a href="">
+                                <li>Escrow.com</li>
+                            </a>
+                            <a href="">
+                                <li>Loadshift</li>
+                            </a>
+                            <a href="">
+                                <li>Warrior Forum</li>
+                            </a>
                         </ul>
                     </div>
                     <div class="footer_app col c-2 m-2 l-2">
                         <h1>Ứng dụng</h1>
                         <ul>
-                            <a href=""><li><img src="./assets/img/app-store.svg" alt=""></li></a>
-                            <a href=""><li><img src="./assets/img/google-play.svg" alt=""></li></a>
+                            <a href="">
+                                <li><img src="./assets/img/app-store.svg" alt=""></li>
+                            </a>
+                            <a href="">
+                                <li><img src="./assets/img/google-play.svg" alt=""></li>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </section>
     <script>
         function disableAccount() {
-    // Show the overlay when the button is clicked
-    document.getElementById("overlay").style.display = "flex";
-    
-    // Add a click event listener to the overlay
-    document.getElementById("overlay").addEventListener("click", function(event) {
-        // Check if the click is outside the overlay content
-        if (event.target === this) {
-            // Hide the overlay if the click is outside
-            this.style.display = "none";
-        }
-    });
-}
+            // Show the overlay when the button is clicked
+            document.getElementById("overlay").style.display = "flex";
 
+            // Add a click event listener to the overlay
+            document.getElementById("overlay").addEventListener("click", function(event) {
+                // Check if the click is outside the overlay content
+                if (event.target === this) {
+                    // Hide the overlay if the click is outside
+                    this.style.display = "none";
+                }
+            });
+        }
     </script>
 </body>
+
 </html>
