@@ -8,24 +8,14 @@
     <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
 
-
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-
-    <style>
-        .navbar>div:nth-child(3) {
-            border-bottom: 3px solid var(--main-color);
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="header">
-        <div class="top">
-
-        </div>
         <?php
             include "db_connection.php";
 
@@ -38,9 +28,6 @@
                 while ($row = $result->fetch_assoc()) {
                     // Lấy thông tin từ cột cần thiết
                     $hinhanhtho = $row['hinhanhtho'];
-                
-            
-                    
                 }
             } else {
                 $hinhanhtho = "avatar.png";   
@@ -57,22 +44,27 @@
                         <img src="./img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
                     </a>
                 </div>
-                <div class="navbar__heading">
-                    <a href="./mainphoto.php" class="navbar__heading-link">Tìm việc</a>
+                <div class="navbar__heading-warp">
+                    <div class="navbar__heading">
+                        <a href="/mainphoto.php" class="navbar__heading-link">Tìm việc</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="/profilephoto.php" class="navbar__heading-link">Tạo hồ sơ</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="/managerrequest.php" class="navbar__heading-link">Quản lý yêu cầu</a>
+                    </div>
+                    <div class="navbar__heading">
+                        <a href="/manageroder.php" class="navbar__heading-link">Đơn hàng</a>
+                    </div>
                 </div>
-                <div class="navbar__heading">
-                    <a href="./profilephoto.php" class="navbar__heading-link">Tạo hồ sơ</a>
+                <div class="navbar__heading-search">
+                    <i class="navbar__search-icon fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
                 </div>
-                <div class="navbar__heading">
-                    <a href="./managerrequest.php" class="navbar__heading-link">Quản lý yêu cầu</a>
-                </div>
-                <div class="navbar__heading">
-                    <a href="./manageroder.php" class="navbar__heading-link">Đơn hàng</a>
-                </div>
-
-                <div class="navbar__heading">
-                    <img src="./img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
-                    <a href="./accountphoto.php" class="navbar__heading-link">
+                <div class="navbar__heading-controls">
+                    <img src="/img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
+                    <a href="/accountphoto.php" class="navbar__heading-link">
                         <p><?php echo $hoTen; ?></p>
                     </a>
                     <div class="tabbar_title3-hover">
@@ -81,7 +73,7 @@
 
                             <div class="infor_user row">
                                 <div class="tabbar_title3-hover--avatar col c-2 m-2 l-2">
-                                    <img src="./video/6478923415f073340ea91470_makeup.png" alt="">
+                                    <img src="/video/6478923415f073340ea91470_makeup.png" alt="">
                                 </div>
                                 <div class="tabbar_title3-hover--infor col c-10 m-10 l-10">
 

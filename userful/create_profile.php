@@ -2,57 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../img/logoicon.jpg" sizes="6x6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../profilephoto.css">
     <link rel="stylesheet" href="../mainicon.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY</title>
+    
+    <style>
+        .navbar__heading-warp > .navbar__heading:nth-child(3) > .navbar__heading-link {
+            color: var(--main-color);
+        }
+    </style>
 </head>
 <body>
-<!-- -----------chatbox------------ -->
+    <?php
+    include "../header.php"
+    ?>
 
-   
-<header class="header">
-            <div class="top">
-
-            </div>
-            <div class="grid wide">
-
-                <!-- Navbar -->
-                <nav class="navbar">
-                    <div class="navbar__logo">
-                        <a href="../main.php" class="navbar__logo-link">
-                            <img src="../img/findy-logo-1.jpg" alt="Findy" class="navbar__logo-img">
-                        </a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./jobsearch.php" class="navbar__heading-link">Tìm việc</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="./create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="#"  onclick="showLoginForm()" class="navbar__heading-link">Blog</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="#" onclick = "showchoice_service()" class="navbar__heading-link">Đăng ký</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="#" onclick="showLoginForm()" class="navbar__heading-link">Đăng nhập</a>
-                    </div>
-                   
-                    
-                </nav>
-            </div>
-        </header>
- 
-
-    
     <section>
         <div class="insert">
             <div class="grid wide">

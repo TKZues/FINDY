@@ -70,6 +70,7 @@
     height: 40px;
     object-fit: cover;
     margin-right: 4px;
+    margin-left: 12px;
 }
 
 .navbar__heading-link {
@@ -80,6 +81,7 @@
     color: var(--text-color);
     margin-left: 4px;
     cursor: pointer;
+    line-height: 40px;
 }
 
 .navbar__heading-link:hover {

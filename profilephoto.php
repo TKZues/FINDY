@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="./profilephoto.css">
     <link rel="stylesheet" href="./mainicon.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+
+    <style>
+        .navbar__heading-warp > .navbar__heading:nth-child(2) > .navbar__heading-link {
+            color: var(--main-color);
+        }
+    </style>
 </head>
 
 <body>
