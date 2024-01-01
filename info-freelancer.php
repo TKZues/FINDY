@@ -25,6 +25,7 @@
     $email = $_GET['email'];
     $address = $_GET['address'];
     $ma_profile = $_GET['ma_profile'];
+    $id_tho = $_GET['idtho'];
 
     include "db_connection.php";
 
@@ -146,39 +147,57 @@
                                     </p>
                                 </div>
                                 <h4 class="freelancer-title">Tác phẩm của tôi</h4>
-                                <div class="freelancer-artwork">
-
+                                <div class="grid-container">
                                     <?php
                                     $connect = new connect;
-                                    $select_tacpham = $connect->select_tacpham($mathongtintho);
-                                    ?>
-                                    <div class="row">
-
-                                        <?php
-                                        if ($select_tacpham) {
-                                            while ($result = $select_tacpham->fetch_assoc()) {
-                                        ?>
-                                                <div class="col l-4 m-12 c-12">
-                                                    <div class='grid-item'>
-                                                        <img class='grid-item' src='<?php echo $result['image'] ?>' alt='Post Image'>
-                                                        <div class='content'>
-                                                            <p> <?php echo  $result['content'] ?> </p>
-                                                        </div>
-                                                        <div class='post-meta'>
-                                                            <span class='like-count'> <?php echo $result['likes']  ?> </span>
-                                                            <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
-
-                                                        </div>
-                                                        <div class='overlay'>
-                                                            <button class='request-btn'>Send Request</button>
-                                                        </div>
-                                                    </div>
+                                    $query = "SELECT * FROM post, thongtintho, profile where thongtintho.id_tho = user_id and thongtintho.mathongtintho = profile.mathongtintho and ten <> '' and user_id = $id_tho";
+                                    $result = $conn->query($query);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            $noidung = $row["content"];
+                                            $postid = $row["post_id"];
+                                            $nguoidang = $row["ten"];
+                                            $hinhanhtho = $row["hinhanhtho"];
+                                            $likes = $row["likes"];
+                                            $hinhanh = $row["image"];
+                                            $posttitle = $row["post_title"];
+                                            $ten = urlencode($row['ten']);
+                                            $nghenghiep = urlencode($row['nghenghiep']);
+                                            $gioithieu = urlencode($row['gioithieu']);
+                                            $sdt = urlencode($row['sdt']);
+                                            $email = urlencode($row['email']);
+                                            $diachi = urlencode($row['diachi']);
+                                            $id_tho = urlencode($row['user_id']);
+                                            echo
+                                            "<div class='grid-item'>
+                                        <div class='dim' onclick='closePopup()'></div>
+                                        <div class='popup-container' id='popup'>
+                                        </div>
+                                        <a class='darken' onclick='openPopup()' data-id=$postid>
+                                            <img src='./img/$hinhanh' alt='Post Image'>
+                                            <div class='overlay'>$posttitle</div>
+                                        <a />
+                                            <div class='post-title'> $posttitle </div>
+                                            <div class='post-meta'>
+                                                <div class='user-info'>
+                                                    <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
+                                                        <img id='avatar' src='./img/$hinhanhtho'>
+                                                    </a>
+                                                    <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
                                                 </div>
-                                        <?php
-                                            }
+                                                <div>
+                                                    <span class='like-count'> $likes </span>
+                                                    <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
+                                                </div>
+                                            </div>
+                                    </div>";
                                         }
-                                        ?>
-                                    </div>
+                                    } else {
+                                        echo "<div></div>";
+                                    }
+
+
+                                    ?>
                                 </div>
 
                                 <!-- Hiển thị số trang -->
@@ -249,10 +268,10 @@
 
                             ?>
                             <?php
-    if (!$dataDisplayed) {
-        echo $emptyImage;
-    }
-?>
+                            if (!$dataDisplayed) {
+                                echo $emptyImage;
+                            }
+                            ?>
                             <!-- <div class="col l-6 m-12 c-12">
                                 <div class="review-item">
                                     <div class="review-item__avatar">
