@@ -610,10 +610,12 @@
 
         public function select_post()
         {
-            $query = "SELECT * FROM post, account_tho where account_tho.id_tho = post.user_id";
+            $query = "SELECT * FROM post, account_tho, thongtintho where thongtintho.id_tho = user_id and account_tho.id_tho = user_id";
             $result = $this->db->select($query);
             return $result;
         }
+    
+
         public function select_post_from_user()
         {
             $query = "SELECT * FROM post, account_tho where account_tho.id_tho = post.user_id";

@@ -251,3 +251,29 @@ function likePost(btn) {
     }
 }
 
+function openPopup() {
+    document.getElementById('popup').classList.add('active');
+    document.querySelector('.dim').classList.add('active');
+    $(document).on('click', '.darken', function() {
+        var rowId = $(this).data('id');
+    
+        // Use AJAX to send the ID to the server
+        $.ajax({
+            type: "POST",
+            url: "expand_img.php",
+            data: { row_id: rowId },
+            success: function(response) {
+                // Display the result in the result-container
+                $("#popup").html(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+}
+
+function closePopup() {
+    document.getElementById('popup').classList.remove('active');
+    document.querySelector('.dim').classList.remove('active');
+}

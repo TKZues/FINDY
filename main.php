@@ -66,30 +66,55 @@
                     </form>
                 </div>
                 <div class="grid-container" id="gridContainer">
-                    <?php
-                    include "connect.php";
-                    $connect = new connect;
-                    $select_post = $connect->select_post();
-                    $count_post = $connect->count_post();
-                    if ($count_post->num_rows > 0) {
-                        while ($row = mysqli_fetch_assoc($select_post)) {
-                            $noidung = $row["content"];
-                            $nguoidang = $row["hoTen"];
-                            $likes = $row["likes"];
-                            $hinhanh = $row["image"];
-                            echo "<div class='grid-item'>
-                                    <img src='$hinhanh' alt='Post Image'>
-                                    <div class='content'>
-                                        <p> $noidung </p>
-                                    </div>
-                                    <div class='post-meta'>
-                                        <span class='like-count'> $likes </span>
-                                        <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
-                                    </div>
-                                </div>";
-                        }
+                <?php
+                include "connect.php";
+                $connect = new connect;
+                $select_post = $connect->select_post();
+                $count_post = $connect->count_post();
+                if ($select_post->num_rows > 0) {
+                    while ($row = mysqli_fetch_assoc($select_post)) {
+                        $noidung = $row["content"];
+                        $postid = $row["post_id"];
+                        $nguoidang = $row["hoTen"];
+                        $hinhanhtho = $row["hinhanhtho"];
+                        $likes = $row["likes"];
+                        $hinhanh = $row["image"];
+                        $posttitle = $row["post_title"];
+                        // $ten = urlencode($row['ten']);
+                        // $nghenghiep = urlencode($row['nghenghiep']);
+                        // $gioithieu = urlencode($row['gioithieu']);
+                        // $sdt = urlencode($row['sdt']);
+                        // $email = urlencode($row['email']);
+                        // $diachi = urlencode($row['diachi']);
+                        echo
+                        "<div class='grid-item'>
+                        <div class='dim' onclick='closePopup()'></div>
+                        <div class='popup-container' id='popup'>
+                        </div>
+                        <a class='darken' onclick='openPopup()' data-id=$postid>
+                            <img src='./img/$hinhanh' alt='Post Image'>
+                            <div class='overlay'>$posttitle</div>
+                        <a />
+                            <div class='post-title'> $posttitle </div>
+                            <div class='post-meta'>
+                                <div class='user-info'>
+                                    <a href='info-freelancer.php?name=ten&job=nghenghiep&rating=4.9&reviews=gioithieu&sdt=sdt&email=email&address=diachi'>
+                                        <img id='avatar' src='./img/$hinhanhtho'>
+                                    </a>
+                                    <a><span class='user-name'> $nguoidang </span></a>
+                                </div>
+                                <div>
+                                    <span class='like-count'> $likes </span>
+                                    <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
+                                </div>
+                            </div>
+                    </div>";
                     }
-                    ?>
+                } else {
+                    echo "<div></div>";
+                }
+
+                ?>
                 </div>
             </div>
         </div>
