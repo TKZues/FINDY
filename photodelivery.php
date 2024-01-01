@@ -310,7 +310,7 @@
                 </div>
 
                 <div class="order__info">
-                    <a href="<?php echo $drive ?>" target="_blank">Xem phản hồi</a>
+                    <a style="text-decoration: none; color: black;font-size: 1.2rem;" href="<?php echo $drive ?>" target="_blank">Xem phản hồi</a>
                 <button class="btn order-btn" onclick="toggleAdditionalInfo1('<?php echo $uniqueId1; ?>', '<?php echo $diadiem; ?>', '<?php echo $gia; ?>', '<?php echo $thoigian; ?>', '<?php echo $mayeucauchinhsua; ?>', '<?php echo $mathongtintho; ?>')">Chỉnh sửa</button>
                 <a href="" class="order__detail">
                     Xem chi tiết

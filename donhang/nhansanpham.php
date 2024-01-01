@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/base.css">
@@ -7,57 +8,108 @@
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        /* Add your CSS styles for the modal here */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        .close {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .confirm-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
+
 <body>
-<?php
+    <?php
     include "../id_thue.php";
-?>
-<?php
+    ?>
+    <?php
 
 
-// Các công việc khác cần làm trên trang mainphoto.php
+    // Các công việc khác cần làm trên trang mainphoto.php
 
-// echo "ID của Thợ: " . $id_thue;
-// echo "ID của Thợ: " . $hoTen;
+    // echo "ID của Thợ: " . $id_thue;
+    // echo "ID của Thợ: " . $hoTen;
 
-?>
+    ?>
 
-<?php
+    <?php
     include "../connect.php";
-?>
-<?php 
+    ?>
+    <?php
     $connect = new connect;
-    $select_sanpham = $connect -> select_sanpham($id_thue); //
+    $select_sanpham = $connect->select_sanpham($id_thue); //
     $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
     $dataDisplayed = false;
-?>
+    ?>
 
-        
-                                <?php
-                                    if($select_sanpham){
-                                        while($result = $select_sanpham->fetch_assoc()){
-                                            $uniqueId = uniqid();  
-                                            $dataDisplayed = true;
-                                        $anhtho = $result['hinhanhtho'];    
-                                        $tentho = $result['hoTen'];
-                                        $diadiem = $result['diadiem'];
-                                        $thoigian = $result['thoigian'];
-                                        $sukien = $result['sukien'];
-                                        $phongcach = $result['phongcach'];
-                                        $gia = $result['gia'];
-                                        $drive = $result['drive'];
-                                        $mathongtintho = $result['mathongtintho'];
-                                        $ma_posttimtho = $result['ma_posttimtho'];
-                                        $mathosanpham = $result['mathosanpham'];
-                                ?>
-                            <div class="manageroder_content  col c-12 m-12 l-12">
-                                <div class="order">
-                                <div class="order__avatar">
+
+    <?php
+    if ($select_sanpham) {
+        while ($result = $select_sanpham->fetch_assoc()) {
+            $uniqueId = uniqid();
+            $dataDisplayed = true;
+            $anhtho = $result['hinhanhtho'];
+            $tentho = $result['hoTen'];
+            $diadiem = $result['diadiem'];
+            $thoigian = $result['thoigian'];
+            $sukien = $result['sukien'];
+            $phongcach = $result['phongcach'];
+            $gia = $result['gia'];
+            $drive = $result['drive'];
+            $mathongtintho = $result['mathongtintho'];
+            $ma_posttimtho = $result['ma_posttimtho'];
+            $mathosanpham = $result['mathosanpham'];
+    ?>
+            <div class="manageroder_content  col c-12 m-12 l-12">
+                <div class="order row">
+                    <div class="order__avatar c-2 m-2 l-2">
                         <img src="../img/<?php echo $anhtho  ?>" alt="Ảnh đại diện" class="order__avatar-img">
                     </div>
 
-                    <div class="order__info">
+                    <div class="order__info c-4 m-4 l-4">
                         <span class="order__name">
                             <?php echo $tentho ?>
                         </span>
@@ -75,7 +127,7 @@
                         </span>
                     </div>
 
-                    <div class="order__info">
+                    <div style="margin: 0 5px;" class="order__info1 c-4 m-4 l-4">
                         <span class="order__title">
                             Mã đơn hàng:
                             <strong><?php echo $mathosanpham ?></strong>
@@ -90,111 +142,132 @@
                             <strong>đ</strong>
                         </span>
                     </div>
-                                    <div class="manageroder_content-items--button col c-2 m-2 l-2">
-                                    <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
-                        '<?php echo $gia; ?>',
-                        '<?php echo $thoigian; ?>'
-                        )">Nhận sản phẩm</button>                                        
-                                    </div>
-                                </div>
-</div>        
-<div id="additional-info_<?php echo $uniqueId; ?>" class="additional-info" style="display: none;">
-            <div class="alone">
-                <form action="" method="POST">
-                    <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
-                    <a href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
-                    
-                </form>
-            </div>
-            <div class="flex_botton">
                     <?php
-                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                            if (isset($_POST['submit_yeucauchinhsua'])) {
-                                $insert_yeucauchinhsua = $connect->insert_yeucauchinhsua();
-                                if ($insert_yeucauchinhsua){
-                                    $delete_thochosanpham = $connect-> delete_thochosanpham($ma_posttimtho, $mathongtintho);
-                                    if ($delete_thochosanpham){
-                                        $delete_thosanpham = $connect-> delete_thosanpham($ma_posttimtho, $mathongtintho);
-                                    }
-                                    else{
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        if (isset($_POST['submit_yeucauchinhsua'])) {
+                            $insert_yeucauchinhsua = $connect->insert_yeucauchinhsua();
+                            if ($insert_yeucauchinhsua) {
+                                $delete_thochosanpham = $connect->delete_thochosanpham($ma_posttimtho, $mathongtintho);
+                                if ($delete_thochosanpham) {
+                                    $delete_thosanpham = $connect->delete_thosanpham($ma_posttimtho, $mathongtintho);
+                                } else {
+                                    echo "Error";
+                                }
+                            } else {
+                                echo "Error";
+                            }
+                        } elseif (isset($_POST['submit_danhgia'])) {
+                            $insert_danhgia = $connect->insert_danhgia();
+                            if ($insert_danhgia) {
+                                $delete_thochosanpham = $connect->delete_thochosanpham($ma_posttimtho, $mathongtintho);
+                                if ($delete_thochosanpham) {
+                                    $delete_thosanpham = $connect->delete_thosanpham($ma_posttimtho, $mathongtintho);
+                                    if ($delete_thosanpham) {
+                                        $insert_dathanhtoan = $connect->insert_dathanhtoan();
+                                    } else {
                                         echo "Error";
                                     }
-                                }else{
-                                    echo "Error";
                                 }
-                            } elseif (isset($_POST['submit_danhgia'])) {
-                                $insert_danhgia = $connect->insert_danhgia();
-                                if($insert_danhgia){
-                                    $delete_thochosanpham = $connect-> delete_thochosanpham($ma_posttimtho, $mathongtintho);
-                                    if ($delete_thochosanpham){
-                                        $delete_thosanpham = $connect-> delete_thosanpham($ma_posttimtho, $mathongtintho);
-                                        if ($delete_thosanpham){
-                                            $insert_dathanhtoan = $connect-> insert_dathanhtoan();
-                                        }
-                                        else{
-                                            echo "Error";
-                                        }
-                                    }
-                                }
-                                else{
-                                    echo "Error";
-                                }
+                            } else {
+                                echo "Error";
                             }
                         }
-                        ?>
-                        <?php
-                            // echo "d" .$ma_posttimtho;
-                            // echo "d" .$mathongtintho;
-                        ?>
-                    <form action="" method="POST">
-                    <input type="text" style="display: none;" name="driveyc" id="" value="<?php echo $drive ?>">
-                    <input type="text" style="display: none;" name="mathongtinthoyc" id="" value="<?php echo $mathongtintho ?>">
-                    <input type="text" style="display: none;" name="ma_posttimthoyc" id="" value="<?php echo $ma_posttimtho ?>">
-                    <button class="button_additional" type="submit" name="submit_yeucauchinhsua">Gửi yêu cầu chỉnh sửa</button>
-                    
-                    </form>
+                    }
+                    ?>
+                    <?php
+                    // echo "d" .$ma_posttimtho;
+                    // echo "d" .$mathongtintho;
+                    ?>
 
-               
-                    
+
+                    <button class="c-2 m-2 l-2 button_additional" type="button" onclick="showProductInfo()">Đã nhận sản phẩm</button>
+
+
+                    <div class="modal" id="productInfoModal">
+                        <div class="modal-content">
+                            
+                            <p style="font-size: 1.7rem;">FINDY sẽ thanh toán số tiền xxx cho <?php echo $tentho ?>. Bạn vui lòng chỉ nhấn "Xác nhận" khi đã xem hình ảnh và hình ảnh không có vấn đề nào.</p>
+                            <form action="" method="POST">
+                            <input type="text" style="display: none;" name="drive" id="" value="<?php echo $drive ?>">
+                            <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                            <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                            <div class="btn_nhan" style="display: flex;align-items: center;justify-content: center;margin: 10px 0;" >
+                                <button class="close" onclick="closeProductInfoModal()">Thoát</button>
+                                <button class="confirm-btn" onclick="confirmReceived() " name="submit_danhgia">Xác nhận</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Content of the modal -->
                     <form action="" method="POST">
                         <input type="text" style="display: none;" name="drive" id="" value="<?php echo $drive ?>">
                         <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                         <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
-                        <button class="button_additional" type="submit" name="submit_danhgia">Đã nhận sản phẩm</button>
                     </form>
-                    <form action="" method="POST">
-                        <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5" style="width: 60%;"></textarea>
+
+
+
+                    <form action="" method="POST" class="c-4 m-4 l-4">
+                        <input type="text" style="display: none;" name="driveyc" id="" value="<?php echo $drive ?>">
+                        <input type="text" style="display: none;" name="mathongtinthoyc" id="" value="<?php echo $mathongtintho ?>">
+                        <input type="text" style="display: none;" name="ma_posttimthoyc" id="" value="<?php echo $ma_posttimtho ?>">
+                        <button class="button_additional" type="submit" name="submit_yeucauchinhsua">Gửi yêu cầu chỉnh sửa</button>
+
+                    </form>
+
+
+
+
+                    <form action="" method="POST" class="c-4 m-4 l-4">
+                        <!-- <input type="text" name="inputdrive" id="inputdrive_<?php echo $uniqueId; ?>" placeholder="Nhập link google drive chứa sản phẩm ..."> -->
+                        <a style="text-decoration: none;" href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
+
+                    </form>
+                    <form action="" method="POST" class="c-4 m-4 l-4">
+                        <!-- <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5" style="width: 60%;"></textarea> -->
                         <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                         <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
                         <button class="button_additional" type="submit" name="submit_danhgia">Báo cáo</button>
                     </form>
-                   
+                </div>
             </div>
-</div>
 
-<?php 
-                                        }
-                                    }
 
-?>
-<?php
+    <?php
+        }
+    }
+
+    ?>
+    <?php
     if (!$dataDisplayed) {
         echo $emptyImage;
     }
-?>
-<script>
-    function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {
-        var additionalInfoDiv = document.getElementById('additional-info_' + uniqueId);
+    ?>
+    <script>
+        function showProductInfo() {
 
-        // Check the current visibility state
-        var isVisible = additionalInfoDiv.style.display === 'block';
+            document.getElementById("productInfoModal").style.display = "block";
+        }
 
-        // Toggle the visibility
-        additionalInfoDiv.style.display = isVisible ? 'none' : 'block';
+        function closeProductInfoModal() {
+            document.getElementById("productInfoModal").style.display = "none";
+        }
 
-        // If visible, populate and show the additional info
-        if (!isVisible) {
-            additionalInfoDiv.innerHTML = `
+
+
+
+        function toggleAdditionalInfo(uniqueId, diadiem, gia, thoigian) {
+            var additionalInfoDiv = document.getElementById('additional-info_' + uniqueId);
+
+            // Check the current visibility state
+            var isVisible = additionalInfoDiv.style.display === 'block';
+
+            // Toggle the visibility
+            additionalInfoDiv.style.display = isVisible ? 'none' : 'block';
+
+            // If visible, populate and show the additional info
+            if (!isVisible) {
+                additionalInfoDiv.innerHTML = `
                 <p>Địa điểm: ${diadiem}</p>
                 <p>Thời gian: ${thoigian}</p>
                 <p>Giá: ${gia}</p>
@@ -205,8 +278,9 @@
                 <button class="button_additional" type="submit">Đã nhận sản phẩm</button>
 
             `;
+            }
         }
-    }
-</script>
+    </script>
 </body>
+
 </html>
