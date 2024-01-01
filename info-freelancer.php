@@ -231,13 +231,13 @@
                         <div class="row">
                             <?php
                             $connect = new connect;
-                            $select_thuethichbaiprofile = $connect->select_thuethichbaiprofile($mathongtintho);
+                            $select_baidanhgia = $connect->select_baidanhgia($mathongtintho);
                             $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
                             $dataDisplayed = false;
                             ?>
                             <?php
-                            if ($select_thuethichbaiprofile) {
-                                while ($result = $select_thuethichbaiprofile->fetch_assoc()) {
+                            if ($select_baidanhgia) {
+                                while ($result = $select_baidanhgia->fetch_assoc()) {
                                     $dataDisplayed = true;
 
                             ?>
