@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
@@ -9,73 +10,71 @@
     <link rel="stylesheet" href="./info-freelancer.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
+
 <body>
-<?php
-    include "id_thue.php";
-?>
-<?php
-
-$name = $_GET['name'];
-$mathongtintho = $_GET['mathongtintho'];
-
-
-include "db_connection.php";
-
-$sql = "SELECT * FROM thongtintho
-inner join profile on thongtintho.mathongtintho = profile.mathongtintho  
-WHERE thongtintho.mathongtintho = $mathongtintho";
-$result = $conn->query($sql);
-
-// Kiểm tra nếu có kết quả
-if ($result->num_rows > 0) {
-    // Lặp qua từng dòng kết quả
-    while ($row = $result->fetch_assoc()) {
-        // Lấy thông tin từ cột cần thiết
-        $mathongtintho = $row['mathongtintho'];
-        $hinhanhtho = $row['hinhanhtho'];
-        $ten = $row['ten'];
-        $diachi = $row['diachi'];
-        $ngaysinh = $row['ngaysinh'];
-        $cccd = $row['cccd'];
-        $gioitinh = $row['gioitinh'];
-        $email = $row['email'];
-        $sdt = $row['sdt'];
-        $job = $row['nghenghiep'];
-        $address = $row['diachi'];
-        $reviews = $row['gioithieu'];
-    }
-} else {
-    $mathongtinthue = "";
-    $hinhanhthue = ""; // You may set a default image path or leave it empty
-    $ten = "";
-    $diachi = "";
-    $ngaysinh = "";
-    $cccd = "";
-    $gioitinh = ""; // Set a default value or leave it empty
-    $email = "";
-    $sdt = "";
-
-    // Thông báo không tìm thấy thông tin
-    // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
-}
-
-// echo "ID của Thợ: " . $id_thue;
-// echo "ID của Thợ: " . $hoTen;
-// echo "Ima thong tin Thợ: " . $mathongtinthue;
-// echo "ID của Thợ: " . $diachi;
-
-// echo "ID của Thợ: " . $name;
-// echo "Ima thong tin Thợ: " . $job;
-// echo "ID của Thợ: " . $rating;
-// echo "tt Thợ: " . $reviews;
-// echo "ID của Thợ: " . $sdt;
-
-
-
-?>
-    <div class="main">
     <?php
-            include "headercustomer.php";
+    include "id_thue.php";
+    ?>
+    <?php
+    $mathongtintho = $_GET['mathongtintho'];
+    $name = $_GET['name'];
+    $job = $_GET['job'];
+    $rating = $_GET['rating'];
+    $reviews = $_GET['reviews'];
+    $sdt = $_GET['sdt'];
+    $email = $_GET['email'];
+    $address = $_GET['address'];
+    $ma_profile = $_GET['ma_profile'];
+ 
+
+    include "db_connection.php";
+
+    $sql = "SELECT * FROM thongtinthue WHERE id_thue = $id_thue";
+    $result = $conn->query($sql);
+
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $mathongtinthue = $row['mathongtinthue'];
+            $hinhanhthue = $row['hinhanhthue'];
+            $diachi = $row['diachi'];
+            $ngaysinh = $row['ngaysinh'];
+            $cccd = $row['cccd'];
+            $gioitinh = $row['gioitinh'];
+            
+        }
+    } else {
+        $mathongtinthue = "";
+        $hinhanhthue = ""; // You may set a default image path or leave it empty
+        $diachi = "";
+        $ngaysinh = "";
+        $cccd = "";
+        $gioitinh = ""; // Set a default value or leave it empty
+       
+
+        // Thông báo không tìm thấy thông tin
+        // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+    }
+
+
+    // echo "ID của Thợ: " . $hoTen;
+    echo "Ima thong tin Thợ: " . $mathongtintho;
+    // echo "ID của Thợ: " . $diachi;
+
+    // echo "ID của Thợ: " . $name;
+    // echo "Ima thong tin Thợ: " . $job;
+    // echo "ID của Thợ: " . $rating;
+    // echo "tt Thợ: " . $reviews;
+    // echo "ID của Thợ: " . $sdt;
+
+
+
+    ?>
+    <div class="main">
+        <?php
+        include "headercustomer.php";
         ?>
 
         <div class="container">
@@ -87,7 +86,7 @@ if ($result->num_rows > 0) {
                                 <div class="freelancer-info">
                                     <div class="personal-info">
                                         <div class="personal-info__avatar">
-                                            <img src="./img/<?php echo $hinhanhtho ?>" alt="Ảnh đại diện" class="personal-info__avatar-img">
+                                            <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="personal-info__avatar-img">
                                         </div>
                                         <h1 class="personal-info__name">
                                             <?php echo $name ?>
@@ -107,22 +106,35 @@ if ($result->num_rows > 0) {
                                             <span class="personal-info__rating-reviews">(234 đánh giá)</span>
                                         </div>
                                     </div>
+                                    <?php
+                                    include "connect.php";
+                                    ?>
+                                    <?php
+                                    $connect = new connect;
+                                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-                                    <button class="btn btn--primary freelancer-info-btn">Liên hệ</button>
+                                        $insert_thuethichbaiprofile = $connect->insert_thuethichbaiprofile();
+                                    }
+                                    ?>
+                                    <form action="" method="POST">
+                                        <input type="text" style="display: none;" name="ma_profile" id="" value="<?php echo $ma_profile ?>">
+                                        <input type="text" style="display: none;" name="mathongtinthue" id="" value="<?php echo $mathongtinthue ?>">
+                                        <button class="btn btn--primary freelancer-info-btn" type="submit">Theo dõi</button>
 
+                                    </form>
                                     <div class="contact-info">
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-phone"></i>
-                                            <span class="contact-info__info-text"><?php echo $sdt ?></span>
+                                            <span class="contact-info__info-text">***********</span>
                                         </div>
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-envelope"></i>
-                                            <span class="contact-info__info-text"><?php echo $email ?></span>
+                                            <span class="contact-info__info-text">************</span>
                                         </div>
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-location-dot"></i>
                                             <span class="contact-info__info-text"><?php echo $address ?></span>
-                                        </div>                                
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -135,165 +147,57 @@ if ($result->num_rows > 0) {
                                     </p>
                                 </div>
                                 <h4 class="freelancer-title">Tác phẩm của tôi</h4>
-                                <div class="freelancer-artwork">
-                                    <div class="row">
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h5 class="artwork-collection__name">Việt phục</h5>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-1-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-1-4.png" alt="" class="artwork-collection__img">
+                                <div class="grid-container">
+                                    <?php
+                                    $connect = new connect;
+                                    $query = "SELECT * FROM post, thongtintho, profile where thongtintho.id_tho = user_id and thongtintho.mathongtintho = profile.mathongtintho and ten <> '' and thongtintho.mathongtintho = $mathongtintho";
+                                    $result = $conn->query($query);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            $noidung = $row["content"];
+                                            $postid = $row["post_id"];
+                                            $nguoidang = $row["ten"];
+                                            $hinhanhtho = $row["hinhanhtho"];
+                                            $likes = $row["likes"];
+                                            $hinhanh = $row["image"];
+                                            $posttitle = $row["post_title"];
+                                            $ten = urlencode($row['ten']);
+                                            $nghenghiep = urlencode($row['nghenghiep']);
+                                            $gioithieu = urlencode($row['gioithieu']);
+                                            $sdt = urlencode($row['sdt']);
+                                            $email = urlencode($row['email']);
+                                            $diachi = urlencode($row['diachi']);
+                                            $id_tho = urlencode($row['user_id']);
+                                            echo
+                                            "<div class='grid-item'>
+                                        <div class='dim' onclick='closePopup()'></div>
+                                        <div class='popup-container' id='popup'>
+                                        </div>
+                                        <a class='darken' onclick='openPopup()' data-id=$postid>
+                                            <img src='./img/$hinhanh' alt='Post Image'>
+                                            <div class='overlay'>$posttitle</div>
+                                        <a />
+                                            <div class='post-title'> $posttitle </div>
+                                            <div class='post-meta'>
+                                                <div class='user-info'>
+                                                    <a style='padding-right:10px' href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
+                                                        <img id='avatar' src='./img/$hinhanhtho'>
+                                                    </a>
+                                                    <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
                                                 </div>
-                                                <p class="artwork-collection__price">1.990.000 đ - 2.990.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 17 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                <div class='interaction'>
+                                                    <span class='like-count'> $likes </span>
+                                                    <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h3 class="artwork-collection__name">Gia đình</h3>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-2-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-2-4.png" alt="" class="artwork-collection__img">
-                                                </div>
-                                                <p class="artwork-collection__price">1.690.000 đ - 2.290.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 37 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h3 class="artwork-collection__name">Sinh nhật</h3>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-3-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-3-4.png" alt="" class="artwork-collection__img">
-                                                </div>
-                                                <p class="artwork-collection__price">800.000 đ - 1.200.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 23 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h3 class="artwork-collection__name">Ngoại cảnh</h3>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-4-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-4-4.png" alt="" class="artwork-collection__img">
-                                                </div>
-                                                <p class="artwork-collection__price">490.000 đ - 590.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 19 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h3 class="artwork-collection__name">Học đường</h3>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-5-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-5-4.png" alt="" class="artwork-collection__img">
-                                                </div>
-                                                <p class="artwork-collection__price">150.000 đ - 290.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 09 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col l-4 m-12 c-12">
-                                            <div class="artwork-collection">
-                                                <h3 class="artwork-collection__name">Tết Tết Tết</h3>
-                                                <div class="artwork-collection__list">
-                                                    <img src="./img/concept-6-1.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-2.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-3.png" alt="" class="artwork-collection__img">
-                                                    <img src="./img/concept-6-4.png" alt="" class="artwork-collection__img">
-                                                </div>
-                                                <p class="artwork-collection__price">1.000.000 đ - 1.500.000 đ</p>
-                                                <div class="artwork-collection__info">
-                                                    <p class="artwork-collection__info-text">Đã thực hiện: 23 dự án</p>
-                                                    <div class="star-rating">
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                        <i class="star-rating--gold fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="artwork-collection__control">
-                                                    <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
-                                                    <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>";
+                                        }
+                                    } else {
+                                        echo "<div></div>";
+                                    }
+
+
+                                    ?>
                                 </div>
 
                                 <!-- Hiển thị số trang -->
@@ -325,29 +229,50 @@ if ($result->num_rows > 0) {
                     <div class="review">
                         <h1 class="review__heading">Đánh giá</h1>
                         <div class="row">
-                            <div class="col l-6 m-12 c-12">
-                                <div class="review-item">
-                                    <div class="review-item__avatar">
-                                        <img src="./img/avatar-10.png" alt="" class="review-item__avatar-img">
-                                    </div>
+                            <?php
+                            $connect = new connect;
+                            $select_baidanhgia = $connect->select_baidanhgia($mathongtintho);
+                            $emptyImage = '<img src="../img/empty-search.png" alt="No data found" style="display: block; margin: auto;">';
+                            $dataDisplayed = false;
+                            ?>
+                            <?php
+                            if ($select_baidanhgia) {
+                                while ($result = $select_baidanhgia->fetch_assoc()) {
+                                    $dataDisplayed = true;
 
-                                    <div class="review-item__content">
-                                        <h5 class="review-item__content-name">Nguyễn Ngọc Diễm</h5>
-                                        <p class="review-item__content-time">08/10/2023 10:08</p>
-                                        <div class="star-rating">
-                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                            <i class="star-rating--gold fa-solid fa-star"></i>
-                                            <i class="star-rating--gold fa-solid fa-star"></i>
+                            ?>
+                                    <div class="col l-6 m-12 c-12">
+                                        <div class="review-item">
+                                            <div class="review-item__avatar">
+                                                <img src="./img/<?php echo $result['hinhanhthue']  ?>" alt="" class="review-item__avatar-img">
+                                            </div>
+
+                                            <div class="review-item__content">
+                                                <h5 class="review-item__content-name"><?php echo $result['hoTen'] ?></h5>
+                                                <p class="review-item__content-time"><?php echo $result['thoigian'] ?></p>
+                                                <div class="star-rating">
+                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                </div>
+                                                <p class="review-item__content-text">
+                                                    <?php echo $result['mota'] ?> </p>
+                                            </div>
                                         </div>
-                                        <p class="review-item__content-text">
-                                            Tôi đã thuê nhiếp ảnh gia này để chụp ảnh gia đình và tôi rất hài lòng với kết quả. Anh ấy đã tạo ra những bức ảnh tuyệt đẹp, ghi lại khoảnh khắc đáng nhớ của gia đình chúng tôi. Chúng tôi không thể hạnh phúc hơn với bộ ảnh gia đình này.
-                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col l-6 m-12 c-12">
+                            <?php
+                                }
+                            }
+
+                            ?>
+                            <?php
+                            if (!$dataDisplayed) {
+                                echo $emptyImage;
+                            }
+                            ?>
+                            <!-- <div class="col l-6 m-12 c-12">
                                 <div class="review-item">
                                     <div class="review-item__avatar">
                                         <img src="./img/avatar-11.png" alt="" class="review-item__avatar-img">
@@ -456,7 +381,7 @@ if ($result->num_rows > 0) {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -474,38 +399,38 @@ if ($result->num_rows > 0) {
                     <h3 class="require-form__heading">Yêu cầu của bạn</h3>
                 </div>
                 <?php
-                    include "connect.php";
+                include "connect.php";
                 ?>
                 <?php
-                    $connect = new connect;
-                    if($_SERVER['REQUEST_METHOD']==='POST'){
-                        $insert_posttructiep = $connect -> insert_posttructiep();
-                    }
+                $connect = new connect;
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $insert_posttructiep = $connect->insert_posttructiep();
+                }
                 ?>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="require-form__form">
 
                         <div class="row post-job__form-item" style="display: none;">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-name" class="post-job__form-text">
-                                                <i class="post-job__form-icon fa-solid fa-file-signature"></i>
-                                                Mã thông tin người thuê
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <input name="post-job__form-ma" style="display: none;" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $mathongtinthue ?>">
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-name" class="post-job__form-text">
+                                    <i class="post-job__form-icon fa-solid fa-file-signature"></i>
+                                    Mã thông tin người thuê
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <input name="post-job__form-ma" style="display: none;" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $mathongtinthue ?>">
+                            </div>
                         </div>
                         <div class="row post-job__form-item" style="display: none;">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-name" class="post-job__form-text">
-                                                <i class="post-job__form-icon fa-solid fa-file-signature"></i>
-                                                Mã profile
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <input name="post-job__form-maprofile" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $ma_profile ?>">
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-name" class="post-job__form-text">
+                                    <i class="post-job__form-icon fa-solid fa-file-signature"></i>
+                                    Mã profile
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <input name="post-job__form-maprofile" id="post-job__form-name" type="text" class="post-job__form-input" placeholder="Tên buổi chụp ảnh/makeup" value="<?php echo $ma_profile ?>">
+                            </div>
                         </div>
                         <div class="row require-form__item">
                             <div class="col l-4 m-6 c-12">
@@ -552,7 +477,7 @@ if ($result->num_rows > 0) {
                             </div>
                             <div class="col l-8 m-6 c-12">
                                 <div class="require-form__price-input">
-                                <input name="post-job__form-price" id="post-job__form-price" type="text" class="post-job__form-input" placeholder="Giá (khoảng bao nhiêu)">
+                                    <input name="post-job__form-price" id="post-job__form-price" type="text" class="post-job__form-input" placeholder="Giá (khoảng bao nhiêu)">
 
                                 </div>
                             </div>
@@ -582,27 +507,27 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                         <div class="row require-form__item">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-upload" class="require-form__text">
-                                                <i class="require-form__icon fa-solid fa-upload"></i>
-                                                Tải ảnh mẫu (phong cách muốn chụp)
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <input name="hinhanh" id="post-job__form-upload" type="file" class="post-job__form-input">
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-upload" class="require-form__text">
+                                    <i class="require-form__icon fa-solid fa-upload"></i>
+                                    Tải ảnh mẫu (phong cách muốn chụp)
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <input name="hinhanh" id="post-job__form-upload" type="file" class="post-job__form-input">
+                            </div>
                         </div>
 
                         <div class="row require-form__item">
-                                        <div class="col l-4 m-6 c-12">
-                                            <label for="post-job__form-description" class="prequire-form__text">
-                                                <i class="require-form__icon fa-regular fa-pen-to-square"></i>
-                                                Mô tả chi tiết các yêu cầu
-                                            </label>
-                                        </div>
-                                        <div class="col l-8 m-6 c-12">
-                                            <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5"></textarea>
-                                        </div>
+                            <div class="col l-4 m-6 c-12">
+                                <label for="post-job__form-description" class="prequire-form__text">
+                                    <i class="require-form__icon fa-regular fa-pen-to-square"></i>
+                                    Mô tả chi tiết các yêu cầu
+                                </label>
+                            </div>
+                            <div class="col l-8 m-6 c-12">
+                                <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5"></textarea>
+                            </div>
                         </div>
                     </div>
 
@@ -616,6 +541,19 @@ if ($result->num_rows > 0) {
     </div>
 
     <script>
+        function showOverlay(element) {
+            element.querySelector('.overlay').style.display = 'flex';
+        }
+
+        function hideOverlay(element) {
+            element.querySelector('.overlay').style.display = 'none';
+        }
+
+        function likePost(button) {
+            // Your like post logic here
+        }
+
+
         const modal = document.querySelector('.modal');
         const modalContainer = document.querySelector('.modal__container')
 
@@ -629,9 +567,10 @@ if ($result->num_rows > 0) {
 
         modal.addEventListener('click', hideRequireForm)
 
-        modalContainer.addEventListener('click', function (event) {
+        modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
     </script>
 </body>
+
 </html>

@@ -149,8 +149,9 @@ echo "Mã thông tin thợ" . $mathongtintho;
                                             <input type="text" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
                                             <input type="text" name="mathongtintho" value="<?php echo $mathongtintho ?>">
                                         </div>
-                                        <button type="submit" name="like"><i class="fa-regular fa-heart"></i></button>
+                                        <button type="submit" name="like" onclick="changeColor(this)"><i class='far fa-heart' id="heartIcon"></i></button>
                                     </form>
+                                    
                                 </div>
                                 <div class="photoclick_left-address">
                                 <i class="fa-solid fa-location-dot"></i> <span><strong>Địa điểm:</strong> <?php echo $diadiem ?></span>
@@ -428,6 +429,19 @@ echo "Mã thông tin thợ" . $mathongtintho;
         </div>
     </div>
     <script>
+        function changeColor(button) {
+    var heartIcon = document.getElementById("heartIcon");
+    
+    // Kiểm tra nếu đã có class 'fas' thì xoá, ngược lại thêm class 'fas'
+    if (heartIcon.classList.contains("fas")) {
+        heartIcon.classList.remove("fas");
+        heartIcon.classList.add("far");
+    } else {
+        heartIcon.classList.remove("far");
+        heartIcon.classList.add("fas");
+    }
+}
+
           function ungTuyen() {
         // Thêm mã xử lý ứng tuyển ở đây, ví dụ: gửi yêu cầu đến máy chủ hoặc lưu trạng thái ứng tuyển trong cơ sở dữ liệu.
         alert('Bạn đã ứng tuyển thành công!');

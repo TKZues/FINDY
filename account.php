@@ -182,24 +182,25 @@
                                                     }
                                                     ?>
                                                     <form action="#" method="post" enctype="multipart/form-data">
-                                                        <label for="id_thue">ID Thuê:</label>
-                                                        <input type="text" id="id_thue" name="id_thue" value="<?php echo $id_thue ?>" required><br>
-
-                                                        <label for="mathongtinthue">Mã Thông Tin Thuê:</label>
-                                                        <input type="text" id="mathongtinthue" name="mathongtinthue" required><br>
-
+                                                        
+                                                        <input type="text" style="display: none;" id="id_thue" name="id_thue" value="<?php echo $id_thue ?>" required><br>
+                                                        <i class="fa-solid fa-image"></i>
                                                         <label for="hinhanhthue">Hình Ảnh Thuê:</label>
                                                         <input type="file" id="hinhanhthue" name="hinhanhthue" required><br>
 
+                                                        <i class="fa-solid fa-location-dot"></i>
                                                         <label for="diachi">Địa Chỉ:</label>
                                                         <input type="text" id="diachi" name="diachi" required><br>
 
+                                                        <i class="fa-solid fa-calendar-day"></i>
                                                         <label for="ngaysinh">Ngày Sinh:</label>
                                                         <input type="date" id="ngaysinh" name="ngaysinh" required><br>
 
+                                                        <i class="fa-solid fa-fingerprint"></i>
                                                         <label for="cccd">CCCD:</label>
                                                         <input type="text" id="cccd" name="cccd" required><br>
 
+                                                        <i class="fa-solid fa-venus-mars"></i>
                                                         <label for="gioitinh">Giới Tính:</label>
                                                         <select id="gioitinh" name="gioitinh" required>
                                                             <option value="Nam">Nam</option>
@@ -207,10 +208,11 @@
                                                             <option value="Khac">Khác</option>
                                                         </select><br>
 
+                                                        <i class="fa-solid fa-phone"></i>
                                                         <label for="sdt">Số Điện Thoại:</label>
                                                         <input type="tel" id="sdt" name="sdt" required><br>
 
-                                                        <input type="submit" value="Gửi">
+                                                        <input class="btn account__personal-btn" type="submit" value="Gửi">
                                                     </form>
                                                 </div>
                                             </div>

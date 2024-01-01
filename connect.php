@@ -217,6 +217,7 @@ class connect
         $query = "INSERT INTO thongtintho (id_tho, hinhanhtho, diachi, ngaysinh, cccd, gioitinh, sdt) 
             VALUES ('$id_tho','$hinhanhtho', '$diachi', '$ngaysinh', '$cccd', '$gioitinh', '$sdt')";
         $result = $this->db->insert($query);
+        
         return $result;
     }
     public function select_thongtinthue()
@@ -235,10 +236,11 @@ class connect
     }
     public function result_thongtintho($ma_posttimtho)
     {
-        $query = "SELECT * FROM thongtintho
-            INNER JOIN quanlybaidang ON thongtintho.mathongtintho = quanlybaidang.ma_thongtintho
+        $query = "SELECT * FROM quanlybaidang
+            INNER JOIN thongtintho ON thongtintho.mathongtintho = quanlybaidang.ma_thongtintho
             inNER JOIN account_tho on thongtintho.id_tho = account_tho.id_tho
-            WHERE quanlybaidang.ma_posttimtho = $ma_posttimtho";
+            inner join profile on profile.mathongtintho = thongtintho.mathongtintho
+            WHERE quanlybaidang.ma_posttimtho = $ma_posttimtho and nghenghiep <> ''";
         $result = $this->db->select($query);
         return $result;
     }

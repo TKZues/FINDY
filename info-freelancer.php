@@ -25,7 +25,7 @@
     $email = $_GET['email'];
     $address = $_GET['address'];
     $ma_profile = $_GET['ma_profile'];
-    $id_tho = $_GET['idtho'];
+ 
 
     include "db_connection.php";
 
@@ -43,7 +43,7 @@
             $ngaysinh = $row['ngaysinh'];
             $cccd = $row['cccd'];
             $gioitinh = $row['gioitinh'];
-            $sdt = $row['sdt'];
+            
         }
     } else {
         $mathongtinthue = "";
@@ -52,15 +52,15 @@
         $ngaysinh = "";
         $cccd = "";
         $gioitinh = ""; // Set a default value or leave it empty
-        $sdt = "";
+       
 
         // Thông báo không tìm thấy thông tin
         // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
     }
 
-    // echo "ID của Thợ: " . $id_thue;
+
     // echo "ID của Thợ: " . $hoTen;
-    // echo "Ima thong tin Thợ: " . $mathongtinthue;
+    echo "Ima thong tin Thợ: " . $mathongtintho;
     // echo "ID của Thợ: " . $diachi;
 
     // echo "ID của Thợ: " . $name;
@@ -125,11 +125,11 @@
                                     <div class="contact-info">
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-phone"></i>
-                                            <span class="contact-info__info-text"><?php echo $sdt ?></span>
+                                            <span class="contact-info__info-text">***********</span>
                                         </div>
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-envelope"></i>
-                                            <span class="contact-info__info-text"><?php echo $email ?></span>
+                                            <span class="contact-info__info-text">************</span>
                                         </div>
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-location-dot"></i>
@@ -150,7 +150,7 @@
                                 <div class="grid-container">
                                     <?php
                                     $connect = new connect;
-                                    $query = "SELECT * FROM post, thongtintho, profile where thongtintho.id_tho = user_id and thongtintho.mathongtintho = profile.mathongtintho and ten <> '' and user_id = $id_tho";
+                                    $query = "SELECT * FROM post, thongtintho, profile where thongtintho.id_tho = user_id and thongtintho.mathongtintho = profile.mathongtintho and ten <> '' and thongtintho.mathongtintho = $mathongtintho";
                                     $result = $conn->query($query);
                                     if ($result->num_rows > 0) {
                                         while ($row = mysqli_fetch_assoc($result)) {

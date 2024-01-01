@@ -340,8 +340,8 @@
                                                         
         ?>
             <form action="./photodelivery.php" method="POST">
-                <input type="text" name="inputmathogiaosp2" value="<?php echo $ma_posttimtho ?>">
-                <input type="text" name="inputmathongtinthue2" value="<?php echo $mathongtintho ?>">
+                <input type="text"  style="display: none;" name="inputmathogiaosp2" value="<?php echo $ma_posttimtho ?>">
+                <input type="text"  style="display: none;" name="inputmathongtinthue2" value="<?php echo $mathongtintho ?>">
                 <input type="text" name="inputdrive2" id="inputdrive_<?php echo $uniqueId1; ?>" placeholder="Nhập link google drive chứa sản phẩm ...">
                 <button class="button_additional" type="submit">Hoàn thành</button>
             </form>

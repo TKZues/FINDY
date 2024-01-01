@@ -37,7 +37,7 @@
         while ($row = $result->fetch_assoc()) {
             // Lấy thông tin từ cột cần thiết
             $mathongtintho = $row['mathongtintho'];
-            $hoTen = $row['hoTen'];
+            
             $hinhanhtho = $row['hinhanhtho'];
             $diachi = $row['diachi'];
             $ngaysinh = $row['ngaysinh'];
@@ -143,21 +143,7 @@
                                             <input type="text" name="" id="" class="account__personal-input" value="<?php echo $sdt ?>">
                                         </div>
                                     </div>
-                                    <script>
-                                        function disableAccount() {
-                                            // Show the overlay when the button is clicked
-                                            document.getElementById("overlay").style.display = "flex";
-
-                                            // Add a click event listener to the overlay
-                                            document.getElementById("overlay").addEventListener("click", function(event) {
-                                                // Check if the click is outside the overlay content
-                                                if (event.target === this) {
-                                                    // Hide the overlay if the click is outside
-                                                    this.style.display = "none";
-                                                }
-                                            });
-                                        }
-                                    </script>
+                                    
                                     <div class="account__personal-info">
                                         <h2 class="account__personal-heading">Vô hiệu hóa và khóa tài khoản</h2>
                                         <div class="account__personal-body">
@@ -185,38 +171,58 @@
                                                         $insert_thongtinthophoto = $connect->insert_thongtinthophoto();
                                                     }
                                                     ?>
-                                                    <form action="#" method="post" enctype="multipart/form-data">
-                                                        <label for="id_tho">ID Thuê:</label>
-                                                        <input type="text" id="id_tho" name="id_tho" value="<?php echo $id_tho ?>" required><br>
+                                                    <form action="" method="post" enctype="multipart/form-data">
+                                                        
+                                                        <input style="display: none;" type="text" id="id_tho" name="id_tho" value="<?php echo $id_tho ?>" required><br>
 
-
+                                                        <i class="fa-solid fa-image"></i>
                                                         <label for="hinhanhthue">Hình Ảnh Thuê:</label>
                                                         <input type="file" id="hinhanhtho" name="hinhanhtho" required><br>
 
+                                                        <i class="fa-solid fa-location-dot"></i>
                                                         <label for="diachi">Địa Chỉ:</label>
                                                         <input type="text" id="diachi" name="diachi" required><br>
 
+                                                        <i class="fa-solid fa-calendar-day"></i>
                                                         <label for="ngaysinh">Ngày Sinh:</label>
                                                         <input type="date" id="ngaysinh" name="ngaysinh" required><br>
 
+                                                        <i class="fa-solid fa-fingerprint"></i>
                                                         <label for="cccd">CCCD:</label>
                                                         <input type="text" id="cccd" name="cccd" required><br>
 
+                                                        
+                                                        <i class="fa-solid fa-venus-mars"></i>
                                                         <label for="gioitinh">Giới Tính:</label>
                                                         <select id="gioitinh" name="gioitinh" required>
                                                             <option value="Nam">Nam</option>
                                                             <option value="Nu">Nữ</option>
                                                             <option value="Khac">Khác</option>
                                                         </select><br>
-
+                                                        <i class="fa-solid fa-phone"></i>
                                                         <label for="sdt">Số Điện Thoại:</label>
                                                         <input type="tel" id="sdt" name="sdt" required><br>
 
-                                                        <input type="submit" value="Gửi">
+                                                        <input class="btn account__personal-btn" type="submit" value="Gửi">
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
+                                        <script>
+                                        function disableAccount() {
+                                            // Show the overlay when the button is clicked
+                                            document.getElementById("overlay").style.display = "flex";
+
+                                            // Add a click event listener to the overlay
+                                            document.getElementById("overlay").addEventListener("click", function(event) {
+                                                // Check if the click is outside the overlay content
+                                                if (event.target === this) {
+                                                    // Hide the overlay if the click is outside
+                                                    this.style.display = "none";
+                                                }
+                                            });
+                                        }
+                                    </script>
                                         <div class="account__personal-body">
                                             <span class="account__personal-text">
                                                 <h4>Xóa </h4>

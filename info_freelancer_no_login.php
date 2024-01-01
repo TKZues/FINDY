@@ -124,14 +124,14 @@
 
                                     </form>
                                     <div class="contact-info">
-                                        <div class="contact-info__info">
+                                        <!-- <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-phone"></i>
                                             <span class="contact-info__info-text"><?php echo $sdt ?></span>
                                         </div>
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-envelope"></i>
                                             <span class="contact-info__info-text"><?php echo $email ?></span>
-                                        </div>
+                                        </div> -->
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-location-dot"></i>
                                             <span class="contact-info__info-text"><?php echo $address ?></span>

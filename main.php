@@ -7,7 +7,7 @@
     <title>FINDY - Kết nối dễ dàng</title>
     <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
-    <script src="./main.js"></script>
+    
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./find-timtho.css">
@@ -1069,5 +1069,7 @@
     <?php
     include "footer.php";
     ?>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./video.js"></script>
 </body>
