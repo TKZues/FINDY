@@ -141,7 +141,21 @@
                                             <input type="text" name="" id="" class="account__personal-input" value="<?php echo $sdt ?>">
                                         </div>
                                     </div>
+                                    <script>
+                                        function disableAccount() {
+                                            // Show the overlay when the button is clicked
+                                            document.getElementById("overlay").style.display = "flex";
 
+                                            // Add a click event listener to the overlay
+                                            document.getElementById("overlay").addEventListener("click", function(event) {
+                                                // Check if the click is outside the overlay content
+                                                if (event.target === this) {
+                                                    // Hide the overlay if the click is outside
+                                                    this.style.display = "none";
+                                                }
+                                            });
+                                        }
+                                    </script>
                                     <div class="account__personal-info">
                                         <h2 class="account__personal-heading">Vô hiệu hóa và khóa tài khoản</h2>
                                         <div class="account__personal-body">
@@ -428,21 +442,7 @@
         </div>
 
     </section>
-    <script>
-        function disableAccount() {
-            // Show the overlay when the button is clicked
-            document.getElementById("overlay").style.display = "flex";
-
-            // Add a click event listener to the overlay
-            document.getElementById("overlay").addEventListener("click", function(event) {
-                // Check if the click is outside the overlay content
-                if (event.target === this) {
-                    // Hide the overlay if the click is outside
-                    this.style.display = "none";
-                }
-            });
-        }
-    </script>
+    
 </body>
 
 </html>

@@ -235,11 +235,12 @@
     display: flex;
     align-items: center;
     flex: 1;
-    background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+    /* background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2)); */
     padding: 16px;
     margin: 8px 0;
     border-radius: 10px;
     position: relative;
+    border: 1px solid #ccc;
 }
 
 .order__avatar {
@@ -271,7 +272,7 @@
 }
 
 .order__name {
-    color: #fff;
+    color: #000000;
     font-size: 1.8rem;
     font-weight: 700;
     display: block;
@@ -280,21 +281,21 @@
 
 .order__text {
     font-size: 1.4rem;
-    color: #fff;
+    color: #000000;
     display: block;
     margin-bottom: 8px;
 }
 
 .order__text-icon {
     font-size: 1.4rem;
-    color: #fff;
+    color: #000000;
     margin-right: 4px;
     width: 14px;
     text-align: center;
 }
 
 .order__title {
-    color: #fff;
+    color: #000000;
     font-size: 1.6rem;
     display: block;
     margin-bottom: 12px;
@@ -307,7 +308,7 @@
 }
 
 .order__detail {
-    color: #fff;
+    color: #000000;
     font-size: 1.2rem;
     font-style: italic;
     text-decoration: none;

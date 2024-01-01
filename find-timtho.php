@@ -43,6 +43,7 @@
                         <div class="col l-3 m-4 c-0">
                             <div class="filter">
                                 <h3 class="filter__heading">
+                                    <i class="filter__heading-icon fa-solid fa-filter"></i>
                                     Lọc
                                 </h3>
                                 <div class="filter__list">

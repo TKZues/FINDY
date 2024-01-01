@@ -179,7 +179,7 @@ echo "ID của Thợ: " . $hoTen;
                                             <input type="text" name="mathongtintho_thuchientt" id="" value="<?php echo $mathongtintho ?>">
                                             <input type="text" name="ma_posttimtho_thuchientt" id="" value="<?php echo $mathanhtoancoctt  ?>">
                                         </div>
-                                        <button class="btn btn--primary payment-methods-btn" >Thanh toán cọc</button>
+                                        <button class="btn btn--primary payment-methods-btn" >Thanh toán</button>
                                     </form>
                                     
                                     <img id="myImg" width="300px" src="" alt="">

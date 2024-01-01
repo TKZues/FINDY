@@ -4,24 +4,6 @@
     <div class="footer">
         <div class="grid wide">
             <div class="footer_container row">
-                <!-- <div class="footer_logo col c-2 m-2 l-2">
-                        <div class="footer_logo-logo">
-                            <img src="./img/findy-logo-ngang.png" alt="">
-                            FINDY
-                        </div>
-                        <div class="footer_logo-english">
-                            <i class="fa-solid fa-earth-asia"></i>
-                            <a href="">VietNam</a>/ <a href="">Tiếng Việt</a>
-                        </div>
-                        <div class="footer_logo-help">
-                            <i class="fa-solid fa-circle-question"></i>
-                            Giúp đỡ & Hỗ trợ
-                        </div>
-                        <div class="footer_logo-accessibility">
-                            <i class="fa-solid fa-universal-access"></i>
-                            Trợ năng
-                        </div>
-                    </div> -->
                 <div class="footer_findy col c-3 m-3 l-2-4">
                     <h1>Findy</h1>
                     <ul>
@@ -127,27 +109,12 @@
     </div>
 
 </section>
-<!-- <script src="https://maps.app.goo.gl/3ooNCCMS91rFeVE88" async defer></script>
-    <script>
-        let map;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
-                
-            });
-            console.log(zoom);
-        }
-    </script> -->
 
 <div class="choice_service">
     <div class="choice_service_container">
         <h3 class="choice_service_container-heading">Bạn là thợ hay người thuê?</h3>
         <div class="choice_service_content">
             <div class="choice_service_content_container">
-                <!-- <button onclick="showRegisterForm()">Muốn làm người thuê</button>
-                <button onclick="showRegisterForm2()">Muốn làm thợ</button> -->
                 <div class="choice_service_content-btn" onclick="showRegisterForm2()">
                     <img src="/img/lam-tho.png" alt="Muốn làm thợ" class="choice_service_content-img">
                     <div class="choice_service_content-text">Muốn làm thợ</div>

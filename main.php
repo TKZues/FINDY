@@ -599,7 +599,7 @@
     <div class="post-container">
         <div class="grid wide">
             <div class="content">
-                <div class="post">
+                <div class="vieclam">
                     <div class="heading">Việc làm tốt mọi nơi</div>
                     <div class="row">
                         <div class="col l-4 m-6 c-12">
