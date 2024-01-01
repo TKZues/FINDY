@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
     $mathongtintho = "";
    // You may set a default image path or leave it empty
    $hinhanhtho = "avatar.jpg";
-    $hoTen = "";
+  
     $diachi = "";
     $ngaysinh = "";
     $socccd = "";
@@ -94,15 +94,13 @@ echo "ID của Thợ: " . $mathongtintho;
 
     // Lấy thông tin người dùng từ session
     $id = $_SESSION['id'];
-    $username = $_SESSION['username'];
+    $hoTen = $_SESSION['hoTen'];
 
     // Hiển thị thông tin người dùng
 
     ?>
 
-    <?php
-    include "headerphoto1.php";
-    ?>
+   
 
     <!-- <section>
         <div class="manageroder">

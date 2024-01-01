@@ -225,6 +225,7 @@ echo "ID của Thợ: " . $hoTen;
                                     <div class="managerrequest_content-items--button c-2 m-2 l-2">
                                         <button type="button"><a href="./acceptorder.php?&tenposttimtho=<?php echo $result['tenposttimtho']; ?>&hoTenthue=<?php echo $result['hoTen']; ?>&diachi=<?php echo $result['diachi']; ?>&ma_posttructiep=<?php echo $result['ma_posttructiep'] ?>&thoigian=<?php echo $result['thoigian']; ?>&phongcach=<?php echo $result['phongcach']; ?>&gia=<?php echo $result['gia']; ?>&motachitiet=<?php echo $result['motachitiet']; ?>">Chấp nhận</a></button>
                                         <button type="button"><a href="">Từ chối</a></button>
+                                        <button type="button"><a href="">Trả giá</a></button>
                                     </div>
                                 </div>
                         </div>

@@ -22,6 +22,8 @@
     $id_tho = $_SESSION['id_tho'];
     $hoTen = $_SESSION['hoTen'];
     $gmail = $_SESSION['gmail'];
+
+    echo "ID của Thợ: " . $hoTen;
     // Kết nối đến cơ sở dữ liệu (sử dụng thông tin kết nối của bạn)
     include "db_connection.php";
 
@@ -35,7 +37,7 @@
         while ($row = $result->fetch_assoc()) {
             // Lấy thông tin từ cột cần thiết
             $mathongtintho = $row['mathongtintho'];
-
+            $hoTen = $row['hoTen'];
             $hinhanhtho = $row['hinhanhtho'];
             $diachi = $row['diachi'];
             $ngaysinh = $row['ngaysinh'];
@@ -47,7 +49,7 @@
         $mathongtintho = "";
         // You may set a default image path or leave it empty
         $hinhanhtho = "avatar.jpg";
-        $hoTen = "";
+       
         $diachi = "";
         $ngaysinh = "";
         $socccd = "";
@@ -62,7 +64,7 @@
     $conn->close();
     // Lấy thông tin người dùng từ session
     // echo "ID của Thợ: " . $id_tho;
-    // echo "ID của Thợ: " . $hoTen;
+   
     // echo "ID của Thợ: " . $hinhanhtho;
     // echo "ID của Thợ: " . $diachi;
     // echo "ID của Thợ: " . $ngaysinh;

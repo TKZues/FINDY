@@ -196,6 +196,8 @@ echo "ID của Thợ: " . $hoTen;
                                                             <!-- Add hidden input for maquanlybaidang -->
                                                             <input type="hidden" name="maquanlybaidang" value="<?php echo $maquanlybaidang ?>">
                                                             <button type="submit" name="reject" class="btn btn--primary candidate__control-btn">Từ chối</button>
+                                                            <button type="submit"  class="btn btn--primary candidate__control-btn">Trả giá</button>
+
                                                         </form>
 
                                                 </div>
