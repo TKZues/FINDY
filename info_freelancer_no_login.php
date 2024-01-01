@@ -74,7 +74,7 @@
     ?>
     <div class="main">
         <?php
-        include "headercustomer.php";
+        include "header.php";
         ?>
 
         <div class="container">
@@ -185,7 +185,7 @@
                                                     </a>
                                                     <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
                                                 </div>
-                                                <div class='interaction'>
+                                                <div>
                                                     <span class='like-count'> $likes </span>
                                                     <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
                                                 </div>

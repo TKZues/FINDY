@@ -933,7 +933,7 @@
   }
 
 
-  .grid-container {
+.grid-container {
     background-color: transparent;
     display: grid;
     gap:20px;

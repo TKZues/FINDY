@@ -92,6 +92,7 @@
             </form>
         </div>
     </div>
+    <div class='dim' onclick='closePopup()'></div>
     <div id="confirmDialog">
         <h2>Chưa lưu thay đổi</h2>
         <p>Những thay đổi của bạn sẽ mất nếu bạn thoát trang<br>

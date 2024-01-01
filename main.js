@@ -222,11 +222,13 @@ function browseFiles() {
 function confirmCancel() {
     const confirmDialog = document.getElementById('confirmDialog');
     confirmDialog.style.display = 'flex';
+    document.querySelector('.dim').classList.add('active');
 }
 
 function closeConfirmDialog() {
     const confirmDialog = document.getElementById('confirmDialog');
     confirmDialog.style.display = 'none';
+    document.querySelector('.dim').classList.remove('active');
 }
 
 function cancelUpload() {
@@ -276,4 +278,5 @@ function openPopup() {
 function closePopup() {
     document.getElementById('popup').classList.remove('active');
     document.querySelector('.dim').classList.remove('active');
+    closeConfirmDialog();
 }

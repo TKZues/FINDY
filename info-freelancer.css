@@ -526,10 +526,10 @@
 
  /* ---------------- */
  .grid-container {
+    background-color: transparent;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 20px 20px 20px;  
+    gap:20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     box-sizing: border-box;
 }
 
@@ -544,12 +544,89 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 230px;
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
     display: block;
     border-bottom: 1px solid #e0e0e0;
 }
+a.darken {
+    display: inline-block;
+    background: black;
+    border-radius: 8px;
+    padding: 0;
+    position: relative;
+}
 
+a.darken img {
+    display: block;
+    object-fit: cover;
+
+    -webkit-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+}
+a.darken:hover .overlay {
+    opacity: 1; /* Hiển thị văn bản khi di chuột vào */
+    cursor: pointer;
+}
+a.darken:hover img {
+    opacity: 0.7;
+
+}
+body{
+    background-color: #fff;
+}
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.popup-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    position: fixed;
+    transform: translate( -50%);
+    bottom: 0%;
+    left: 50%;
+    background-color: white;
+    padding: 70px 30px 30px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.495);
+    z-index: 998; 
+    display: none;
+}
+
+/* Hiển thị popup và overlay khi cần thiết */
+.popup-container.active,
+.dim.active {
+    display: flex;
+}
 .grid-item .content {
     padding: 16px;
 }
@@ -565,15 +642,309 @@
     font-size: 14px;
     color: #666666;
 }
+.post-title{
+    display: none;
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    left: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2; /* Đặt tiêu đề lên trên lớp mờ */    
+}
 
 .post-meta {
     display: flex;
+    width: 270px;
+    align-items: center;
+    padding: 12px 0 20px 0;
+}
+.user-info{
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.interaction{
+    width: 30%;
+    display: flex;
     justify-content: flex-end;
+    gap:5px;
+    align-items: center;
+}
+#avatar{
+    float: left;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.user-name{
+    float: left;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--text-color);
+}
+.like-count, .comment-count {
+    font-size: 14px;
+    color: #666666;
+}
 
+.add-post-btn {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.interaction-btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: #9e9ea7;
+    border: none;
+    padding-left: 5px;
+    margin-right: 0;
+    
+}
+
+/* ------------- Responsive ------------- */
+
+/* ------------- Mobile ------------- */
+@media (max-width: 739px) {
+    .navbar__heading {
+        display: none;
+    }
+    
+    .navbar__mobile-bars {
+        display: block;
+    }
+
+    .freelancer-description,
+    .freelancer-title {
+        margin-left: 32px;
+    }
+
+    .freelancer-artwork {
+        margin-left: 16px;
+    }
+
+    .review-item {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .require-form__heading {
+        padding: 20px;
+    }
+
+    .require-form__header {
+        font-size: 2rem;
+    }
+}
+
+/* ------------- Table ------------- */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .navbar__heading {
+        display: none;
+    }
+    
+    .navbar__mobile-bars {
+        display: block;
+    }
+    
+    .content {
+        margin: 0 16px;
+    }
+
+    .review-item {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .contact-info__info {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .personal-info__rating {
+        display: block;
+    }
+
+    .contact-info {
+        margin: 8px;
+    }
+
+    .contact-info__info {
+        font-size: 1.3rem;
+    }
+
+    .personal-info__name {
+        font-size: 1.8rem;
+    }
+
+    .artwork-collection__info {
+        display: block;
+    }
+}
+.grid-container {
+    background-color: transparent;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    box-sizing: border-box;
+}
+
+.grid-item {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+a.darken {
+    display: inline-block;
+    background: black;
+    border-radius: 8px;
+    padding: 0;
+    position: relative;
+}
+
+a.darken img {
+    display: block;
+    object-fit: cover;
+
+    -webkit-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+}
+a.darken:hover .overlay {
+    opacity: 1; /* Hiển thị văn bản khi di chuột vào */
+    cursor: pointer;
+}
+a.darken:hover img {
+    opacity: 0.7;
+
+}
+body{
+    background-color: #fff;
+}
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.popup-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    position: fixed;
+    transform: translate( -50%);
+    bottom: 0%;
+    left: 50%;
+    background-color: white;
+    padding: 70px 30px 30px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.495);
+    z-index: 998; 
+    display: none;
+}
+
+/* Hiển thị popup và overlay khi cần thiết */
+.popup-container.active,
+.dim.active {
+    display: flex;
+}
+.grid-item .content {
+    padding: 16px;
+}
+
+.grid-item h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+.post-title{
+    display: none;
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    left: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2; /* Đặt tiêu đề lên trên lớp mờ */    
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
     align-items: center;
     padding: 12px;
 }
-
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#avatar{
+    float: left;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.user-name{
+    float: left;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--text-color);
+}
 .like-count, .comment-count {
     font-size: 14px;
     color: #666666;
@@ -799,118 +1170,4 @@
     border:solid 1px #9e9ea7;
     border-radius: 20px;
     cursor: pointer;
-}
-
-.grid-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.grid-item-img {
-    width: 100%;
-    height: auto;
-    transition: filter 0.3s;
-}
-
-.grid-item:hover .grid-item-img {
-    filter: grayscale(80%);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(192, 192, 192, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.grid-item:hover .overlay {
-    display: flex;
-}
-
-/* ------------- Responsive ------------- */
-
-/* ------------- Mobile ------------- */
-@media (max-width: 739px) {
-    .navbar__heading {
-        display: none;
-    }
-    
-    .navbar__mobile-bars {
-        display: block;
-    }
-
-    .freelancer-description,
-    .freelancer-title {
-        margin-left: 32px;
-    }
-
-    .freelancer-artwork {
-        margin-left: 16px;
-    }
-
-    .review-item {
-        height: auto;
-        min-height: 150px;
-    }
-
-    .require-form__heading {
-        padding: 20px;
-    }
-
-    .require-form__header {
-        font-size: 2rem;
-    }
-}
-
-/* ------------- Table ------------- */
-@media (min-width: 740px) and (max-width: 1023px) {
-    .navbar__heading {
-        display: none;
-    }
-    
-    .navbar__mobile-bars {
-        display: block;
-    }
-    
-    .content {
-        margin: 0 16px;
-    }
-
-    .review-item {
-        height: auto;
-        min-height: 150px;
-    }
-
-    .contact-info__info {
-        font-size: 1.4rem;
-    }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1239px) {
-    .personal-info__rating {
-        display: block;
-    }
-
-    .contact-info {
-        margin: 8px;
-    }
-
-    .contact-info__info {
-        font-size: 1.3rem;
-    }
-
-    .personal-info__name {
-        font-size: 1.8rem;
-    }
-
-    .artwork-collection__info {
-        display: block;
-    }
 }

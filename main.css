@@ -689,15 +689,23 @@ body{
 
 .post-meta {
     display: flex;
-    justify-content: space-between;
-    width: 250px;
+    width: 270px;
     align-items: center;
-    padding: 12px;
+    padding: 12px 0 20px 0;
 }
 .user-info{
+    width: 70%;
+    float: left;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+}
+.interaction{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    gap:5px;
+    align-items: center;
 }
 #avatar{
     float: left;
@@ -712,6 +720,7 @@ body{
     font-weight: 550;
     color: var(--text-color);
 }
+
 .like-count, .comment-count {
     font-size: 14px;
     color: #666666;

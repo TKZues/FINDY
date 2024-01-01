@@ -66,28 +66,29 @@
                     </form>
                 </div>
                 <div class="grid-container" id="gridContainer">
-                <?php
-                include "connect.php";
-                $connect = new connect;
-                $select_post = $connect->select_post();
-                $count_post = $connect->count_post();
-                if ($select_post->num_rows > 0) {
-                    while ($row = mysqli_fetch_assoc($select_post)) {
-                        $noidung = $row["content"];
-                        $postid = $row["post_id"];
-                        $nguoidang = $row["hoTen"];
-                        $hinhanhtho = $row["hinhanhtho"];
-                        $likes = $row["likes"];
-                        $hinhanh = $row["image"];
-                        $posttitle = $row["post_title"];
-                        // $ten = urlencode($row['ten']);
-                        // $nghenghiep = urlencode($row['nghenghiep']);
-                        // $gioithieu = urlencode($row['gioithieu']);
-                        // $sdt = urlencode($row['sdt']);
-                        // $email = urlencode($row['email']);
-                        // $diachi = urlencode($row['diachi']);
-                        echo
-                        "<div class='grid-item'>
+                    <?php
+                    include "connect.php";
+                    $connect = new connect;
+                    $select_post = $connect->select_post();
+                    $count_post = $connect->count_post();
+                    if ($select_post->num_rows > 0) {
+                        while ($row = mysqli_fetch_assoc($select_post)) {
+                            $noidung = $row["content"];
+                            $postid = $row["post_id"];
+                            $nguoidang = $row["ten"];
+                            $hinhanhtho = $row["hinhanhtho"];
+                            $likes = $row["likes"];
+                            $hinhanh = $row["image"];
+                            $posttitle = $row["post_title"];
+                            $ten = urlencode($row['ten']);
+                            $nghenghiep = urlencode($row['nghenghiep']);
+                            $gioithieu = urlencode($row['gioithieu']);
+                            $sdt = urlencode($row['sdt']);
+                            $email = urlencode($row['email']);
+                            $diachi = urlencode($row['diachi']);
+                            $id_tho = urlencode($row['user_id']);
+                            echo
+                            "<div class='grid-item'>
                         <div class='dim' onclick='closePopup()'></div>
                         <div class='popup-container' id='popup'>
                         </div>
@@ -98,23 +99,23 @@
                             <div class='post-title'> $posttitle </div>
                             <div class='post-meta'>
                                 <div class='user-info'>
-                                    <a href='info-freelancer.php?name=ten&job=nghenghiep&rating=4.9&reviews=gioithieu&sdt=sdt&email=email&address=diachi'>
+                                    <a style='padding-right:10px' href='info_freelancer_no_login.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
                                         <img id='avatar' src='./img/$hinhanhtho'>
                                     </a>
-                                    <a><span class='user-name'> $nguoidang </span></a>
+                                    <a class='user-name' href='info_freelancer_no_login.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
                                 </div>
-                                <div>
+                                <div class = 'interaction'>
                                     <span class='like-count'> $likes </span>
                                     <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
                                 </div>
                             </div>
                     </div>";
+                        }
+                    } else {
+                        echo "<div></div>";
                     }
-                } else {
-                    echo "<div></div>";
-                }
 
-                ?>
+                    ?>
                 </div>
             </div>
         </div>
