@@ -1063,15 +1063,16 @@ body{
 
 .post-meta {
     display: flex;
-    justify-content: space-between;
     width: 250px;
     align-items: center;
-    padding: 12px;
+    padding: 12px 0 20px 0;
 }
-.user-info{
+.interaction{
+    width: 100%;
     display: flex;
+    justify-content: flex-end;
+    gap:5px;
     align-items: center;
-    gap: 20px;
 }
 #avatar{
     float: left;

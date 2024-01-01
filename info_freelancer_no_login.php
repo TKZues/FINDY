@@ -180,12 +180,12 @@
                                             <div class='post-title'> $posttitle </div>
                                             <div class='post-meta'>
                                                 <div class='user-info'>
-                                                    <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
+                                                    <a style='padding-right:10px' href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
                                                         <img id='avatar' src='./img/$hinhanhtho'>
                                                     </a>
                                                     <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
                                                 </div>
-                                                <div>
+                                                <div class='interaction'>
                                                     <span class='like-count'> $likes </span>
                                                     <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
                                                 </div>

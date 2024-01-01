@@ -920,18 +920,8 @@ body{
     z-index: 2; /* Đặt tiêu đề lên trên lớp mờ */    
 }
 
-.post-meta {
-    display: flex;
-    justify-content: space-between;
-    width: 250px;
-    align-items: center;
-    padding: 12px;
-}
-.user-info{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+
+
 #avatar{
     float: left;
     width: 25px;
@@ -939,12 +929,7 @@ body{
     overflow: hidden;
     border-radius: 50%;
 }
-.user-name{
-    float: left;
-    font-size: 14px;
-    font-weight: 550;
-    color: var(--text-color);
-}
+
 .like-count, .comment-count {
     font-size: 14px;
     color: #666666;
