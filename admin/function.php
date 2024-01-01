@@ -76,6 +76,12 @@ class connect
         $result = $this->db->select($query);
         return $result;
     }
+    public function select_phanhoitunguoidung()
+    {
+        $query = "SELECT * FROM phanhoitunguoidung";
+        $result = $this->db->select($query);
+        return $result;
+    }
     public function delete_thongtindanhgia()
     {
         $madanhgia = $_POST['madanhgia'];
