@@ -186,7 +186,8 @@ class connect
 
     public function select_profile()
     {
-        $query = "SELECT *FROM profile";
+        $query = "SELECT *FROM profile
+        inner join thongtintho on thongtintho.mathongtintho = profile.mathongtintho";
         $result = $this->db->select($query);
         return $result;
     }

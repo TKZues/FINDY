@@ -240,7 +240,7 @@
                                                         <div class="freelancer-item__personal-info">
                                                             <div class="freelancer-item__avatar">
                                                                 <!-- <img src="./img/avatar-1.png" alt="Ảnh đại diện" class="freelancer-item__avatar-img"> -->
-                                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/avatar-1.png);"></div>
+                                                                <div class="freelancer-item__avatar-img" style="background-image: url(./img/<?php echo $result['hinhanhtho'] ?>);"></div>
                                                                 <p class="freelancer-item__avatar-text">Uy tín: 100</p>
 
                                                             </div>

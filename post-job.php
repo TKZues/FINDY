@@ -37,7 +37,7 @@
             // Lấy thông tin từ cột cần thiết
             $mathongtinthue = $row['mathongtinthue'];
             $hinhanhthue = $row['hinhanhthue'];
-            $ten = $row['ten'];
+           
             $diachi = $row['diachi'];
             $ngaysinh = $row['ngaysinh'];
             $cccd = $row['cccd'];
@@ -48,7 +48,7 @@
     } else {
         $mathongtinthue = "";
         $hinhanhthue = ""; // You may set a default image path or leave it empty
-        $ten = "";
+       
         $diachi = "";
         $ngaysinh = "";
         $cccd = "";
@@ -57,13 +57,13 @@
         $sdt = "";
 
         // Thông báo không tìm thấy thông tin
-        echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+        // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
     }
 
-    echo "ID của Thợ: " . $id_thue;
-    echo "ID của Thợ: " . $hoTen;
-    echo "Ima thong tin Thợ: " . $mathongtinthue;
-    echo "ID của Thợ: " . $diachi;
+    // echo "ID của Thợ: " . $id_thue;
+    // echo "ID của Thợ: " . $hoTen;
+    // echo "Ima thong tin Thợ: " . $mathongtinthue;
+    // echo "ID của Thợ: " . $diachi;
 
     // Đóng kết nối
     $conn->close();
