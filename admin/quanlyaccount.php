@@ -127,12 +127,19 @@
                                         <i class="fa-solid fa-chevron-right"></i>
                                     </div>
                                 </a>
+                                <a href="qly_phanhoinguoithue.php" target="loadpage">
+                                    <div class="home">
+                                    <i class="fa-solid fa-comment-medical"></i>
+                                        Quản lý thông tin phản hồi
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="manager_right c-10 m-10 l-10">
                         <article>
-                            <iframe name="loadpage" src="./qly_thongtindanhgia.php" width="100%" height="1000px" frameborder="0"></iframe>
+                            <iframe name="loadpage" src="./qly_phanhoinguoithue.php" width="100%" height="1000px" frameborder="0"></iframe>
                         </article>
                     </div>
                 </div>

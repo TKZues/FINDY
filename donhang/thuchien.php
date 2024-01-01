@@ -73,7 +73,7 @@
                                         
                                     </div>
                                     <div class="manageroder_content-items--button col c-2 m-2 l-2">
-                                        <a  href="../deposit-payment.php?name=<?php echo urlencode($tentho); ?>&diadiem=<?php echo urlencode($diadiem); ?>&thoigian=<?php echo urlencode($thoigian); ?>&diachi=<?php echo urlencode($sukien); ?>&gia=<?php echo urlencode($gia); ?>" target = "_blank" ><button type="button">Đang thực hiện</button></a>
+                                        <a  href="#"  ><button type="button">Đang thực hiện</button></a>
                                         
                                     </div>
                                 </div>

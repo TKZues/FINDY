@@ -315,6 +315,7 @@
             $query = "INSERT INTO thuchien (ma_posttimtho, mathongtintho) 
             VALUES ('$maposttimtho','$mathongtintho')";
             $result = $this->db->insert($query);
+           
             return $result;
 
            
@@ -651,12 +652,13 @@
              $result = $this->db->insert($query);
              return $result;
         }
-        public function select_thuethichbaiprofile($mathongtintho){
-            $query = "SELECT *from thongtindanhgia
-            inner join thongtinthue on thongtinthue.mathongtinthue = thongtindanhgia.mathongtinthue
-            inner join thongtintho on thongtintho.mathongtintho = thongtindanhgia.mathongtintho
+        public function select_thuethichbaiprofile($mathongtinthue){
+            $query = "SELECT *from thuethichbaiprofile
+            inner join thongtinthue on thongtinthue.mathongtinthue = thuethichbaiprofile.mathongtinthue
+            inner join profile on profile.ma_profile = thuethichbaiprofile.ma_profile
+            inner join thongtintho on thongtintho.mathongtintho = profile.mathongtintho
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
-            where thongtintho.mathongtintho = $mathongtintho;";
+            where thongtinthue.mathongtinthue = $mathongtinthue;";
             $result = $this->db->select($query);
             return $result;
         }
