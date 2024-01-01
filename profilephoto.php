@@ -7,7 +7,8 @@
     <title>FINDY - Kết nối dễ dàng</title>
     <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
-
+    <script src="./anhphoto.js"></script>
+    <script src="./main.js"></script>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./profilephoto.css">
     <link rel="stylesheet" href="./mainicon.css">
@@ -600,8 +601,6 @@
             </form>
         </div>
     </div>
-    <script src="./anhphoto.js"></script>
-    <script src="./main.js"></script>
 </body>
 
 </html>

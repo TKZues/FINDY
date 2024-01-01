@@ -6,6 +6,7 @@
     <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Findy</title>
+    <script src="./main.js"></script>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./info-freelancer.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
@@ -170,27 +171,28 @@
                                             $id_tho = urlencode($row['user_id']);
                                             echo
                                             "<div class='grid-item'>
-                                        <div class='dim' onclick='closePopup()'></div>
-                                        <div class='popup-container' id='popup'>
-                                        </div>
-                                        <a class='darken' onclick='openPopup()' data-id=$postid>
-                                            <img src='./img/$hinhanh' alt='Post Image'>
-                                            <div class='overlay'>$posttitle</div>
-                                        <a />
-                                            <div class='post-title'> $posttitle </div>
-                                            <div class='post-meta'>
-                                                <div class='user-info'>
-                                                    <a style='padding-right:10px' href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
-                                                        <img id='avatar' src='./img/$hinhanhtho'>
-                                                    </a>
-                                                    <a href='info-freelancer.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'><span class='user-name'> $nguoidang </span></a>
+                                                <div class='dim' onclick='closePopup()'></div>
+                                                <div class='popup-container' id='popup'></div>
+                                                <a class='darken' onclick='openPopup()' data-id=$postid>
+                                                    <img src='./img/$hinhanh' alt='Post Image'>
+                                                    <div class='overlay'>$posttitle</div>
+                                                <a />
+                                                <div class='post-title'> $posttitle </div>
+                                                <div class='post-meta'>
+                                                    <div class='user-info'>
+                                                        <a style='padding-right:10px' href='info_freelancer_no_login.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
+                                                            <img id='avatar' src='./img/$hinhanhtho'>
+                                                        </a>
+                                                        <a href='info_freelancer_no_login.php?name=$ten&job=$nghenghiep&rating=4.9&reviews=$gioithieu&sdt=$sdt&email=$email&address=$diachi&idtho=$id_tho'>
+                                                            <span class='user-name'> $nguoidang </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class='interaction'>
+                                                            <span class='like-count'> $likes </span>
+                                                            <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
+                                                    </div>
                                                 </div>
-                                                <div class='interaction'>
-                                                    <span class='like-count'> $likes </span>
-                                                    <button class='interaction-btn' onclick='likePost(this)'><i class='far fa-heart'></i></button>
-                                                </div>
-                                            </div>
-                                    </div>";
+                                            </div>";
                                         }
                                     } else {
                                         echo "<div></div>";
