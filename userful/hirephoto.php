@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css">
 
     <style>
-        .navbar__heading-warp > .navbar__heading:nth-child(1) > .navbar__heading-link {
+        .navbar__heading-warp>.navbar__heading:nth-child(1)>.navbar__heading-link {
             color: var(--main-color);
         }
     </style>
@@ -67,7 +67,8 @@
                     <div class="col l-3 m-4 c-0">
                         <div class="filter">
                             <h3 class="filter__heading">
-                                Lọc theo
+                                <i class="filter__heading-icon fa-solid fa-filter"></i>
+                                Lọc
                             </h3>
                             <div class="filter__list">
                                 <div class="filter__item-warp">
@@ -207,12 +208,6 @@
 
                     <div class="col l-9 m-8 c-12">
                         <div class="jobbest_container">
-                            <!-- <div class="jobbest-header">
-                                <div class="jobbest-header--bottom_filter">
-                                    <input type="text" name="" id="" placeholder="Lọc theo">
-                                </div>
-                            </div> -->
-
                             <?php
                             include "../connect.php"
                             ?>
@@ -235,9 +230,9 @@
                                             $_SESSION['anhmau'] = $result['anhmau'];
                                             $_SESSION['motachitiet'] = $result['motachitiet'];
                                     ?>
-                                        <div class="col c-12 m-6 l-6">
-                                            <a href="./photoclick.php" class="jobbest_item-warp">
-                                                <div class="jobbest_item">
+                                            <div class="col c-12 m-6 l-6">
+                                                <a href="./photoclick.php" class="jobbest_item-warp">
+                                                    <div class="jobbest_item">
                                                         <!-- <div class="jobbest-list-top--left col c-2 m-2 l-2">
                                                             <img src="<?php echo $imguserphoto_up ?>" alt="">
                                                         </div> -->
@@ -251,20 +246,9 @@
                                                         <div class="jobbest_favourite">
                                                             <i class="jobbest_favourite-icon fa-regular fa-heart"></i>
                                                         </div>
-                                                    <!-- <div class="jobbest-list-bottom">
-                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
-
-                                                        </div>
-                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
-
-                                                        </div>
-                                                        <div class="jobbest-list-bottom-item  c-3 m-3 l-3">
-
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                            </a>
-                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
                                     <?php
                                         }
                                     }
@@ -277,33 +261,7 @@
             </div>
     </section>
 
-    <section>
-        <div class="jobbest">
-            <div class="grid wide">
-
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="bannermid">
-            <div class="grid wide">
-                <div class="bannermid_container row">
-                    <div class="bannermid_items col c-4 m-4 l-4">
-                        <img src="./img/Việt Nam.jpg" alt="">
-                    </div>
-                    <div class="bannermid_items col c-4 m-4 l-4">
-                        <img src="./img/Colors of Hoi An, Vietnam.jpg" alt="">
-                    </div>
-                    <div class="bannermid_items col c-4 m-4 l-4">
-                        <img src="./img/download (4).jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
+    <!-- <section>
         <div class="jobinteresting">
             <div class="grid wide">
                 <div class="jobinteresting_container row">
@@ -404,8 +362,8 @@
                     </div>
                 </div>
             </div>
-    </section>
-    <section>
+    </section> -->
+    <!-- <section>
         <div class="footer">
             <div class="grid wide">
                 <div class="footer_container row">
@@ -529,22 +487,9 @@
             </div>
         </div>
 
-    </section>
-    <!-- <script src="https://maps.app.goo.gl/3ooNCCMS91rFeVE88" async defer></script>
-    <script>
-        let map;
+    </section> -->
 
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
-                
-            });
-            console.log(zoom);
-        }
-    </script> -->
-
-    <div class="choice_service ">
+    <!-- <div class="choice_service ">
         <div class="choice_service_container">
             <div class="choice_service_content">
                 <div class="choice_service_content_container">
@@ -553,11 +498,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal__container">
-            <!-- Register form1 -->
             <?php
             include "../connect.php";
             ?>
@@ -624,10 +568,6 @@
                 </div>
 
                 <div class="account_form__footer">
-                    <!-- <p class="account_form__separate">
-                        <span class="account_form__separate-text">Bạn đã có tài khoản Findy?</span>
-                    </p>
-                    <button class="btn account_form__footer-btn">Đăng nhập</button> -->
 
                     <p class="account_form__text">
                         Bạn đã có tài khoản Findy?
@@ -635,7 +575,6 @@
                     </p>
                 </div>
             </form>
-            <!-- thợ -->
             <?php
             $connect = new connect;
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -699,10 +638,6 @@
                 </div>
 
                 <div class="account_form__footer">
-                    <!-- <p class="account_form__separate">
-                        <span class="account_form__separate-text">Bạn đã có tài khoản Findy?</span>
-                    </p>
-                    <button class="btn account_form__footer-btn">Đăng nhập</button> -->
 
                     <p class="account_form__text">
                         Bạn đã có tài khoản Findy?
@@ -710,7 +645,6 @@
                     </p>
                 </div>
             </form>
-            <!-- Login form -->
 
             <form class="account_form hidden" id="login-form" method="POST" action="login_process.php">
                 <div class="account_form__container">
@@ -756,10 +690,6 @@
                 </div>
 
                 <div class="account_form__footer">
-                    <!-- <p class="account_form__separate">
-                        <span class="account_form__separate-text">Bạn đã có tài khoản Findy?</span>
-                    </p>
-                    <button class="btn account_form__footer-btn">Đăng nhập</button> -->
 
                     <p class="account_form__text">
                         Bạn đã có tài khoản Findy?
@@ -768,10 +698,16 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
-    <script src="../main.js"></script>
-    <script src="../video.js"></script>
+    <!-- <script src="../main.js"></script>
+    <script src="../video.js"></script> -->
+
+    <script src="../find-timtho.js"></script>
+
+    <?php
+    include "../footer.php"
+    ?>
 
 </body>
 

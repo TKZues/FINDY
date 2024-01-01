@@ -8,30 +8,40 @@
 }
 
 /* ------------- Filter ------------- */
+.find-timtho-container {
+    margin-top: var(--top-header-height);
+    background-color: var(--background-color);
+}
+
+.find-timtho-content {
+    padding-top: 36px;
+}
+
 .filter {
     background-color: #fff;
     border-radius: 10px;
 }
 
 .filter__heading {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     padding: 12px 16px;
-    line-height: 1.6;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 6px;
+    text-align: center;
 }
 
 .filter__heading-icon {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-right: 8px;
 }
 
 .filter__list {
-    padding-top: 12px;
-    display: flex;
+    padding-bottom: 12px;
+    margin: 0 10px;
 }
 
 .filter__item-warp {
-    margin: 8px;
-    flex: 1;
+    margin: 16px;
 }
 
 .filter__item {
@@ -45,7 +55,6 @@
     overflow: hidden;
     position: relative;
     user-select: none;
-    margin-bottom: 16px;
 }
 
 .filter__item:hover {
@@ -65,6 +74,7 @@
 
 .selected {
     border: 1px solid var(--main-color);
+    font-weight: 700;
     color: var(--main-color);
 }
 
@@ -72,12 +82,8 @@
     color: var(--main-color);
 }
 
-.filter__menu-warp {
-    background-color: #fff;
-}
-
 .filter__menu {
-    padding-left: 8px;
+    padding: 16px 16px 0;
 }
 
 .filter__menu-item {
@@ -86,18 +92,8 @@
     align-items: center;
 }
 
-.filter__menu-name {
-    font-size: 1.4rem;
-    color: var(--text-color);
-}
-
-.filter__menu-name:hover {
-    color: var(--main-color);
-    cursor: pointer;
-}
-
 .filter__price-input {
-    width: 70px;
+    width: 80px;
     height: 30px;
     margin-left: 8px;
 }
@@ -108,13 +104,20 @@
     outline: none;
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    font-size: 1.4rem;
-    color: var(--text-color);
+}
+
+.filter__menu-name:hover {
+    color: var(--main-color);
     cursor: pointer;
 }
 
-.filter__menu-item .star-rating {
+.filter__menu-name {
     font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.filter__menu-item .star-rating {
+    font-size: 1.6rem;
     padding: 0;
     cursor: pointer;
 }
@@ -124,12 +127,12 @@
     height: 30px;
     margin-top: 16px;
     margin-left: 8px;
-    border-radius: 5px;
+    border-radius: 0;
 }
 
 /* ------------- Freelancer list ------------- */
 .freelancer {
-    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .freelancer-item {
