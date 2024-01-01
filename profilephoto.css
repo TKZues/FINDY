@@ -750,10 +750,6 @@
 .insert{
     margin-top: var(--top-header-height);
 }
-.insert-profile{
-    /* background-color: #ebebeb; */
-   
-}
 #preview-container {
     width: 100px;
     height: 100px;
@@ -938,27 +934,107 @@
 
 
   .grid-container {
+    background-color: transparent;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 20px 20px 20px;  
+    gap:20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     box-sizing: border-box;
 }
 
 .grid-item {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-item img {
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.grid-item img {
-    width: 100%;
-    height: 230px;
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
     display: block;
     border-bottom: 1px solid #e0e0e0;
 }
+a.darken {
+    display: inline-block;
+    background: black;
+    border-radius: 8px;
+    padding: 0;
+    position: relative;
+}
 
+a.darken img {
+    display: block;
+    object-fit: cover;
+
+    -webkit-transition: all 0.1s linear;
+       -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+         -o-transition: all 0.1s linear;
+            transition: all 0.1s linear;
+}
+a.darken:hover .overlay {
+    opacity: 1; /* Hiển thị văn bản khi di chuột vào */
+    cursor: pointer;
+}
+a.darken:hover img {
+    opacity: 0.7;
+
+}
+body{
+    background-color: #fff;
+}
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.popup-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 95%;
+    position: fixed;
+    transform: translate( -50%);
+    bottom: 0%;
+    left: 50%;
+    background-color: white;
+    padding: 70px 30px 30px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.495);
+    z-index: 998; 
+    display: none;
+}
+
+/* Hiển thị popup và overlay khi cần thiết */
+.popup-container.active,
+.dim.active {
+    display: flex;
+}
 .grid-item .content {
     padding: 16px;
 }
@@ -974,15 +1050,42 @@
     font-size: 14px;
     color: #666666;
 }
+.post-title{
+    display: none;
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    left: 10px; /* Điều chỉnh vị trí của tiêu đề */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2; /* Đặt tiêu đề lên trên lớp mờ */    
+}
 
 .post-meta {
     display: flex;
-    justify-content: flex-end;
-
+    justify-content: space-between;
+    width: 250px;
     align-items: center;
     padding: 12px;
 }
-
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#avatar{
+    float: left;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.user-name{
+    float: left;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--text-color);
+}
 .like-count, .comment-count {
     font-size: 14px;
     color: #666666;
@@ -1118,6 +1221,9 @@
     border: none;
     font-size: 16px;
     border-bottom: solid 2px var(--main-color);
+}
+#fileInput{
+    display: none;
 }
 #dropArea_p{
     margin-top: 10px;
