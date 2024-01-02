@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./info-freelancer.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <style>
+        .grid-container {
+            display: block;
+        }
+
+        .freelancer1 {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +34,7 @@
     $email = $_GET['email'];
     $address = $_GET['address'];
     $ma_profile = $_GET['ma_profile'];
- 
+
 
     include "db_connection.php";
 
@@ -43,7 +52,6 @@
             $ngaysinh = $row['ngaysinh'];
             $cccd = $row['cccd'];
             $gioitinh = $row['gioitinh'];
-            
         }
     } else {
         $mathongtinthue = "";
@@ -52,7 +60,7 @@
         $ngaysinh = "";
         $cccd = "";
         $gioitinh = ""; // Set a default value or leave it empty
-       
+
 
         // Thông báo không tìm thấy thông tin
         // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
@@ -146,8 +154,12 @@
                                         <?php echo $reviews ?>
                                     </p>
                                 </div>
-                                <h4 class="freelancer-title">Tác phẩm của tôi</h4>
+                                <div class="" style="display: flex;">
+                                    <h4 style="padding: 4px; margin: 10px 5px; border-bottom: 3px solid var(--main-color);"  class="freelancer-title">Tác phẩm của tôi</h4>
+                                    <h4 style="padding: 4px; margin: 10px 5px; border-bottom: 3px solid var(--main-color);" class="freelancer-title">Gửi yêu cầu</h4>
+                                </div>
                                 <div class="grid-container">
+                                    <div class="row">
                                     <?php
                                     $connect = new connect;
                                     $query = "SELECT * FROM post, thongtintho, profile where thongtintho.id_tho = user_id and thongtintho.mathongtintho = profile.mathongtintho and ten <> '' and thongtintho.mathongtintho = $mathongtintho";
@@ -169,7 +181,7 @@
                                             $diachi = urlencode($row['diachi']);
                                             $id_tho = urlencode($row['user_id']);
                                             echo
-                                            "<div class='grid-item'>
+                                            "<div class='grid-item c-4 m-4 l-4'>
                                         <div class='dim' onclick='closePopup()'></div>
                                         <div class='popup-container' id='popup'>
                                         </div>
@@ -198,8 +210,202 @@
 
 
                                     ?>
+                                    </div>
                                 </div>
+                                <div class="freelancer1">
+                                    <div class="row">
 
+
+                                        <div class="col l-12 m-12 c-12">
+
+                                            <div class="freelancer-artwork">
+                                                <div class="row">
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h5 class="artwork-collection__name">Việt phục</h5>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-1-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-1-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-1-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-1-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">1.990.000 đ - 2.990.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 17 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h3 class="artwork-collection__name">Gia đình</h3>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-2-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-2-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-2-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-2-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">1.690.000 đ - 2.290.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 37 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h3 class="artwork-collection__name">Sinh nhật</h3>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-3-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-3-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-3-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-3-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">800.000 đ - 1.200.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 23 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h3 class="artwork-collection__name">Ngoại cảnh</h3>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-4-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-4-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-4-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-4-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">490.000 đ - 590.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 19 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h3 class="artwork-collection__name">Học đường</h3>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-5-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-5-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-5-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-5-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">150.000 đ - 290.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 09 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col l-4 m-12 c-12">
+                                                        <div class="artwork-collection">
+                                                            <h3 class="artwork-collection__name">Tết Tết Tết</h3>
+                                                            <div class="artwork-collection__list">
+                                                                <img src="./img/concept-6-1.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-6-2.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-6-3.png" alt="" class="artwork-collection__img">
+                                                                <img src="./img/concept-6-4.png" alt="" class="artwork-collection__img">
+                                                            </div>
+                                                            <p class="artwork-collection__price">1.000.000 đ - 1.500.000 đ</p>
+                                                            <div class="artwork-collection__info">
+                                                                <p class="artwork-collection__info-text">Đã thực hiện: 23 dự án</p>
+                                                                <div class="star-rating">
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                    <i class="star-rating--gold fa-solid fa-star"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="artwork-collection__control">
+                                                                <!-- <a href="#" class="btn artwork-collection__control-btn">Xem chi tiết</a> -->
+                                                                <button class="btn btn--primary artwork-collection__control-btn" onclick="showRequireForm()">Gửi yêu cầu</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <script>
+    // Function to toggle visibility of grid-container and freelancer1
+    function toggleView(view) {
+        if (view === 'grid-container') {
+            document.querySelector('.grid-container').style.display = 'block';
+            document.querySelector('.freelancer1').style.display = 'none';
+        } else if (view === 'freelancer1') {
+            document.querySelector('.grid-container').style.display = 'none';
+            document.querySelector('.freelancer1').style.display = 'block';
+        }
+    }
+
+    // Event listener for clicking on "Tác phẩm của tôi"
+    document.querySelector('.freelancer-title:first-child').addEventListener('click', function() {
+        toggleView('grid-container');
+    });
+
+    // Event listener for clicking on "Gửi yêu cầu"
+    document.querySelector('.freelancer-title:last-child').addEventListener('click', function() {
+        toggleView('freelancer1');
+    });
+</script>
                                 <!-- Hiển thị số trang -->
                                 <ul class="pagination">
                                     <li class="pagination-item">
