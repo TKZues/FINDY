@@ -21,7 +21,8 @@
                     <a href="/userful/jobsearch.php" class="navbar__heading-link">Tìm việc</a>
                 </div>
                 <div class="navbar__heading">
-                    <a href="/userful/create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a>
+                    <!-- <a href="/userful/create_profile.php" class="navbar__heading-link">Tạo hồ sơ</a> -->
+                    <a href="#" class="navbar__heading-link">Tạo hồ sơ</a>
                 </div>
                 <div class="navbar__heading">
                     <a href="#" class="navbar__heading-link">Blog</a>

@@ -93,7 +93,7 @@
                         <div class='popup-container' id='popup'>
                         </div>
                         <a class='darken' onclick='openPopup()' data-id=$postid>
-                            <img src='./img/$hinhanh' alt='Post Image'>
+                            <div class='post-img' style='background-image: url(./img/$hinhanh);'></div>
                             <div class='overlay'>$posttitle</div>
                         <a />
                             <div class='post-title'> $posttitle </div>
@@ -126,7 +126,7 @@
             <div class="row find-timtho-content">
                 <div class="freelancer">
                     <div class="heading">Photographer & Make-up Artist tốt nhất</div>
-                    <div class="row">
+                    <div class="row freelancer-container">
                         <div class="col l-3 m-4 c-12">
                             <div class="freelancer-item">
                                 <a href="info-freelancer.php" class="freelancer-item-warp">
@@ -602,10 +602,35 @@
             <div class="content">
                 <div class="vieclam">
                     <div class="heading">Việc làm tốt mọi nơi</div>
-                    <div class="row">
+                    <div class="row vieclam-container">
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
+                                <div class="vieclam-content">
+                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
+                                    <div class="post-content__author">
+                                        <span class="post-content__name">Thanh Khải</span>
+                                        <span class="post-content__time">
+                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
+                                            30 phút trước
+                                        </span>
+                                    </div>
+                                    <div class="post-content__description">
+                                        <span class="post-content__price">500.000 - 1.000.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
+                                    </div>
+                                </div>
+                                <div class="slide-show-artwork">
+                                    <div class="post-content__artwork-list">
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <a href="./photoclick.php" class="post-content-warp">
+                                <div class="vieclam-content">
                                     <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
                                     <div class="post-content__author">
                                         <span class="post-content__name">Thanh Khải</span>
@@ -637,7 +662,7 @@
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
+                                <div class="vieclam-content">
                                     <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
                                     <div class="post-content__author">
                                         <span class="post-content__name">Thanh Khải</span>
@@ -669,7 +694,7 @@
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
+                                <div class="vieclam-content">
                                     <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
                                     <div class="post-content__author">
                                         <span class="post-content__name">Thanh Khải</span>
@@ -701,7 +726,7 @@
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
+                                <div class="vieclam-content">
                                     <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
                                     <div class="post-content__author">
                                         <span class="post-content__name">Thanh Khải</span>
@@ -733,39 +758,7 @@
                         </div>
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
-                                    <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
-                                        <span class="post-content__time">
-                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
-                                        </span>
-                                    </div>
-                                    <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
-                                    </div>
-                                    <!-- <p class="post-content__text">
-                                        Chúng tôi đang tìm kiếm một nhiếp ảnh gia tài năng, đam mê và sáng tạo để ghi lại những khoảnh khắc quý giá trong cuộc sống gia đình chúng tôi.
-                                    </p>
-                                    <div class="post-content__details">
-                                        <a href="#" class="post-content__detail">Hồ Chí Minh</a>
-                                        <a href="#" class="post-content__detail">Chụp ảnh gia đình</a>
-                                    </div> -->
-                                </div>
-                                <div class="slide-show-artwork">
-                                    <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col l-4 m-6 c-12">
-                            <a href="./photoclick.php" class="post-content-warp">
-                                <div class="post-content">
+                                <div class="vieclam-content">
                                     <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
                                     <div class="post-content__author">
                                         <span class="post-content__name">Thanh Khải</span>

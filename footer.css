@@ -319,3 +319,27 @@
     color: var(--text-color);
     padding: 16px 0;
 }
+
+/* ------------- Responsive ------------- */
+
+/* Mobile: width < 740px  */
+@media (max-width: 739px) {
+    
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile & Tablet: width < 1024px */
+@media only screen and (max-width: 1023px) {
+    .footer_container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .footer_container > div {
+        margin-top: 16px;
+    }
+}
