@@ -726,5 +726,15 @@ class connect
         $result = $this->db->select($query);
         return $result;
     }
+
+    public function insert_post(){
+        $image = $_FILES['image']['name'];
+        $postTitle = $_POST['postTitle'];
+        $postContent = $_POST['postContent'];
+        $mathongtintho = $_POST['mathongtintho'];
+        $query = "INSERT INTO `post`( `user_id`, `image`, `post_title`, `content`) VALUES ('$mathongtintho','$image','$postTitle','$postContent')";
+        $result = $this->db->insert($query);
+        return $result;
+    }
 }
 ?>

@@ -227,7 +227,7 @@
                         <!-- <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5" style="width: 60%;"></textarea> -->
                         <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                         <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
-                        <button class="button_additional" type="submit" name="submit_danhgia">Báo cáo</button>
+                        <button class="button_additional" type="submit" >Báo cáo</button>
                     </form>
                 </div>
             </div>

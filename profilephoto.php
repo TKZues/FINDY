@@ -33,7 +33,7 @@
     // Lấy thông tin người dùng từ session
     $id_tho = $_SESSION['id_tho'];
     $hoTen = $_SESSION['hoTen'];
-
+    $gmail = $_SESSION['gmail'];
     // Hiển thị thông tin người dùng
 
     echo $id_tho;
@@ -108,7 +108,7 @@
                                 <div class="insert-profile-left">
                                     <div class="insert-profile-left-img">
                                         <!-- <img id="hinhAnh" src="./img/<?php echo $hinhanhtho ?>" alt="Hình ảnh của bạn" style="max-width: 200px;"> -->
-                                        <img id="hinhAnh" src="./img/avatar-13.png" alt="Hình ảnh của bạn" style="max-width: 200px;">
+                                        <img id="hinhAnh" src="./img/<?php echo $hinhanhtho ?>" alt="Hình ảnh của bạn" style="max-width: 200px;">
 
                                     </div>
                                     <div class="insert-profile-right-name">
@@ -119,15 +119,15 @@
                                     </div>
                                     <div class="insert-profile-left-mail">
                                         <i class="fa-solid fa-envelope"></i>
-                                        <input placeholder="Nhập mail" type="text" name="email" id="">
+                                        <input placeholder="Nhập mail" type="text" name="email" id="" value="<?php echo $gmail ?>">
                                     </div>
                                     <div class="insert-profile-left-phone">
                                         <i class="fa-solid fa-phone"></i>
-                                        <input placeholder="Nhập số điện thoại" type="text" name="phone" id="">
+                                        <input placeholder="Nhập số điện thoại" type="text" name="phone" id="" value="<?php echo $sdt ?>">
                                     </div>
                                     <div class="insert-profile-left-fb">
                                         <i class="fa-brands fa-facebook"></i>
-                                        <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="">
+                                        <input placeholder="Nhập địa chỉ" type="text" name="diachi" id="" value="<?php echo $diachi ?>">
                                     </div>
                                     <div class="insert-profile-left-address">
                                         <i class="fa-solid fa-location-dot"></i>

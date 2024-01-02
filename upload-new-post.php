@@ -74,23 +74,33 @@
     $conn->close();
     ?>
     <div class="post">
-        <div id="dropArea" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+    <?php
+                    include "connect.php";
+                    ?>
+                    <?php
+                    $connect = new connect;
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        $insert_post = $connect->insert_post();
+                    }
+                    ?>
+        <form id='postForm' method="POST" enctype="multipart/form-data">
+            <div id="dropArea" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
             <img id="img_holder" src="./img/picture.png">
             <p id="dropArea_p">Kéo và thả ảnh hoặc video vào đây hoặc</p><button id="browseButton" onclick="browseFiles()">Tải lên</button>
-            <input type="file" id="fileInput" accept="image/*, video/*" onchange="handleFile(this.files)">
+            <input name="image" type="file" id="fileInput" accept="image/*, video/*" onchange="handleFile(this.files)">
             <img id="preview" alt="Preview" />
 
-        </div>
-        <div class='post-form'>
-            <form id='postForm'>
+            </div>
+            <div class='post-form'>
                 <label id="lbl" for='postTitle'>Tiêu đề:</label>
+                <input style="display: none;" type="text" name="mathongtintho" id="" value="<?php echo $id_tho ?>">
                 <input type='text' id='postTitle' name='postTitle' required>
                 <label id="lbl" for='postContent'>Nội dung:</label>
                 <textarea id='postContent' name='postContent' rows='4' required></textarea>
-                <button id="postButton" type='button' onclick='submitPost()'>Đăng bài</button>
+                <button id="postButton" type='submit' >Đăng bài</button>
                 <button id="cancelButton" onclick="confirmCancel()">Hủy</button>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
     <div class='dim' onclick='closePopup()'></div>
     <div id="confirmDialog">
