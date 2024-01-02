@@ -183,7 +183,7 @@ function dropHandler(event) {
 function handleFile(files) {
     const dropArea = document.getElementById('dropArea');
     const preview = document.getElementById('preview');
-
+   var fileInput = document.getElementById('fileInput');
     if (files.length > 0) {
         const file = files[0];
         const fileType = file.type.split('/')[0];
@@ -192,6 +192,7 @@ function handleFile(files) {
             const reader = new FileReader();
             reader.onload = function (e) {
                 preview.src = e.target.result;
+                fileInput.file[0].name = e.target.result;
                 preview.style.display = 'flex';
                 dropArea_p.style.display = 'none';
                 img_holder.style.display = 'none';  
@@ -203,9 +204,7 @@ function handleFile(files) {
         }
     }
 
-    // Reset input field
-    const fileInput = document.getElementById('fileInput');
-    fileInput.value = '';
+    
 }
 
 // Kích hoạt input file khi click vào vùng drop

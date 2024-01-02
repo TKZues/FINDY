@@ -152,6 +152,7 @@
             $mathongtintho = $result['mathongtintho'];
             $ma_posttimtho = $result['ma_posttimtho'];
             $mathosanpham = $result['mathosanpham'];
+            $giatri = $result['giatri'];
     ?>
             <div class="manageroder_content  col c-12 m-12 l-12">
                 <div class="order row">
@@ -188,7 +189,7 @@
                         </span>
                         <span class="order__title">
                             Tổng giá trị:
-                            <strong><?php echo $gia ?></strong>
+                            <strong><?php echo $giatri ?></strong>
                             <strong>đ</strong>
                         </span>
                     </div>

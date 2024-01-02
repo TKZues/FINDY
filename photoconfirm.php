@@ -42,7 +42,7 @@
                                         $gia = $result['gia'];
                                         $ma_thanhtoancoc = $result['ma_thanhtoancoc'];
                                         $tenposttimtho = $result['tenposttimtho'];
-                                            
+                                        $giatri = $result['giatri'];
                                 ?>
         <div class="col l-12 m-12 c-12">
             <div class="order">
@@ -79,7 +79,7 @@
                     </span>
                     <span class="order__title">
                         Tổng giá trị:
-                        <strong><?php echo $gia ?></strong>
+                        <strong><?php echo $giatri ?></strong>
                         <strong>đ</strong>
                     </span>
                 </div>

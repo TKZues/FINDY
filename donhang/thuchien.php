@@ -47,6 +47,7 @@
                                         $phongcach = $result['phongcach'];
                                         $gia = $result['gia'];
                                         $mathuchien = $result['mathuchien'];
+                                        $giatri = $result['giatri'];
                                             
                                 ?>
                             <div class="manageroder_content  col c-12 m-12 l-12">
@@ -84,7 +85,7 @@
                         </span>
                         <span class="order__title">
                             Tổng giá trị:
-                            <strong><?php echo $gia ?></strong>
+                            <strong><?php echo $giatri ?></strong>
                             <strong>đ</strong>
                         </span>
                     </div>

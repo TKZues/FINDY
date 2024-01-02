@@ -47,6 +47,7 @@
                                         $mathongtintho = $result['mathongtintho'];
                                         $tenposttimtho = $result['tenposttimtho'];
                                              $drive = $result['drive'];
+                                             $giatri = $result['giatri'];
                                 ?>
                         <div class="col l-12 m-12 c-12">
             <div class="order">
@@ -84,7 +85,7 @@
                     </span>
                     <span class="order__title">
                         Tổng giá trị:
-                        <strong><?php echo $gia ?></strong>
+                        <strong><?php echo $giatri ?>đ</strong>
                     </span>
                 </div>
 

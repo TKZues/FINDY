@@ -250,6 +250,7 @@ class connect
             inner JOIN thue_thanhtoancoc ON thue_thanhtoancoc.ma_posttimtho = post_timtho.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
             inner join account_tho on account_tho.id_tho = thongtintho.id_tho
             where id_thue = $id_thue";
         $result = $this->db->select($query);
@@ -262,6 +263,8 @@ class connect
         inner join thongtintho on thongtintho.mathongtintho = thue_thanhtoancoc.mathongtintho
         inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
         inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+        inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
         where thongtintho.id_tho = $id_tho";
         $result = $this->db->select($query);
         return $result;
@@ -273,6 +276,8 @@ class connect
         inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
         inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
         inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+        inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
         where thongtinthue.id_thue = $id_thue";
         $result = $this->db->select($query);
         return $result;
@@ -284,6 +289,8 @@ class connect
             inner join thongtintho on thongtintho.mathongtintho = thuchien.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             where thongtintho.id_tho = $id_tho";
         $result = $this->db->select($query);
         return $result;
@@ -316,6 +323,8 @@ class connect
             inner join thongtintho on thongtintho.mathongtintho = tho_giaosanpham.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             where thongtintho.id_tho = $id_tho";
         $result = $this->db->select($query);
         return $result;
@@ -380,6 +389,8 @@ class connect
             inner join post_timtho on post_timtho.ma_posttimtho = tho_sanpham.ma_posttimtho
             inner join thongtintho on thongtintho.mathongtintho = tho_sanpham.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             inner join account_tho on account_tho.id_tho = thongtintho.id_tho
             where thongtinthue.id_thue = $id_thue";
         $result = $this->db->select($query);
@@ -392,6 +403,8 @@ class connect
             inner join thongtintho on thongtintho.mathongtintho = thue_danhgia.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_tho on account_tho.id_tho = thongtintho.id_tho
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             where thongtinthue.id_thue = $id_thue";
         $result = $this->db->select($query);
         return $result;
@@ -557,6 +570,8 @@ class connect
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
             inner join thongtintho on thongtintho.mathongtintho = thochochinhsua.mathongtintho
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             where thongtintho.id_tho = $id_tho";
 
         $result = $this->db->select($query);
@@ -645,6 +660,8 @@ class connect
             inner join thongtintho on thongtintho.mathongtintho = thanhtoan.mathongtintho
             inner join thongtinthue on thongtinthue.mathongtinthue = post_timtho.mathongtinthue
             inner join account_thue on account_thue.id_thue = thongtinthue.id_thue
+            inner join quanlybaidang on quanlybaidang.ma_posttimtho = post_timtho.ma_posttimtho
+
             where thongtintho.id_tho = $id_tho";
         $result = $this->db->select($query);
         return $result;

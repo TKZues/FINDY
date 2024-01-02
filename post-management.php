@@ -181,7 +181,7 @@ WHERE thongtinthue.id_thue = $id_thue;
                                                                         if ($insert_thanhtoancoc) {
                                                                             // If the insert is successful, proceed to delete from table2
                                                                             $maquanlybaidang = $_POST['maquanlybaidang'];
-                                                                            $delete_quanlybaidang = $connect->delete_quanlybaidang($maquanlybaidang);
+                                                                            
                                                                             echo "<script>window.location.reload();</script>"; // Reload the page using JavaScript
                                                                         exit();
                                                                         } else {

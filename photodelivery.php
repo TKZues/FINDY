@@ -61,7 +61,8 @@
                                         $mathongtintho = $result['mathongtintho'];
                                         $mathogiaosanpham = $result['mathogiaosanpham'];
                                         $ma_posttimtho = $result['ma_posttimtho'];
-                                            
+                                        $giatri = $result['giatri'];
+
                                 ?>
                         <div class="col l-12 m-12 c-12">
             <div class="order">
@@ -98,7 +99,7 @@
                     </span>
                     <span class="order__title">
                         Tổng giá trị:
-                        <strong><?php echo $gia ?></strong>
+                        <strong><?php echo $giatri ?></strong>
                     </span>
                 </div>
 
@@ -173,7 +174,7 @@
                                         $mathongtinthuett = $result['mathongtinthue'];
                                         $mathochochinhsua = $result['mathochochinhsua'];
                                         $ma_posttimtho = $result['ma_posttimtho'];
-                                        
+                                        $giatri = $result['giatri'];
                                             
                                 ?>
                         <div class="col l-12 m-12 c-12">
@@ -211,7 +212,7 @@
                     </span>
                     <span class="order__title">
                         Tổng giá trị:
-                        <strong><?php echo $gia ?></strong>
+                        <strong><?php echo $giatri ?>đ</strong>
                     </span>
                 </div>
 
