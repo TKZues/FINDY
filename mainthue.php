@@ -601,12 +601,62 @@
                                         <span class="post-content__name">Thanh Khải</span>
                                         <span class="post-content__time">
                                             <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
+                                            2 ngày trước
                                         </span>
                                     </div>
                                     <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
+                                        <span class="post-content__price">1.000.000 - 1.500.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 02 ngày 03 giờ</span>
+                                    </div>
+                                </div>
+                                <div class="slide-show-artwork">
+                                    <div class="post-content__artwork-list">
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/concept-2-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/concept-2-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/concept-2-3.png);" onclick="changeImage3()"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <a href="./photoclick.php" class="post-content-warp">
+                                <div class="vieclam-content">
+                                    <h3 class="post-content__title">Chụp ảnh kỷ yếu</h3>
+                                    <div class="post-content__author">
+                                        <span class="post-content__name">Minh Hải</span>
+                                        <span class="post-content__time">
+                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
+                                            23 giờ trước
+                                        </span>
+                                    </div>
+                                    <div class="post-content__description">
+                                        <span class="post-content__price">2.000.000 - 2.500.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 06 ngày 01 giờ</span>
+                                    </div>
+                                </div>
+                                <div class="slide-show-artwork">
+                                    <div class="post-content__artwork-list">
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-7-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-7-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-7-3.png);" onclick="changeImage3()"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <a href="./photoclick.php" class="post-content-warp">
+                                <div class="vieclam-content">
+                                    <h3 class="post-content__title">Chụp ảnh việt phục</h3>
+                                    <div class="post-content__author">
+                                        <span class="post-content__name">Phạm Thanh</span>
+                                        <span class="post-content__time">
+                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
+                                            16 phút trước
+                                        </span>
+                                    </div>
+                                    <div class="post-content__description">
+                                        <span class="post-content__price">500.000 - 7.000.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 01 ngày 06 giờ</span>
                                     </div>
                                 </div>
                                 <div class="slide-show-artwork">
@@ -621,24 +671,24 @@
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
                                 <div class="vieclam-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
+                                    <h3 class="post-content__title">Makeup đi dự tiệc</h3>
                                     <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
+                                        <span class="post-content__name">Nguyễn Thanh Thảo</span>
                                         <span class="post-content__time">
                                             <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
+                                            01 phút trước
                                         </span>
                                     </div>
                                     <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
+                                        <span class="post-content__price">200.000 - 500.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 01 ngày 10 giờ</span>
                                     </div>
                                 </div>
                                 <div class="slide-show-artwork">
                                     <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-6-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-6-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-6-3.png);" onclick="changeImage3()"></div>
                                     </div>
                                 </div>
                             </a>
@@ -646,24 +696,24 @@
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
                                 <div class="vieclam-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
+                                    <h3 class="post-content__title">Chụp ảnh sinh nhật</h3>
                                     <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
+                                        <span class="post-content__name">Nhã Nam</span>
                                         <span class="post-content__time">
                                             <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
+                                            13 phút trước
                                         </span>
                                     </div>
                                     <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
+                                        <span class="post-content__price">500.000 - 8.000.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 06 ngày 13 giờ</span>
                                     </div>
                                 </div>
                                 <div class="slide-show-artwork">
                                     <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/concept-3-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/concept-3-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/concept-3-3.png);" onclick="changeImage3()"></div>
                                     </div>
                                 </div>
                             </a>
@@ -671,74 +721,24 @@
                         <div class="col l-4 m-6 c-12">
                             <a href="./photoclick.php" class="post-content-warp">
                                 <div class="vieclam-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
+                                    <h3 class="post-content__title">Chụp ảnh tết</h3>
                                     <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
+                                        <span class="post-content__name">Thanh Ngọc</span>
                                         <span class="post-content__time">
                                             <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
+                                            10 phút trước
                                         </span>
                                     </div>
                                     <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
+                                        <span class="post-content__price">700.000 - 1.000.000</span>
+                                        <span class="post-content__deadline">Hạn ứng tuyển: 01 ngày 09 giờ</span>
                                     </div>
                                 </div>
                                 <div class="slide-show-artwork">
                                     <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col l-4 m-6 c-12">
-                            <a href="./photoclick.php" class="post-content-warp">
-                                <div class="vieclam-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
-                                    <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
-                                        <span class="post-content__time">
-                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
-                                        </span>
-                                    </div>
-                                    <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
-                                    </div>
-                                </div>
-                                <div class="slide-show-artwork">
-                                    <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col l-4 m-6 c-12">
-                            <a href="./photoclick.php" class="post-content-warp">
-                                <div class="vieclam-content">
-                                    <h3 class="post-content__title">Chụp ảnh kỷ niệm gia đình</h3>
-                                    <div class="post-content__author">
-                                        <span class="post-content__name">Thanh Khải</span>
-                                        <span class="post-content__time">
-                                            <i class="post-content__time-icon fa-regular fa-clock"></i>
-                                            30 phút trước
-                                        </span>
-                                    </div>
-                                    <div class="post-content__description">
-                                        <span class="post-content__price">500.000 - 1.000.000</span>
-                                        <span class="post-content__deadline">Hạn ứng tuyển: 10 ngày 08 giờ</span>
-                                    </div>
-                                </div>
-                                <div class="slide-show-artwork">
-                                    <div class="post-content__artwork-list">
-                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/collection-8-1.png);" onclick="changeImage1()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/collection-8-2.png);" onclick="changeImage2()"></div>
-                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/collection-8-3.png);" onclick="changeImage3()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-1" style="background-image: url(./img/concept-6-1.png);" onclick="changeImage1()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-2" style="background-image: url(./img/concept-6-2.png);" onclick="changeImage2()"></div>
+                                        <div class="post-content__artwork-img" id="artwork-img-3" style="background-image: url(./img/concept-6-3.png);" onclick="changeImage3()"></div>
                                     </div>
                                 </div>
                             </a>
@@ -748,6 +748,7 @@
             </div>
         </div>
     </div>
+
     <div class="forthe">
         <video id="mVideo" autoplay>
             <source src="./video/videomakeup.mp4" type="video/mp4">

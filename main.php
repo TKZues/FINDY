@@ -734,6 +734,7 @@
             </div>
         </div>
     </div>
+    
     <div class="forthe">
         <video id="mVideo" autoplay>
             <source src="./video/videomakeup.mp4" type="video/mp4">

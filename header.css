@@ -37,7 +37,7 @@
 .navbar__heading-warp {
     display: flex;
     flex: 1;
-    margin: 0 36px;
+    margin: 0 24px;
 }
 
 .navbar__heading-search {
@@ -64,13 +64,19 @@
     display: flex;
 }
 
+.notify-icon {
+    font-size: 2rem;
+    margin-left: 16px;
+    color: #f2c438;
+    cursor: pointer;
+}
+
 .navbar__heading-img{
     width: 40px;
     border-radius: 50%;
     height: 40px;
     object-fit: cover;
-    margin-right: 8px;
-    margin-left: 12px;
+    margin: 0 8px;
 }
 
 .navbar__heading-link {
@@ -104,6 +110,13 @@
     margin-left: auto;
 }
 
+.navbar__heading-controls,
+.navbar__account {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__heading-controls > .navbar__heading-link,
 .navbar__account > .navbar__heading-link {
     display: flex;
 }

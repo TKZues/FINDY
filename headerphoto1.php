@@ -47,11 +47,11 @@
                 <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
             </div>
             <div class="navbar__heading-controls">
-                <img src="/img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
                 <a href="/accountphoto.php" class="navbar__heading-link">
+                    <img src="/img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
                     <p><?php echo $hoTen; ?></p>
                 </a>
-
+                <i class="notify-icon fa-solid fa-bell"></i>
             </div>
             <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
                 <i class="navbar__heading-icon fa-solid fa-bars"></i>

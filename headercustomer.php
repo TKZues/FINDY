@@ -50,6 +50,7 @@
                     <img src="/img/<?php echo $hinhanhthue  ?>" alt="" class="navbar__heading-img">
                     <?php echo $hoTen; ?>
                 </a>
+                <i class="notify-icon fa-solid fa-bell"></i>
             </div>
             <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
                 <i class="navbar__heading-icon fa-solid fa-bars"></i>
