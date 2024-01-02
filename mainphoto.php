@@ -84,11 +84,11 @@ WHERE thongtintho.id_tho = $id_tho";
     <section>
         <div class="container">
             <div class="grid wide">
-                <div class="jobbest-header--top">
-                    Việc làm Photographer tốt nhất
+                <div class="job-header">
+                    Việc làm tốt nhất
                 </div>
                 <div class="content row">
-                    <div class="col l-3 m-4 c-0">
+                    <div class="col l-3 m-0 c-0">
                         <div class="filter">
                             <h3 class="filter__heading">
                                 <i class="filter__heading-icon fa-solid fa-filter"></i>
@@ -266,7 +266,7 @@ WHERE thongtintho.id_tho = $id_tho";
                         </div>
                     </div>
 
-                    <div class="jobbest_container col c-8 m-8 l-8 ">
+                    <div class="jobbest_container col l-9 m-12 c-12">
                         <div class="jobbest-mid">
                             <div class="row">
                                 <?php
@@ -292,26 +292,9 @@ WHERE thongtintho.id_tho = $id_tho";
                                                     $hinhanhthue = $thongtinthue_data['hinhanhthue'];
 
                                         ?>
-                                                    <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
-                                                        <div class="jobbest-items ">
-                                                            <div class="jobbest_info">
-                                                                <div class="jobbest-mid-top--right col c-8 m-8 l-8">
-                                                                    <p><?php echo $result['tenposttimtho']  ?></p>
-                                                                    <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
-                                                                    <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
-                                                                    <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
-                                                                    <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
-                                                                </div>
-                                                                <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-
-                                                                    <button type="submit"><i class="fa-regular fa-heart"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                <div class="col c-12 m-6 l-6">
+                                                    <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="jobbest_item-warp">
                                                         <div class="jobbest_item">
-                                                            <!-- <div class="jobbest-list-top--left col c-2 m-2 l-2">
-                                                            <img src="<?php echo $imguserphoto_up ?>" alt="">
-                                                        </div> -->
                                                             <div class="jobbest_info">
                                                                 <h3 class="jobbest_info-title"><?php echo $result['tenposttimtho']  ?></h3>
                                                                 <div class="jobbest_info-info">
@@ -332,10 +315,11 @@ WHERE thongtintho.id_tho = $id_tho";
                                                                 </div>
                                                             </div>
                                                             <div class="jobbest_favourite">
-                                                                <i class="jobbest_favourite-icon fa-regular fa-heart"></i>
+                                                                <button type="submit" class="jobbest_favourite-btn"><i class="jobbest_favourite-icon fa-regular fa-heart"></i></button>
                                                             </div>
                                                         </div>
                                                     </a>
+                                                </div>
                                         <?php
                                                 }
                                             }
