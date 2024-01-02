@@ -15,7 +15,7 @@
             </div>
             <div class="navbar__heading-warp">
                 <div class="navbar__heading">
-                    <a href="/userful/hirephoto.php" class="navbar__heading-link">Thuê Thợ</a>
+                    <a href="/userful/hirephoto.php" class="navbar__heading-link">Tìm Thợ</a>
                 </div>
                 <div class="navbar__heading">
                     <a href="/userful/jobsearch.php" class="navbar__heading-link">Tìm việc</a>

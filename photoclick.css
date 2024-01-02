@@ -527,9 +527,9 @@
     display: flex;
 }
 
-.photoclick_left-button form:nth-child(1){
+/* .photoclick_left-button form:nth-child(1){
     width: 50%;
-}
+} */
 .photoclick_left-button form:nth-child(2){
     width: 10%;
 }
