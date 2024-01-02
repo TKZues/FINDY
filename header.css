@@ -192,7 +192,7 @@
 
 /* Mobile & Tablet: width < 1024px */
 @media only screen and (max-width: 1023px) {
-        .navbar__heading-warp {
+    .navbar__heading-warp {
         margin: 0;
     }
 

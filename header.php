@@ -61,15 +61,16 @@
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
-                <a href="./userful/hirephoto.php" class="mobile__heading-link">Thuê Thợ</a>
+                <a href="/userful/hirephoto.php" class="mobile__heading-link">Thuê Thợ</a>
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
-                <a href="./userful/jobsearch.php" class="mobile__heading-link">Tìm việc</a>
+                <a href="/userful/jobsearch.php" class="mobile__heading-link">Tìm việc</a>
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-pen"></i>
-                <a href="./userful/create_profile.php" class="mobile__heading-link">Tạo hồ sơ</a>
+                <!-- <a href="/userful/create_profile.php" class="mobile__heading-link">Tạo hồ sơ</a> -->
+                <a href="#" class="mobile__heading-link">Tạo hồ sơ</a>
             </div>
             <div class="mobile__heading">
                 <i class="mobile__heading-icon fa-solid fa-file-pen"></i>

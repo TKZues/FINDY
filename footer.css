@@ -317,14 +317,46 @@
 .choice_service_content-text {
     font-size: 1.6rem;
     color: var(--text-color);
-    padding: 16px 0;
+    padding: 16px 8px;
 }
 
 /* ------------- Responsive ------------- */
 
 /* Mobile: width < 740px  */
 @media (max-width: 739px) {
+    .choice_service_container {
+        width: calc(100% - 32px);
+    }
+
+    .choice_service_content {
+        width: 100%;
+    }
     
+    .choice_service_content-img {
+        height: 100px;
+    }
+
+    .choice_service_content-text {
+        font-size: 1.2rem;
+    }
+
+    .account_form,
+    .account_form2 {
+        width: calc(100% - 32px);
+        margin: 0 13px;
+    }
+
+    .account_form__container,
+    .account_form__socials,
+    .account_form__footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .account_form__socials-list {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 /* Tablet: width >= 740px and width < 1024px */
