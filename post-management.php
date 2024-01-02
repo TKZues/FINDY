@@ -128,6 +128,7 @@ WHERE thongtinthue.id_thue = $id_thue;
                                                     $nghenghiep = $row_thongtintho['nghenghiep'];
                                                     $hinhanhtho = $row_thongtintho['hinhanhtho'];
                                                     $maquanlybaidang = $row_thongtintho['ma_quanlybaidang'];
+                                                    $giatri = $row_thongtintho['giatri'];
                                                     // echo  'maqly'.$maquanlybaidang
                                             ?>
                                                     <div class="candidate__list c-12 m-12 l-12">
@@ -157,6 +158,9 @@ WHERE thongtinthue.id_thue = $id_thue;
                                                                         <strong>4.9</strong>
                                                                         <span>(234 đánh giá)</span>
                                                                     </div>
+                                                                    <span class="giatri" >
+                                                                       <p> Giá: <?php echo $giatri ?> đ</p>
+                                                                    </span>
                                                                     <div class="candidate__thongtin">
 
 

@@ -330,8 +330,9 @@ class connect
     {
         $mathongtintho = $_POST['mathongtintho'];
         $ma_posttimtho = $_POST['ma_posttimtho'];
-        $query = "INSERT INTO quanlybaidang (ma_posttimtho, ma_thongtintho)
-            values ('$ma_posttimtho', '$mathongtintho')";
+        $giatri = $_POST['giatri'];
+        $query = "INSERT INTO quanlybaidang (ma_posttimtho, ma_thongtintho, giatri)
+            values ('$ma_posttimtho', '$mathongtintho','$giatri')";
         $result = $this->db->insert($query);
         return $result;
     }
