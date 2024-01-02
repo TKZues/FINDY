@@ -89,7 +89,6 @@
             <p id="dropArea_p">Kéo và thả ảnh hoặc video vào đây hoặc</p><button id="browseButton" onclick="browseFiles()">Tải lên</button>
             <input name="image" type="file" id="fileInput" accept="image/*, video/*" onchange="handleFile(this.files)">
             <img id="preview" alt="Preview" />
-
             </div>
             <div class='post-form'>
                 <label id="lbl" for='postTitle'>Tiêu đề:</label>

@@ -29,7 +29,7 @@
             </div>
             <div class="navbar__heading-warp">
                 <div class="navbar__heading">
-                    <a href="/find-timtho.php" class="navbar__heading-link">Thuê Thợ</a>
+                    <a href="/find-timtho.php" class="navbar__heading-link">Tìm Thợ</a>
                 </div>
                 <div class="navbar__heading">
                     <a href="/post-job.php" class="navbar__heading-link">Đăng tin</a>
