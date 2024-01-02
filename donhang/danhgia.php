@@ -51,32 +51,49 @@
                                         $drive = $result['drive'];
                                         $mathongtinthue = $result['mathongtinthue'];
                                         $mathongtintho = $result['mathongtintho'];
+                                        $mathuedanhgia = $result['mathuedanhgia'];
                                         // $mathogiaosanpham = $result['mathogiaosanpham'];
                                             
                                 ?>
                             <div class="manageroder_content  col c-12 m-12 l-12">
-                                <div class="row">
-                                    <div class="manageroder_content-items--avatar col c-2 m-2 l-2">
-                                        <img style="width:100px; height:100px; " src="../img/<?php echo $anhtho ?>" alt="">
-                                    </div>
-                                    <div class="manageroder_content-items--mid col c-7 m-7 l-7">
-                                        <div class="name">
-                                            <?php echo $tentho ?>
-                                        </div>
-                                        <div class="address">
-                                            <span>Địa điểm: </span><?php echo $diadiem ?>
-                                        </div>
-                                        <div class="time">
-                                            <span>Thời gian: </span><?php echo $thoigian ?>
-                                        </div>
-                                        <div class="style">
-                                            <span>Phong cách: </span><?php  echo $phongcach ?>
-                                        </div>
-                                        <div class="price">
-                                            <span>Cọc: </span><?php echo $gia ?> <span>đ</span>
-                                        </div>
-                                        
-                                    </div>
+                                <div class="order row">
+                                <div class="order__avatar c-2 m-2 l-2">
+                        <img src="../img/<?php echo $anhtho  ?>" alt="Ảnh đại diện" class="order__avatar-img">
+                    </div>
+
+                    <div class="order__info c-4 m-4 l-4">
+                        <span class="order__name">
+                            <?php echo $tentho ?>
+                        </span>
+                        <span class="order__text">
+                            <i class="order__text-icon fa-solid fa-location-dot"></i>
+                            <?php echo $diadiem ?>
+                        </span>
+                        <span class="order__text">
+                            <i class="order__text-icon fa-solid fa-calendar-days"></i>
+                            <?php echo $thoigian ?>
+                        </span>
+                        <span class="order__text">
+                            <i class="order__text-icon fa-regular fa-clock"></i>
+                            16h:30p
+                        </span>
+                    </div>
+
+                    <div style="margin: 0 5px;" class="order__info1 c-4 m-4 l-4">
+                        <span class="order__title">
+                            Mã đơn hàng:
+                            <strong><?php echo $mathuedanhgia ?></strong>
+                        </span>
+                        <span class="order__title">
+                            Phong cách:
+                            <strong><?php echo $phongcach ?></strong>
+                        </span>
+                        <span class="order__title">
+                            Tổng giá trị:
+                            <strong><?php echo $gia ?></strong>
+                            <strong>đ</strong>
+                        </span>
+                    </div>
                                     <div class="manageroder_content-items--button col c-2 m-2 l-2">
                                     <button class="btn order-btn" onclick="toggleAdditionalInfo('<?php echo $uniqueId; ?>', '<?php echo $diadiem; ?>',
                         '<?php echo $gia; ?>',

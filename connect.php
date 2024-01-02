@@ -736,5 +736,14 @@ class connect
         $result = $this->db->insert($query);
         return $result;
     }
+    public function insert_baocaochoadmin(){
+        $mathongtintho = $_POST['mathongtintho'];
+        $ma_posttimtho = $_POST['ma_posttimtho'];
+        $detail = $_POST['detail'];
+        $drive = $_POST['drive'];
+        $query = "INSERT INTO `baocaochoadmin`( `mathongtintho`, `ma_posttimtho`, `reason`, `drive`) VALUES ('$mathongtintho','$ma_posttimtho','$detail','$drive')";
+        $result = $this->db->insert($query);
+        return $result;
+    }
 }
 ?>

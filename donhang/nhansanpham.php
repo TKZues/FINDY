@@ -58,6 +58,56 @@
         .confirm-btn:hover {
             background-color: #45a049;
         }
+
+
+        /* Style cho nút Báo cáo */
+        .button_additional {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style cho cửa sổ nổi */
+        #reportPopup {
+            width: 60%;
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Style cho radio buttons */
+        #reportPopup input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        /* Style cho textarea */
+        #reportPopup textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Style cho nút Đóng */
+        #reportPopup button {
+            background-color: #ccc;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #reportPopup button:hover {
+            background-color: #ddd;
+        }
     </style>
 </head>
 
@@ -170,7 +220,11 @@
                                 }
                             } else {
                                 echo "Error";
+
                             }
+                        }
+                        elseif (isset($_POST['baocao'])){
+                            $insert_baocaochoadmin = $connect->insert_baocaochoadmin();
                         }
                     }
                     ?>
@@ -185,16 +239,16 @@
 
                     <div class="modal" id="productInfoModal">
                         <div class="modal-content">
-                            
+
                             <p style="font-size: 1.7rem;">FINDY sẽ thanh toán số tiền xxx cho <?php echo $tentho ?>. Bạn vui lòng chỉ nhấn "Xác nhận" khi đã xem hình ảnh và hình ảnh không có vấn đề nào.</p>
                             <form action="" method="POST">
-                            <input type="text" style="display: none;" name="drive" id="" value="<?php echo $drive ?>">
-                            <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
-                            <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
-                            <div class="btn_nhan" style="display: flex;align-items: center;justify-content: center;margin: 10px 0;" >
-                                <button class="close" onclick="closeProductInfoModal()">Thoát</button>
-                                <button class="confirm-btn" onclick="confirmReceived() " name="submit_danhgia">Xác nhận</button>
-                            </div>
+                                <input type="text" style="display: none;" name="drive" id="" value="<?php echo $drive ?>">
+                                <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                                <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                                <div class="btn_nhan" style="display: flex;align-items: center;justify-content: center;margin: 10px 0;">
+                                    <button class="close" onclick="closeProductInfoModal()">Thoát</button>
+                                    <button class="confirm-btn" onclick="confirmReceived() " name="submit_danhgia">Xác nhận</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -223,12 +277,40 @@
                         <a style="text-decoration: none;" href="<?php echo $drive ?> " target="_blank"><button class="button_additional" type="button">Xem hình ảnh</button></a>
 
                     </form>
-                    <form action="" method="POST" class="c-4 m-4 l-4">
-                        <!-- <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5" style="width: 60%;"></textarea> -->
-                        <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
-                        <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
-                        <button class="button_additional" type="submit" >Báo cáo</button>
-                    </form>
+
+                    <!-- <textarea name="post-job__form-description" id="post-job__form-description" class="post-job__form-input" cols="1" rows="5" style="width: 60%;"></textarea> -->
+                    <button class="button_additional c-3 m-3 l-3" type="button" onclick="showReportPopup()">Báo cáo</button>
+                    <div id="reportPopup" style="display: none;">
+                        <form action="" method="post">
+                            <input type="text" style="display: none;" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                            <input type="text" style="display: none;" name="ma_posttimtho" id="" value="<?php echo $ma_posttimtho ?>">
+                            <input type="text" style="display: none;" name="drive" id="" value="<?php echo $drive ?>">
+
+
+                            <input type="radio" name="reason" value="lienlac" onclick="updateTextarea('Ảnh chứa thông tin liên lạc')"> <span style="font-size: 1.3rem;">Ảnh chứa thông tin liên lạc</span><br>
+                            <input type="radio" name="reason" value="mathat" onclick="updateTextarea('Ảnh chứa thông tin mật')"> <span style="font-size: 1.3rem;">Ảnh chứa thông tin mật</span><br>
+                            <input type="radio" name="reason" value="xampham" onclick="updateTextarea('Ảnh xâm phạm quyền tác giả')"> <span style="font-size: 1.3rem;">Ảnh xâm phạm quyền tác giả</span><br>
+                            <input type="radio" name="reason" value="khac" onclick="updateTextarea('')"> <span style="font-size: 1.3rem;">Khác</span><br>
+                            <textarea name="detail" id="detailTextarea" placeholder="Chi tiết báo cáo (Bắt buộc điền trên 100 ký tự)" required></textarea>
+                            <button name="baocao" type="submit">Gửi</button>
+                            <button onclick="closeReportPopup()">Đóng</button>
+                        </form>
+                        <script>
+                            function updateTextarea(reasonText) {
+                                document.getElementById('detailTextarea').value = reasonText;
+                            }
+                        </script>
+                    </div>
+                    <script>
+                        function showReportPopup() {
+                            document.getElementById('reportPopup').style.display = 'block';
+                        }
+
+                        function closeReportPopup() {
+                            document.getElementById('reportPopup').style.display = 'none';
+                        }
+                    </script>
+
                 </div>
             </div>
 
