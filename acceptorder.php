@@ -134,7 +134,7 @@ echo "ID của Thợ: " . $mathongtintho;
                                     Make-up
                                 </div>
                                 <div class="acceptoder_left-price-style">
-                                    100000
+                                    0
                                 </div>
                             </div>
                             <div class="sum" style="display: flex;justify-content: space-between;" >
@@ -142,7 +142,7 @@ echo "ID của Thợ: " . $mathongtintho;
                                     Tổng giá trị
                                 </div>
                                 <div class="acceptoder_left-price-sum">
-                                <?php echo $gia+100000 ?>
+                                <?php echo $gia ?>
                                 </div>
                             </div>
                             <div class="acceptoder_left-items-button">

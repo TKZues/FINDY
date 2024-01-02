@@ -137,10 +137,10 @@
                     </div>
                 </div>
                 <div class="mathongtintho">
-                    <input type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
+                    <input style="display: none;" type="text" name="mathongtintho" id="" value="<?php echo $mathongtintho ?>">
                 </div>
                 <div class="mota">
-                    <input type="mathongtinthue" name="mathongtinthue" id="" value="<?php echo $mathongtinthue ?>">
+                    <input style="display: none;" type="mathongtinthue" name="mathongtinthue" id="" value="<?php echo $mathongtinthue ?>">
                 </div>
                 <div class="mota">
                     <textarea name="mota" id="mota" rows="4" placeholder="Hãy chia sẽ những điều bạn thích về thợ này nhé"></textarea>

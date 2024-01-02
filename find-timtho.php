@@ -287,9 +287,9 @@
 
                                                     <div class="slide-show-artwork">
                                                         <div class="freelancer-item__artwork-list">
-                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-1.png);" onclick="changeImage1()"></div>
-                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-2.png);" onclick="changeImage2()"></div>
-                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/collection-1-3.png);" onclick="changeImage3()"></div>
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/<?php echo $result['img1'] ?>);" onclick="changeImage1()"></div>
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/<?php echo $result['img2'] ?>);" onclick="changeImage2()"></div>
+                                                            <div class="freelancer-item__artwork-img" style="background-image: url(./img/<?php echo $result['img3'] ?>);" onclick="changeImage3()"></div>
                                                         </div>
                                                     </div>
                                                 </a>

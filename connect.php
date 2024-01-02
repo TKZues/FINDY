@@ -157,7 +157,8 @@ class connect
     public function select_postjob()
     {
         $query = "SELECT *FROM post_timtho
-            inner join thongtinthue on post_timtho.mathongtinthue = thongtinthue.mathongtinthue";
+            inner join thongtinthue on post_timtho.mathongtinthue = thongtinthue.mathongtinthue
+            inner join account_thue on account_thue.id_thue = thongtinthue.id_thue";
         $result = $this->db->select($query);
         return $result;
     }

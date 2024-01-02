@@ -71,6 +71,7 @@
     $motachitiet = $_GET['motachitiet'];
     $ma_posttimtho = $_GET['ma_posttimtho'];
     $anhmau = $_GET['anhmau'];
+    $hoTenkhach = $_GET['hoTen'];
     // Use these variables as needed in your photoclick.php page
 
 
@@ -277,7 +278,7 @@
 
                         <div class="photoclick_right-info">
                             <div class="photoclick_right-avatar" style="background-image: url(/img/avatar-1.png);"></div>
-                            <p class="photoclick_right-name">Tên người đăng bài</p>
+                            <p class="photoclick_right-name"><?php echo $hoTenkhach ?></p>
                         </div>
                     </div>
                 </div>
