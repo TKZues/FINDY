@@ -502,6 +502,11 @@
     background-color: var(--background-color);
 }
 
+.vieclam-content {
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
 .find-timtho-container {
     padding-bottom: var(--top-header-height);
 }
@@ -571,6 +576,7 @@
     background-color: transparent;
     border-radius: 8px;
     overflow: hidden;
+    margin: 0 8px;
 }
 
 .grid-item img {
@@ -590,6 +596,7 @@ a.darken {
     border-radius: 8px;
     padding: 0;
     position: relative;
+    width: 100%;
 }
 
 a.darken img {
@@ -676,6 +683,15 @@ body{
     font-size: 14px;
     color: #666666;
 }
+
+.post-img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center;
+}
+
 .post-title{
     display: none;
     position: absolute;
@@ -689,9 +705,10 @@ body{
 
 .post-meta {
     display: flex;
-    width: 270px;
+    /* width: 270px; */
     align-items: center;
     padding: 12px 0 20px 0;
+    width: 100%;
 }
 .user-info{
     width: 70%;
@@ -950,3 +967,29 @@ body{
     border-radius: 20px;
     cursor: pointer;
 }
+
+
+/* ------------- Responsive ------------- */
+
+/* Mobile: width < 740px  */
+@media (max-width: 739px) {
+    .heading {
+        font-size: 2.3rem;
+    }
+
+    .vieclam-container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media (min-width: 740px) and (max-width:1023px) {
+    
+}
+
+/* Mobile & Tablet: width < 1024px */
+@media only screen and (max-width: 1023px) {
+    
+}
+

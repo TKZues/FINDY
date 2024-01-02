@@ -1,7 +1,10 @@
+.container {
+    background-color: var(--background-color);
+}
+
 /* --------------- Banner ------------- */
 .banner {
     margin-top: var(--top-header-height);
-    /* padding-top: 120px; */
 }
 
 .banner_img-container {
@@ -16,7 +19,7 @@
 .banner_img-img {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 350px;
 }
 
 .banner_img-img img {
@@ -76,7 +79,7 @@
 /* --------------- Jobs ------------- */
 
 .job {
-    margin-top: 36px;
+    padding: 36px 0;
 }
 
 .job-header {
@@ -87,7 +90,7 @@
 }
 
 .job_container {
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 /* --------- Filter --------- */
@@ -228,61 +231,73 @@
 } */
 
 /* --------- Job best --------- */
-.jobbest_container {
-
-}
-
-.jobbest_list {
-
-}
-
 .jobbest_item-warp {
+    display: block;
     text-decoration: none;
+    color: var(--text-color);
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .jobbest_item {
-    background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
-    color: #fff;
+    position: relative;
+    margin-bottom: 24px;
     border-radius: 10px;
-    margin-top: 10px;
-    padding: 16px;
-    cursor: pointer;
+    border: 1px solid var(--border-color);
 }
 
 .jobbest_info {
+    padding: 8px 16px;
+    border-radius: 10px;
+}
 
+.jobbest_item:hover {
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 10px 20px 0 rgba(71, 140, 67, 0.2);
+    transform: translateY(-1px);
 }
 
 .jobbest_info-title {
     font-size: 2rem;
+    width: 95%;
+    margin: 8px 0;
+    line-height: 1.6;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
 }
 
-.jobbest_info-time {
-
+.jobbest_info-info {
+    margin: 8px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
-.jobbest_info-price {
-
+.jobbest_info-icon {
+    width: 16px;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-right: 4px;
+    color: var(--main-color);
 }
 
-.jobbest_info-event {
-
-}
-
-.jobbest_info-place {
-
+.jobbest_info-text {
+    font-size: 1.4rem;
 }
 
 .jobbest_favourite {
-
+    position: absolute;
+    top: 18px;
+    right: 16px;
 }
 
 .jobbest_favourite-icon {
-
+    font-size: 1.8rem;
+    color: var(--main-color);
 }
 
 
@@ -467,233 +482,9 @@
     height: auto;
 }
 
-/* ----------------footer-------------- */
-
-
-
-.footer {
-    margin-top: 150px;
-    background-color: #12151b;
-    padding: 50px 0;
-    color: var(--text-color-main);
-    font-size: 1rem;
-    border-top: 1px solid #686766;
-}
-
-.footer a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: var(--text-color-main);
-}
-
-.footer_logo div {
-    font-size: 1.3rem;
-    margin: 5px 0;
-    color: var(--text-color-main);
-}
-
-.footer_logo div a {
-    text-decoration: none;
-    color: var(--text-color-main);
-}
-
-.footer_logo-logo img {
-    width: 30%;
-}
-
-.footer div h1 {
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-.footer div ul li {
-    list-style: none;
-
-    margin: 5px 0;
-
-}
-
-.footer div ul a li:hover {
-    padding-left: 15px;
-    color: #5643ff;
-    transition: all 0.3s ease-in;
-}
-
-/* ------- Form đăng nhập, đăng ký -------*/
-
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    display: none;
-}
-
-.modal.open {
-    display: flex;
-}
-
-.modal__container {
-    margin: auto;
-}
-
-.account_form {
-    width: 500px;
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-.account_form__container {
-    padding: 16px 32px;
-}
-
-.account_form__heading {
-    color: var(--text-color);
-    font-size: 2.8rem;
-    text-align: center;
-    font-weight: 400;
-}
-
-.account_form__form {
-    margin: 16px;
-}
-
-.account_form__input {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    font-size: 1.4rem;
-    padding: 0 12px;
-    margin-bottom: 16px;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
-    outline: none;
-}
-
-.show-hide-password {
-    position: absolute;
-    padding: 12px;
-    font-size: 1.4rem;
-    top: calc((100% - 16px) / 2);
-    right: 0;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.account_form__input:focus {
-    border-color: var(--main-color);
-}
-
-.account_form__aside {
-    margin: 0 16px;
-}
-
-.account_form__policy-text {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    text-align: center;
-}
-
-.account_form__policy-link {
-    text-decoration: none;
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.account_form__btn {
-    width: calc(100% - 32px);
-    margin: 20px 16px;
-}
-
-.account_form__socials {
-    padding: 0 32px;
-}
-
-.account_form__separate {
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    text-align: center;
-    line-height: 0;
-}
-
-.account_form__separate-text {
-    font-size: 1.4rem;
-    background-color: #fff;
-    color: rgba(0, 0, 0, 0.25);
-    padding: 0 10px;
-}
-
-.account_form__socials-list {
-    margin: 16px 32px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.account_form__socials--facebook {
-    color: #3a5a9b;
-}
-
-.account_form__socials--google {
-    color: #000;
-}
-
-.account_form__socials--facebook,
-.account_form__socials--google {
-    border-radius: 5px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.account_form__socials--facebook:hover,
-.account_form__socials--google:hover {
-    background-color: #f5f5f5;
-}
-
-.account_form__socials-icon {
-    font-size: 2.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
-}
-
-.account_form__socials-title {
-    margin: 0 16px;
-}
-
-.account_form__footer {
-    /* padding: 80px 32px 16px; */
-    padding: 16px 32px;
-    text-align: center;
-}
-
-.account_form__footer-btn {
-    margin: 20px auto;
-    background-color: #fff;
-    border: 2px solid var(--main-color);
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.account_form__text {
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.25);
-}
-
-.account_form__link {
-    text-decoration: none;
-    color: var(--main-color)
-}
-
 /* ------------- Responsive ------------- */
 
-/* ------------- Mobile ------------- */
+/* Mobile: width < 740px  */
 @media (max-width: 739px) {
     .navbar__heading {
         display: none;
@@ -702,34 +493,40 @@
     .navbar__mobile-bars {
         display: block;
     }
-}
-
-@media (max-width: 768px) {
-    .banner {
-        padding-top: 100px;
-    }
 
     .banner_img-img {
-        height: 150px;
+        height: 110px;
     }
-
+    
     .button_banner {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .button_banner-icon {
+        padding: 4px 6px;
+        margin: 0 8px;
     }
 
-    .filter_top {
-        font-size: 1.5rem;
+    .job-header {
+        font-size: 2rem;
     }
-
-    .jobbest-header--top {
+    
+    .jobbest_info-title {
         font-size: 1.6rem;
     }
 
-    .jobbest-list-top--right {
-        font-size: 1.2rem;
-    }
+}
 
-    .jobbest-list-top--right p {
-        font-size: 1.1rem;
+/* Tablet: width >= 740px and width < 1024px */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .banner_img-img {
+        height: 230px;
+    }
+}
+
+/* Mobile & Tablet: width < 1024px */
+@media only screen and (max-width: 1023px) {
+    .jobbest_list {
+        margin: 0 16px;
     }
 }

@@ -8,15 +8,6 @@
 }
 
 /* ------------- Filter ------------- */
-.find-timtho-container {
-    margin-top: var(--top-header-height);
-    background-color: var(--background-color);
-}
-
-.find-timtho-content {
-    padding-top: 36px;
-}
-
 .filter {
     background-color: #fff;
     border-radius: 10px;
@@ -235,6 +226,10 @@
 .freelancer-item__contact-info {
     margin-bottom: 8px;
     margin-left: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
 .freelancer-item__contact-icon {
@@ -243,10 +238,6 @@
 }
 
 .freelancer-item__contact-text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
     font-size: 1.4rem;
 }
 
@@ -343,55 +334,9 @@
     margin: 0 15px;
 }
 
+/* ------------- Responsive ------------- */
 
-/* .footer{
-    margin-top: 150px;
-    background-color: #12151b;
-    padding: 50px 0;
-    color: var(--text-color-main);
-    font-size: 1rem;
-    border-top: 1px solid #686766;
-}
-
-.footer a{
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: var(--text-color-main);
-}
-
-.footer_logo div{
-    font-size: 1.3rem;
-    margin: 5px 0;
-    color: var(--text-color-main);
-}
-
-.footer_logo div a{
-    text-decoration: none;
-    color: var(--text-color-main);
-}
-.footer_logo-logo img{
-    width: 30%;
-}
-
-.footer div h1{
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-.footer div ul li{
-    list-style: none;
-    
-    margin: 5px 0;
-   
-}
-
-.footer div ul a li:hover{
-    padding-left: 15px;
-    color: #5643ff;
-    transition: all 0.3s ease-in;
-} */
-
-/* ------------- Mobile ------------- */
+/* Mobile: width < 740px  */
 @media (max-width: 739px) {
     .pagination-item__link {
         height: 28px;
@@ -399,9 +344,14 @@
         min-width: 36px;
         margin: 0;
     }
+
+    .freelancer {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
-/* ------------- Table ------------- */
+/* Tablet: width >= 740px and width < 1024px */
 @media (min-width: 740px) and (max-width: 1023px) {
     .pagination-item__link {
         height: 28px;
@@ -409,4 +359,15 @@
         min-width: 36px;
         margin: 4px;
     }
+
+    .freelancer,
+    .vieclam {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+/* Mobile & Tablet: width < 1024px */
+@media only screen and (max-width: 1023px) {
+    
 }

@@ -4,7 +4,7 @@
     <div class="footer">
         <div class="grid wide">
             <div class="footer_container row">
-                <div class="footer_findy col c-3 m-3 l-2-4">
+                <div class="footer_findy col c-6 m-4 l-2-4">
                     <h1>Findy</h1>
                     <ul>
                         <a href="">
@@ -27,7 +27,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="footer_introduce col c-3 m-3 l-2-4">
+                <div class="footer_introduce col c-6 m-4 l-2-4">
                     <h1>Giới thiệu</h1>
                     <ul>
                         <a href="">
@@ -56,7 +56,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="footer_rules col c-3 m-3 l-2-4">
+                <div class="footer_rules col c-6 m-4 l-2-4">
                     <h1>Điều khoản</h1>
                     <ul>
                         <a href="">
@@ -76,7 +76,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="footer_socials col c-3 m-3 l-2-4">
+                <div class="footer_socials col c-6 m-4 l-2-4">
                     <h1>Cộng đồng FINDY</h1>
                     <ul>
                         <a href="https://www.facebook.com/profile.php?id=61553281270154" target="_blank">
@@ -93,7 +93,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="footer_app col c-3 m-3 l-2-4">
+                <div class="footer_app col c-6 m-4 l-2-4">
                     <h1>Ứng dụng</h1>
                     <ul>
                         <a href="">
