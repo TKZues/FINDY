@@ -3,12 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findy</title>
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./post-management.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+
+    <style>
+        .navbar__heading-warp>.navbar__heading:nth-child(3)>.navbar__heading-link {
+            color: var(--main-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -40,14 +48,14 @@ WHERE thongtinthue.id_thue = $id_thue;
             // echo "Ngày sinh thợ: " . $row["ngaysinh"] . "<br><hr>";
         }
     } else {
-        echo "Không có dữ liệu.";
+        // echo "Không có dữ liệu.";
     }
     // Đóng kết nối
     $conn->close();
     // Các công việc khác cần làm trên trang mainphoto.php
 
-    echo "ID của Thợ: " . $id_thue;
-    echo "ID của Thợ: " . $hoTen;
+    // echo "ID của Thợ: " . $id_thue;
+    // echo "ID của Thợ: " . $hoTen;
 
     ?>
     <div class="main">

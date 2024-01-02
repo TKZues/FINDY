@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Add more fields as needed
 
         // Redirect to mainphoto.php with necessary parameters
-        header("Location: mainphoto.php");
+        header("Location: maintho.php");
         exit();
         
     }
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Add more fields as needed
 
         // Redirect to find_timtho.php with necessary parameters
-        header("Location: find-timtho.php");
+        header("Location: mainthue.php");
         exit();
     }
 

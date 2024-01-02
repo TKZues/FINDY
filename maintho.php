@@ -8,16 +8,48 @@
     <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./find-timtho.css">
-    <link rel="stylesheet" href="./post-management.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/find-timtho.css">
+    <link rel="stylesheet" href="/post-management.css">
+    <link rel="stylesheet" href="/font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
 
 <body>
+<?php
+    include "id_tho.php";
+    ?>
+
+
     <?php
-    include "header.php"
+
+    include "db_connection.php";
+
+    $sql = "SELECT * FROM thongtintho
+WHERE thongtintho.id_tho = $id_tho";
+    $result = $conn->query($sql);
+
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $mathongtintho = $row['mathongtintho'];
+        }
+    } else {
+        $mathongtintho = "";
+
+
+        // Thông báo không tìm thấy thông tin
+        // echo "Không tìm thấy thông tin thuê cho ID: " . $id_thue;
+    }
+    // Các công việc khác cần làm trên trang mainphoto.php
+    // echo "ID của Thợ: " . $id_tho;
+    // echo "ID của Thợ: " . $hoTen;
+    ?>
+
+    <?php
+    include "headerphoto1.php";
     ?>
 
     <section>

@@ -22,7 +22,7 @@ if (!isset($_SESSION['id'])) {
 
 // Lấy thông tin người dùng từ session
 $id = $_SESSION['id'];
-$username = $_SESSION['username'];
+$username = $_SESSION['username']
 
 // Hiển thị thông tin người dùng
 

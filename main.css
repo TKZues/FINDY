@@ -1,6 +1,6 @@
 /* ------------video------------ */
 .videomain{
-    padding-top: var(--top-header-height);
+    padding-top: 60px;
 }
 
 .videomain_video{

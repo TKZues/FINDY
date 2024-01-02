@@ -8,16 +8,30 @@
     <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
     
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./find-timtho.css">
-    <link rel="stylesheet" href="./post-management.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/find-timtho.css">
+    <link rel="stylesheet" href="/post-management.css">
+    <link rel="stylesheet" href="/font/fontawesome-free-6.3.0-web/css/all.min.css">
 </head>
 
 <body>
     <?php
-    include "header.php"
+    include "id_thue.php";
+    ?>
+    <?php
+
+
+    // Các công việc khác cần làm trên trang mainphoto.php
+
+    echo "ID của Thợ: " . $id_thue;
+    echo "ID của Thợ: " . $hoTen;
+
+    //test
+
+    ?>
+    <?php
+    include "headercustomer.php";
     ?>
 
     <section>

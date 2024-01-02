@@ -1,111 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="/header.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINDY - Kết nối dễ dàng</title>
-    <link rel="icon" href="./img/findy-logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./img/findy-logo.png" type="image/x-icon">
+<header class="header">
+    <?php
+    include "db_connection.php";
 
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
-</head>
+    $sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
+    $result = $conn->query($sql);
 
-<body>
+    // Kiểm tra nếu có kết quả
+    if ($result->num_rows > 0) {
+        // Lặp qua từng dòng kết quả
+        while ($row = $result->fetch_assoc()) {
+            // Lấy thông tin từ cột cần thiết
+            $hinhanhtho = $row['hinhanhtho'];
+        }
+    } else {
+        $hinhanhtho = "avatar.png";
+    }
 
-    <header class="header">
-        <?php
-            include "db_connection.php";
+    ?>
+    <div class="grid wide">
 
-            $sql = "SELECT * FROM thongtintho WHERE id_tho = $id_tho";
-            $result = $conn->query($sql);
-            
-            // Kiểm tra nếu có kết quả
-            if ($result->num_rows > 0) {
-                // Lặp qua từng dòng kết quả
-                while ($row = $result->fetch_assoc()) {
-                    // Lấy thông tin từ cột cần thiết
-                    $hinhanhtho = $row['hinhanhtho'];
-                }
-            } else {
-                $hinhanhtho = "avatar.png";   
-
-            }
-           
-        ?>
-        <div class="grid wide">
-
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="navbar__logo">
-                    <a href="/photologin.php" class="navbar__logo-link">
-                        <img src="/img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
-                    </a>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="/maintho.php" class="navbar__logo-link">
+                    <img src="/img/findy-logo-ngang.png" alt="Findy" class="navbar__logo-img">
+                </a>
+            </div>
+            <div class="navbar__heading-warp">
+                <div class="navbar__heading">
+                    <a href="/mainphoto.php" class="navbar__heading-link">Tìm việc</a>
                 </div>
-                <div class="navbar__heading-warp">
-                    <div class="navbar__heading">
-                        <a href="/mainphoto.php" class="navbar__heading-link">Tìm việc</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="/profilephoto.php" class="navbar__heading-link">Tạo hồ sơ</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="/managerrequest.php" class="navbar__heading-link">Quản lý yêu cầu</a>
-                    </div>
-                    <div class="navbar__heading">
-                        <a href="/manageroder.php" class="navbar__heading-link">Đơn hàng</a>
-                    </div>
+                <div class="navbar__heading">
+                    <a href="/profilephoto.php" class="navbar__heading-link">Tạo hồ sơ</a>
                 </div>
-                <div class="navbar__heading-search">
-                    <i class="navbar__search-icon fa-solid fa-magnifying-glass"></i>
-                    <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
+                <div class="navbar__heading">
+                    <a href="/managerrequest.php" class="navbar__heading-link">Quản lý yêu cầu</a>
                 </div>
-                <div class="navbar__heading-controls">
-                    <img src="/img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
-                    <a href="/accountphoto.php" class="navbar__heading-link">
-                        <p><?php echo $hoTen; ?></p>
-                    </a>
-
-                </div>
-                <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
-                    <i class="navbar__heading-icon fa-solid fa-bars"></i>
-                </label>
-            </nav>
-            <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
-
-            <!-- Mobile menu -->
-            <div class="mobile__menu">
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-circle-user"></i>
-                    <a href="/accountphoto.php" class="mobile__heading-link"><?php echo $hoTen; ?></a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
-                    <a href="/mainphoto.php" class="mobile__heading-link">Tìm việc</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
-                    <a href="/profilephoto.php" class="mobile__heading-link">Tạo hồ sơ</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-pen"></i>
-                    <a href="/manageroder.php" class="mobile__heading-link">Đơn hàng</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-file-pen"></i>
-                    <a href="/managerrequest.php" class="mobile__heading-link">Quản lý yêu cầu</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-clipboard"></i>
-                    <a href="/manageroder.php" class="mobile__heading-link">Đơn hàng</a>
-                </div>
-                <div class="mobile__heading">
-                    <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
-                    <a href="/main.php" class="mobile__heading-link">Đăng xuất</a>
+                <div class="navbar__heading">
+                    <a href="/manageroder.php" class="navbar__heading-link">Đơn hàng</a>
                 </div>
             </div>
+            <div class="navbar__heading-search">
+                <i class="navbar__search-icon fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
+            </div>
+            <div class="navbar__heading-controls">
+                <img src="/img/<?php echo $hinhanhtho ?>" alt="" class="navbar__heading-img">
+                <a href="/accountphoto.php" class="navbar__heading-link">
+                    <p><?php echo $hoTen; ?></p>
+                </a>
+
+            </div>
+            <label for="mobile-bars-checkbox" class="navbar__mobile-bars">
+                <i class="navbar__heading-icon fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <input type="checkbox" hidden id="mobile-bars-checkbox" class="navbar__bars-checkbox">
+
+        <!-- Mobile menu -->
+        <div class="mobile__menu">
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-circle-user"></i>
+                <a href="/accountphoto.php" class="mobile__heading-link"><?php echo $hoTen; ?></a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-magnifying-glass"></i>
+                <a href="/mainphoto.php" class="mobile__heading-link">Tìm việc</a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-users-between-lines"></i>
+                <a href="/profilephoto.php" class="mobile__heading-link">Tạo hồ sơ</a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-pen"></i>
+                <a href="/manageroder.php" class="mobile__heading-link">Đơn hàng</a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-file-pen"></i>
+                <a href="/managerrequest.php" class="mobile__heading-link">Quản lý yêu cầu</a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-clipboard"></i>
+                <a href="/manageroder.php" class="mobile__heading-link">Đơn hàng</a>
+            </div>
+            <div class="mobile__heading">
+                <i class="mobile__heading-icon fa-solid fa-right-from-bracket"></i>
+                <a href="/main.php" class="mobile__heading-link">Đăng xuất</a>
+            </div>
         </div>
-    </header>
-</body>
+    </div>
+</header>
