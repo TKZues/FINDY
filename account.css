@@ -202,23 +202,65 @@
     align-items: center;
 }
 
-
 .overlay-content {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     font-size: 1.6rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 700px;
+}
+
+.overlay-item {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-text {
+    width: 130px;
+}
+
+.overlay-input {
+    flex: 1;
+    height: 30px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 1.6rem;
 }
 
 .overlay-content i{
-    color: var(--main-color);    width: 30px;
+    color: var(--main-color);
+    width: 30px;
+    text-align: center;
+    margin-right: 8px;
 }
 
 .overlay-content label{
-    line-height: 38px;
+    line-height: 1.6;
     padding: 10px 0;
 }
+
+.overlay-heading {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--main-color);
+    text-align: center;
+}
+
+#hinhanhtho,
+#ngaysinh,
+#gioitinh {
+    font-size: 1.4rem;
+}
+
+.overlay-btn {
+    margin-left: auto;
+    width: 170px;
+    margin-top: 12px;
+}
+
 /* ------------- Freelancer list ------------- */
 .daluu{
     font-size: 2.3rem;

@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./img/logoicon.jpg" sizes="6x6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findy</title>
+    <title>FINDY - Kết nối dễ dàng</title>
+    <link rel="icon" href="/img/findy-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/findy-logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./account.css">
     <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
@@ -181,38 +183,44 @@
                                                         $insert_thongtintho = $connect->insert_thongtintho();
                                                     }
                                                     ?>
-                                                    <form action="#" method="post" enctype="multipart/form-data">
-                                                        
-                                                        <input type="text" style="display: none;" id="id_thue" name="id_thue" value="<?php echo $id_thue ?>" required><br>
-                                                        <i class="fa-solid fa-image"></i>
-                                                        <label for="hinhanhthue">Hình Ảnh Thuê:</label>
-                                                        <input type="file" id="hinhanhthue" name="hinhanhthue" required><br>
-
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                        <label for="diachi">Địa Chỉ:</label>
-                                                        <input type="text" id="diachi" name="diachi" required><br>
-
-                                                        <i class="fa-solid fa-calendar-day"></i>
-                                                        <label for="ngaysinh">Ngày Sinh:</label>
-                                                        <input type="date" id="ngaysinh" name="ngaysinh" required><br>
-
-                                                        <i class="fa-solid fa-fingerprint"></i>
-                                                        <label for="cccd">CCCD:</label>
-                                                        <input type="text" id="cccd" name="cccd" required><br>
-
-                                                        <i class="fa-solid fa-venus-mars"></i>
-                                                        <label for="gioitinh">Giới Tính:</label>
-                                                        <select id="gioitinh" name="gioitinh" required>
-                                                            <option value="Nam">Nam</option>
-                                                            <option value="Nu">Nữ</option>
-                                                            <option value="Khac">Khác</option>
-                                                        </select><br>
-
-                                                        <i class="fa-solid fa-phone"></i>
-                                                        <label for="sdt">Số Điện Thoại:</label>
-                                                        <input type="tel" id="sdt" name="sdt" required><br>
-
-                                                        <input class="btn account__personal-btn" type="submit" value="Gửi">
+                                                    <p class="overlay-heading">Cập nhật thông tin</p>
+                                                    <form action="" method="post" enctype="multipart/form-data">
+                                                        <input style="display: none;" type="text" id="id_tho" name="id_tho" value="<?php echo $id_tho ?>" required><br>
+                                                        <div class="overlay-item">
+                                                            <i class="fa-solid fa-image"></i>
+                                                            <label for="hinhanhthue" class="overlay-text">Hình ảnh thuê:</label>
+                                                            <input type="file" id="hinhanhtho" name="hinhanhtho" required><br>
+                                                        </div>
+                                                        <div class="overlay-item">
+                                                            <i class="fa-solid fa-location-dot"></i>
+                                                            <label for="diachi" class="overlay-text">Địa chỉ:</label>
+                                                            <input class="overlay-input" type="text" id="diachi" name="diachi" required><br>
+                                                        </div>
+                                                        <div class="overlay-item">
+                                                            <i class="fa-solid fa-calendar-day"></i>
+                                                            <label for="ngaysinh" class="overlay-text">Ngày sinh:</label>
+                                                            <input type="date" id="ngaysinh" name="ngaysinh" required><br>
+                                                        </div>
+                                                        <div class="overlay-item">
+                                                            <i class="fa-solid fa-fingerprint"></i>
+                                                            <label for="cccd" class="overlay-text">CCCD:</label>
+                                                            <input class="overlay-input" type="text" id="cccd" name="cccd" required><br>
+                                                        </div>
+                                                        <div class="overlay-item">                                                        
+                                                            <i class="fa-solid fa-venus-mars"></i>
+                                                            <label for="gioitinh" class="overlay-text">Giới tính:</label>
+                                                            <select id="gioitinh" name="gioitinh" required>
+                                                                <option value="Nam">Nam</option>
+                                                                <option value="Nu">Nữ</option>
+                                                                <option value="Khac">Khác</option>
+                                                            </select><br>
+                                                        </div>
+                                                        <div class="overlay-item">
+                                                            <i class="fa-solid fa-phone"></i>
+                                                            <label for="sdt" class="overlay-text">Số điện thoại:</label>
+                                                            <input class="overlay-input" type="tel" id="sdt" name="sdt" required><br>
+                                                        </div>
+                                                        <input class="btn btn--primary overlay-btn" type="submit" value="Lưu">
                                                     </form>
                                                 </div>
                                             </div>
