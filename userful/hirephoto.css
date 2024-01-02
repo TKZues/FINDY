@@ -19,7 +19,7 @@
 .banner_img-img {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 350px;
 }
 
 .banner_img-img img {
@@ -231,14 +231,6 @@
 } */
 
 /* --------- Job best --------- */
-.jobbest_container {
-
-}
-
-.jobbest_list {
-
-}
-
 .jobbest_item-warp {
     display: block;
     text-decoration: none;
