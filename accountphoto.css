@@ -171,6 +171,7 @@
 .container {
     margin-top: var(--top-header-height);
     background-color: var(--background-color);
+    padding-bottom: 60px;
 }
 
 .content {
@@ -308,207 +309,93 @@
     background-color: #fff;
     padding: 16px 32px;
     border-radius: 5px;
+} 
+
+.account__history-save-content {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
 }
+
 
 /* ----------jobbest------------- */
-
-
-.jobbest-header--top{
-    color: #00b14f;
-    display: flex;
-    font-weight: 600;
-    gap: 10px;
-    line-height: 28px;
-    font-size: 2.0rem;
-}
-    
-.jobbest-header--bottom{
-    display: flex;
-    align-items: center;
-}
-
-.jobbest-header--bottom_filter input{
-    padding: 7px 10px;
-    border-radius: 3px;
-    border: 1px solid #b3b3b3;
-}
-
-.jobbest-header--bottom-button{
-    background-color: #dcdcdc;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    padding: 7px 10px;
-    margin: 5px 10px;
-    border-radius: 15px;
-}
-
-.jobbest{
-    background-color: #f5f5f5;
-    padding: 20px 0;
-}
-
-.account__history-save-content{
-    font-size: 2.2rem;
-    font-weight: 600;
-    margin: 5px 0;
-}
-
-.jobbest-mid a{
+.jobbest_item-warp {
+    display: block;
     text-decoration: none;
-   
-    
+    color: var(--text-color);
+    background-color: #fff;
+    border-radius: 10px;
 }
 
-.jobbest-mid div > a > div{
-    background-color: #fcfcfc;
-    margin: 7px 0;
-   padding: 10px 15px;
-   border-radius: 20px;
-   border: 1px solid  #e2e2e2; 
-   /* background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
+.jobbest_item {
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
 }
 
-.jobbest-mid div > a:hover >div {
-    border: 1px solid #cecece;
-    background-color: white;
+.jobbest_info {
+    padding: 8px 16px;
+    border-radius: 10px;
 }
 
-.jobbest-mid-top--left{
-    display: flex;
-    align-items: center;
+.jobbest_item:hover {
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 10px 20px 0 rgba(71, 140, 67, 0.2);
+    transform: translateY(-1px);
 }
 
-.jobbest-mid-top--left img{
-    width: 100%;
+.jobbest_info-title {
+    font-size: 2rem;
+    width: 95%;
+    margin: 8px 0;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
-.jobbest-mid-top--right{
-    color: #212f3f;
-    font-size: 1.7rem;
-    font-weight: 600;
-    line-height: 20px;
-    display: flex;
-    flex-direction: column;
+.jobbest_info-info {
+    margin: 8px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
-.jobbest-mid-top--right p{
-    color: #000000;
-    font-size: 1.3rem;
-    margin: 2px 0;
-    font-weight: 500;
-    line-height: 16px;
-    white-space: nowrap; /* Ngăn chặn trình duyệt xuống dòng khi nội dung quá dài */
-    overflow: hidden;    /* Ẩn phần nội dung vượt quá chiều rộng của phần tử */
-    text-overflow: ellipsis;
-}
-
-.jobbest-mid-top--right p:nth-child(1){
-    color: var(--main-color-2);
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 16px;
-    
-}
-
-
-.jobbest-mid-top--right i{
-    color: rgb(9, 9, 9);
-    margin: 3px 5px;
-}
-
-.jobbest-mid-bottom{
-    display: flex;
-}
-.jobbest-mid-top--right2{
-    color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-    font-size: 1.4rem;
-}
-
-
-
-.jobbest-mid-bottom-button{
-    background: var(--main-color);
-    border-radius: 4px;
-    color: #ffffff;
-    display: inline-flex;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    padding: 4px 8px;
-    margin: 5px 5px;
-}
-.jobbest-bottom{
-    margin: 10px 0;
+.jobbest_info-icon {
+    width: 16px;
     font-size: 1.4rem;
     text-align: center;
+    margin-right: 4px;
+    color: var(--main-color);
 }
 
-.jobbest-bottom span{
-    margin: 0 5px;
+.jobbest_info-text {
+    font-size: 1.4rem;
 }
 
-.jobbest-bottom i{
-    padding: 8px 10px;
-    color: #009643;
-    background-color: white;
-    border-radius: 50%;
-    border: 1px solid #00b14f;
+.jobbest_favourite {
+    position: absolute;
+    top: 18px;
+    right: 16px;
 }
 
-/* ----------------footer-------------- */
-
-
-
-.footer{
-    margin-top: 150px;
-    background-color: #12151b;
-    padding: 50px 0;
-    color: var(--text-color-main);
-    font-size: 1rem;
-    border-top: 1px solid #686766;
+.jobbest_favourite-icon {
+    font-size: 1.8rem;
+    color: var(--main-color);
 }
 
-.footer a{
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: var(--text-color-main);
+.jobbest_favourite-btn {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
 }
 
-.footer_logo div{
-    font-size: 1.3rem;
-    margin: 5px 0;
-    color: var(--text-color-main);
-}
 
-.footer_logo div a{
-    text-decoration: none;
-    color: var(--text-color-main);
-}
-.footer_logo-logo img{
-    width: 30%;
-}
-
-.footer div h1{
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-.footer div ul li{
-    list-style: none;
-    
-    margin: 5px 0;
-   
-}
-
-.footer div ul a li:hover{
-    padding-left: 15px;
-    color: #5643ff;
-    transition: all 0.3s ease-in;
-}
 
 
 .overlay {
