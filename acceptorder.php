@@ -137,12 +137,12 @@ echo "ID của Thợ: " . $mathongtintho;
                                     100000
                                 </div>
                             </div>
-                            <div class="sum">
+                            <div class="sum" style="display: flex;justify-content: space-between;" >
                                 <div class="acceptoder_left-price-sum-text">
                                     Tổng giá trị
                                 </div>
                                 <div class="acceptoder_left-price-sum">
-                                    
+                                <?php echo $gia+100000 ?>
                                 </div>
                             </div>
                             <div class="acceptoder_left-items-button">
