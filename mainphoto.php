@@ -26,7 +26,6 @@
     include "id_tho.php";
     ?>
 
-
     <?php
 
     include "db_connection.php";
@@ -83,9 +82,12 @@ WHERE thongtintho.id_tho = $id_tho";
 
 
     <section>
-        <div class="filter">
+        <div class="container">
             <div class="grid wide">
-                <div class="filter_container row">
+                <div class="jobbest-header--top">
+                    Việc làm Photographer tốt nhất
+                </div>
+                <div class="content row">
                     <div class="col l-3 m-4 c-0">
                         <div class="filter">
                             <h3 class="filter__heading">
@@ -265,13 +267,6 @@ WHERE thongtintho.id_tho = $id_tho";
                     </div>
 
                     <div class="jobbest_container col c-8 m-8 l-8 ">
-                        <div class="jobbest-header ">
-                            <div class="jobbest-header--top">
-                                Việc làm Photographer tốt nhất
-                            </div>
-                            <div class="jobbest-header--bottom">
-                            </div>
-                        </div>
                         <div class="jobbest-mid">
                             <div class="row">
                                 <?php
@@ -299,24 +294,45 @@ WHERE thongtintho.id_tho = $id_tho";
                                         ?>
                                                     <a href="./photoclick.php?tenposttimtho=<?php echo urlencode($result['tenposttimtho']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&phongcach=<?php echo urlencode($result['phongcach']); ?>&mathongtinthue=<?php echo urlencode($result['mathongtinthue']); ?>&ma_posttimtho=<?php echo urlencode($result['ma_posttimtho']); ?>&thoigian=<?php echo urlencode($result['thoigian']); ?>&gia=<?php echo urlencode($result['gia']); ?>&sukien=<?php echo urlencode($result['sukien']); ?>&diadiem=<?php echo urlencode($result['diadiem']); ?>&anhmau=<?php echo urlencode($result['anhmau']); ?>&motachitiet=<?php echo urlencode($result['motachitiet']); ?>" class="col c-12 m-6 l-6">
                                                         <div class="jobbest-items ">
-                                                            <div class="jobbest-mid-top">
-                                                                <div class="row">
-
-                                                                    <div class="jobbest-mid-top--left col c-3 m-3 l-3">
-                                                                        <img src="./img/<?php echo $hinhanhthue ?>" style="width:80px;height:80px;border-radius:50%" alt="">
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right col c-8 m-8 l-8">
-                                                                        <p><?php echo $result['tenposttimtho']  ?></p>
-                                                                        <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
-                                                                        <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
-                                                                        <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
-                                                                        <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
-                                                                    </div>
-                                                                    <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
-
-                                                                        <button type="submit"><i class="fa-regular fa-heart"></i></button>
-                                                                    </div>
+                                                            <div class="jobbest_info">
+                                                                <div class="jobbest-mid-top--right col c-8 m-8 l-8">
+                                                                    <p><?php echo $result['tenposttimtho']  ?></p>
+                                                                    <p><i class="fa-regular fa-calendar"></i><?php echo $result['thoigian'] ?></p>
+                                                                    <p><i class="fa-solid fa-coins"></i><?php echo $result['gia'] ?></p>
+                                                                    <p><i class="fa-regular fa-calendar"></i><?php echo $result['sukien'] ?></p>
+                                                                    <p><i class="fa-solid fa-location-dot"></i> <?php echo $result['diadiem'] ?></p>
                                                                 </div>
+                                                                <div class="jobbest-mid-top--right2 col c-1 m-1 l-1">
+
+                                                                    <button type="submit"><i class="fa-regular fa-heart"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="jobbest_item">
+                                                            <!-- <div class="jobbest-list-top--left col c-2 m-2 l-2">
+                                                            <img src="<?php echo $imguserphoto_up ?>" alt="">
+                                                        </div> -->
+                                                            <div class="jobbest_info">
+                                                                <h3 class="jobbest_info-title"><?php echo $result['tenposttimtho']  ?></h3>
+                                                                <div class="jobbest_info-info">
+                                                                    <i class="jobbest_info-icon fa-solid fa-calendar-days"></i>
+                                                                    <span class="jobbest_info-text"><?php echo $result['thoigian'] ?></span>
+                                                                </div>
+                                                                <div class="jobbest_info-info">
+                                                                    <i class="jobbest_info-icon fa-solid fa-circle-dollar-to-slot"></i>
+                                                                    <span class="jobbest_info-text"><?php echo $result['gia'] ?></span>
+                                                                </div>
+                                                                <div class="jobbest_info-info">
+                                                                    <i class="jobbest_info-icon fa-solid fa-star"></i>
+                                                                    <span class="jobbest_info-text"><?php echo $result['sukien'] ?></span>
+                                                                </div>
+                                                                <div class="jobbest_info-info">
+                                                                    <i class="jobbest_info-icon fa-solid fa-location-dot"></i>
+                                                                    <span class="jobbest_info-text"><?php echo $result['diadiem'] ?></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="jobbest_favourite">
+                                                                <i class="jobbest_favourite-icon fa-regular fa-heart"></i>
                                                             </div>
                                                         </div>
                                                     </a>

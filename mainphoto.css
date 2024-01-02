@@ -1,3 +1,12 @@
+.container {
+    padding-top: 36px;
+    background-color: var(--background-color);
+}
+
+.content {
+    margin-top: 16px;
+}
+
 /* ------------- Filter ------------- */
 .filter {
     background-color: #fff;
@@ -227,6 +236,7 @@
 
 .banner {
     margin-top: var(--top-header-height);
+    background-color: var(--background-color);
 }
 
 .banner_img{
@@ -261,13 +271,15 @@
     transform: translateX(400%);
 }
 
-.button_banner{
+.button_banner {
     position: absolute;
     width: 100%;
     top: 50%;
     display: flex;
     font-size: 1.5rem;
     justify-content: space-between;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .button_banner i{
@@ -310,16 +322,11 @@
 }
 
 /* ----------jobbest------------- */
-
-
 .jobbest-header--top{
-    color: #00b14f;
-    display: flex;
-    font-weight: 600;
-    gap: 10px;
-    line-height: 28px;
-    font-size: 2.0rem;
-    margin: 8px 0;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3rem;
+    font-weight: 700;
 }
     
 .jobbest-header--bottom{
@@ -348,9 +355,7 @@
 }
 
 .jobbest-mid a{
-    text-decoration: none;
-   
-    
+    text-decoration: none;    
 }
 
 .jobbest-mid div > a > div{
@@ -404,7 +409,6 @@
     
 }
 
-
 .jobbest-mid-top--right i{
     color: rgb(9, 9, 9);
     margin: 3px 5px;
@@ -421,8 +425,6 @@
     text-align: right;
     font-size: 1.4rem;
 }
-
-
 
 .jobbest-mid-bottom-button{
     background: var(--main-color);
@@ -451,6 +453,18 @@
     background-color: white;
     border-radius: 50%;
     border: 1px solid #00b14f;
+}
+
+.jobbest-items {
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.jobbest_info {
+    padding: 8px 16px;
+    border-radius: 10px;
 }
 
 /* --------------jobintereting---------- */

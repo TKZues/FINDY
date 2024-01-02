@@ -1,3 +1,7 @@
+.main {
+    background-color: var(--background-color);
+}
+
 /* ------------- Quản lý bài đăng -------------*/
 .post {
     padding-bottom: 60px;
