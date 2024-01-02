@@ -127,9 +127,13 @@
                                     <form action="" method="POST">
                                         <input type="text" style="display: none;" name="ma_profile" id="" value="<?php echo $ma_profile ?>">
                                         <input type="text" style="display: none;" name="mathongtinthue" id="" value="<?php echo $mathongtinthue ?>">
-                                        <button class="btn btn--primary freelancer-info-btn" type="submit">Theo dõi</button>
-
+                                        <div style="display: flex;overflow: hidden;align-items: center;margin: 20px;">
+                                            <button style="width: 30%;margin: 3px 2px; border-radius: 15px;padding:10px 15px; height:  35px;background-color: #ffffff;border: 2px solid var(--main-color); " class="" type="submit"><i class="fa-solid fa-user-plus" style="color: #45a168;"></i></button>
+                                            <button style="width: 70%;border-radius: 15px; height: 35px;" class=" btn--primary freelancer-info-btn"  onclick="showRequireForm()">Gửi yêu cầu</button>
+                                        </div>
                                     </form>
+                                    
+
                                     <div class="contact-info">
                                         <div class="contact-info__info">
                                             <i class="contact-info__info-icon fa-solid fa-phone"></i>
