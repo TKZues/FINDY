@@ -192,7 +192,7 @@ function handleFile(files) {
             const reader = new FileReader();
             reader.onload = function (e) {
                 preview.src = e.target.result;
-                fileInput.file[0].name = e.target.result;
+                
                 preview.style.display = 'flex';
                 dropArea_p.style.display = 'none';
                 img_holder.style.display = 'none';  
