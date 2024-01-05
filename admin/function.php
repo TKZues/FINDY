@@ -78,7 +78,7 @@ class connect
     }
     public function select_phanhoitunguoidung()
     {
-        $query = "SELECT * FROM phanhoitunguoidung";
+        $query = "SELECT * FROM baocaochoadmin";
         $result = $this->db->select($query);
         return $result;
     }

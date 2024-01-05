@@ -764,5 +764,6 @@ class connect
         $result = $this->db->insert($query);
         return $result;
     }
+    
 }
 ?>

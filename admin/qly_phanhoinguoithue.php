@@ -38,11 +38,12 @@
             <?php
             if ($select_phanhoitunguoidung) {
                 while ($result = $select_phanhoitunguoidung->fetch_assoc()) {
-                    $maphanhoitunguoidung = $result['maphanhoitunguoidung'];
+                    $maphanhoitunguoidung = $result['mabaocao'];
 
-                    $mathongtinthue =     $result['mathongtinthue'];
-                    $phanhoi =      $result['phanhoi'];
-                    $thoigian =  $result['thoigian'];
+                    $mathongtinthue =     $result['mathongtintho'];
+                    $phanhoi =      $result['ma_posttimtho'];
+                    $thoigian =  $result['reason'];
+                    $drive =  $result['drive'];
                     
             ?>
 
