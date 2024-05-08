@@ -68,8 +68,8 @@ Nắm bắt được những khó khăn này, FINDY ra đời với mục tiêu 
 ## 6. Thành tích
 Dự án đạt **Giải nhất** cuộc thi ***“Advanced Information Systems Contest – AISC”*** – Cuộc thi học thuật do khoa Hệ thống Thông tin – Trường ĐH Công nghệ Thông tin ĐHQG tổ chức.
 <div align="center">
-  <img width="500px" alt="FINDY đạt giải nhất cuộc thi AISC'23" src="https://github.com/TKZues/FINDY/assets/152046332/2334a70e-449d-42dd-b3a9-f32f29ce5b77" />
-  <img width="500px" alt="Lễ tuyên dương" src="https://github.com/TKZues/FINDY/assets/152046332/72be3fb9-5f60-4cae-8550-093b58d9b9b9" />
+  <img alt="FINDY đạt giải nhất cuộc thi AISC'23" src="https://github.com/TKZues/FINDY/assets/152046332/2334a70e-449d-42dd-b3a9-f32f29ce5b77" />
+  <img alt="Lễ tuyên dương" src="https://github.com/TKZues/FINDY/assets/152046332/72be3fb9-5f60-4cae-8550-093b58d9b9b9" />
 </div>
 
 
